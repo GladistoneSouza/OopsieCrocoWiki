@@ -62,6 +62,8 @@ export const heroes: HeroRecord[] = [
       "Defesa mais recente: 8.825",
       "Fragmentos: 22/30",
       "Recompensa global: Dano Crítico +18,2%",
+      "Snapshot no nível 12: poder 16.067 · ataque 12,04K · HP 214,74K · defesa 7.577",
+      "No snapshot do nível 12: 32/30 fragmentos e Dano Crítico global +16,8%",
     ],
     levelSkills: [
       {
@@ -156,6 +158,7 @@ export const heroes: HeroRecord[] = [
       "Ficha de identidade e visual oficial",
       "Histórias 1 e 2 e travas dos capítulos seguintes",
       "Habilidade base e telas de progressão dos níveis 3 a 50",
+      "Snapshot histórico da conta no nível 12",
     ],
     evidenceImages: [
       { src: "/screenshots/lilith/hero-background.jpg", caption: "Identidade oficial, raça, profissão e background" },
@@ -167,6 +170,7 @@ export const heroes: HeroRecord[] = [
       { src: "/screenshots/lilith/apply-nightmare.jpg", caption: "Habilidade base Apply Nightmare" },
       { src: "/screenshots/lilith/levels-3-8.jpg", caption: "Níveis 3, 5 e 8" },
       { src: "/screenshots/lilith/septic-curse.jpg", caption: "Tooltip de Septic Curse" },
+      { src: "/screenshots/lilith/level-12-snapshot.jpg", caption: "Snapshot histórico no nível 12" },
       { src: "/screenshots/lilith/level-10-12.jpg", caption: "Níveis 10 e 12" },
       { src: "/screenshots/lilith/profession-levels-25-40.jpg", caption: "Bônus de profissão dos níveis 25 a 40" },
       { src: "/screenshots/lilith/profession-levels-35-50.jpg", caption: "Bônus de profissão dos níveis 35 a 50" },
