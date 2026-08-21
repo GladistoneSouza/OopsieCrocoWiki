@@ -116,6 +116,97 @@ export const heroes: HeroRecord[] = [
     evidence: ["Telas de equipamentos e runs compartilhadas"],
     pending: ["Nome oficial completo", "Árvore de habilidades", "Breakpoints por nível"],
   },
+  {
+    slug: "lilith",
+    name: "Lilith",
+    aliases: ["Dark Knight", "Calamity dourada"],
+    className: "Calamity",
+    rarity: "SSR",
+    role: "Dano contínuo / debuff / sustentação",
+    summary: "Calamity dourada baseada em Nightmare: aplica dano contínuo, reduz cura recebida e pode combinar propagação, controle e autocura.",
+    fieldNote: "Observada no nível 13. É uma alternativa SSR para a função Calamity, mas sua mecânica de Nightmare é distinta do Fear do Sword Demon.",
+    levelSkills: [
+      {
+        name: "Apply Nightmare",
+        description: "Causa dano a um inimigo aleatório e aplica Nightmare; o efeito causa dano contínuo e reduz a cura recebida pelo alvo.",
+        source: "Confirmada em telas do personagem.",
+      },
+      {
+        name: "Nível 3 — Twin Nightmare",
+        description: "Ao entrar em batalha, aplica Nightmare a dois inimigos.",
+        source: "Confirmada em tela de evolução.",
+      },
+      {
+        name: "Nível 5 — sustain de Nightmare",
+        description: "Cada Nightmare aplicado restaura HP da própria Lilith.",
+        source: "Confirmada em tela de evolução.",
+      },
+      {
+        name: "Nível 8 — Septic Curse",
+        description: "Fortalece a redução de cura associada ao Nightmare.",
+        source: "Confirmada em tela de evolução.",
+      },
+      {
+        name: "Nível 10 — Dream Erosion / Eternal Reincarnation",
+        description: "Dream Erosion fortalece o dano contínuo; Eternal Reincarnation aumenta a propagação do Nightmare quando ele termina e reforça a redução de cura.",
+        source: "Confirmada em telas de evolução e bênçãos.",
+      },
+      {
+        name: "Nível 12 — bênção adicional",
+        description: "Depois de concluir a Ultimate, Lilith recebe uma bênção adicional.",
+        source: "Confirmada em tela de evolução.",
+      },
+      {
+        name: "Nível 15 — recuperação de mana",
+        description: "Cada Nightmare aplicado restaura mana da própria Lilith.",
+        source: "Confirmada em tela de evolução; nível ainda não alcançado na conta observada.",
+      },
+    ],
+    builds: [
+      {
+        name: "Nightmare ofensivo",
+        status: "em teste",
+        summary: "Prioriza o dano contínuo e a pressão de Nightmare.",
+        priorities: ["Fierce Nightmare", "Crazy Nightmare", "Dream Erosion"],
+      },
+      {
+        name: "Sustentação",
+        status: "em teste",
+        summary: "Combina a cura natural do kit com bênçãos de recuperação.",
+        priorities: ["Bloodthirsty Curse", "Soul-Draining Curse"],
+      },
+      {
+        name: "Controle e anti-cura",
+        status: "em teste",
+        summary: "Reduz a capacidade de resposta e sustentação dos inimigos.",
+        priorities: ["Paralyzing Curse", "Weaken Curse", "Septic Curse"],
+      },
+      {
+        name: "Propagação de Nightmare",
+        status: "em teste",
+        summary: "Espalha Nightmare entre múltiplos alvos e prolonga sua presença em combate.",
+        priorities: ["Twin Nightmare", "Overtime Nightmare", "Eternal Reincarnation"],
+      },
+    ],
+    synergies: [
+      "Composições Calamity que aproveitam debuffs e lutas prolongadas",
+      "Fases com vários inimigos, onde Nightmare pode se espalhar",
+      "Inimigos com cura ou sustain elevado",
+      "Sword Demon como núcleo de Fear, sem confundir Nightmare com Fear",
+    ],
+    evidence: [
+      "Telas do kit, bênçãos e desbloqueios por nível compartilhadas pelo jogador",
+      "Tela de evolução para o nível 13: poder 16.591, ataque 12,44K, HP 221,74K e defesa 7.824",
+      "Estado observado: nível 13 e 2/30 fragmentos após a evolução",
+    ],
+    pending: [
+      "Testar se Twin Nightmare gera uma instância separada de cura por alvo",
+      "No nível 15, testar se Twin Nightmare também gera mana separadamente por alvo",
+      "Confirmar valores numéricos e duração de cada Nightmare e bênção",
+      "Documentar a Ultimate completa e o requisito exato para concluí-la",
+      "Adicionar os prints da Lilith ao repositório como evidência visual",
+    ],
+  },
 ];
 
 export function getHero(slug: string) {
