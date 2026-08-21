@@ -41,7 +41,7 @@ export default function Home() {
     <main>
       <header className="topbar">
         <a className="brand" href="#inicio" aria-label="Oopsie Croco Wiki — início"><span className="brand-mark">OC</span><span><b>Oopsie Croco</b><small>Wiki de campo</small></span></a>
-        <nav aria-label="Navegação principal"><a href="#equipamentos">Equipamentos</a><a href="#gemas">Gemas</a><a href="#invocacoes">Invocações</a><a href="#coop">Co-op</a><a href="/personagens">Personagens</a></nav>
+        <nav aria-label="Navegação principal"><a href="#equipamentos">Equipamentos</a><a href="#gemas">Gemas</a><a href="#invocacoes">Invocações</a><a href="#coop">Co-op</a><a href="#runs">Runs</a><a href="/personagens">Personagens</a></nav>
         <span className="version">v0.1 • em construção</span>
       </header>
 
