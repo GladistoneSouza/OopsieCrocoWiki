@@ -20,6 +20,9 @@ export type HeroRecord = {
   role: string;
   summary: string;
   fieldNote: string;
+  image?: string;
+  stats?: string[];
+  exclusiveGems?: { name: string; slot: string; baseStat: string; effect: string }[];
   levelSkills: HeroSkill[];
   builds: HeroBuild[];
   synergies: string[];
@@ -37,7 +40,37 @@ export const heroes: HeroRecord[] = [
     rarity: "SSR",
     role: "Invocação / queimadura / amplificação de dano",
     summary: "Invocadora SSR que cria Elementais de Fogo por 8 segundos e converte a presença e a morte deles em dano, mana e fortalecimento do grupo.",
-    fieldNote: "Ficha baseada somente nas descrições exibidas pelo jogo. As telas não informam porcentagens, duração, limite de acúmulos nem a chance exata de divisão.",
+    fieldNote: "Ficha baseada somente nas descrições exibidas pelo jogo. A tela ainda não informa duração, limite de acúmulos nem as chances exatas de Wildfire Rebirth.",
+    image: "/screenshots/mia/mia-profession-bonuses.jpg",
+    stats: [
+      "Nível observado: 15",
+      "Poder: 19.848",
+      "Ataque: 18,15K",
+      "HP: 220,27K",
+      "Defesa: 7.589",
+      "Fragmentos: 35/60",
+      "Recompensa global: Dano Crítico +21%",
+    ],
+    exclusiveGems: [
+      {
+        name: "Pink Diamond",
+        slot: "Armor",
+        baseStat: "DEF +4%",
+        effect: "Ao ser invocado, o Fire Element concede a um aliado aleatório um bônus de 20% de ataque. O restante da descrição está cortado na tela disponível.",
+      },
+      {
+        name: "Jade",
+        slot: "Necklace",
+        baseStat: "Max HP +6%",
+        effect: "Quando morre, o Fire Element restaura 15% de mana para um aliado aleatório.",
+      },
+      {
+        name: "Amber",
+        slot: "Ring",
+        baseStat: "Max HP +8%",
+        effect: "Pyromancer Crit +8%.",
+      },
+    ],
     levelSkills: [
       {
         name: "Habilidade base — Summon Fire Elemental",
@@ -60,9 +93,14 @@ export const heroes: HeroRecord[] = [
         source: "Ficha do personagem e tooltip",
       },
       {
-        name: "Wildfire Rebirth — aumento da chance de divisão",
-        description: "A progressão aumenta a chance de divisão de Wildfire Rebirth. O número do nível está cortado no print disponível.",
-        source: "Ficha do personagem",
+        name: "Nível 10 — Death is Only the Beginning",
+        description: "A Ultimate começa com 3 bolas de fogo.",
+        source: "Texto confirmado na tela de progressão.",
+      },
+      {
+        name: "Nível 10 — Wildfire Rebirth",
+        description: "A chance de divisão dos Elementais de Fogo aumenta.",
+        source: "Texto confirmado na tela de progressão.",
       },
       {
         name: "Nível 12 — bênção adicional",
@@ -73,6 +111,21 @@ export const heroes: HeroRecord[] = [
         name: "Nível 15 — buff por morte",
         description: "Para cada Elemental de Fogo que morre, o dano de todos os aliados aumenta.",
         source: "Ficha do personagem",
+      },
+      {
+        name: "Nível 20 — Death is Only the Beginning",
+        description: "As bolas de fogo ricocheteiam 1 vez adicional.",
+        source: "Texto confirmado na tela; nível ainda bloqueado.",
+      },
+      {
+        name: "Nível 20 — Wildfire Rebirth",
+        description: "Os Elementais de Fogo passam a ter chance de se dividir em dois Elementais de Fogo.",
+        source: "Texto confirmado na tela; nível ainda bloqueado.",
+      },
+      {
+        name: "Níveis 25, 30, 35 e 40 — bônus de profissão",
+        description: "Cada um desses níveis aumenta em 6% o dano dos personagens desta profissão.",
+        source: "Os quatro breakpoints foram confirmados na tela de progressão.",
       },
     ],
     builds: [
@@ -119,6 +172,8 @@ export const heroes: HeroRecord[] = [
       "Blessing Bestiary completo da Mia",
       "Ficha SSR Fire Spirit Master no nível 15",
       "Tooltips de Self-destruction e Incinerate",
+      "Progressão confirmada até o nível 40",
+      "Tela das três gemas exclusivas",
     ],
     evidenceImages: [
       { src: "/screenshots/mia-bestiary-ultimates.jpg", alt: "Bestiário da Mia mostrando as Ultimates Death is the Beginning e Wildfire Rebirth" },
@@ -127,13 +182,18 @@ export const heroes: HeroRecord[] = [
       { src: "/screenshots/mia-level-3.jpg", alt: "Ficha da Mia no nível 15 com tooltip de Deathrattle Self-destruction" },
       { src: "/screenshots/mia-level-8.jpg", alt: "Ficha da Mia no nível 15 com tooltip de Strengthen Incinerate" },
       { src: "/screenshots/mia-level-15.jpg", alt: "Progressão da Mia mostrando os efeitos dos níveis 12 e 15" },
+      { src: "/screenshots/mia/mia-exclusive-gems.jpg", alt: "Gemas exclusivas Pink Diamond, Jade e Amber da Mia" },
+      { src: "/screenshots/mia/mia-level-10.jpg", alt: "Progressão da Mia mostrando os dois efeitos do nível 10" },
+      { src: "/screenshots/mia/mia-level-20.jpg", alt: "Progressão da Mia mostrando os dois efeitos do nível 20" },
+      { src: "/screenshots/mia/mia-profession-bonuses.jpg", alt: "Bônus de 6% de dano da profissão nos níveis 25, 30, 35 e 40" },
     ],
     pending: [
-      "Confirmar o número do nível que aumenta a chance de divisão de Wildfire Rebirth.",
       "Registrar porcentagens, duração e limite de acúmulos dos aumentos de dano.",
       "Confirmar a chance base e a chance melhorada de Wildfire Rebirth.",
       "Verificar se elementais criados por Wildfire Rebirth também ativam normalmente todos os efeitos de morte.",
       "Esclarecer a diferença de nomenclatura entre Enhance • Burn e Strengthen • Incinerate na tela do nível 8.",
+      "Obter a descrição completa da Pink Diamond depois de '20% attack'.",
+      "Confirmar se também existem bônus de profissão nos níveis 45 e 50.",
     ],
   },
   {
