@@ -437,7 +437,8 @@ export const heroes: HeroRecord[] = [
     synergies: ["Yang: Rapid da Sakura acelera o motor de habilidades", "Cura e mitigação permitem explorar Night Raid sem perder o personagem", "Bite: Crazy facilita os procs de Bite: Continuous Attack contra boss"],
     evidence: ["Build completa registrada numa run de 15 níveis", "Dano acima de 100M observado em condições favoráveis"],
     pending: ["Confirmar se Berserk permanece até o fim da batalha depois da primeira ativação", "Medir Continuous Attack contra outras Blessings ofensivas", "Separar habilidades gratuitas por nível permanente"],
-  },  {
+  },
+  {
     slug: "kazers-darkblade",
     name: "Kazer’s Darkblade",
     aliases: ["Demon King", "Sword Demon", "Calamity do Fear"],
