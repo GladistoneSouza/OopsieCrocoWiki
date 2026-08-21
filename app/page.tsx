@@ -30,7 +30,7 @@ export default function Home() {
     <main>
       <header className="topbar">
         <a className="brand" href="#inicio" aria-label="Oopsie Croco Wiki — início"><span className="brand-mark">OC</span><span><b>Oopsie Croco</b><small>Wiki de campo</small></span></a>
-        <nav aria-label="Navegação principal"><a href="#equipamentos">Equipamentos</a><a href="#gemas">Gemas</a><a href="#coop">Co-op</a><a href="/personagens">Personagens</a></nav>
+        <nav aria-label="Navegação principal"><a href="#equipamentos">Equipamentos</a><a href="#gemas">Gemas</a><a href="#invocacoes">Invocações</a><a href="#coop">Co-op</a><a href="/personagens">Personagens</a></nav>
         <span className="version">v0.1 • em construção</span>
       </header>
 
@@ -49,17 +49,45 @@ export default function Home() {
       <section className="section recycle-section" id="reciclagem">
         <div className="section-head"><div><p className="eyebrow">SISTEMA 02</p><h2>Desmontagem</h2></div><p>Peças sem uso podem ser convertidas em ouro e material de refino. O preview mostra o retorno antes da confirmação.</p></div>
         <div className="recycle-layout">
-          <div className="table-wrap light-table"><table><thead><tr><th>Qualidade</th><th>Nível</th><th>Ouro</th><th>Material</th></tr></thead><tbody><tr><td><i className="q excellent"/>Excellent</td><td>88</td><td>366</td><td>90</td></tr><tr><td><i className="q rare"/>Rare</td><td>88</td><td>514</td><td>135</td></tr><tr><td><i className="q epic"/>Epic</td><td>83</td><td>585</td><td>234</td></tr><tr><td><i className="q epic"/>Epic</td><td>86</td><td>633</td><td>252</td></tr><tr><td><i className="q epic"/>Epic</td><td>88</td><td>663</td><td>270</td></tr></tbody></table></div>
-          <div className="sum-proof"><span>SOMA COMPROVADA</span><h3>O preview é aditivo</h3><p>Excellent 88 + Epic 88</p><strong>366 + 663 = 1.029 ouro</strong><strong>90 + 270 = 360 materiais</strong><hr/><p>Epic 88 + Epic 86</p><strong>663 + 633 = 1.296 ouro</strong><strong>270 + 252 = 522 materiais</strong></div>
+          <div className="table-wrap light-table"><table><thead><tr><th>Qualidade</th><th>Nível</th><th>Ouro</th><th>Material</th></tr></thead><tbody><tr><td><i className="q normal"/>Normal</td><td>80</td><td>179</td><td>36</td></tr><tr><td><i className="q excellent"/>Excellent</td><td>80</td><td>297</td><td>72</td></tr><tr><td><i className="q excellent"/>Excellent</td><td>88</td><td>366</td><td>90</td></tr><tr><td><i className="q rare"/>Rare</td><td>88</td><td>514</td><td>135</td></tr><tr><td><i className="q epic"/>Epic</td><td>83</td><td>585</td><td>234</td></tr><tr><td><i className="q epic"/>Epic</td><td>86</td><td>633</td><td>252</td></tr><tr><td><i className="q epic"/>Epic</td><td>88</td><td>663</td><td>270</td></tr><tr><td><i className="q legendary"/>Legendary</td><td>86</td><td>772</td><td>420</td></tr></tbody></table></div>
+          <div className="sum-proof"><span>LOTE COMPROVADO</span><h3>15 peças somadas</h3><p>1 Legendary, 6 Epic, 4 Rare, 3 Excellent e 1 Normal</p><strong>7.672 ouro</strong><strong>2.706 materiais</strong><hr/><p>A soma dos 15 valores individuais fecha exatamente com o preview do lote.</p><small>Nos exemplos de mesmo nível e qualidade, slots diferentes deram o mesmo retorno. A evidência indica que o valor depende de qualidade + nível, não do tipo da peça.</small></div>
         </div>
         <div className="filter-note"><b>Filtros disponíveis</b><span>Nível: abaixo de 20, 40, 60, 80, 100 ou 120.</span><span>Qualidade: abaixo de Common, Great, Rare, Epic, Legendary ou Mythical.</span></div>
-        <div className="mini-gallery"><figure><img src="/screenshots/dismantle-excellent.jpg" alt="Desmontagem de equipamento Excellent nível 88"/><figcaption>Excellent 88: 366 ouro + 90 materiais.</figcaption></figure><figure><img src="/screenshots/dismantle-epic-pair.jpg" alt="Desmontagem simultânea de dois equipamentos Epic"/><figcaption>Dois Epic selecionados: retorno somado antes de confirmar.</figcaption></figure></div>
+        <div className="mini-gallery"><figure><img src="/screenshots/dismantle-full-batch.jpg" alt="Preview de desmontagem de quinze equipamentos"/><figcaption>Lote completo: 15 peças retornam 7.672 ouro + 2.706 materiais.</figcaption></figure><figure><img src="/screenshots/dismantle-legendary-86.jpg" alt="Desmontagem de arma Legendary nível 86"/><figcaption>Legendary 86: 772 ouro + 420 materiais.</figcaption></figure><figure><img src="/screenshots/dismantle-excellent.jpg" alt="Desmontagem de equipamento Excellent nível 88"/><figcaption>Excellent 88: 366 ouro + 90 materiais.</figcaption></figure><figure><img src="/screenshots/dismantle-epic-pair.jpg" alt="Desmontagem simultânea de dois equipamentos Epic"/><figcaption>Dois Epic selecionados: retorno somado antes de confirmar.</figcaption></figure></div>
       </section>
 
       <section className="section dark-section" id="gemas">
         <div className="section-head"><div><p className="eyebrow">SISTEMA 03</p><h2>Gemas & síntese</h2></div><p>Até cinco gemas por peça. Quatro gemas idênticas e da mesma qualidade podem ser sintetizadas para gerar uma superior.</p></div>
         <div className="gem-layout"><div className="gem-stack" aria-label="Exemplo de síntese"><div className="gem purple">◆</div><span>× 4</span><i>→</i><div className="gem gold">◆</div><small>Mesma gema + mesma qualidade</small></div><div className="table-wrap"><table><thead><tr><th>Bônus documentado</th><th>Total atual</th><th>Origem</th></tr></thead><tbody>{gems.map(([a,b,c]) => <tr key={a}><td>{a}</td><td>{b}</td><td>{c}</td></tr>)}</tbody></table></div></div>
         <div className="warning"><b>Nota de fórmula</b><span>Ainda precisamos testar se categorias diferentes somam ou multiplicam entre si. Os valores acima registram apenas os bônus visíveis.</span></div>
+        <div className="coop-facts">
+          <article><span>REFINO CONFIRMADO</span><b>Stage Mastery</b><p>Exemplo observado: Stage Battle Damage +5,62%.</p></article>
+          <article><span>4 CLASSES</span><b>Master of All Trades</b><p>Exemplo observado: All Damage +6,06% e Damage Reduction +6,06% ao usar quatro classes.</p></article>
+          <article><span>DIREÇÃO DE BUILD</span><b>Bônus universais primeiro</b><p>All Damage, Adventurer Damage e Attack servem ao núcleo inteiro; bônus de classe devem acompanhar os carries realmente usados.</p></article>
+        </div>
+      </section>
+
+      <section className="section recycle-section" id="invocacoes">
+        <div className="section-head"><div><p className="eyebrow">ECONOMIA 01</p><h2>Marco de 50 invocações</h2></div><p>Os três baús são cumulativos. A coleta registrada entregou todas as recompensas garantidas de uma vez.</p></div>
+        <div className="coop-facts">
+          <article><span>COMMON CHEST</span><b>250 moedas</b><p>Moedas para o Hero Exchange.</p></article>
+          <article><span>MONTHLY PASS</span><b>250 moedas</b><p>Também entrega moedas para o Hero Exchange.</p></article>
+          <article><span>LIFETIME PASS</span><b>2 fichas míticas</b><p>Fichas vermelhas para a linha de invocação mítica.</p></article>
+          <article><span>TOTAL COM PASSES</span><b>500 + 2</b><p>500 moedas de troca e 2 fichas míticas a cada ciclo de 50 summons normais.</p></article>
+        </div>
+        <aside className="example"><span>PROJEÇÃO DIRETA</span><p><b>250 summons normais</b> completam cinco ciclos: <strong>2.500 moedas do Hero Exchange + 10 fichas míticas.</strong> A recompensa opcional marcada como “Chance to Obtain” é adicional; ela não apareceu na coleta documentada.</p></aside>
+        <div className="warning"><b>Pity paralelo</b><span>O contador de Legendary continuou ativo depois da coleta. O marco dos baús não substitui nem reinicia a garantia de herói dourado.</span></div>
+      </section>
+
+      <section className="section">
+        <div className="section-head"><div><p className="eyebrow">ESTRATÉGIA DE CAMPO</p><h2>Núcleo 4 + 1</h2></div><p>Estrutura observada para runs longas. A quinta vaga responde ao problema específico da fase.</p></div>
+        <div className="run-flow">
+          <article><span>FRONTLINE + FEAR</span><h3>Kazer’s Darkblade</h3><p>Tanka, aplica Fear e converte os acúmulos em dano. A cura durante Blade Storm é o próximo breakpoint importante.</p></article>
+          <article><span>CARRY DE BOSS</span><h3>Shadow Wolf</h3><p>Escala Blood, múltiplos Bites e dano com HP baixo.</p></article>
+          <article><span>INFRAESTRUTURA</span><h3>Sakura</h3><p>Cura, shield, mana e Yang: Rapid para acelerar o time inteiro.</p></article>
+          <article><span>CORPOS + AGGRO</span><h3>Maya</h3><p>Esqueletos absorvem ataques, protegem a retaguarda e mantêm dano constante.</p></article>
+        </div>
+        <aside className="counter-rule"><b>Quinta vaga flexível</b><span>Arqueiro quando falta DPS; Controller quando uma interrupção decide a luta; Tank apenas quando frontline e summons não bastam; segundo Summoner quando mais corpos e aggro oferecem mais valor.</span></aside>
       </section>
 
       <section className="section" id="coop">
