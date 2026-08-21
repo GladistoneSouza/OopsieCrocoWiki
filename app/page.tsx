@@ -1,4 +1,6 @@
 import { heroes } from "./data/heroes";
+import { combatRuns } from "./data/combatRuns";
+import { newlyDocumentedEnemies } from "./data/enemies";
 
 const rarities = [
   { name: "R", color: "Azul", note: "Base da progressão de heróis" },
@@ -119,6 +121,18 @@ export default function Home() {
           <figure><img src="/screenshots/coop-ranking.jpg" alt="Ranking do Co-op Spire"/><figcaption><b>Ranking</b><span>Conta L2darkness no 15º lugar, com progresso 5–10.</span></figcaption></figure>
           <figure><img src="/screenshots/coop-drop-rates.jpg" alt="Probabilidades de equipamentos na dificuldade 1"/><figcaption><b>Drop da dificuldade 1</b><span>Probabilidades oficiais exibidas dentro do jogo.</span></figcaption></figure>
         </div>
+      </section>
+
+      <section className="section field-runs" id="runs">
+        <div className="section-head"><div><p className="eyebrow">LABORATÓRIO DE CAMPO</p><h2>Runs documentadas</h2></div><p>Resultados completos usados para validar builds e sinergias. Os números registram cada tentativa específica, não uma promessa de dano fixo.</p></div>
+        <div className="documented-runs">{combatRuns.map((run) => <article className="documented-run" key={run.title}>
+          <header><div><span>{run.stage} • BOSS EM {run.timerAtBoss}</span><h3>{run.title}</h3></div><b>{run.status}</b></header>
+          <p>{run.summary}</p>
+          <div className="damage-board">{run.damage.map((entry) => <div key={entry.hero}><span>{entry.hero}</span><strong>{entry.damage}</strong>{entry.note ? <small>{entry.note}</small> : null}</div>)}</div>
+          <ul>{run.highlights.map((item) => <li key={item}>{item}</li>)}</ul>
+          <div className="run-evidence">{run.evidenceImages.map((item) => <figure key={item.src}><a href={item.src} target="_blank" rel="noreferrer"><img src={item.src} alt={item.alt} loading="lazy"/></a><figcaption>{item.alt}</figcaption></figure>)}</div>
+        </article>)}</div>
+        <div className="new-enemies"><div className="detail-title"><span>MECÂNICAS ENCONTRADAS</span><b>CONFIRMAÇÃO SEPARADA</b></div>{newlyDocumentedEnemies.map((enemy) => <article key={enemy.name}><div><h3>{enemy.name}</h3><b>{enemy.skill}</b></div><p>{enemy.effect}</p><small>{enemy.confidence}</small></article>)}</div>
       </section>
 
       <section className="section heroes" id="herois">
