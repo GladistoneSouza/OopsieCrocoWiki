@@ -52,7 +52,7 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
         {hero.exclusiveGems?.length ? <section className="exclusive-gems"><p className="eyebrow">GEMAS EXCLUSIVAS</p><h2>Equipamentos próprios da personagem</h2><div>{hero.exclusiveGems.map((gem) => <article key={gem.name}><span>{gem.slot}</span><h3>{gem.name}</h3><b>{gem.baseStat}</b><p>{gem.effect}</p></article>)}</div></section> : null}
 
         <div className="character-columns">
-          <section><p className="eyebrow">POR NÍVEL</p><h2>Habilidades gratuitas</h2>{hero.levelSkills.length ? hero.levelSkills.map((skill) => <article className="info-card" key={skill.name}><h3>{skill.name}</h3><p>{skill.description}</p></article>) : <p className="empty-state">Ainda precisamos registrar os níveis e os nomes oficiais.</p>}</section>
+          <section><p className="eyebrow">POR NÍVEL</p><h2>Habilidades gratuitas</h2>{hero.levelSkills.length ? hero.levelSkills.map((skill) => <article className="info-card" key={skill.name}><h3>{skill.name}</h3><p>{skill.description}</p>{skill.source ? <small>Fonte: {skill.source}</small> : null}</article>) : <p className="empty-state">Ainda precisamos registrar os níveis e os nomes oficiais.</p>}</section>
           <section><p className="eyebrow">DENTRO DA RUN</p><h2>Árvores e builds</h2>{hero.builds.length ? hero.builds.map((build) => <article className="build-detail" key={build.name}><span>{build.status}</span><h3>{build.name}</h3><p>{build.summary}</p><ol>{build.priorities.map((item) => <li key={item}>{item}</li>)}</ol></article>) : <p className="empty-state">Árvore ainda não documentada.</p>}</section>
         </div>
 
@@ -61,7 +61,7 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
           <section><p className="eyebrow">PENDÊNCIAS</p><ul className="plain-list pending">{hero.pending.map((item) => <li key={item}>{item}</li>)}</ul></section>
         </div>
         <aside className="evidence"><b>Fontes desta ficha</b><span>{hero.evidence.join(" • ")}</span></aside>
-        {hero.evidenceImages?.length ? <section className="evidence-gallery"><p className="eyebrow">EVIDÊNCIAS VISUAIS</p><h2>Prints originais</h2><div>{hero.evidenceImages.map((item) => <figure key={item.src}><a href={item.src}><img src={item.src} alt={item.caption} loading="lazy" /></a><figcaption>{item.caption}</figcaption></figure>)}</div></section> : null}
+        {hero.evidenceImages?.length ? <section className="evidence-gallery"><p className="eyebrow">EVIDÊNCIAS VISUAIS</p><h2>Prints originais</h2><div>{hero.evidenceImages.map((item) => <figure key={item.src}><a href={item.src}><img src={item.src} alt={item.caption ?? item.alt ?? "Evidência visual"} loading="lazy" /></a><figcaption>{item.caption ?? item.alt}</figcaption></figure>)}</div></section> : null}
       </article>
     </main>
   );
