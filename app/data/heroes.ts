@@ -511,6 +511,10 @@ export const heroes: HeroRecord[] = [
       { name: "Nível 20 — Fear Settlement / Shadow Overlap", description: "Cada corte pode aplicar Fear; quando um clone desaparece, existe chance de invocá-lo novamente." },
       { name: "Nível 25 — Fear Settlement / Shadows Lurking", description: "Cada corte pode aumentar o dano de Fear recebido pelo alvo; a quantidade de clones possui chance de aumentar em 1." },
       { name: "Nível 30 — bônus de profissão", description: "Aumenta em 8% o dano dos personagens da profissão Calamity." },
+      { name: "Nível 35 — bônus de profissão", description: "Aumenta em 8% o dano dos personagens da profissão Calamity." },
+      { name: "Nível 40 — bônus de profissão", description: "Aumenta em 8% o dano dos personagens da profissão Calamity." },
+      { name: "Nível 45 — bônus de profissão", description: "Aumenta em 8% o dano dos personagens da profissão Calamity." },
+      { name: "Nível 50 — bônus de profissão", description: "Aumenta em 8% o dano dos personagens da profissão Calamity." },
     ],
     builds: [
       {
@@ -541,10 +545,11 @@ export const heroes: HeroRecord[] = [
       { src: "/screenshots/sword-demon/bestiary-ultimates.jpg", alt: "Fear into the Soul, Bloody Swordsmanship, Fear Resolution e Many Shadows" },
       { src: "/screenshots/sword-demon/progression-15-20.jpg", alt: "Progressão permanente dos níveis 15 e 20" },
       { src: "/screenshots/sword-demon/progression-25-30.jpg", alt: "Progressão permanente dos níveis 25 e 30" },
+      { src: "/screenshots/sword-demon/progression-30-50.jpg", alt: "Bônus de 8% de dano de profissão nos níveis 30, 35, 40, 45 e 50" },
       { src: "/screenshots/runs/summon-army-sword-demon.jpg", alt: "Build de clones e Fear usada numa run" },
       { src: "/screenshots/runs/marksman-counter-result.jpg", alt: "Sword Demon encerra a segunda run com 23,96M" },
     ],
-    pending: ["Obter o valor cortado de redução de cura de Fear into the Soul", "Confirmar os nomes divergentes Blade of Fear/Dreadblade e Gale/Swift Wind", "Registrar a progressão permanente acima do nível 30"],
+    pending: ["Obter o valor cortado de redução de cura de Fear into the Soul", "Confirmar os nomes divergentes Blade of Fear/Dreadblade e Gale/Swift Wind"],
   },
   {
     slug: "maya-necromancer-apprentice",
