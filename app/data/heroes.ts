@@ -29,11 +29,182 @@ export type HeroRecord = {
   builds: HeroBuild[];
   synergies: string[];
   evidence: string[];
-  evidenceImages?: { src: string; alt: string }[];
+  evidenceImages?: { src: string; alt?: string; caption?: string }[];
   pending: string[];
 };
 
 export const heroes: HeroRecord[] = [
+  {
+    slug: "lilith",
+    name: "Lilith · Charmflame",
+    aliases: ["Dark Knight", "Lilith", "Calamity dourada"],
+    className: "Calamity",
+    rarity: "SSR",
+    role: "Dano contínuo / debuff / sustentação",
+    summary: "Dark Knight SSR baseada em Nightmare: combina dano contínuo, redução de cura, propagação, controle e recuperação própria.",
+    fieldNote: "A tela atual mostra Lilith no nível 13. Nightmare é a mecânica própria dela e não deve ser confundida com o Fear do Sword Demon.",
+    image: "/screenshots/lilith/lilith-hero.jpg",
+    identity: [
+      "Nome exibido na ficha: Lilith · Charmflame",
+      "Gênero: feminino",
+      "Raça: Demon Race",
+      "Profissão: Calamity",
+    ],
+    story: [
+      "Lilith é descrita como pequena, destrutiva e travessa dentro do clã demoníaco. Luta de perto com armas revestidas de ossos e cristais mágicos e também domina magia de pesadelos.",
+      "Em Runecity, usou ilusões de Nightmare para espalhar medo e confusão, escapar dos guardas e preparar armadilhas. Os magos da cidade começaram a atravessar as ilusões, revelando resistência mágica e uma força desconhecida.",
+      "Os capítulos seguintes da história são liberados nos níveis 15, 20, 25 e 30.",
+    ],
+    stats: [
+      "Nível observado: 13",
+      "Poder mais recente: 18.894",
+      "Ataque mais recente: 14,13K",
+      "HP mais recente: 256,12K",
+      "Defesa mais recente: 8.825",
+      "Fragmentos: 22/30",
+      "Recompensa global: Dano Crítico +18,2%",
+      "Snapshot no nível 12: poder 16.067 · ataque 12,04K · HP 214,74K · defesa 7.577",
+      "No snapshot do nível 12: 32/30 fragmentos e Dano Crítico global +16,8%",
+    ],
+    exclusiveGems: [
+      {
+        name: "Sapphire",
+        slot: "Helmet",
+        baseStat: "DEF +4%",
+        effect: "Depois de lançar Nightmare, o dano da própria Dark Knight aumenta em 6%.",
+      },
+      {
+        name: "Amethyst",
+        slot: "Weapon",
+        baseStat: "ATK +6%",
+        effect: "Nightmare Curse tem 35% de chance de ser lançada novamente.",
+      },
+      {
+        name: "Ruby",
+        slot: "Shield",
+        baseStat: "ATK +8%",
+        effect: "Crítico da Dark Knight +8%.",
+      },
+    ],
+    levelSkills: [
+      {
+        name: "Habilidade base — Apply Nightmare",
+        description: "Causa dano a um inimigo aleatório e aplica Nightmare. Nightmare causa dano contínuo e reduz a recuperação de vida do inimigo.",
+        source: "Texto confirmado no tooltip da habilidade.",
+      },
+      {
+        name: "Nível 3 — Twins Nightmare",
+        description: "Começa a batalha com Twins Nightmare obtido.",
+        source: "Texto confirmado na tela de progressão.",
+      },
+      {
+        name: "Nível 5 — recuperação de HP",
+        description: "Cada Nightmare lançado no inimigo restaura vida para a própria Lilith.",
+        source: "Texto confirmado na tela de progressão.",
+      },
+      {
+        name: "Nível 8 — Sepsis Curse / Septic Curse",
+        description: "Começa com a Curse obtida. O tooltip usa o nome Septic Curse e informa que inimigos carregando Nightmare têm seus efeitos de cura reduzidos.",
+        source: "A lista mostra Sepsis Curse; o tooltip mostra Septic Curse.",
+      },
+      {
+        name: "Nível 10 — Dream Erosion",
+        description: "Inimigos carregando Nightmare recebem dano muito aumentado.",
+        source: "Texto confirmado na tela de progressão.",
+      },
+      {
+        name: "Nível 10 — Eternal Reincarnation",
+        description: "Aumenta a chance de transferência do Nightmare e fortalece a redução de cura.",
+        source: "Texto confirmado na tela de progressão.",
+      },
+      {
+        name: "Nível 12 — Blessing adicional",
+        description: "Ganha uma Blessing adicional depois de selecionar uma Ultimate Skill.",
+        source: "Confirmada no print de progressão do nível 13.",
+      },
+      {
+        name: "Nível 15 — recuperação de mana",
+        description: "Cada Nightmare lançado no inimigo restaura mana para a própria Lilith.",
+        source: "Texto confirmado na tela; nível ainda bloqueado.",
+      },
+      {
+        name: "Nível 20 — Dream Erosion",
+        description: "Nightmare passa a causar mais dano a cada segundo.",
+        source: "Texto confirmado na tela; nível ainda bloqueado.",
+      },
+      {
+        name: "Nível 20 — Nightmare Reincarnation",
+        description: "Nightmare causa dano quando termina.",
+        source: "Texto confirmado na tela; nível ainda bloqueado.",
+      },
+      {
+        name: "Níveis 25, 30, 35, 40, 45 e 50 — bônus de profissão",
+        description: "Cada um desses níveis aumenta em 6% o dano dos personagens desta profissão.",
+        source: "Todos os seis breakpoints foram confirmados nas telas de progressão.",
+      },
+    ],
+    builds: [
+      {
+        name: "Nightmare ofensivo",
+        status: "em teste",
+        summary: "Prioriza a pressão de dano contínuo e o dano de encerramento do Nightmare.",
+        priorities: ["Fierce Nightmare", "Crazy Nightmare", "Dream Erosion", "Nightmare Reincarnation"],
+      },
+      {
+        name: "Sustentação",
+        status: "em teste",
+        summary: "Combina a recuperação natural do kit com Blessings de cura.",
+        priorities: ["Bloodthirsty Curse", "Soul-Draining Curse"],
+      },
+      {
+        name: "Controle e anti-cura",
+        status: "em teste",
+        summary: "Reduz a capacidade de resposta e sustentação dos inimigos.",
+        priorities: ["Paralyzing Curse", "Weaken Curse", "Septic Curse"],
+      },
+      {
+        name: "Propagação de Nightmare",
+        status: "em teste",
+        summary: "Espalha Nightmare entre múltiplos alvos e prolonga sua presença em combate.",
+        priorities: ["Twin Nightmare", "Overtime Nightmare", "Nightmare Reincarnation"],
+      },
+    ],
+    synergies: [
+      "Composições Calamity voltadas a debuffs e lutas prolongadas",
+      "Fases com vários inimigos, onde Nightmare pode se espalhar",
+      "Inimigos com cura ou sustain elevado",
+      "Sword Demon como núcleo de Fear, mantendo Nightmare como mecânica separada",
+    ],
+    evidence: [
+      "Ficha de identidade e visual oficial",
+      "Histórias 1 e 2 e travas dos capítulos seguintes",
+      "Habilidade base e telas de progressão dos níveis 3 a 50",
+      "Snapshot histórico da conta no nível 12",
+      "Tela completa das três gemas exclusivas",
+    ],
+    evidenceImages: [
+      { src: "/screenshots/lilith/hero-background.jpg", caption: "Identidade oficial, raça, profissão e background" },
+      { src: "/screenshots/lilith/story-1.jpg", caption: "Story 1" },
+      { src: "/screenshots/lilith/story-2.jpg", caption: "Story 2" },
+      { src: "/screenshots/lilith/level-12-15.jpg", caption: "Níveis 12 e 15, atributos e recompensa global" },
+      { src: "/screenshots/lilith/level-15-20.jpg", caption: "Níveis 15 e 20" },
+      { src: "/screenshots/lilith/level-20-25.jpg", caption: "Níveis 20 e 25" },
+      { src: "/screenshots/lilith/apply-nightmare.jpg", caption: "Habilidade base Apply Nightmare" },
+      { src: "/screenshots/lilith/levels-3-8.jpg", caption: "Níveis 3, 5 e 8" },
+      { src: "/screenshots/lilith/septic-curse.jpg", caption: "Tooltip de Septic Curse" },
+      { src: "/screenshots/lilith/level-12-snapshot.jpg", caption: "Snapshot histórico no nível 12" },
+      { src: "/screenshots/lilith/exclusive-gems.jpg", caption: "Sapphire, Amethyst e Ruby exclusivas" },
+      { src: "/screenshots/lilith/level-10-12.jpg", caption: "Níveis 10 e 12" },
+      { src: "/screenshots/lilith/profession-levels-25-40.jpg", caption: "Bônus de profissão dos níveis 25 a 40" },
+      { src: "/screenshots/lilith/profession-levels-35-50.jpg", caption: "Bônus de profissão dos níveis 35 a 50" },
+    ],
+    pending: [
+      "Adicionar os prints do Blessing Bestiary e mapear a árvore completa",
+      "Confirmar os valores numéricos, duração e chance de cada Nightmare",
+      "Testar se Twin Nightmare gera cura e mana separadamente por alvo",
+      "Confirmar qual variante do sobrenome é canônica nas traduções: Charmflame, Flamecharm ou Meiyan",
+    ],
+  },
   {
     slug: "mia-morning-dew",
     name: "Mia Morning Dew",
@@ -42,13 +213,17 @@ export const heroes: HeroRecord[] = [
     rarity: "SSR",
     role: "Invocação / queimadura / amplificação de dano",
     summary: "Invocadora SSR que cria Elementais de Fogo por 8 segundos e converte a presença e a morte deles em dano, mana e fortalecimento do grupo.",
-    fieldNote: "Ficha baseada somente nas descrições exibidas pelo jogo. A tela ainda não informa duração, limite de acúmulos nem as chances exatas de Wildfire Rebirth.",
+    fieldNote: "Ficha baseada somente nas descrições exibidas pelo jogo. Diversos efeitos informam que o dano ou a chance aumenta, mas omitem o multiplicador, a duração, a porcentagem e o limite de acúmulos. Esses valores permanecem como não informados, sem estimativa pela tradução.",
     image: "/screenshots/mia/mia-profession-bonuses.jpg",
     identity: [
       "Nome exibido na ficha: Mia Morning Dew",
       "Gênero: feminino",
       "Raça: Human Race",
       "Profissão: Summon",
+      "Alcance exibido: 4",
+      "Visual padrão: Yaoyac",
+      "Skin alternativa: Iridescent, liberada no nível 20",
+      "A tela informa que desbloquear skins aumenta todos os atributos",
       "Organização citada: Forbidden Rune Sect, em Runecity, capital da Valern Federation",
     ],
     story: [
@@ -64,6 +239,7 @@ export const heroes: HeroRecord[] = [
       "Ataque: 18,15K",
       "HP: 220,27K",
       "Defesa: 7.589",
+      "Atributos exibidos na tela de skins: Ataque 10, Defesa 5 e HP 150",
       "Fragmentos: 35/60",
       "Recompensa global: Dano Crítico +21%",
     ],
@@ -72,7 +248,7 @@ export const heroes: HeroRecord[] = [
         name: "Pink Diamond",
         slot: "Armor",
         baseStat: "DEF +4%",
-        effect: "Ao ser invocado, o Fire Element concede a um aliado aleatório um bônus de 20% de ataque. O restante da descrição está cortado na tela disponível.",
+        effect: "Ao ser invocado, o Fire Element concede a um aliado aleatório um bônus de 20% de ataque. A duração, o acúmulo e a possibilidade de renovação não são informados na tela.",
       },
       {
         name: "Jade",
@@ -190,6 +366,7 @@ export const heroes: HeroRecord[] = [
       "Tooltips de Self-destruction e Incinerate",
       "Progressão confirmada até o nível 50",
       "Tela das três gemas exclusivas",
+      "Tela de alcance e tela das skins Yaoyac e Iridescent",
       "Background e capítulos 1–3 da história",
     ],
     evidenceImages: [
@@ -204,6 +381,8 @@ export const heroes: HeroRecord[] = [
       { src: "/screenshots/mia/mia-level-20.jpg", alt: "Progressão da Mia mostrando os dois efeitos do nível 20" },
       { src: "/screenshots/mia/mia-profession-bonuses.jpg", alt: "Bônus de 6% de dano da profissão nos níveis 25, 30, 35 e 40" },
       { src: "/screenshots/mia/mia-profession-bonuses-45-50.jpg", alt: "Bônus de 6% de dano da profissão nos níveis 35, 40, 45 e 50" },
+      { src: "/screenshots/mia/mia-range-4.jpg", alt: "Ficha da Mia exibindo alcance 4" },
+      { src: "/screenshots/mia/mia-skins.jpg", alt: "Skins Yaoyac e Iridescent da Mia; Iridescent é liberada no nível 20" },
       { src: "/screenshots/mia/story-background.jpg", alt: "Hero Background da Mia com identidade e origem da personagem" },
       { src: "/screenshots/mia/story-1.jpg", alt: "Primeiro capítulo da história da Mia" },
       { src: "/screenshots/mia/story-2.jpg", alt: "Segundo capítulo da história da Mia sobre os fragmentos de Dragonbreath" },
@@ -224,7 +403,7 @@ export const heroes: HeroRecord[] = [
       "Confirmar a chance base e a chance melhorada de Wildfire Rebirth.",
       "Verificar se elementais criados por Wildfire Rebirth também ativam normalmente todos os efeitos de morte.",
       "Esclarecer a diferença de nomenclatura entre Enhance • Burn e Strengthen • Incinerate na tela do nível 8.",
-      "Obter a descrição completa da Pink Diamond depois de '20% attack'.",
+      "Testar a duração, o acúmulo, a renovação e os possíveis alvos do bônus de 20% de ataque da Pink Diamond; a tela não informa esses parâmetros.",
       "Confirmar a inconsistência de nomes entre Mia Morning Dew, Mia Morningdew e Mia Chenlu nas telas da história.",
       "Registrar o conteúdo dos capítulos 4–6 quando forem desbloqueados.",
     ],
