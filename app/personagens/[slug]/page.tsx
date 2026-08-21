@@ -29,13 +29,23 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
         <span className="version">Ficha individual</span>
       </header>
       <article className="character-page">
-        <header className="character-header">
-          <p className="eyebrow">{hero.className}{hero.rarity ? ` • ${hero.rarity}` : ""}</p>
-          <h1>{hero.name}</h1>
-          {hero.aliases?.length ? <p className="aliases">Também conhecido como: {hero.aliases.join(", ")}</p> : null}
-          <p className="character-lede">{hero.summary}</p>
-          <div className="status-chips"><span>{hero.role}</span><span>Dados de campo</span></div>
+        <header className={`character-header${hero.image ? " with-portrait" : ""}`}>
+          <div className="character-intro">
+            <p className="eyebrow">{hero.className}{hero.rarity ? ` • ${hero.rarity}` : ""}</p>
+            <h1>{hero.name}</h1>
+            {hero.aliases?.length ? <p className="aliases">Também conhecido como: {hero.aliases.join(", ")}</p> : null}
+            <p className="character-lede">{hero.summary}</p>
+            <div className="status-chips"><span>{hero.role}</span><span>Dados de campo</span></div>
+          </div>
+          {hero.image ? <figure className="character-portrait"><img src={hero.image} alt={`Visual oficial de ${hero.name}`} /><figcaption>Visual oficial no jogo</figcaption></figure> : null}
         </header>
+
+        {hero.identity?.length || hero.stats?.length ? <div className="character-facts">
+          {hero.identity?.length ? <section><p className="eyebrow">IDENTIDADE</p><ul>{hero.identity.map((item) => <li key={item}>{item}</li>)}</ul></section> : null}
+          {hero.stats?.length ? <section><p className="eyebrow">CONTA OBSERVADA</p><ul>{hero.stats.map((item) => <li key={item}>{item}</li>)}</ul></section> : null}
+        </div> : null}
+
+        {hero.story?.length ? <section className="character-story"><p className="eyebrow">HISTÓRIA</p><h2>Pesadelos de Runecity</h2>{hero.story.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section> : null}
 
         <section className="character-note"><b>Observação prática</b><p>{hero.fieldNote}</p></section>
 
@@ -49,6 +59,7 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
           <section><p className="eyebrow">PENDÊNCIAS</p><ul className="plain-list pending">{hero.pending.map((item) => <li key={item}>{item}</li>)}</ul></section>
         </div>
         <aside className="evidence"><b>Fontes desta ficha</b><span>{hero.evidence.join(" • ")}</span></aside>
+        {hero.evidenceImages?.length ? <section className="evidence-gallery"><p className="eyebrow">EVIDÊNCIAS VISUAIS</p><h2>Prints originais</h2><div>{hero.evidenceImages.map((item) => <figure key={item.src}><a href={item.src}><img src={item.src} alt={item.caption} loading="lazy" /></a><figcaption>{item.caption}</figcaption></figure>)}</div></section> : null}
       </article>
     </main>
   );

@@ -20,14 +20,129 @@ export type HeroRecord = {
   role: string;
   summary: string;
   fieldNote: string;
+  image?: string;
+  identity?: string[];
+  story?: string[];
+  stats?: string[];
   levelSkills: HeroSkill[];
   builds: HeroBuild[];
   synergies: string[];
   evidence: string[];
+  evidenceImages?: { src: string; caption: string }[];
   pending: string[];
 };
 
 export const heroes: HeroRecord[] = [
+  {
+    slug: "lilith",
+    name: "Lilith · Charmflame",
+    aliases: ["Dark Knight", "Lilith", "Calamity dourada"],
+    className: "Calamity",
+    rarity: "SSR",
+    role: "Dano contínuo / debuff / sustentação",
+    summary: "Dark Knight SSR baseada em Nightmare: combina dano contínuo, redução de cura, propagação, controle e recuperação própria.",
+    fieldNote: "A tela atual mostra Lilith no nível 13. Nightmare é a mecânica própria dela e não deve ser confundida com o Fear do Sword Demon.",
+    image: "/screenshots/lilith/lilith-hero.jpg",
+    identity: [
+      "Nome exibido na ficha: Lilith · Charmflame",
+      "Gênero: feminino",
+      "Raça: Demon Race",
+      "Profissão: Calamity",
+    ],
+    story: [
+      "Lilith é descrita como pequena, destrutiva e travessa dentro do clã demoníaco. Luta de perto com armas revestidas de ossos e cristais mágicos e também domina magia de pesadelos.",
+      "Em Runecity, usou ilusões de Nightmare para espalhar medo e confusão, escapar dos guardas e preparar armadilhas. Os magos da cidade começaram a atravessar as ilusões, revelando resistência mágica e uma força desconhecida.",
+      "Os capítulos seguintes da história são liberados nos níveis 15, 20, 25 e 30.",
+    ],
+    stats: [
+      "Nível observado: 13",
+      "Poder: 18.486",
+      "Ataque: 13,68K",
+      "HP: 252,79K",
+      "Defesa: 8.705",
+      "Fragmentos: 22/30",
+      "Recompensa global: Dano Crítico +18,2%",
+    ],
+    levelSkills: [
+      {
+        name: "Nível 12 — Blessing adicional",
+        description: "Ganha uma Blessing adicional depois de selecionar uma Ultimate Skill.",
+        source: "Confirmada no print de progressão do nível 13.",
+      },
+      {
+        name: "Nível 15 — recuperação de mana",
+        description: "Cada Nightmare lançado no inimigo restaura mana para a própria Lilith.",
+        source: "Texto confirmado na tela; nível ainda bloqueado.",
+      },
+      {
+        name: "Nível 20 — Dream Erosion",
+        description: "Nightmare passa a causar mais dano a cada segundo.",
+        source: "Texto confirmado na tela; nível ainda bloqueado.",
+      },
+      {
+        name: "Nível 20 — Nightmare Reincarnation",
+        description: "Nightmare causa dano quando termina.",
+        source: "Texto confirmado na tela; nível ainda bloqueado.",
+      },
+      {
+        name: "Nível 25 — bônus de profissão",
+        description: "Aumenta em 6% o dano dos personagens desta profissão.",
+        source: "Texto confirmado na tela; nível ainda bloqueado.",
+      },
+    ],
+    builds: [
+      {
+        name: "Nightmare ofensivo",
+        status: "em teste",
+        summary: "Prioriza a pressão de dano contínuo e o dano de encerramento do Nightmare.",
+        priorities: ["Fierce Nightmare", "Crazy Nightmare", "Dream Erosion", "Nightmare Reincarnation"],
+      },
+      {
+        name: "Sustentação",
+        status: "em teste",
+        summary: "Combina a recuperação natural do kit com Blessings de cura.",
+        priorities: ["Bloodthirsty Curse", "Soul-Draining Curse"],
+      },
+      {
+        name: "Controle e anti-cura",
+        status: "em teste",
+        summary: "Reduz a capacidade de resposta e sustentação dos inimigos.",
+        priorities: ["Paralyzing Curse", "Weaken Curse", "Septic Curse"],
+      },
+      {
+        name: "Propagação de Nightmare",
+        status: "em teste",
+        summary: "Espalha Nightmare entre múltiplos alvos e prolonga sua presença em combate.",
+        priorities: ["Twin Nightmare", "Overtime Nightmare", "Nightmare Reincarnation"],
+      },
+    ],
+    synergies: [
+      "Composições Calamity voltadas a debuffs e lutas prolongadas",
+      "Fases com vários inimigos, onde Nightmare pode se espalhar",
+      "Inimigos com cura ou sustain elevado",
+      "Sword Demon como núcleo de Fear, mantendo Nightmare como mecânica separada",
+    ],
+    evidence: [
+      "Ficha de identidade e visual oficial",
+      "Histórias 1 e 2 e travas dos capítulos seguintes",
+      "Telas de progressão dos níveis 12 a 25",
+    ],
+    evidenceImages: [
+      { src: "/screenshots/lilith/hero-background.jpg", caption: "Identidade oficial, raça, profissão e background" },
+      { src: "/screenshots/lilith/story-1.jpg", caption: "Story 1" },
+      { src: "/screenshots/lilith/story-2.jpg", caption: "Story 2" },
+      { src: "/screenshots/lilith/level-12-15.jpg", caption: "Níveis 12 e 15, atributos e recompensa global" },
+      { src: "/screenshots/lilith/level-15-20.jpg", caption: "Níveis 15 e 20" },
+      { src: "/screenshots/lilith/level-20-25.jpg", caption: "Níveis 20 e 25" },
+    ],
+    pending: [
+      "Adicionar os prints do Blessing Bestiary e mapear a árvore completa",
+      "Confirmar os valores numéricos, duração e chance de cada Nightmare",
+      "Testar se Twin Nightmare gera cura e mana separadamente por alvo",
+      "Registrar o texto completo do bônus do nível 30",
+      "Confirmar qual variante do sobrenome é canônica nas traduções: Charmflame, Flamecharm ou Meiyan",
+    ],
+  },
   {
     slug: "shadow-wolf",
     name: "Shadow Wolf",
@@ -115,97 +230,6 @@ export const heroes: HeroRecord[] = [
     synergies: ["Carregadores que operam com HP baixo", "Composições frágeis de retaguarda"],
     evidence: ["Telas de equipamentos e runs compartilhadas"],
     pending: ["Nome oficial completo", "Árvore de habilidades", "Breakpoints por nível"],
-  },
-  {
-    slug: "lilith",
-    name: "Lilith",
-    aliases: ["Dark Knight", "Calamity dourada"],
-    className: "Calamity",
-    rarity: "SSR",
-    role: "Dano contínuo / debuff / sustentação",
-    summary: "Calamity dourada baseada em Nightmare: aplica dano contínuo, reduz cura recebida e pode combinar propagação, controle e autocura.",
-    fieldNote: "Observada no nível 13. É uma alternativa SSR para a função Calamity, mas sua mecânica de Nightmare é distinta do Fear do Sword Demon.",
-    levelSkills: [
-      {
-        name: "Apply Nightmare",
-        description: "Causa dano a um inimigo aleatório e aplica Nightmare; o efeito causa dano contínuo e reduz a cura recebida pelo alvo.",
-        source: "Confirmada em telas do personagem.",
-      },
-      {
-        name: "Nível 3 — Twin Nightmare",
-        description: "Ao entrar em batalha, aplica Nightmare a dois inimigos.",
-        source: "Confirmada em tela de evolução.",
-      },
-      {
-        name: "Nível 5 — sustain de Nightmare",
-        description: "Cada Nightmare aplicado restaura HP da própria Lilith.",
-        source: "Confirmada em tela de evolução.",
-      },
-      {
-        name: "Nível 8 — Septic Curse",
-        description: "Fortalece a redução de cura associada ao Nightmare.",
-        source: "Confirmada em tela de evolução.",
-      },
-      {
-        name: "Nível 10 — Dream Erosion / Eternal Reincarnation",
-        description: "Dream Erosion fortalece o dano contínuo; Eternal Reincarnation aumenta a propagação do Nightmare quando ele termina e reforça a redução de cura.",
-        source: "Confirmada em telas de evolução e bênçãos.",
-      },
-      {
-        name: "Nível 12 — bênção adicional",
-        description: "Depois de concluir a Ultimate, Lilith recebe uma bênção adicional.",
-        source: "Confirmada em tela de evolução.",
-      },
-      {
-        name: "Nível 15 — recuperação de mana",
-        description: "Cada Nightmare aplicado restaura mana da própria Lilith.",
-        source: "Confirmada em tela de evolução; nível ainda não alcançado na conta observada.",
-      },
-    ],
-    builds: [
-      {
-        name: "Nightmare ofensivo",
-        status: "em teste",
-        summary: "Prioriza o dano contínuo e a pressão de Nightmare.",
-        priorities: ["Fierce Nightmare", "Crazy Nightmare", "Dream Erosion"],
-      },
-      {
-        name: "Sustentação",
-        status: "em teste",
-        summary: "Combina a cura natural do kit com bênçãos de recuperação.",
-        priorities: ["Bloodthirsty Curse", "Soul-Draining Curse"],
-      },
-      {
-        name: "Controle e anti-cura",
-        status: "em teste",
-        summary: "Reduz a capacidade de resposta e sustentação dos inimigos.",
-        priorities: ["Paralyzing Curse", "Weaken Curse", "Septic Curse"],
-      },
-      {
-        name: "Propagação de Nightmare",
-        status: "em teste",
-        summary: "Espalha Nightmare entre múltiplos alvos e prolonga sua presença em combate.",
-        priorities: ["Twin Nightmare", "Overtime Nightmare", "Eternal Reincarnation"],
-      },
-    ],
-    synergies: [
-      "Composições Calamity que aproveitam debuffs e lutas prolongadas",
-      "Fases com vários inimigos, onde Nightmare pode se espalhar",
-      "Inimigos com cura ou sustain elevado",
-      "Sword Demon como núcleo de Fear, sem confundir Nightmare com Fear",
-    ],
-    evidence: [
-      "Telas do kit, bênçãos e desbloqueios por nível compartilhadas pelo jogador",
-      "Tela de evolução para o nível 13: poder 16.591, ataque 12,44K, HP 221,74K e defesa 7.824",
-      "Estado observado: nível 13 e 2/30 fragmentos após a evolução",
-    ],
-    pending: [
-      "Testar se Twin Nightmare gera uma instância separada de cura por alvo",
-      "No nível 15, testar se Twin Nightmare também gera mana separadamente por alvo",
-      "Confirmar valores numéricos e duração de cada Nightmare e bênção",
-      "Documentar a Ultimate completa e o requisito exato para concluí-la",
-      "Adicionar os prints da Lilith ao repositório como evidência visual",
-    ],
   },
 ];
 
