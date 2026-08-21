@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
 import { getHero, heroes } from "../../data/heroes";
 
+const confidenceLegend = [
+  { key: "confirmed", label: "Confirmado pela tela", description: "Texto, número ou condição legível diretamente no jogo." },
+  { key: "observed", label: "Observado em batalha", description: "Comportamento visto em uma run, mas não explicado integralmente pela interface." },
+  { key: "inferred", label: "Interpretação provável", description: "Leitura coerente das evidências, mantida explicitamente como hipótese." },
+  { key: "missing", label: "Não informado pelo jogo", description: "Duração, chance, multiplicador ou limite omitido pela própria descrição." },
+  { key: "translation", label: "Tradução inconsistente", description: "Nomes ou efeitos conflitantes entre telas, idiomas ou partes da interface." },
+] as const;
+
 export function generateStaticParams() {
   return heroes.map(({ slug }) => ({ slug }));
 }
@@ -48,6 +56,12 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
         {hero.story?.length ? <section className="character-story"><p className="eyebrow">HISTÓRIA</p><h2>{hero.slug === "lilith" ? "Pesadelos de Runecity" : hero.slug === "mia-morning-dew" ? "Origem da Fire Spirit Master" : `História de ${hero.name}`}</h2>{hero.story.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section> : null}
 
         <section className="character-note"><b>Observação prática</b><p>{hero.fieldNote}</p></section>
+
+        <section className="confidence-legend" aria-labelledby="confidence-title">
+          <p className="eyebrow">LEGENDA DA FICHA</p>
+          <h2 id="confidence-title">Como tratamos cada informação</h2>
+          <div>{confidenceLegend.map((item) => <article data-confidence={item.key} key={item.key}><b>{item.label}</b><p>{item.description}</p></article>)}</div>
+        </section>
 
         {hero.exclusiveGems?.length ? <section className="exclusive-gems"><p className="eyebrow">GEMAS EXCLUSIVAS</p><h2>Equipamentos próprios da personagem</h2><div>{hero.exclusiveGems.map((gem) => <article key={gem.name}><span>{gem.slot}</span><h3>{gem.name}</h3><b>{gem.baseStat}</b><p>{gem.effect}</p></article>)}</div></section> : null}
 
