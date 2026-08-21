@@ -56,14 +56,44 @@ export const heroes: HeroRecord[] = [
     ],
     stats: [
       "Nível observado: 13",
-      "Poder: 18.486",
-      "Ataque: 13,68K",
-      "HP: 252,79K",
-      "Defesa: 8.705",
+      "Poder mais recente: 18.894",
+      "Ataque mais recente: 14,13K",
+      "HP mais recente: 256,12K",
+      "Defesa mais recente: 8.825",
       "Fragmentos: 22/30",
       "Recompensa global: Dano Crítico +18,2%",
     ],
     levelSkills: [
+      {
+        name: "Habilidade base — Apply Nightmare",
+        description: "Causa dano a um inimigo aleatório e aplica Nightmare. Nightmare causa dano contínuo e reduz a recuperação de vida do inimigo.",
+        source: "Texto confirmado no tooltip da habilidade.",
+      },
+      {
+        name: "Nível 3 — Twins Nightmare",
+        description: "Começa a batalha com Twins Nightmare obtido.",
+        source: "Texto confirmado na tela de progressão.",
+      },
+      {
+        name: "Nível 5 — recuperação de HP",
+        description: "Cada Nightmare lançado no inimigo restaura vida para a própria Lilith.",
+        source: "Texto confirmado na tela de progressão.",
+      },
+      {
+        name: "Nível 8 — Sepsis Curse / Septic Curse",
+        description: "Começa com a Curse obtida. O tooltip usa o nome Septic Curse e informa que inimigos carregando Nightmare têm seus efeitos de cura reduzidos.",
+        source: "A lista mostra Sepsis Curse; o tooltip mostra Septic Curse.",
+      },
+      {
+        name: "Nível 10 — Dream Erosion",
+        description: "Inimigos carregando Nightmare recebem dano muito aumentado.",
+        source: "Texto confirmado na tela de progressão.",
+      },
+      {
+        name: "Nível 10 — Eternal Reincarnation",
+        description: "Aumenta a chance de transferência do Nightmare e fortalece a redução de cura.",
+        source: "Texto confirmado na tela de progressão.",
+      },
       {
         name: "Nível 12 — Blessing adicional",
         description: "Ganha uma Blessing adicional depois de selecionar uma Ultimate Skill.",
@@ -85,9 +115,9 @@ export const heroes: HeroRecord[] = [
         source: "Texto confirmado na tela; nível ainda bloqueado.",
       },
       {
-        name: "Nível 25 — bônus de profissão",
-        description: "Aumenta em 6% o dano dos personagens desta profissão.",
-        source: "Texto confirmado na tela; nível ainda bloqueado.",
+        name: "Níveis 25, 30, 35, 40, 45 e 50 — bônus de profissão",
+        description: "Cada um desses níveis aumenta em 6% o dano dos personagens desta profissão.",
+        source: "Todos os seis breakpoints foram confirmados nas telas de progressão.",
       },
     ],
     builds: [
@@ -125,7 +155,7 @@ export const heroes: HeroRecord[] = [
     evidence: [
       "Ficha de identidade e visual oficial",
       "Histórias 1 e 2 e travas dos capítulos seguintes",
-      "Telas de progressão dos níveis 12 a 25",
+      "Habilidade base e telas de progressão dos níveis 3 a 50",
     ],
     evidenceImages: [
       { src: "/screenshots/lilith/hero-background.jpg", caption: "Identidade oficial, raça, profissão e background" },
@@ -134,12 +164,17 @@ export const heroes: HeroRecord[] = [
       { src: "/screenshots/lilith/level-12-15.jpg", caption: "Níveis 12 e 15, atributos e recompensa global" },
       { src: "/screenshots/lilith/level-15-20.jpg", caption: "Níveis 15 e 20" },
       { src: "/screenshots/lilith/level-20-25.jpg", caption: "Níveis 20 e 25" },
+      { src: "/screenshots/lilith/apply-nightmare.jpg", caption: "Habilidade base Apply Nightmare" },
+      { src: "/screenshots/lilith/levels-3-8.jpg", caption: "Níveis 3, 5 e 8" },
+      { src: "/screenshots/lilith/septic-curse.jpg", caption: "Tooltip de Septic Curse" },
+      { src: "/screenshots/lilith/level-10-12.jpg", caption: "Níveis 10 e 12" },
+      { src: "/screenshots/lilith/profession-levels-25-40.jpg", caption: "Bônus de profissão dos níveis 25 a 40" },
+      { src: "/screenshots/lilith/profession-levels-35-50.jpg", caption: "Bônus de profissão dos níveis 35 a 50" },
     ],
     pending: [
       "Adicionar os prints do Blessing Bestiary e mapear a árvore completa",
       "Confirmar os valores numéricos, duração e chance de cada Nightmare",
       "Testar se Twin Nightmare gera cura e mana separadamente por alvo",
-      "Registrar o texto completo do bônus do nível 30",
       "Confirmar qual variante do sobrenome é canônica nas traduções: Charmflame, Flamecharm ou Meiyan",
     ],
   },
