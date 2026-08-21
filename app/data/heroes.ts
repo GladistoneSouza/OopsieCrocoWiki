@@ -24,6 +24,7 @@ export type HeroRecord = {
   identity?: string[];
   story?: string[];
   stats?: string[];
+  exclusiveGems?: { name: string; slot: string; baseStat: string; effect: string }[];
   levelSkills: HeroSkill[];
   builds: HeroBuild[];
   synergies: string[];
@@ -64,6 +65,26 @@ export const heroes: HeroRecord[] = [
       "Recompensa global: Dano Crítico +18,2%",
       "Snapshot no nível 12: poder 16.067 · ataque 12,04K · HP 214,74K · defesa 7.577",
       "No snapshot do nível 12: 32/30 fragmentos e Dano Crítico global +16,8%",
+    ],
+    exclusiveGems: [
+      {
+        name: "Sapphire",
+        slot: "Helmet",
+        baseStat: "DEF +4%",
+        effect: "Depois de lançar Nightmare, o dano da própria Dark Knight aumenta em 6%.",
+      },
+      {
+        name: "Amethyst",
+        slot: "Weapon",
+        baseStat: "ATK +6%",
+        effect: "Nightmare Curse tem 35% de chance de ser lançada novamente.",
+      },
+      {
+        name: "Ruby",
+        slot: "Shield",
+        baseStat: "ATK +8%",
+        effect: "Crítico da Dark Knight +8%.",
+      },
     ],
     levelSkills: [
       {
@@ -159,6 +180,7 @@ export const heroes: HeroRecord[] = [
       "Histórias 1 e 2 e travas dos capítulos seguintes",
       "Habilidade base e telas de progressão dos níveis 3 a 50",
       "Snapshot histórico da conta no nível 12",
+      "Tela completa das três gemas exclusivas",
     ],
     evidenceImages: [
       { src: "/screenshots/lilith/hero-background.jpg", caption: "Identidade oficial, raça, profissão e background" },
@@ -171,6 +193,7 @@ export const heroes: HeroRecord[] = [
       { src: "/screenshots/lilith/levels-3-8.jpg", caption: "Níveis 3, 5 e 8" },
       { src: "/screenshots/lilith/septic-curse.jpg", caption: "Tooltip de Septic Curse" },
       { src: "/screenshots/lilith/level-12-snapshot.jpg", caption: "Snapshot histórico no nível 12" },
+      { src: "/screenshots/lilith/exclusive-gems.jpg", caption: "Sapphire, Amethyst e Ruby exclusivas" },
       { src: "/screenshots/lilith/level-10-12.jpg", caption: "Níveis 10 e 12" },
       { src: "/screenshots/lilith/profession-levels-25-40.jpg", caption: "Bônus de profissão dos níveis 25 a 40" },
       { src: "/screenshots/lilith/profession-levels-35-50.jpg", caption: "Bônus de profissão dos níveis 35 a 50" },

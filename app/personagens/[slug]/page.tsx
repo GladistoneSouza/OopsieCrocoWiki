@@ -49,6 +49,8 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
 
         <section className="character-note"><b>Observação prática</b><p>{hero.fieldNote}</p></section>
 
+        {hero.exclusiveGems?.length ? <section className="exclusive-gems"><p className="eyebrow">GEMAS EXCLUSIVAS</p><h2>Equipamentos próprios da personagem</h2><div>{hero.exclusiveGems.map((gem) => <article key={gem.name}><span>{gem.slot}</span><h3>{gem.name}</h3><b>{gem.baseStat}</b><p>{gem.effect}</p></article>)}</div></section> : null}
+
         <div className="character-columns">
           <section><p className="eyebrow">POR NÍVEL</p><h2>Habilidades gratuitas</h2>{hero.levelSkills.length ? hero.levelSkills.map((skill) => <article className="info-card" key={skill.name}><h3>{skill.name}</h3><p>{skill.description}</p></article>) : <p className="empty-state">Ainda precisamos registrar os níveis e os nomes oficiais.</p>}</section>
           <section><p className="eyebrow">DENTRO DA RUN</p><h2>Árvores e builds</h2>{hero.builds.length ? hero.builds.map((build) => <article className="build-detail" key={build.name}><span>{build.status}</span><h3>{build.name}</h3><p>{build.summary}</p><ol>{build.priorities.map((item) => <li key={item}>{item}</li>)}</ol></article>) : <p className="empty-state">Árvore ainda não documentada.</p>}</section>
