@@ -40,7 +40,7 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
         <section className="character-note"><b>Observação prática</b><p>{hero.fieldNote}</p></section>
 
         <div className="character-columns">
-          <section><p className="eyebrow">POR NÍVEL</p><h2>Habilidades gratuitas</h2>{hero.levelSkills.length ? hero.levelSkills.map((skill) => <article className="info-card" key={skill.name}><h3>{skill.name}</h3><p>{skill.description}</p></article>) : <p className="empty-state">Ainda precisamos registrar os níveis e os nomes oficiais.</p>}</section>
+          <section><p className="eyebrow">POR NÍVEL</p><h2>Habilidades gratuitas</h2>{hero.levelSkills.length ? hero.levelSkills.map((skill) => <article className="info-card" key={skill.name}><h3>{skill.name}</h3><p>{skill.description}</p>{skill.source ? <small>Fonte: {skill.source}</small> : null}</article>) : <p className="empty-state">Ainda precisamos registrar os níveis e os nomes oficiais.</p>}</section>
           <section><p className="eyebrow">DENTRO DA RUN</p><h2>Árvores e builds</h2>{hero.builds.length ? hero.builds.map((build) => <article className="build-detail" key={build.name}><span>{build.status}</span><h3>{build.name}</h3><p>{build.summary}</p><ol>{build.priorities.map((item) => <li key={item}>{item}</li>)}</ol></article>) : <p className="empty-state">Árvore ainda não documentada.</p>}</section>
         </div>
 
@@ -49,6 +49,22 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
           <section><p className="eyebrow">PENDÊNCIAS</p><ul className="plain-list pending">{hero.pending.map((item) => <li key={item}>{item}</li>)}</ul></section>
         </div>
         <aside className="evidence"><b>Fontes desta ficha</b><span>{hero.evidence.join(" • ")}</span></aside>
+        {hero.evidenceImages?.length ? (
+          <section className="evidence-gallery">
+            <p className="eyebrow">EVIDÊNCIAS VISUAIS</p>
+            <h2>Capturas do jogo</h2>
+            <div className="evidence-grid">
+              {hero.evidenceImages.map((item) => (
+                <figure key={item.src}>
+                  <a href={item.src} target="_blank" rel="noreferrer">
+                    <img src={item.src} alt={item.alt} loading="lazy" />
+                  </a>
+                  <figcaption>{item.alt}</figcaption>
+                </figure>
+              ))}
+            </div>
+          </section>
+        ) : null}
       </article>
     </main>
   );
