@@ -27,6 +27,15 @@ const gems = [
   ["Primeiros 5 andares", "+64% dano", "Colar + escudo"],
 ];
 
+const refiningEffects = [
+  { effect: "Stage Mastery", value: "+14,32%", target: "Stage Battle Damage", slot: "Arma", cost: 210, image: "/screenshots/refining/stage-mastery.jpg" },
+  { effect: "Dungeon Mastery", value: "+14,85%", target: "Dungeon Battle Damage", slot: "Arma", cost: 210, image: "/screenshots/refining/dungeon-mastery.jpg" },
+  { effect: "Co-op Spire Mastery", value: "+11,74%", target: "Co-op Spire Battle Damage", slot: "Colar", cost: 232, image: "/screenshots/refining/coop-spire-mastery.jpg" },
+  { effect: "Master of All Trades", value: "+3,93% / +3,93%", target: "All Damage / Damage Reduction com 4 classes", slot: "Anel", cost: 246, image: "/screenshots/refining/master-all-trades.jpg" },
+  { effect: "Assassin Emblem", value: "+7,31%", target: "Assassin Hero Damage", slot: "Armadura", cost: 252, image: "/screenshots/refining/assassin-emblem.jpg" },
+  { effect: "Archer Emblem", value: "+11,27%", target: "Archer Hero Damage", slot: "Capacete", cost: 193, image: "/screenshots/refining/archer-emblem.jpg" },
+];
+
 export default function Home() {
   return (
     <main>
@@ -66,6 +75,15 @@ export default function Home() {
           <article><span>REFINO CONFIRMADO</span><b>Stage Mastery</b><p>Exemplo observado: Stage Battle Damage +5,62%.</p></article>
           <article><span>4 CLASSES</span><b>Master of All Trades</b><p>Exemplo observado: All Damage +6,06% e Damage Reduction +6,06% ao usar quatro classes.</p></article>
           <article><span>DIREÇÃO DE BUILD</span><b>Bônus universais primeiro</b><p>All Damage, Adventurer Damage e Attack servem ao núcleo inteiro; bônus de classe devem acompanhar os carries realmente usados.</p></article>
+        </div>
+        <div className="refining-record">
+          <div className="refining-intro">
+            <div><span>REFINO • REGISTRO DE CAMPO</span><h3>Efeitos especiais observados</h3></div>
+            <p>Cada tentativa mostra <b>20% de probabilidade</b> de gerar um efeito especial. O nome do efeito define onde o bônus funciona; o percentual é o valor daquela rolagem e pode variar em outro resultado.</p>
+          </div>
+          <div className="refining-table-wrap"><table className="refining-table"><thead><tr><th>Efeito</th><th>Bônus do print</th><th>Aplicação</th><th>Peça</th><th>Custo observado</th></tr></thead><tbody>{refiningEffects.map((item) => <tr key={item.effect}><td>{item.effect}</td><td>{item.value}</td><td>{item.target}</td><td>{item.slot}</td><td>{item.cost}</td></tr>)}</tbody></table></div>
+          <aside className="refining-rule"><b>Como interpretar</b><span>Masteries de modo só funcionam naquele conteúdo. Emblems fortalecem uma classe. Master of All Trades exige quatro classes e entrega simultaneamente dano e redução de dano. Os custos pertencem às peças exibidas; ainda não formam uma fórmula universal por slot, nível ou raridade.</span></aside>
+          <div className="refining-gallery">{refiningEffects.map((item) => <figure key={item.image}><a href={item.image} target="_blank" rel="noreferrer"><img src={item.image} alt={`Tela de refino com ${item.effect}`}/></a><figcaption><b>{item.effect}</b><span>{item.value} • {item.slot} • custo {item.cost}</span></figcaption></figure>)}</div>
         </div>
       </section>
 
