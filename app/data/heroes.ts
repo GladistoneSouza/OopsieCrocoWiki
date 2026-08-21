@@ -123,9 +123,9 @@ export const heroes: HeroRecord[] = [
         source: "Texto confirmado na tela; nível ainda bloqueado.",
       },
       {
-        name: "Níveis 25, 30, 35 e 40 — bônus de profissão",
+        name: "Níveis 25, 30, 35, 40, 45 e 50 — bônus de profissão",
         description: "Cada um desses níveis aumenta em 6% o dano dos personagens desta profissão.",
-        source: "Os quatro breakpoints foram confirmados na tela de progressão.",
+        source: "Os seis breakpoints foram confirmados nas telas de progressão.",
       },
     ],
     builds: [
@@ -186,6 +186,7 @@ export const heroes: HeroRecord[] = [
       { src: "/screenshots/mia/mia-level-10.jpg", alt: "Progressão da Mia mostrando os dois efeitos do nível 10" },
       { src: "/screenshots/mia/mia-level-20.jpg", alt: "Progressão da Mia mostrando os dois efeitos do nível 20" },
       { src: "/screenshots/mia/mia-profession-bonuses.jpg", alt: "Bônus de 6% de dano da profissão nos níveis 25, 30, 35 e 40" },
+      { src: "/screenshots/mia/mia-profession-bonuses-45-50.jpg", alt: "Bônus de 6% de dano da profissão nos níveis 35, 40, 45 e 50" },
     ],
     pending: [
       "Registrar porcentagens, duração e limite de acúmulos dos aumentos de dano.",
@@ -193,7 +194,6 @@ export const heroes: HeroRecord[] = [
       "Verificar se elementais criados por Wildfire Rebirth também ativam normalmente todos os efeitos de morte.",
       "Esclarecer a diferença de nomenclatura entre Enhance • Burn e Strengthen • Incinerate na tela do nível 8.",
       "Obter a descrição completa da Pink Diamond depois de '20% attack'.",
-      "Confirmar se também existem bônus de profissão nos níveis 45 e 50.",
     ],
   },
   {
