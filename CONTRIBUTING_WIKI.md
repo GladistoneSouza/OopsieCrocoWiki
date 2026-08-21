@@ -35,3 +35,15 @@ Nunca transforme uma hipótese em regra. Use “aparentemente”, “observado�
 ## Modelo mínimo de personagem
 
 Cada personagem deve conter: `slug`, `name`, `className`, `role`, `summary`, `fieldNote`, `levelSkills`, `builds`, `synergies`, `evidence` e `pending`.
+
+## Grau de confiança das informações
+
+Todas as fichas exibem a mesma legenda. Ao escrever ou revisar conteúdo, preserve estas categorias:
+
+- **Confirmado pela tela:** texto, número ou condição legível diretamente no jogo.
+- **Observado em batalha:** comportamento visto em uma run, mas não explicado integralmente pela interface.
+- **Interpretação provável:** conclusão coerente com as evidências, sempre apresentada como hipótese.
+- **Não informado pelo jogo:** duração, chance, multiplicador, limite ou outra propriedade omitida pela descrição.
+- **Tradução inconsistente:** nomes ou efeitos conflitantes entre telas, idiomas ou partes da interface.
+
+Nunca transforme observação ou interpretação em informação confirmada. Quando o jogo omitir um valor, registre a omissão em vez de estimá-lo pela tradução.
