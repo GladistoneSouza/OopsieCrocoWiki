@@ -32,7 +32,7 @@ export default function Home() {
     <main>
       <header className="topbar">
         <a className="brand" href="#inicio" aria-label="Oopsie Croco Wiki — início"><span className="brand-mark">OC</span><span><b>Oopsie Croco</b><small>Wiki de campo</small></span></a>
-        <nav aria-label="Navegação principal"><a href="#equipamentos">Equipamentos</a><a href="#gemas">Gemas</a><a href="#coop">Co-op</a><a href="/personagens">Personagens</a></nav>
+        <nav aria-label="Navegação principal"><a href="#equipamentos">Equipamentos</a><a href="#gemas">Gemas</a><a href="#invocacoes">Invocações</a><a href="#coop">Co-op</a><a href="/personagens">Personagens</a></nav>
         <span className="version">v0.1 • em construção</span>
       </header>
 
@@ -62,6 +62,34 @@ export default function Home() {
         <div className="section-head"><div><p className="eyebrow">SISTEMA 03</p><h2>Gemas & síntese</h2></div><p>Até cinco gemas por peça. Quatro gemas idênticas e da mesma qualidade podem ser sintetizadas para gerar uma superior.</p></div>
         <div className="gem-layout"><div className="gem-stack" aria-label="Exemplo de síntese"><div className="gem purple">◆</div><span>× 4</span><i>→</i><div className="gem gold">◆</div><small>Mesma gema + mesma qualidade</small></div><div className="table-wrap"><table><thead><tr><th>Bônus documentado</th><th>Total atual</th><th>Origem</th></tr></thead><tbody>{gems.map(([a,b,c]) => <tr key={a}><td>{a}</td><td>{b}</td><td>{c}</td></tr>)}</tbody></table></div></div>
         <div className="warning"><b>Nota de fórmula</b><span>Ainda precisamos testar se categorias diferentes somam ou multiplicam entre si. Os valores acima registram apenas os bônus visíveis.</span></div>
+        <div className="coop-facts">
+          <article><span>REFINO CONFIRMADO</span><b>Stage Mastery</b><p>Exemplo observado: Stage Battle Damage +5,62%.</p></article>
+          <article><span>4 CLASSES</span><b>Master of All Trades</b><p>Exemplo observado: All Damage +6,06% e Damage Reduction +6,06% ao usar quatro classes.</p></article>
+          <article><span>DIREÇÃO DE BUILD</span><b>Bônus universais primeiro</b><p>All Damage, Adventurer Damage e Attack servem ao núcleo inteiro; bônus de classe devem acompanhar os carries realmente usados.</p></article>
+        </div>
+      </section>
+
+      <section className="section recycle-section" id="invocacoes">
+        <div className="section-head"><div><p className="eyebrow">ECONOMIA 01</p><h2>Marco de 50 invocações</h2></div><p>Os três baús são cumulativos. A coleta registrada entregou todas as recompensas garantidas de uma vez.</p></div>
+        <div className="coop-facts">
+          <article><span>COMMON CHEST</span><b>250 moedas</b><p>Moedas para o Hero Exchange.</p></article>
+          <article><span>MONTHLY PASS</span><b>250 moedas</b><p>Também entrega moedas para o Hero Exchange.</p></article>
+          <article><span>LIFETIME PASS</span><b>2 fichas míticas</b><p>Fichas vermelhas para a linha de invocação mítica.</p></article>
+          <article><span>TOTAL COM PASSES</span><b>500 + 2</b><p>500 moedas de troca e 2 fichas míticas a cada ciclo de 50 summons normais.</p></article>
+        </div>
+        <aside className="example"><span>PROJEÇÃO DIRETA</span><p><b>250 summons normais</b> completam cinco ciclos: <strong>2.500 moedas do Hero Exchange + 10 fichas míticas.</strong> A recompensa opcional marcada como “Chance to Obtain” é adicional; ela não apareceu na coleta documentada.</p></aside>
+        <div className="warning"><b>Pity paralelo</b><span>O contador de Legendary continuou ativo depois da coleta. O marco dos baús não substitui nem reinicia a garantia de herói dourado.</span></div>
+      </section>
+
+      <section className="section">
+        <div className="section-head"><div><p className="eyebrow">ESTRATÉGIA DE CAMPO</p><h2>Núcleo 4 + 1</h2></div><p>Estrutura observada para runs longas. A quinta vaga responde ao problema específico da fase.</p></div>
+        <div className="run-flow">
+          <article><span>FRONTLINE + FEAR</span><h3>Kazer’s Darkblade</h3><p>Tanka, aplica Fear e converte os acúmulos em dano. A cura durante Blade Storm é o próximo breakpoint importante.</p></article>
+          <article><span>CARRY DE BOSS</span><h3>Shadow Wolf</h3><p>Escala Blood, múltiplos Bites e dano com HP baixo.</p></article>
+          <article><span>INFRAESTRUTURA</span><h3>Sakura</h3><p>Cura, shield, mana e Yang: Rapid para acelerar o time inteiro.</p></article>
+          <article><span>CORPOS + AGGRO</span><h3>Maya</h3><p>Esqueletos absorvem ataques, protegem a retaguarda e mantêm dano constante.</p></article>
+        </div>
+        <aside className="counter-rule"><b>Quinta vaga flexível</b><span>Arqueiro quando falta DPS; Controller quando uma interrupção decide a luta; Tank apenas quando frontline e summons não bastam; segundo Summoner quando mais corpos e aggro oferecem mais valor.</span></aside>
       </section>
 
       <section className="section" id="coop">
