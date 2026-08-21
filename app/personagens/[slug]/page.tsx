@@ -45,7 +45,7 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
           {hero.stats?.length ? <section><p className="eyebrow">CONTA OBSERVADA</p><ul>{hero.stats.map((item) => <li key={item}>{item}</li>)}</ul></section> : null}
         </div> : null}
 
-        {hero.story?.length ? <section className="character-story"><p className="eyebrow">HISTÓRIA</p><h2>Pesadelos de Runecity</h2>{hero.story.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section> : null}
+        {hero.story?.length ? <section className="character-story"><p className="eyebrow">HISTÓRIA</p><h2>{hero.slug === "lilith" ? "Pesadelos de Runecity" : hero.slug === "mia-morning-dew" ? "Origem da Fire Spirit Master" : `História de ${hero.name}`}</h2>{hero.story.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section> : null}
 
         <section className="character-note"><b>Observação prática</b><p>{hero.fieldNote}</p></section>
 
