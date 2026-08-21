@@ -40,7 +40,12 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
           {hero.image ? <figure className="character-portrait"><img src={hero.image} alt={`Visual oficial de ${hero.name}`} /><figcaption>Visual oficial no jogo</figcaption></figure> : null}
         </header>
 
-        {hero.stats?.length ? <div className="character-facts single"><section><p className="eyebrow">CONTA OBSERVADA</p><ul>{hero.stats.map((item) => <li key={item}>{item}</li>)}</ul></section></div> : null}
+        {hero.identity?.length || hero.stats?.length ? <div className="character-facts">
+          {hero.identity?.length ? <section><p className="eyebrow">IDENTIDADE</p><ul>{hero.identity.map((item) => <li key={item}>{item}</li>)}</ul></section> : null}
+          {hero.stats?.length ? <section><p className="eyebrow">CONTA OBSERVADA</p><ul>{hero.stats.map((item) => <li key={item}>{item}</li>)}</ul></section> : null}
+        </div> : null}
+
+        {hero.story?.length ? <section className="character-story"><p className="eyebrow">HISTÓRIA</p><h2>Origem da Fire Spirit Master</h2>{hero.story.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section> : null}
 
         <section className="character-note"><b>Observação prática</b><p>{hero.fieldNote}</p></section>
 

@@ -21,6 +21,8 @@ export type HeroRecord = {
   summary: string;
   fieldNote: string;
   image?: string;
+  identity?: string[];
+  story?: string[];
   stats?: string[];
   exclusiveGems?: { name: string; slot: string; baseStat: string; effect: string }[];
   levelSkills: HeroSkill[];
@@ -42,6 +44,20 @@ export const heroes: HeroRecord[] = [
     summary: "Invocadora SSR que cria Elementais de Fogo por 8 segundos e converte a presença e a morte deles em dano, mana e fortalecimento do grupo.",
     fieldNote: "Ficha baseada somente nas descrições exibidas pelo jogo. A tela ainda não informa duração, limite de acúmulos nem as chances exatas de Wildfire Rebirth.",
     image: "/screenshots/mia/mia-profession-bonuses.jpg",
+    identity: [
+      "Nome exibido na ficha: Mia Morning Dew",
+      "Gênero: feminino",
+      "Raça: Human Race",
+      "Profissão: Summon",
+      "Organização citada: Forbidden Rune Sect, em Runecity, capital da Valern Federation",
+    ],
+    story: [
+      "Mia é uma jovem invocadora reconhecida pela Forbidden Rune Sect. Desde a infância demonstra forte afinidade com o elemento fogo, controlando chamas e invocando pequenos espíritos de fogo ágeis e abrasadores. Ela utiliza a Flame Bell, forjada em uma antiga prata secreta, como meio de conjuração e artefato rúnico.",
+      "No primeiro capítulo, Mia aparece na biblioteca da seita de feitiços proibidos, em Runecity, segurando a Flame Bell. Determinada, pretende utilizar os mistérios do fogo para proteger aquilo que considera importante.",
+      "Quando a poluição provocada por fragmentos de Dragonbreath começa a se espalhar, Mia decide investigar a origem da anomalia nos elementais de fogo. Ela reconhece o poder destrutivo dos fragmentos e teme que uma tragédia do passado se repita.",
+      "Acompanhada por seus espíritos de fogo, Mia avança até a origem da contaminação e encontra um mago sombrio manipulando elementais para transformá-los em armas. O trecho visível identifica esse mago como responsável pela poluição da fonte do fogo e participante de uma conspiração maior.",
+      "Os capítulos seguintes são liberados nos níveis 20, 25 e 30.",
+    ],
     stats: [
       "Nível observado: 15",
       "Poder: 19.848",
@@ -172,8 +188,9 @@ export const heroes: HeroRecord[] = [
       "Blessing Bestiary completo da Mia",
       "Ficha SSR Fire Spirit Master no nível 15",
       "Tooltips de Self-destruction e Incinerate",
-      "Progressão confirmada até o nível 40",
+      "Progressão confirmada até o nível 50",
       "Tela das três gemas exclusivas",
+      "Background e capítulos 1–3 da história",
     ],
     evidenceImages: [
       { src: "/screenshots/mia-bestiary-ultimates.jpg", alt: "Bestiário da Mia mostrando as Ultimates Death is the Beginning e Wildfire Rebirth" },
@@ -187,6 +204,13 @@ export const heroes: HeroRecord[] = [
       { src: "/screenshots/mia/mia-level-20.jpg", alt: "Progressão da Mia mostrando os dois efeitos do nível 20" },
       { src: "/screenshots/mia/mia-profession-bonuses.jpg", alt: "Bônus de 6% de dano da profissão nos níveis 25, 30, 35 e 40" },
       { src: "/screenshots/mia/mia-profession-bonuses-45-50.jpg", alt: "Bônus de 6% de dano da profissão nos níveis 35, 40, 45 e 50" },
+      { src: "/screenshots/mia/story-background.jpg", alt: "Hero Background da Mia com identidade e origem da personagem" },
+      { src: "/screenshots/mia/story-1.jpg", alt: "Primeiro capítulo da história da Mia" },
+      { src: "/screenshots/mia/story-2.jpg", alt: "Segundo capítulo da história da Mia sobre os fragmentos de Dragonbreath" },
+      { src: "/screenshots/mia/story-3.jpg", alt: "Terceiro capítulo da história da Mia e o encontro com o mago sombrio" },
+      { src: "/screenshots/mia/story-4-level-20.jpg", alt: "Capítulo 4 da história da Mia bloqueado até o nível 20" },
+      { src: "/screenshots/mia/story-5-level-25.jpg", alt: "Capítulo 5 da história da Mia bloqueado até o nível 25" },
+      { src: "/screenshots/mia/story-6-level-30.jpg", alt: "Capítulo 6 da história da Mia bloqueado até o nível 30" },
     ],
     pending: [
       "Registrar porcentagens, duração e limite de acúmulos dos aumentos de dano.",
@@ -194,6 +218,9 @@ export const heroes: HeroRecord[] = [
       "Verificar se elementais criados por Wildfire Rebirth também ativam normalmente todos os efeitos de morte.",
       "Esclarecer a diferença de nomenclatura entre Enhance • Burn e Strengthen • Incinerate na tela do nível 8.",
       "Obter a descrição completa da Pink Diamond depois de '20% attack'.",
+      "Registrar o final cortado dos textos do Background e dos capítulos 1–3.",
+      "Confirmar a inconsistência de nomes entre Mia Morning Dew, Mia Morningdew e Mia Chenlu nas telas da história.",
+      "Registrar o conteúdo dos capítulos 4–6 quando forem desbloqueados.",
     ],
   },
   {
