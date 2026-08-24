@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { SiteHeader } from "../../components/SiteHeader";
 import { SiteFooter } from "../../components/SiteFooter";
+import { EvidenceCarousel } from "../../components/EvidenceCarousel";
 import { getHero, heroes } from "../../data/heroes";
 
 const confidenceLegend = [
@@ -209,22 +210,12 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
               </div>
               <span>{hero.evidenceImages.length} prints catalogados</span>
             </div>
-            <div className="evidence-board">
-              {hero.evidenceImages.map((item, index) => {
+            <EvidenceCarousel
+              items={hero.evidenceImages.map((item) => {
                 const label = item.caption ?? item.alt ?? "Evidência visual";
-                return (
-                  <figure className="evidence-shot" key={item.src}>
-                    <a href={item.src} target="_blank" rel="noreferrer">
-                      <img src={item.src} alt={label} loading="lazy" />
-                    </a>
-                    <figcaption>
-                      <b>{String(index + 1).padStart(2, "0")} · {evidenceKind(item.src, label)}</b>
-                      <span>{label}</span>
-                    </figcaption>
-                  </figure>
-                );
+                return { src: item.src, label, kind: evidenceKind(item.src, label) };
               })}
-            </div>
+            />
           </section>
         ) : null}
       </article>
