@@ -29,3 +29,16 @@ export const afkEconomy = {
     text: "O pacote de US$20 e o UR Way continuam fora da wiki até existirem prints claros. O registro atual usa apenas capturas diretas do AFK/Raid.",
   },
 };
+
+export const dailyShopHistory = [
+  {
+    kicker: "LOJA DIÁRIA • JUL./AGO. 2026",
+    title: "Até 10 refreshes pagos com ouro",
+    text: "A rotação diária permitia até 10 atualizações usando ouro. O refresh podia antecipar fragmentos do núcleo, mas seu custo acumulado competia com os demais usos do recurso.",
+  },
+  {
+    kicker: "PREÇOS HISTÓRICOS",
+    title: "SR por 125–250; SSR por 500–1.000",
+    text: "Capturas da rotação mostraram SR nas faixas de 125 e 250 moedas e SSR nas faixas de 500 e 1.000. Personagem, promoção e limite alteravam o preço; este snapshot não substitui os valores atuais do Hero Exchange.",
+  },
+];

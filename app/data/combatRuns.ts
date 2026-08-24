@@ -1,7 +1,7 @@
 export type CombatRun = {
   title: string;
   stage: string;
-  timerAtBoss: string;
+  timerAtBoss?: string;
   markerLabel?: string;
   status: "confirmada na tela" | "observada em run";
   summary: string;
@@ -11,6 +11,22 @@ export type CombatRun = {
 };
 
 export const combatRuns: CombatRun[] = [
+  {
+    title: "A barreira de regeneração",
+    stage: "Estágio 75",
+    timerAtBoss: "sem painel preservado",
+    markerLabel: "HISTÓRICO",
+    status: "observada em run",
+    summary: "A conta ficou presa contra uma formação com cura muito alta e investida no alvo de menor HP; a passagem exigiu reduzir a regeneração e manter pressão contínua.",
+    damage: [],
+    highlights: [
+      "Anti-heal e dano contínuo foram priorizados para impedir que a regeneração apagasse o progresso da luta.",
+      "A investida contra o alvo de menor HP exigiu proteger a unidade mais frágil da composição.",
+      "Many Shadows, ultimate do Sword Demon, criou o clone que repetia Blade Storm e ampliava Fear, dano e pressão sobre a cura.",
+      "A identidade exata de todos os inimigos e o painel de dano ainda dependem da recuperação dos prints antigos.",
+    ],
+    evidenceImages: [],
+  },
   {
     title: "Clear do 82 Silver Beach",
     stage: "Estágio 82",
