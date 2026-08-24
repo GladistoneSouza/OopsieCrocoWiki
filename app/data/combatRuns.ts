@@ -17,7 +17,7 @@ export const combatRuns: CombatRun[] = [
     timerAtBoss: "derrota no nível 10/15",
     markerLabel: "RESULTADO",
     status: "confirmada na tela",
-    summary: "A primeira tentativa documentada de Moonshade não chegou à Corrosive Empress: caiu na sequência do elite Octopus King. O mapa mostrou Restrain contra Summon e fraqueza azul nos alvos principais.",
+    summary: "A primeira tentativa documentada de Moonshade não chegou à Corrosive Empress: caiu na sequência do elite Octopus King. O mapa mostrou Restrain contra Summoner e fraqueza azul nos alvos principais.",
     damage: [
       { hero: "Bounty Hunter", damage: "Lv.7 na tentativa", note: "linha de munições" },
       { hero: "Onmyoji", damage: "Lv.5 na tentativa", note: "escudos e controle" },

@@ -50,7 +50,7 @@ export const inRunMechanics = [
   {
     kicker: "INIMIGOS • VARIAÇÃO",
     title: "Restrições dependem do estágio",
-    text: "Os inimigos não parecem mudar aleatoriamente por tentativa: cada estágio/mapa observado tem seu próprio conjunto. Por isso, efeitos que prejudicam Mago, Calamity, Arqueiro/Shooter ou Summon devem ser registrados no estágio correto. O 82 Silver Beach tinha inimigos com resposta contra Calamity; o 83 Moonshade mostrou Restrain contra Summon, sem evidência de anti-Calamity nesse mapa. Bone Desert aparece nas capturas como 11.Bone Desert, com Not Recommended para o ícone verde/pata e boss/elite fracos contra azul.",
+    text: "Os inimigos não parecem mudar aleatoriamente por tentativa: cada estágio/mapa observado tem seu próprio conjunto. Por isso, efeitos que prejudicam Mago, Calamity, Arqueiro/Shooter ou Summoner devem ser registrados no estágio correto. O 82 Silver Beach tinha inimigos com resposta contra Calamity; o 83 Moonshade mostrou Restrain contra Summoner, sem evidência de anti-Calamity nesse mapa. Bone Desert aparece nas capturas como 11.Bone Desert, com Not Recommended para Summoner e boss/elite fracos contra azul.",
   },
   {
     kicker: "CLASS BONUS",
@@ -62,13 +62,13 @@ export const inRunMechanics = [
 export const inRunMechanicShots = [
   {
     src: "/screenshots/campaign/early-campaign-green-restrain-opening-pick.jpg",
-    alt: "Escolha inicial de heróis em campanha inicial com Restrain verde/pata",
-    caption: "Exemplo de campanha inicial: escolha 2 de 4 heróis, item Go to Level 10 e Restrain verde/pata.",
+    alt: "Escolha inicial de heróis em Bone Desert com Restrain contra Summoner",
+    caption: "11.Bone Desert: escolha 2 de 4 heróis, item Go to Level 10 e Restrain contra Summoner.",
   },
   {
     src: "/screenshots/campaign/stage-11-bone-desert-map.jpg",
-    alt: "Mapa Bone Desert com Not Recommended para ícone verde/pata",
-    caption: "Bone Desert: mapa marcado como Not Recommended para o ícone verde/pata.",
+    alt: "Mapa Bone Desert com Not Recommended para Summoner",
+    caption: "11.Bone Desert: mapa marcado como Not Recommended para Summoner.",
   },
   {
     src: "/screenshots/campaign/stage-11-bone-desert-bosses.jpg",

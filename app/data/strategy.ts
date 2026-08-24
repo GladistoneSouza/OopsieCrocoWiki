@@ -56,7 +56,7 @@ export const strategyNotes: StrategyNote[] = [
   {
     kicker: "ESTÁGIO 83 • PRIMEIRA TENTATIVA",
     title: "O primeiro bloqueio veio antes da chefe",
-    text: "A primeira tentativa documentada de Moonshade caiu no nível 10/15, ainda contra a sequência do elite Octopus King. O estágio 83 mostrou Restrain contra Summon e fraqueza azul nos alvos principais, sem evidência de inimigo anti-Calamity nesse mapa. O bloqueio prático veio antes da Corrosive Empress.",
+    text: "A primeira tentativa documentada de Moonshade caiu no nível 10/15, ainda contra a sequência do elite Octopus King. O estágio 83 mostrou Restrain contra Summoner e fraqueza azul nos alvos principais, sem evidência de inimigo anti-Calamity nesse mapa. O bloqueio prático veio antes da Corrosive Empress.",
     confidence: "confirmada na tela",
   },
   {
