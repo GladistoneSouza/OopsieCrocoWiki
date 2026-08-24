@@ -97,38 +97,3 @@ export const levelGrowth = {
   text: "Usando a escada limpa do Dragon Warrior (níveis 3→4→5 capturados na mesma sessão), cada nível rendeu de forma praticamente linear: +758 de poder, +440 de ataque, +12,21K de HP e +416-417 de defesa. Já a diferença entre snapshots de datas distintas (ex.: os dois níveis 1 dele, ou os níveis 3 da Flower Spirit em julho vs. agosto) NÃO serve para essa conta: os valores da ficha embutem bônus globais que mudam com a progressão geral. Comparações válidas exigem capturas na mesma sessão.",
   confidence: "confirmada na tela" as const,
 };
-
-// Registros antigos preservam o estado da conta e da economia naquele momento.
-// Preços, ofertas e progressão não devem ser lidos como valores atuais do jogo.
-export const historicalNotes: StrategyNote[] = [
-  {
-    kicker: "LINHA DO TEMPO • AGO. 2026",
-    title: "Do estágio 69 ao 83",
-    text: "Em 12 ago., a conta estava no estágio 69 com 87,41K de poder geral e renda de 361 gold/h + 16 recursos/h. Depois travou no estágio 75, alcançou o 82 (Silver Beach) e, em 23 ago., chegou ao 83. A sequência mostra na prática como avanço de campanha, renda passiva e fortalecimento da conta se alimentaram.",
-    confidence: "observada em run",
-  },
-  {
-    kicker: "RUN HISTÓRICA • ESTÁGIO 75",
-    title: "Cura forte exigiu anti-heal e pressão contínua",
-    text: "A conta ficou presa num estágio com elite/boss de regeneração forte e investida contra o alvo de menor HP. A leitura da tentativa foi priorizar anti-heal, dano contínuo e sobrevivência do alvo frágil. A passagem veio quando o clone da ultimate Many Shadows do Sword Demon ampliou Blade Storm, Fear e a pressão sobre a cura. O número do estágio e o resultado são observados; a identidade exata de todos os inimigos ainda depende dos prints antigos.",
-    confidence: "observada em run",
-  },
-  {
-    kicker: "LOJA DIÁRIA • SNAPSHOT",
-    title: "Até 10 refreshes pagos com ouro",
-    text: "Na rotação observada, a loja diária permitia até 10 atualizações usando ouro. O refresh tinha valor porque podia antecipar fragmentos do núcleo, mas o custo acumulado precisava competir com outros usos do ouro. Regra registrada como snapshot da versão de agosto de 2026.",
-    confidence: "confirmada na tela",
-  },
-  {
-    kicker: "PREÇOS ANTIGOS • SNAPSHOT",
-    title: "SR por 125–250; SSR por 500–1.000",
-    text: "Capturas antigas mostraram fragmentos/itens SR nas faixas de 125 e 250 moedas e SSR nas faixas de 500 e 1.000. Promoções, personagem e limite semanal alteravam o valor; estas faixas documentam a economia observada e não substituem os preços atuais do Hero Exchange.",
-    confidence: "confirmada na tela",
-  },
-  {
-    kicker: "EVENTO / OFERTA • SNAPSHOT",
-    title: "40 summons, pacote de US$20 e UR muito caro",
-    text: "Em registros antigos, um evento trabalhava com cerca de 40 summons e apareceu um pacote de aproximadamente US$20. O herói UR chamado Way foi avaliado em torno de 70 unidades por fragmento, muito acima dos heróis comuns da loja. São referências históricas de custo e escala; moeda, conteúdo e conversão da oferta precisam ser relidos no print antes de qualquer comparação atual.",
-    confidence: "observada em run",
-  },
-];
