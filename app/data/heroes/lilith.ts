@@ -8,7 +8,7 @@ export const lilith: HeroRecord = {
   rarity: "SSR",
   role: "Dano contínuo / debuff / sustentação",
   summary: "Dark Knight SSR baseada em Nightmare: combina dano contínuo, redução de cura, propagação, controle e recuperação própria.",
-  fieldNote: "A tela atual mostra Lilith no nível 13. Nightmare é a mecânica própria dela e não deve ser confundida com o Fear do Sword Demon.",
+  fieldNote: "Ficha mais recente confirmada no nível 15 (24 ago.), com a passiva exclusiva de mana desbloqueada. Nightmare é a mecânica própria dela e não deve ser confundida com o Fear do Sword Demon.",
   image: "/screenshots/lilith/lilith-hero.jpg",
   identity: [
     "Nome exibido na ficha: Lilith · Charmflame",
@@ -22,13 +22,9 @@ export const lilith: HeroRecord = {
     "Os capítulos seguintes da história são liberados nos níveis 15, 20, 25 e 30.",
   ],
   stats: [
-    "Nível observado: 13",
-    "Poder mais recente: 18.894",
-    "Ataque mais recente: 14,13K",
-    "HP mais recente: 256,12K",
-    "Defesa mais recente: 8.825",
-    "Fragmentos: 22/30",
-    "Recompensa global: Dano Crítico +18,2%",
+    "Nível 15 (24 ago.): poder 21.824 · ataque 16,28K · HP 299,38K · defesa 10,11K · Dano Crítico global +21,0% · fragmentos 4/60",
+    "Snapshot no nível 13: poder 18.894 · ataque 14,13K · HP 256,12K · defesa 8.825 · fragmentos 22/30",
+    "Recompensa global no nível 13: Dano Crítico +18,2%",
     "Snapshot no nível 12: poder 16.067 · ataque 12,04K · HP 214,74K · defesa 7.577",
     "No snapshot do nível 12: 32/30 fragmentos e Dano Crítico global +16,8%",
   ],
@@ -90,8 +86,8 @@ export const lilith: HeroRecord = {
     },
     {
       name: "Nível 15 — recuperação de mana",
-      description: "Cada Nightmare lançado no inimigo restaura mana para a própria Lilith.",
-      source: "Texto confirmado na tela; nível ainda bloqueado.",
+      description: "Cada Nightmare lançado no inimigo restaura mana para a própria Lilith. A ficha do nível 15 exibe o efeito como Exclusive passive.",
+      source: "Confirmado desbloqueado na ficha do nível 15 (24 ago.).",
     },
     {
       name: "Nível 20 — Dream Erosion",
@@ -150,6 +146,7 @@ export const lilith: HeroRecord = {
     "Tela completa das três gemas exclusivas",
   ],
   evidenceImages: [
+    { src: "/screenshots/lilith/profile-level-15.jpg", caption: "Ficha completa no nível 15 com a passiva de mana desbloqueada" },
     { src: "/screenshots/lilith/hero-background.jpg", caption: "Identidade oficial, raça, profissão e background" },
     { src: "/screenshots/lilith/story-1.jpg", caption: "Story 1" },
     { src: "/screenshots/lilith/story-2.jpg", caption: "Story 2" },
