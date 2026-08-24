@@ -31,6 +31,10 @@ function storyTitle(slug: string, name: string) {
   return `História de ${name}`;
 }
 
+function originalStorySource(src: string) {
+  return src.replace("/story-crops/", "/");
+}
+
 export function generateStaticParams() {
   return heroes.map(({ slug }) => ({ slug }));
 }
@@ -63,7 +67,7 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
     );
   }
 
-  const storyImageSources = new Set(hero.storyImages?.map((item) => item.src) ?? []);
+  const storyImageSources = new Set(hero.storyImages?.flatMap((item) => [item.src, originalStorySource(item.src)]) ?? []);
   const evidenceImages = hero.evidenceImages?.filter((item) => !storyImageSources.has(item.src)) ?? [];
 
   return (
