@@ -33,6 +33,9 @@ export const pickGallery = [
 ];
 
 export const coopCosts = [
+  { kicker: "CLASS BONUS", title: "+30% para classes sorteadas", text: "No início da run, o jogo sorteia classes que ganham +30% de dano (ex.: Archer e Summoner numa run de dificuldade 5). O número de peças de equipamento obtidas acompanha o número de ondas vencidas." },
+  { kicker: "RECOMPENSA DE DERROTA", title: "Perder também paga", text: "Uma derrota no andar 10 ainda entregou 612 moedas, 200 EXP, 12 gemas, equipamentos nível 83-88 e tomos de classe — proporcional ao progresso." },
+  { kicker: "LEADER REWARD", title: "Baús do líder por andar", text: "Na dificuldade 6, o líder tem baús nos andares L3, L7 e L10; na dificuldade 7 foi visto L7 com 42 itens. O ranking exibe progresso como dificuldade-andar (líder observado em 9-5), indicando dificuldades além da 7." },
   { kicker: "CUSTO DO LÍDER", title: "1 ticket + 20 stamina", text: "O jogador que convida consome um ticket por partida. O primeiro ticket é recuperado automaticamente todos os dias." },
   { kicker: "CUSTO DO ASSISTENTE", title: "20 stamina", text: "Ambos recebem recompensas de conclusão, mas partidas como assistente não contam para o ranking." },
   { kicker: "DESCONEXÃO", title: "Progresso preservado", text: "Se houver desconexão durante a partida, a recompensa correspondente ao progresso atual é enviada pelo correio." },

@@ -106,7 +106,7 @@ export const refiningCosts = [
 ];
 
 export const refiningCostsNote =
-  "Custos em poções de refino por tentativa, observados nas peças Mythic da conta (níveis 83-88). Registros anteriores mostravam custos menores (ex.: 210 na arma), então o custo aparentemente escala com a peça — ainda sem fórmula confirmada.";
+  "Custos em poções de refino por tentativa, observados nas peças Mythic da conta (níveis 83-88). Peças Legendary custaram menos nas mesmas condições — arma 210, escudo 205, capacete 193 —, indicando que o custo escala com a raridade da peça; a fórmula exata segue pendente.";
 
 export type RefineTierRow = {
   effect: string;

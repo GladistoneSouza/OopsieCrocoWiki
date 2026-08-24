@@ -7,6 +7,7 @@ import { CalloutNote } from "./components/CalloutNote";
 import { heroes } from "./data/heroes";
 import { rarities } from "./data/equipment";
 import { summonEconomy } from "./data/economy";
+import { summonRules, heroSummonRates, mythicalSummon, heroExchange } from "./data/summons";
 
 const systems = [
   {
@@ -135,6 +136,41 @@ export default function Home() {
         </div>
         <CalloutNote tone="info" title="Projeção direta" text={summonEconomy.projection} />
         <CalloutNote tone="warning" title={summonEconomy.pity.title} text={summonEconomy.pity.text} />
+        <div className="fact-grid three">
+          <FactCard kicker={summonRules.kicker} title={summonRules.title} text={summonRules.text} />
+          <FactCard kicker={mythicalSummon.kicker} title={mythicalSummon.title} text={mythicalSummon.text} />
+          <FactCard kicker={heroExchange.kicker} title={heroExchange.title} text={heroExchange.text} />
+        </div>
+        <div className="dismantle-layout">
+          <div className="table-wrap sticker-card">
+            <table className="game-table">
+              <thead>
+                <tr><th>Hero Summon (Rate Details)</th><th>Banner Lv.1</th><th>Lv.2</th><th>Lv.3</th></tr>
+              </thead>
+              <tbody>
+                {heroSummonRates.rows.map((row) => (
+                  <tr key={row.item}><td>{row.item}</td><td>{row.lv1}</td><td>{row.lv2}</td><td>{row.lv3}</td></tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="table-wrap sticker-card">
+            <table className="game-table">
+              <thead>
+                <tr><th>Mythical Summon</th><th>Taxa</th></tr>
+              </thead>
+              <tbody>
+                {mythicalSummon.rates.map((row) => (
+                  <tr key={row.item}><td>{row.item}</td><td>{row.chance}</td></tr>
+                ))}
+                {heroExchange.rows.map((row) => (
+                  <tr key={row.hero}><td>Exchange: {row.hero}</td><td>{row.price} · {row.limit}</td></tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <CalloutNote tone="warning" title="Leituras com ressalva" text={heroSummonRates.note} />
       </section>
 
       <section className="section" id="raridades">

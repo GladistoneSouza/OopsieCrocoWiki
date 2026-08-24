@@ -6,7 +6,8 @@ import { FactCard } from "../components/FactCard";
 import { CalloutNote } from "../components/CalloutNote";
 import { ShotFigure } from "../components/ShotFigure";
 import { combatRuns, coreTeam, fifthSlotRule } from "../data/combatRuns";
-import { newlyDocumentedEnemies, documentedBosses, enemyShots } from "../data/enemies";
+import { newlyDocumentedEnemies, documentedBosses, enemyShots, fieldDebuffs } from "../data/enemies";
+import { otherModes, inRunMechanics } from "../data/modes";
 
 export const metadata: Metadata = {
   title: "Runs documentadas — Oopsie Croco Wiki",
@@ -117,6 +118,44 @@ export default function RunsPage() {
         <div className="shot-grid five">
           {enemyShots.map((shot) => (
             <ShotFigure key={shot.src} src={shot.src} alt={shot.alt} caption={shot.caption} linked />
+          ))}
+        </div>
+      </section>
+
+      <section className="section" id="modos">
+        <SectionHead
+          eyebrow="ALÉM DO CO-OP"
+          title="Outros modos documentados"
+          description="Modos registrados pelas telas do jogo; cada um ainda merece página própria quando houver mais runs."
+        />
+        <div className="fact-grid three">
+          {otherModes.map((mode) => (
+            <FactCard key={mode.title} kicker={mode.kicker} title={mode.title} text={mode.text} />
+          ))}
+        </div>
+      </section>
+
+      <section className="section" id="mecanicas-run">
+        <SectionHead
+          eyebrow="DENTRO DA RUN"
+          title="Eventos e regras de escolha"
+          description="Mecânicas que aparecem no meio das runs e mudam decisões de build."
+        />
+        <div className="fact-grid">
+          {inRunMechanics.map((mechanic) => (
+            <FactCard key={mechanic.title} kicker={mechanic.kicker} title={mechanic.title} text={mechanic.text} />
+          ))}
+        </div>
+        <div className="new-enemies">
+          {fieldDebuffs.map((debuff) => (
+            <article className="sticker-card" key={debuff.name}>
+              <div>
+                <h3>{debuff.name}</h3>
+                <b>DEBUFF</b>
+              </div>
+              <p>{debuff.text}</p>
+              <small className="chip">{debuff.confidence}</small>
+            </article>
           ))}
         </div>
       </section>
