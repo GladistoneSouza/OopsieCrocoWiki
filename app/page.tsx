@@ -31,7 +31,7 @@ const systems = [
     icon: "🧪",
     tone: "berry",
     title: "Runs documentadas",
-    text: "Resultados completos com dano por herói, usados para validar builds, sinergias e counters.",
+    text: "Resultados completos com dano por herói, usados para validar composições, sinergias e respostas de fase.",
     cta: "Ver o laboratório",
   },
   {

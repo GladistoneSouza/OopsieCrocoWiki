@@ -17,14 +17,14 @@ export const accountTimeline = [
     date: "16-17 ago. 2026",
     stage: "Estágio 82",
     power: "aprox. 122K",
-    note: "Conta alcançou Silver Beach e passou a enfrentar o counter de Calamity.",
+    note: "Conta alcançou Silver Beach; as capturas daquele mapa registraram inimigos com mecânicas que atrapalhavam Calamity.",
     confidence: "confirmada na tela",
   },
   {
     date: "23-24 ago. 2026",
     stage: "Estágio 83",
     power: "126,73K",
-    note: "Novo estágio alcançado; draft registrou Bounty Hunter com contador 3 e Sword Demon com 2.",
+    note: "Novo estágio alcançado; a tentativa registrou Bounty Hunter com contador 3 e Sword Demon com 2.",
     confidence: "confirmada na tela",
   },
   {
@@ -38,7 +38,7 @@ export const accountTimeline = [
     date: "24 ago. 2026",
     stage: "Estágio 83 Moonshade",
     power: "132,02K",
-    note: "Primeira tentativa documentada caiu no nível 10/15, ainda no bloco do elite Octopus King e antes da Corrosive Empress.",
+    note: "Primeira tentativa documentada caiu no nível 10/15, ainda na sequência do elite Octopus King e antes da Corrosive Empress.",
     confidence: "confirmada na tela",
   },
 ] as const;

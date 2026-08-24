@@ -7,13 +7,13 @@ import { CalloutNote } from "../components/CalloutNote";
 import { ShotFigure } from "../components/ShotFigure";
 import { combatRuns, coreTeam, fifthSlotRule } from "../data/combatRuns";
 import { newlyDocumentedEnemies, documentedBosses, enemyShots, fieldDebuffs } from "../data/enemies";
-import { otherModes, inRunMechanics } from "../data/modes";
+import { otherModes, inRunMechanics, inRunMechanicShots } from "../data/modes";
 import { campaignStatus, strategyNotes, levelGrowth } from "../data/strategy";
 import { accountTimeline } from "../data/timeline";
 
 export const metadata: Metadata = {
   title: "Runs documentadas — Oopsie Croco Wiki",
-  description: "Resultados completos de runs de Oopsie Croco com dano por herói, usados para validar builds, sinergias e counters.",
+  description: "Resultados completos de runs de Oopsie Croco com dano por herói, usados para validar composições, sinergias e respostas de fase.",
 };
 
 export default function RunsPage() {
@@ -25,7 +25,7 @@ export default function RunsPage() {
         <p className="eyebrow">LABORATÓRIO DE CAMPO</p>
         <h1>Runs documentadas</h1>
         <p className="lede">
-          Resultados completos usados para validar builds e sinergias. Os números registram cada
+          Resultados completos usados para validar composições e sinergias. Os números registram cada
           tentativa específica, não uma promessa de dano fixo.
         </p>
       </section>
@@ -162,11 +162,16 @@ export default function RunsPage() {
         <SectionHead
           eyebrow="DENTRO DA RUN"
           title="Eventos e regras de escolha"
-          description="Mecânicas que aparecem no meio das runs e mudam decisões de build."
+          description="Mecânicas que aparecem no meio das runs e mudam decisões de composição."
         />
         <div className="fact-grid">
           {inRunMechanics.map((mechanic) => (
             <FactCard key={mechanic.title} kicker={mechanic.kicker} title={mechanic.title} text={mechanic.text} />
+          ))}
+        </div>
+        <div className="shot-grid five">
+          {inRunMechanicShots.map((shot) => (
+            <ShotFigure key={shot.src} src={shot.src} alt={shot.alt} caption={shot.caption} linked />
           ))}
         </div>
         <div className="new-enemies">

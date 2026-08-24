@@ -109,7 +109,7 @@ export const kazersDarkblade: HeroRecord = {
     { src: "/screenshots/sword-demon/story-3a.jpg", alt: "Primeira parte da Story 3 do Sword Demon" },
     { src: "/screenshots/sword-demon/story-3b.jpg", alt: "Conclusão da Story 3 do Sword Demon" },
     { src: "/screenshots/runs/summon-army-sword-demon.jpg", alt: "Build de clones e Fear usada numa run" },
-    { src: "/screenshots/runs/marksman-counter-result.jpg", alt: "Sword Demon encerra a segunda run com 23,96M" },
+    { src: "/screenshots/runs/marksman-counter-result.jpg", alt: "Sword Demon encerra a segunda tentativa com 23,96M" },
   ],
   pending: ["Obter o valor cortado de redução de cura de Fear into the Soul", "Confirmar os nomes divergentes Blade of Fear/Dreadblade e Gale/Swift Wind"],
 };

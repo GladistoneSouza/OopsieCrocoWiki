@@ -9,7 +9,7 @@ export const bountyHunter: HeroRecord = {
   role: "DPS por munições",
   summary: "Atiradora SSR baseada em munições especiais, velocidade de ataque, acúmulo de ataque e Barrage.",
   fieldNote:
-    "Foi MVP numa run documentada da dificuldade 5, com 4,31M, e depois alcançou 17,58M no andar 15 mesmo sob efeitos que neutralizavam atiradores. Identidade confirmada em 23 ago.: SSR Bounty Hunter, Eria · Ironwing.",
+    "Foi MVP numa run documentada da dificuldade 5, com 4,31M, e depois alcançou 17,58M no andar 15 mesmo sob efeitos daquela tentativa que prejudicavam atiradores. Identidade confirmada em 23 ago.: SSR Bounty Hunter, Eria · Ironwing.",
   image: "/screenshots/bounty-hunter/profile-level-15.jpg",
   identity: [
     "Título exibido: SSR Bounty Hunter",
@@ -52,7 +52,7 @@ export const bountyHunter: HeroRecord = {
     {
       name: "Barrage de munições",
       status: "confirmada",
-      summary: "Converte frequência de ataques e variedade de munições em escala de dano. O motor por trás (interpretação provável): a diversidade de balas especiais alimenta o Ammunition Expert (até 50 acúmulos de ATK), Attack Speed multiplica a frequência dos procs e o Barrage Time converte o acúmulo em limpeza de área dobrando a ultimate.",
+      summary: "Converte frequência de ataques e variedade de munições em escala de dano. O motor por trás (interpretação provável): a diversidade de balas especiais alimenta o Ammunition Expert (até 50 acúmulos de ATK), Attack Speed multiplica a frequência das ativações e o Barrage Time converte o acúmulo em limpeza de área dobrando a ultimate.",
       priorities: ["Ammunition Expert", "Gunsling · Loading", "Ammunition · Steel Core", "Ammunition · Mercury ou Tear", "Spearmanship · Double Shot", "Barrage Time +1"],
     },
   ],
@@ -60,14 +60,14 @@ export const bountyHunter: HeroRecord = {
   evidence: [
     "Ficha SSR Bounty Hunter — Eria · Ironwing no nível 15",
     "Run dificuldade 5: MVP com 4,31M",
-    "Run andar 15: 17,58M sob counter de atirador",
+    "Run andar 15: 17,58M sob efeitos que prejudicavam atiradores",
     "Painéis de blessings de múltiplas runs (22-23 ago.)",
   ],
   evidenceImages: [
     { src: "/screenshots/bounty-hunter/profile-level-15.jpg", alt: "Ficha SSR Bounty Hunter — Eria · Ironwing no nível 15" },
     { src: "/screenshots/bounty-hunter/blessings-run-level-6.jpg", alt: "Painel de blessings com Barrage Time e Gunsling Improvement" },
     { src: "/screenshots/bounty-hunter/blessings-igris.jpg", alt: "Painel de blessings com Call for Support contra o boss Igris" },
-    { src: "/screenshots/runs/marksman-counter-bounty-hunter.jpg", alt: "Build da Bounty Hunter no andar 15" },
+    { src: "/screenshots/runs/marksman-counter-bounty-hunter.jpg", alt: "Árvore da Bounty Hunter no andar 15" },
     { src: "/screenshots/runs/marksman-counter-result.jpg", alt: "Bounty Hunter encerra o andar 15 com 17,58M de dano" },
   ],
   pending: [

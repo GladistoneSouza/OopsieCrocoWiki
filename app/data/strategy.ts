@@ -55,14 +55,14 @@ export const strategyNotes: StrategyNote[] = [
   },
   {
     kicker: "ESTÁGIO 83 • PRIMEIRA TENTATIVA",
-    title: "O primeiro bloqueio veio antes do boss",
-    text: "A primeira tentativa documentada de Moonshade caiu no nível 10/15, ainda contra o bloco do elite Octopus King com Restrain e fraqueza azul. Portanto, a próxima leitura prática não é só resolver a Regeneration da Corrosive Empress; primeiro é atravessar o pacote de elite que derrubou a composição antes do boss final.",
+    title: "O primeiro bloqueio veio antes da chefe",
+    text: "A primeira tentativa documentada de Moonshade caiu no nível 10/15, ainda contra a sequência do elite Octopus King. O estágio 83 mostrou Restrain contra Summon e fraqueza azul nos alvos principais, sem evidência de inimigo anti-Calamity nesse mapa. O bloqueio prático veio antes da Corrosive Empress.",
     confidence: "confirmada na tela",
   },
   {
     kicker: "BLESSINGS • ROTA",
-    title: "Monte a build por rota, não por carta isolada",
-    text: "Não basta pegar a carta mais forte da rodada: é preciso decidir cedo a rota da run e escolher dentro dela — boss (scaling, marca e execução), ondas (AoE, correntes e invocações), sobrevivência (cura e escudo) ou counter (interrupção/burst contra a habilidade perigosa da fase). Uma escolha fora da rota ocupa a vaga de uma peça do combo e pode atrasar a ultimate que fecha a build.",
+    title: "Monte a formação por rota, não por carta isolada",
+    text: "Não basta pegar a carta mais forte da rodada: é preciso decidir cedo a rota da tentativa e escolher dentro dela — chefe, ondas, sobrevivência ou resposta direta à mecânica perigosa da fase. Uma escolha fora da rota ocupa a vaga de uma peça importante e pode atrasar a habilidade final que fecha a formação.",
     confidence: "estratégia do jogador",
   },
   {
@@ -91,8 +91,8 @@ export const strategyNotes: StrategyNote[] = [
   },
   {
     kicker: "BOUNTY HUNTER",
-    title: "Por que a build de munições funciona",
-    text: "Leitura fina da build confirmada: a diversidade de balas especiais (Steel Core, Mercury, Tear, Explosion) alimenta o Ammunition Expert (ATK até 50 acúmulos); Attack Speed (Loading, Frenzy, Kinetic Energy) multiplica a frequência dos procs; e o Barrage Time converte todo esse acúmulo em limpeza de área ao dobrar a ultimate.",
+    title: "Por que a linha de munições funciona",
+    text: "Leitura da linha confirmada: a diversidade de balas especiais (Steel Core, Mercury, Tear, Explosion) alimenta o Ammunition Expert (ATK até 50 acúmulos); velocidade de ataque (Loading, Frenzy, Kinetic Energy) aumenta a frequência das ativações; e Barrage Time converte esse acúmulo em limpeza de área ao dobrar a habilidade final.",
     confidence: "interpretação provável",
   },
   {

@@ -123,7 +123,7 @@ export const phantom: HeroRecord = {
       name: "Abertura acelerada",
       status: "rascunho",
       summary:
-        "Direção derivada apenas do Bestiary: usar Extremely colorful (+240% de velocidade de ataque nos 10s iniciais) para multiplicar os procs de lâmina dos ataques básicos (Extremely white / Jiyi · Powder / Extremely Red) logo no começo da luta.",
+        "Direção derivada apenas do Bestiary: usar Extremely colorful (+240% de velocidade de ataque nos 10s iniciais) para multiplicar as ativações de lâmina dos ataques básicos (Extremely white / Jiyi · Powder / Extremely Red) logo no começo da luta.",
       priorities: ["Extremely colorful", "Extremely Red", "Jiyi · Powder", "Extremely white", "Extreme intention · kill"],
     },
   ],
