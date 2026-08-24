@@ -24,12 +24,13 @@ export type HeroRecord = {
   artImage?: string;
   identity?: string[];
   story?: string[];
+  storyImages?: { src: string; alt?: string; caption?: string; title?: string }[];
   stats?: string[];
   exclusiveGems?: { name: string; slot: string; baseStat: string; effect: string }[];
   levelSkills: HeroSkill[];
   builds: HeroBuild[];
   synergies: string[];
   evidence: string[];
-  evidenceImages?: { src: string; alt?: string; caption?: string }[];
+  evidenceImages?: { src: string; alt?: string; caption?: string; title?: string }[];
   pending: string[];
 };

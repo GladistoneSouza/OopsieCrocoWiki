@@ -63,6 +63,9 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
     );
   }
 
+  const storyImageSources = new Set(hero.storyImages?.map((item) => item.src) ?? []);
+  const evidenceImages = hero.evidenceImages?.filter((item) => !storyImageSources.has(item.src)) ?? [];
+
   return (
     <main>
       <SiteHeader active="/personagens" />
@@ -115,6 +118,16 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
           <section className="character-story">
             <p className="eyebrow">HISTÓRIA</p>
             <h2>{storyTitle(hero.slug, hero.name)}</h2>
+            {hero.storyImages?.length ? (
+              <div className="story-carousel-panel" aria-label={`Prints da história de ${hero.name}`}>
+                <EvidenceCarousel
+                  items={hero.storyImages.map((item) => {
+                    const label = item.caption ?? item.alt ?? "Print da história";
+                    return { src: item.src, label, kind: item.title ?? "História" };
+                  })}
+                />
+              </div>
+            ) : null}
             {hero.story.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
           </section>
         ) : null}
@@ -204,19 +217,19 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
           <span>{hero.evidence.join(" • ")}</span>
         </aside>
 
-        {hero.evidenceImages?.length ? (
+        {evidenceImages.length ? (
           <section className="evidence-gallery sticker-card">
             <div className="gallery-head">
               <div>
                 <p className="eyebrow">EVIDÊNCIAS VISUAIS</p>
                 <h2>Galeria de referência</h2>
               </div>
-              <span>{hero.evidenceImages.length} prints catalogados</span>
+              <span>{evidenceImages.length} prints catalogados</span>
             </div>
             <EvidenceCarousel
-              items={hero.evidenceImages.map((item) => {
+              items={evidenceImages.map((item) => {
                 const label = item.caption ?? item.alt ?? "Evidência visual";
-                return { src: item.src, label, kind: evidenceKind(item.src, label) };
+                return { src: item.src, label, kind: item.title ?? evidenceKind(item.src, label) };
               })}
             />
           </section>

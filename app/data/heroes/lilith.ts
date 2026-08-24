@@ -26,6 +26,16 @@ export const lilith: HeroRecord = {
     "Em Runecity (Story2, página 3/7), usou ilusões de Nightmare para espalhar medo e confusão, escapar dos guardas e preparar armadilhas. Os magos da cidade começaram a atravessar as ilusões, revelando resistência mágica e uma força desconhecida.",
     "A aba de história tem 7 páginas: Hero Background + Story1 a Story6. Story1 e Story2 já foram lidas (20 diamantes cada). Desbloqueios confirmados: Story3 no nível 15, Story4 no nível 20, Story5 no nível 25 e Story6 no nível 30 — a Story6 também pode ser comprada por 20 gemas. Cada página lida recompensa 20 diamantes.",
   ],
+  storyImages: [
+    { src: "/screenshots/lilith/hero-background.jpg", title: "Background", caption: "Hero Background: identidade oficial, raça, profissão e início da história da Lilith." },
+    { src: "/screenshots/lilith/story-1.jpg", title: "Story 1", caption: "Story 1: Lilith Meiyan, Black Breath Cult e a magia de Nightmare." },
+    { src: "/screenshots/lilith/story-2.jpg", title: "Story 2", caption: "Story 2: Runecity, ilusões de Nightmare e resistência dos magos da cidade." },
+    { src: "/screenshots/lilith/story-level-15.jpg", title: "Story 3", caption: "Story 3: desbloqueio confirmado no nível 15." },
+    { src: "/screenshots/lilith/story-level-20.jpg", title: "Story 4", caption: "Story 4: desbloqueio confirmado no nível 20." },
+    { src: "/screenshots/lilith/story-level-25.jpg", title: "Story 5", caption: "Story 5: desbloqueio confirmado no nível 25." },
+    { src: "/screenshots/lilith/story-level-30.jpg", title: "Story 6", caption: "Story 6: desbloqueio confirmado no nível 30." },
+    { src: "/screenshots/lilith/story-6-gem-unlock.jpg", title: "Story 6 · gemas", caption: "Story 6 também aparece com opção de compra por 20 gemas." },
+  ],
   stats: [
     "Nível 15 (24 ago.): poder 21.824 · ataque 16,28K · HP 299,38K · defesa 10,11K · Dano Crítico global +21,0% · fragmentos 4/60 · material de upgrade 0/1344",
     "Snapshot no nível 13 (21 ago., ~09h): poder 18.894 · ataque 14,13K · HP 256,12K · defesa 8.825 · fragmentos 22/30 · Dano Crítico global +18,2%",

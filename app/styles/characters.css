@@ -292,6 +292,30 @@
   margin: 4px 0 14px;
 }
 
+.story-carousel-panel {
+  margin: 18px 0 20px;
+}
+
+.story-carousel-panel .carousel-stage {
+  min-height: 520px;
+  background:
+    linear-gradient(135deg, rgba(255, 194, 51, 0.16), transparent 36%),
+    linear-gradient(180deg, #2b2038, #181224);
+}
+
+.story-carousel-panel .carousel-image-link {
+  padding: 18px 68px;
+}
+
+.story-carousel-panel .carousel-image-link img {
+  max-height: 68vh;
+}
+
+.story-carousel-panel .carousel-caption {
+  border-color: rgba(43, 37, 67, 0.24);
+  background: rgba(255, 250, 236, 0.82);
+}
+
 .character-story > p:not(.eyebrow) {
   max-width: 850px;
   color: var(--ink-soft);
