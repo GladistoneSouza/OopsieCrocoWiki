@@ -91,7 +91,7 @@ export const lilith: HeroRecord = {
         "Os dois se enfrentam em um duelo de pesadelos e transformações, criando uma situação caótica e difícil de controlar.",
         "O confronto aumenta o respeito de Lilith pelo oponente, mas também revela uma ameaça maior por trás da aliança. Suspeitando de um plano mais amplo, ela percebe que talvez seja apenas uma peça em um jogo maior.",
       ],
-      note: "Texto consolidado a partir de dois prints rolados da Story 3.",
+      note: "Texto consolidado a partir da Story 3.",
     },
     {
       title: "Story 4",
