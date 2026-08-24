@@ -27,12 +27,12 @@ export const documentedBosses: DocumentedBoss[] = [
   },
   {
     name: "Igris",
-    context: "Boss de desafio com vários níveis — o HP escala de alguns milhões até a casa dos bilhões",
+    context: "Boss de desafio em escada: derrotar um nível libera o seguinte, sempre com mais HP — de alguns milhões nos primeiros até a casa dos bilhões",
     skills: [
       { name: "Boss Rage Mode", text: "Durante a luta, o boss entra em modo fúria com o banner “Boss Rage Mode! Damage +20000%!”." },
       { name: "Boss Damage Boost", text: "A interface exibiu um multiplicador crescente de Boss Damage Boost (+205% a +210% observados)." },
     ],
-    notes: "Barras de HP registradas em níveis diferentes: 1,02B e 999,99M nos prints do repositório e 1,93B numa run relatada — coerente com a progressão por níveis observada pelo jogador (de milhões nos primeiros até bilhões, talvez além). Na run capturada, Shadow Wolf concentrou o dano (104,86M) enquanto o time inteiro caía durante o Rage Mode.",
+    notes: "A progressão é sequencial, não por seleção: cada abate avança automaticamente para o nível seguinte, com HP maior. Barras registradas em níveis diferentes: 1,02B e 999,99M nos prints do repositório e 1,93B numa run relatada — não se sabe ainda se existe um nível máximo. Na run capturada, Shadow Wolf concentrou o dano (104,86M) enquanto o time inteiro caía durante o Rage Mode.",
     image: "/screenshots/enemies/igris-rage-mode.jpg",
   },
   {
