@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Oopsie Croco Wiki",
-  description: "Guia prático de equipamentos, gemas, builds, heróis e modos de jogo.",
+  description: "Guia prático de equipamentos, gemas, builds, heróis e modos de jogo de Oopsie Croco, o auto-battler roguelike da Croco Studio Interactive.",
   openGraph: {
     title: "Oopsie Croco Wiki",
     description: "Equipamentos, gemas, builds e Co-op.",

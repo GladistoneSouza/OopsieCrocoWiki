@@ -1,0 +1,277 @@
+/* ---- Hero da home ---- */
+
+.home-hero {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 90px 24px 70px;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.home-hero h1 {
+  font-size: clamp(46px, 6.4vw, 78px);
+  max-width: 640px;
+}
+
+.home-hero h1 em {
+  font-style: normal;
+  color: var(--croco-deep);
+  text-decoration: underline wavy var(--sun);
+  text-decoration-thickness: 5px;
+  text-underline-offset: 8px;
+}
+
+.home-hero .lede {
+  margin: 26px 0 30px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.hero-updated {
+  display: block;
+  margin-top: 20px;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--ink-soft);
+}
+
+/* ---- Card do ciclo ---- */
+
+.cycle-card {
+  background: var(--ink);
+  color: #fff;
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: 10px 10px 0 rgba(43, 37, 67, 0.2);
+  transform: rotate(1.2deg);
+}
+
+.cycle-card .kicker {
+  color: var(--sun);
+}
+
+.cycle {
+  display: grid;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.cycle div {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.cycle b {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  background: var(--sun);
+  color: var(--ink);
+  border: 2px solid #fff;
+  border-radius: 50%;
+  font-family: var(--font-display);
+  font-size: 16px;
+}
+
+.cycle span {
+  font-family: var(--font-display);
+  font-size: 21px;
+}
+
+.cycle i {
+  margin-left: 15px;
+  color: #8b85ad;
+  font-style: normal;
+}
+
+.cycle-card p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #cfcbe6;
+  border-top: 2px solid rgba(255, 255, 255, 0.15);
+  padding-top: 18px;
+}
+
+/* ---- Cards de sistemas ---- */
+
+.system-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.system-card {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: var(--ink);
+  border: var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sticker);
+  transition: transform var(--pop), box-shadow var(--pop);
+}
+
+.system-card:hover {
+  transform: translateY(-5px) rotate(-0.5deg);
+  box-shadow: var(--shadow-sticker-hover);
+}
+
+.system-card.tone-gold { background: linear-gradient(150deg, #ffe6a3, #ffcf55); }
+.system-card.tone-sky { background: linear-gradient(150deg, #c9ecff, #7fd0fa); }
+.system-card.tone-berry { background: linear-gradient(150deg, #e4d6ff, #c0a1fa); }
+.system-card.tone-croco { background: linear-gradient(150deg, #d1efc0, #94d878); }
+
+.system-icon {
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  font-size: 28px;
+  background: var(--panel);
+  border: var(--border);
+  border-radius: 18px;
+  box-shadow: 0 3px 0 rgba(43, 37, 67, 0.25);
+  transform: rotate(-4deg);
+  transition: transform var(--pop);
+}
+
+.system-card:hover .system-icon {
+  transform: rotate(4deg) scale(1.06);
+}
+
+.system-card h3 {
+  font-size: 27px;
+  margin: 18px 0 10px;
+}
+
+.system-card p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(43, 37, 67, 0.8);
+  max-width: 420px;
+}
+
+.system-card b {
+  display: inline-block;
+  margin-top: 16px;
+  font-family: var(--font-display);
+  font-size: 14px;
+}
+
+/* ---- Heróis em destaque ---- */
+
+.hero-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.hero-cards > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.hero-cards article {
+  height: 100%;
+}
+
+.hero-cards h3 {
+  font-size: 24px;
+  margin: 18px 0 10px;
+}
+
+.hero-cards p {
+  color: var(--ink-soft);
+  font-size: 13px;
+  line-height: 1.6;
+  min-height: 62px;
+}
+
+.hero-cards article > b {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 12px;
+  font-weight: 900;
+  color: var(--croco-deep);
+}
+
+/* ---- Raridades ---- */
+
+.rarity-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+.rarity-row article {
+  display: grid;
+  gap: 5px;
+  padding: 20px;
+  color: #fff;
+  border: var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sticker);
+  background: var(--r-blue);
+}
+
+.rarity-row article[data-rarity="SR"] { background: var(--r-purple); }
+.rarity-row article[data-rarity="SSR"] { background: var(--r-gold); }
+.rarity-row article[data-rarity="SP"] { background: var(--r-red); }
+.rarity-row article[data-rarity="UR"] {
+  background: linear-gradient(135deg, #5369c4, #a04b9b, #c88b38);
+}
+
+.rarity-row b {
+  font-family: var(--font-display);
+  font-size: 26px;
+}
+
+.rarity-row span {
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.rarity-row small {
+  font-size: 10px;
+  opacity: 0.85;
+}
+
+@media (max-width: 900px) {
+  .home-hero {
+    grid-template-columns: 1fr;
+    padding: 60px 24px 50px;
+    gap: 40px;
+  }
+
+  .system-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .rarity-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .rarity-row {
+    grid-template-columns: 1fr;
+  }
+
+  .cycle-card {
+    box-shadow: 6px 6px 0 rgba(43, 37, 67, 0.2);
+  }
+}

@@ -40,3 +40,6 @@ next-env.d.ts
 /.sites-runtime/
 /outputs/
 /work/
+
+# Prints brutos do jogo (material de trabalho, nao publicar)
+/img_game/
