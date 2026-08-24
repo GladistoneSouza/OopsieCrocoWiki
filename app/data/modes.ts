@@ -50,7 +50,7 @@ export const inRunMechanics = [
   {
     kicker: "INIMIGOS • VARIAÇÃO",
     title: "Restrições dependem do estágio",
-    text: "Os inimigos não parecem mudar aleatoriamente por tentativa: cada estágio/mapa observado tem seu próprio conjunto. Por isso, efeitos que prejudicam Mago, Calamity, Arqueiro/Shooter ou Summon devem ser registrados no estágio correto. O 82 Silver Beach tinha inimigos com resposta contra Calamity; o 83 Moonshade mostrou Restrain contra Summon, mas não evidência de anti-Calamity. Campanhas iniciais também mostram variação própria, como Bone Desert marcado como Not Recommended para o ícone verde/pata.",
+    text: "Os inimigos não parecem mudar aleatoriamente por tentativa: cada estágio/mapa observado tem seu próprio conjunto. Por isso, efeitos que prejudicam Mago, Calamity, Arqueiro/Shooter ou Summon devem ser registrados no estágio correto. O 82 Silver Beach tinha inimigos com resposta contra Calamity; o 83 Moonshade mostrou Restrain contra Summon, sem evidência de anti-Calamity nesse mapa. Bone Desert aparece nas capturas como 11.Bone Desert, com Not Recommended para o ícone verde/pata e boss/elite fracos contra azul.",
   },
   {
     kicker: "CLASS BONUS",
@@ -68,7 +68,12 @@ export const inRunMechanicShots = [
   {
     src: "/screenshots/campaign/stage-11-bone-desert-map.jpg",
     alt: "Mapa Bone Desert com Not Recommended para ícone verde/pata",
-    caption: "Bone Desert: mapa marcado como Not Recommended para o ícone verde/pata, enquanto boss e elite mostram fraqueza azul em outra tela.",
+    caption: "Bone Desert: mapa marcado como Not Recommended para o ícone verde/pata.",
+  },
+  {
+    src: "/screenshots/campaign/stage-11-bone-desert-bosses.jpg",
+    alt: "Ficha de Bone Desert com Stone Giant e Land Shark King",
+    caption: "Bone Desert: Stone Giant e Land Shark King aparecem como alvos principais fracos contra azul.",
   },
   {
     src: "/screenshots/campaign/early-campaign-poison-bug-tooltip.jpg",
