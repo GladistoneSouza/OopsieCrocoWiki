@@ -53,3 +53,15 @@ export const combatRuns: CombatRun[] = [
     ],
   },
 ];
+
+export const coreTeam = [
+  { kicker: "FRONTLINE + FEAR", name: "Kazer’s Darkblade", text: "Tanka, aplica Fear e converte os acúmulos em dano. A cura durante Blade Storm é o próximo breakpoint importante." },
+  { kicker: "CARRY DE BOSS", name: "Shadow Wolf", text: "Escala Blood, múltiplos Bites e dano com HP baixo." },
+  { kicker: "INFRAESTRUTURA", name: "Sakura", text: "Cura, shield, mana e Yang: Rapid para acelerar o time inteiro." },
+  { kicker: "CORPOS + AGGRO", name: "Maya", text: "Esqueletos absorvem ataques, protegem a retaguarda e mantêm dano constante." },
+];
+
+export const fifthSlotRule = {
+  title: "Quinta vaga flexível",
+  text: "Arqueiro quando falta DPS; Controller quando uma interrupção decide a luta; Tank apenas quando frontline e summons não bastam; segundo Summoner quando mais corpos e aggro oferecem mais valor.",
+};
