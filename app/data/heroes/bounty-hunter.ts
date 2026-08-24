@@ -17,8 +17,17 @@ export const bountyHunter: HeroRecord = {
     "Profissão: Archer",
     "Posição exibida: 5",
   ],
-  stats: ["Nível 15: poder 21.398 · ataque 19,57K · HP 238,82K · defesa 8.136 · Dano Crítico global +21,0% · fragmentos 19/60"],
+  stats: [
+    "Nível 15: poder 21.398 · ataque 19,57K · HP 238,82K · defesa 8.136 · Dano Crítico global +21,0% · fragmentos 19/60",
+    "Snapshot no nível 13: poder 17.149 · ataque 15,54K · HP 194,83K · defesa 6.545",
+    "Snapshot no nível 10 (jul.-ago.): poder 8.664 · ataque 7.975 · HP 96,61K · defesa 3.245",
+  ],
   levelSkills: [
+    {
+      name: "Ultimate — Let the Bullets Fly",
+      description: "Depois de 8 ataques, dispara uma rajada de balas (descrição de seleção: Deal Burst Damage). Em batalha, ela acumula os buffs Sharpness (aumenta dano) e Frenzy (aumenta velocidade de ataque) — observados 10→20 acúmulos de Sharpness elevando o ATK de 20,8K para 22,69K.",
+      source: "Carta de seleção e painel do herói em batalha.",
+    },
     { name: "Nível 15 — Wild Rapid Fire", description: "A contagem de balas de Wild Rapid Fire aumenta em +5.", source: "Texto confirmado na ficha do nível 15." },
     {
       name: "Nível 20 — Call for Backup / Barrage Time",

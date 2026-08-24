@@ -10,26 +10,31 @@ export const dragonWarrior: HeroRecord = {
   summary:
     "Guerreiro SP construído em torno de Dragon Soul Link: compartilha o dano dos aliados, acumula Dragon Heart para crescer o HP máximo e escala redução de dano própria e do grupo.",
   fieldNote:
-    "Ficha documentada do nível 1 ao 5 em 23 ago. 2026, com o Blessing Bestiary completo. Ainda não há run registrada com o personagem, então todo o desempenho prático permanece pendente.",
+    "Ficha documentada entre 21 e 23 ago. 2026: progressão agora mapeada até o nível 30, Blessing Bestiary completo e primeiros registros do herói em batalha (painel de skill, escolhas de blessing e ranking de dano em 21 ago.). Ainda não há run dedicada em que o Dragon Warrior seja o foco do time.",
   image: "/screenshots/dragon-warrior/profile-level-1.jpg",
   identity: [
     "Título exibido: SP Dragon Warrior",
     "Nome exibido na ficha: Rain Flame Soul",
     "Profissão: Warrior",
     "Alcance/posição exibida: 1 (frontline)",
+    "Obtenção observada: tela \"New Hero\" em 21 ago. (invocação); aparece como opção de Probability UP no Mythical Summon e como herói selecionável no Mythic Hero Select Chest e no Abyss Realm",
   ],
   stats: [
     "Nível 1: poder 14.728 · ataque 8.561 · HP 237,22K · defesa 8.079 · Dano Crítico global +1,6%",
     "Nível 3: poder 16.894 · ataque 9.820 · HP 272,11K · defesa 9.267 · Dano Crítico global +4,8%",
     "Nível 4: poder 17.652 · ataque 10,26K · HP 284,32K · defesa 9.683 · Dano Crítico global +6,4%",
     "Nível 5: poder 18.410 · ataque 10,7K · HP 296,53K · defesa 10,1K · Dano Crítico global +8,0%",
-    "Snapshot anterior no nível 1 (22 ago.): poder 14.304 · ataque 8.298 · HP 230,05K · defesa 7.874",
+    "Snapshot anterior no nível 1 (21–22 ago.): poder 14.304 · ataque 8.298 · HP 230,05K · defesa 7.874",
+    "Snapshot no nível 5 divergente (21 ago., tela Hero Details em contexto co-op): CP 13,7K · ataque 8.056 · HP 223,02K · defesa 7.337 — valores menores que o próprio nível 1 registrado; ver pendências",
+    "Tela \"New Hero\" na obtenção (21 ago.): ataque 8.225 · HP 228,01K · defesa 780[valor cortado, não exibido por inteiro]",
+    "Em batalha (21 ago., painel do herói): HP 328.976/328.976 · ataque 9.583 · defesa 8.661 — valores observados durante uma run, com buffs ativos (3 ícones: 1 / 1 / 20 stacks; tooltip de um deles: \"Healing — Stacks: 1 — Continuously recover HP\")",
   ],
   levelSkills: [
     {
       name: "Ultimate — Dragon Soul Link",
       description: "Ganha redução de dano e compartilha 30% do dano recebido por 1 a 3 aliados.",
-      source: "Texto confirmado no Blessing Bestiary.",
+      source:
+        "Texto confirmado no Blessing Bestiary, na tela Hero Details e no painel do herói em batalha (mesmo texto nas três telas).",
     },
     {
       name: "Nível 3 — Dragon Heart · Protection",
@@ -45,80 +50,101 @@ export const dragonWarrior: HeroRecord = {
     {
       name: "Nível 8 — Link · Thick Skin",
       description:
-        "Começa com Link · Thick Skin. Tooltip: para cada 1 aliado com dano compartilhado, a própria redução de dano aumenta bastante.",
-      source: "Ficha e tooltip confirmados na tela.",
+        "Começa com Link · Thick Skin. Tooltip: para cada 1 aliado com dano compartilhado, a própria redução de dano aumenta bastante. Nota de tradução: o tooltip da ficha diz \"For every 1 teammate shared, one's own DMG reduction will be greatly increased\" e o Bestiary/picker em batalha diz \"For each 1 ally you share damage with, your DMG Reduction increases greatly\" — duas traduções para o mesmo efeito.",
+      source: "Ficha, tooltip, Bestiary e picker em batalha confirmados na tela.",
     },
     {
-      name: "Nível 10 — Summon Dragon / Dragon God's Blessing",
+      name: "Nível 10 — Summon Dragon / Dragon God's Blessing (melhoria)",
       description:
-        "Summon Dragon: o sopro do dragão passa a provocar todos os inimigos e concede escudos aos aliados. Dragon God's Blessing: aumenta a redução de dano do Dragon Warrior e fortalece o efeito de compartilhamento do Link.",
-      source: "Texto da progressão; os textos do Bestiary para as mesmas ultimates são diferentes (ver pendências).",
+        "Summon Dragon: o sopro do dragão passa adicionalmente a provocar todos os inimigos e concede escudos aos aliados. Dragon God's Blessing: aumenta a redução de dano do Dragon Warrior e fortalece o efeito de compartilhamento do Link.",
+      source:
+        "Texto da progressão. Hipótese reforçada pelos níveis 20 e 25: as linhas de progressão são melhorias incrementais das duas ultimates douradas do Bestiary (\"additionally\"), não redefinições delas.",
     },
     {
       name: "Nível 12 — Blessing adicional",
       description: "Ganha uma Blessing adicional depois de selecionar uma Ultimate Skill.",
-      source: "Texto confirmado na tela de progressão.",
+      source:
+        "Texto confirmado na tela de progressão; coerente com o picker em batalha marcado \"Level 12\" oferecendo 6 opções, incluindo a dourada Dragon God's Blessing.",
     },
     {
       name: "Nível 15 — escudo pós-Link",
       description:
         "Depois de liberar Dragon Soul Link, o Dragon Warrior e o aliado com menor vida ganham um escudo.",
-      source: "Texto confirmado na tela de progressão; nível ainda bloqueado.",
+      source: "Texto confirmado na tela de progressão.",
+    },
+    {
+      name: "Nível 20 — Summon Dragon / Dragon God's Blessing (melhoria)",
+      description:
+        "Summon Dragon: inimigos provocados causam dano reduzido. Dragon God's Blessing: restaura o HP perdido do Dragon Warrior a cada segundo.",
+      source: "Texto confirmado na tela de progressão (nível ainda bloqueado).",
+    },
+    {
+      name: "Nível 25 — Summon Dragon / Dragon God's Blessing (melhoria)",
+      description:
+        "Summon Dragon: o Dragon Breath concede a todos os aliados redução de dano aumentada. Dragon God's Blessing: aumenta a taxa de reflexão (reflect ratio) do Dragon Warrior.",
+      source: "Texto confirmado na tela de progressão (nível ainda bloqueado).",
+    },
+    {
+      name: "Nível 30 — dano da profissão",
+      description: "Aumenta o DMG desta profissão em 8%.",
+      source: "Texto confirmado na tela de progressão (nível ainda bloqueado).",
     },
     {
       name: "Bestiary — Dragonheart · Sustain",
       description: "Duração de Dragon Soul Link aumentada; ganha Dragonheart por segundo, aumentando permanentemente o HP máximo.",
-      source: "Blessing Bestiary",
+      source: "Blessing Bestiary; também vista como opção em picker de batalha (21 ago.).",
     },
     {
       name: "Bestiary — Dragonheart · Feedback",
       description: "Durante Dragon Soul Link, ser atingido tem chance de causar dano aos inimigos próximos e restaurar o próprio HP.",
-      source: "Blessing Bestiary",
+      source: "Blessing Bestiary; também vista como opção em picker de batalha (21 ago.).",
     },
     {
       name: "Bestiary — Dragonheart · Sword Intent",
       description: "Ataques causam dano adicional e têm chance de conceder Dragonheart.",
-      source: "Blessing Bestiary",
+      source: "Blessing Bestiary; também vista como opção em picker de batalha (21 ago.).",
     },
     {
       name: "Bestiary — Dragonheart · Intimidation",
       description: "Durante Dragon Soul Link, causa dano por segundo aos inimigos próximos e reduz o ataque deles.",
-      source: "Blessing Bestiary",
+      source: "Blessing Bestiary; não apareceu nos pickers de batalha registrados.",
     },
     {
       name: "Bestiary — Dragonheart · Scale Armor",
       description: "Ao ativar Dragon Soul Link, provoca inimigos próximos e ganha um escudo.",
-      source: "Blessing Bestiary",
+      source: "Blessing Bestiary; também vista como opção em picker de batalha (21 ago.).",
     },
     {
       name: "Bestiary — Link · Enhancement",
       description: "A cada 1 instância de dano recebida, ganha um pouco de redução de dano.",
-      source: "Blessing Bestiary",
+      source: "Blessing Bestiary; não apareceu nos pickers de batalha registrados.",
     },
     {
       name: "Bestiary — Link · Spread",
       description: "Dragon Soul Link vincula todos os aliados.",
-      source: "Blessing Bestiary",
+      source: "Blessing Bestiary; também vista como opção em picker de batalha (21 ago.).",
     },
     {
       name: "Bestiary — Link · Nourishment",
       description: "Com HP baixo, restaura vida continuamente.",
-      source: "Blessing Bestiary",
+      source: "Blessing Bestiary; também vista como opção em picker de batalha (21 ago.).",
     },
     {
       name: "Bestiary — Link · Survival",
       description: "Com HP baixo, ganha redução de dano.",
-      source: "Blessing Bestiary",
+      source: "Blessing Bestiary; também vista como opção em picker de batalha (21 ago.).",
     },
     {
       name: "Bestiary — Summon Dragon (dourada)",
       description: "Invoca um dragão gigante que causa dano a todos os inimigos e reduz a defesa deles.",
-      source: "Blessing Bestiary; diverge do texto do nível 10 (provocar + escudos).",
+      source:
+        "Blessing Bestiary; também oferecida como dourada em picker de batalha (21 ago.). As linhas de progressão dos níveis 10/20/25 acrescentam efeitos a esta ultimate (hipótese).",
     },
     {
       name: "Bestiary — Dragon God's Blessing (dourada)",
       description: "Na primeira vez que o HP chega a 0, revive e recupera uma grande quantidade de vida.",
-      source: "Blessing Bestiary; diverge do texto do nível 10 (redução de dano + link).",
+      source:
+        "Blessing Bestiary; também oferecida como dourada em picker de batalha nível 12 (21 ago.). As linhas de progressão dos níveis 10/20/25 acrescentam efeitos a esta ultimate (hipótese).",
     },
   ],
   builds: [
@@ -126,7 +152,7 @@ export const dragonWarrior: HeroRecord = {
       name: "Âncora de frontline",
       status: "rascunho",
       summary:
-        "Direção sugerida pelo próprio Bestiary: manter Dragon Soul Link ativo no maior número de aliados e converter o dano recebido em defesa e sustain. Ainda sem run registrada.",
+        "Direção sugerida pelo próprio Bestiary: manter Dragon Soul Link ativo no maior número de aliados e converter o dano recebido em defesa e sustain. Há registros do herói em batalha (21 ago.), mas as telas mostram apenas as opções oferecidas nos pickers, não quais blessings foram escolhidas.",
       priorities: ["Link · Spread", "Dragonheart · Sustain", "Link · Thick Skin", "Dragonheart · Scale Armor", "Link · Nourishment"],
     },
   ],
@@ -134,12 +160,17 @@ export const dragonWarrior: HeroRecord = {
     "Composições que sofrem dano constante — o compartilhamento converte pressão em redução de dano via Link · Thick Skin",
     "Aliados frágeis de retaguarda protegidos pelo escudo do nível 15",
     "Times de invocação: mais corpos vivos para vincular com Link · Spread",
+    "Composição observada em batalha (21 ago., boss do estágio 15): Bounty Hunter, Sword Demon, Robin e Tidecaller ao lado do Dragon Warrior — no ranking de dano ele fez 1,65M → 1,88M, papel claramente não ofensivo",
   ],
   evidence: [
     "Fichas dos níveis 1, 3, 4 e 5 com atributos completos",
     "Tooltips de Dragon Heart · Protection e Link · Thick Skin",
-    "Progressão dos níveis 10, 12 e 15",
+    "Progressão dos níveis 10, 12, 15, 20, 25 e 30 (telas de 21 e 23 ago.)",
     "Blessing Bestiary completo (3 telas)",
+    "Pickers de blessing em batalha (21 ago.), incluindo as douradas Summon Dragon e Dragon God's Blessing",
+    "Painel do herói em batalha com stats e texto de Dragon Soul Link (21 ago.)",
+    "Ranking de dano de batalha contra boss do estágio 15 (21 ago.)",
+    "Tela Hero Details nível 5 em contexto co-op com stats divergentes (21 ago.)",
   ],
   evidenceImages: [
     { src: "/screenshots/dragon-warrior/profile-level-1.jpg", caption: "Ficha SP Dragon Warrior — Rain Flame Soul no nível 1" },
@@ -152,11 +183,20 @@ export const dragonWarrior: HeroRecord = {
     { src: "/screenshots/dragon-warrior/profile-level-3.jpg", caption: "Ficha no nível 3" },
     { src: "/screenshots/dragon-warrior/profile-level-4.jpg", caption: "Ficha no nível 4" },
     { src: "/screenshots/dragon-warrior/profile-level-5.jpg", caption: "Ficha no nível 5" },
+    { src: "/screenshots/dragon-warrior/progression-level-20.jpg", caption: "Progressão do nível 20: melhorias de Summon Dragon e Dragon God's Blessing" },
+    { src: "/screenshots/dragon-warrior/progression-levels-25-30.jpg", caption: "Progressão dos níveis 25 e 30 (+8% DMG da profissão)" },
+    { src: "/screenshots/dragon-warrior/battle-panel-dragon-soul-link.jpg", caption: "Painel do herói em batalha: stats, Dragon Soul Link e buff Healing" },
+    { src: "/screenshots/dragon-warrior/battle-damage-ranking.jpg", caption: "Ranking de dano em batalha de boss (estágio 15) com Dragon Warrior no time" },
+    { src: "/screenshots/dragon-warrior/battle-blessing-picker-level-12.jpg", caption: "Picker de blessing nível 12 em batalha com a dourada Dragon God's Blessing" },
+    { src: "/screenshots/dragon-warrior/battle-blessing-picker-summon-dragon.jpg", caption: "Picker de blessing em batalha com a dourada Summon Dragon" },
+    { src: "/screenshots/dragon-warrior/hero-details-level-5-coop.jpg", caption: "Hero Details nível 5 em contexto co-op, com stats divergentes da ficha própria" },
   ],
   pending: [
-    "Registrar uma run completa para validar a direção de build",
-    "Esclarecer a divergência entre os textos do nível 10 e do Bestiary para Summon Dragon e Dragon God's Blessing (tradução inconsistente)",
-    "Confirmar os valores numéricos de Dragon Heart, escudos e redução de dano",
-    "Mapear os breakpoints dos níveis 20+",
+    "Registrar uma run completa focada no Dragon Warrior para validar a direção de build (os registros de 21 ago. mostram pickers e ranking, mas não quais blessings foram escolhidas)",
+    "Confirmar a hipótese de que as linhas de progressão dos níveis 10/20/25 são melhorias das ultimates do Bestiary, e não textos alternativos",
+    "Esclarecer a ficha nível 5 divergente de 21 ago. (CP 13,7K, stats abaixo do próprio nível 1): pela cronologia, foi vista via Hero Details em co-op antes de o herói ser obtido — hipótese: ficha do Dragon Warrior de outro jogador",
+    "Confirmar os valores numéricos de Dragon Heart, escudos, reflexão e redução de dano",
+    "Identificar os dois buffs sem tooltip vistos no painel de batalha (ícones com 1 e 20 stacks)",
+    "Mapear os breakpoints acima do nível 30 (a tela registrada termina no nível 30)",
   ],
 };
