@@ -8,6 +8,7 @@ import { heroes } from "./data/heroes";
 import { rarities } from "./data/equipment";
 import { afkEconomy, dailyShopHistory, summonEconomy } from "./data/economy";
 import { summonRules, heroSummonRates, mythicalSummon, heroExchange } from "./data/summons";
+import { evidenceStandards, cleanupRoadmap, officialClasses } from "./data/research";
 
 const systems = [
   {
@@ -97,6 +98,39 @@ export default function Home() {
               <b>{system.cta} →</b>
             </Link>
           ))}
+        </div>
+      </section>
+
+      <section className="section" id="metodo">
+        <SectionHead
+          eyebrow="MÉTODO"
+          title="Como o material é organizado"
+          description="A wiki separa print forte, contexto, hipótese e pendência para evitar jogar tudo no mesmo peso."
+        />
+        <div className="fact-grid">
+          {evidenceStandards.map((item) => (
+            <FactCard key={item.title} kicker={item.kicker} title={item.title} text={item.text} />
+          ))}
+        </div>
+        <div className="class-reference sticker-card">
+          <span className="kicker">CLASSES OFICIAIS</span>
+          <div>
+            {officialClasses.map((className) => (
+              <b className={`chip class-chip class-${className.toLowerCase()}`} key={className}>{className}</b>
+            ))}
+          </div>
+        </div>
+        <div className="research-roadmap sticker-card">
+          <span className="kicker">ARRUMAÇÃO DO ARQUIVO</span>
+          <div>
+            {cleanupRoadmap.map((item) => (
+              <article key={item.stage}>
+                <b>{item.stage}</b>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 

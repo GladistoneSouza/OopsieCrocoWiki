@@ -4,11 +4,11 @@ export const flowerSpirit: HeroRecord = {
   slug: "flower-spirit",
   name: "Lia",
   aliases: ["Flower Spirit", "SP Flower Spirit", "Hua Ling"],
-  className: "Suporte",
+  className: "Support",
   rarity: "SP",
-  role: "Suporte / cura em área / buffs de Petal Leaf / ressurreição",
+  role: "Support / cura em área / buffs de Petal Leaf / ressurreição",
   summary:
-    "Suporte SP cuja habilidade Floral Spirit Blessing cura 2 aliados e aplica Petal Leaf (buff de ATK). O Bestiary expande para escudos, purificação, imunidade a controle, espalhamento das folhas e até ressurreição de aliado (The Blessing of the Flower God), com as douradas Abundance e Flower Rain levando cura e folhas para o time inteiro.",
+    "Heroína SP da classe Support cuja habilidade Floral Spirit Blessing cura 2 aliados e aplica Petal Leaf (buff de ATK). O Bestiary expande para escudos, purificação, imunidade a controle, espalhamento das folhas e até ressurreição de aliado (The Blessing of the Flower God), com as douradas Abundance e Flower Rain levando cura e folhas para o time inteiro.",
   fieldNote:
     "Ficha documentada no nível 3 (progressão visível até o nível 30; nível 35 cortado). Inconsistência de tradução: a ficha chama a heroína de Lia, mas os textos de batalha (blessing Abundance e painéis in-run) a chamam de Hua Ling — mesmo personagem. O talento do nível 5, antes cortado na tela, foi resolvido por tooltip: 'The flowers are blooming exuberantly'.",
   image: "/screenshots/sp-heroes/flower-spirit-profile.jpg",
@@ -62,7 +62,7 @@ export const flowerSpirit: HeroRecord = {
   ],
   builds: [
     {
-      name: "Suporte de cura, escudo e ressurreição",
+      name: "Cura, escudo e ressurreição",
       status: "rascunho",
       summary: "Direção derivada apenas do Bestiary e das escolhas vistas em run: empilhar cura e escudo em área (Abundance, petals guard, Flowers in full bloom), proteger o time com purificação e imunidade a controle e segurar The Blessing of the Flower God como seguro contra a primeira morte.",
       priorities: ["Abundance", "The Blessing of the Flower God", "petals guard", "Flowers in full bloom", "Protective Mosaic Leaves", "Free of control mosaics and leaves"],

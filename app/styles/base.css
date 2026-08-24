@@ -140,12 +140,12 @@ img {
 
 .class-calamity { background: #ffd9d1; color: #a8321c; }
 .class-summon { background: #e7d9ff; color: #6a35c8; }
-.class-assassino { background: #efe0ff; color: #6530a3; }
-.class-arqueiro { background: #d3efff; color: #176b94; }
-.class-suporte { background: #ffefc8; color: #a55e00; }
+.class-assasin { background: #efe0ff; color: #6530a3; }
+.class-archer { background: #d3efff; color: #176b94; }
+.class-support { background: #ffefc8; color: #a55e00; }
 .class-control { background: #d9f0ff; color: #1f6fae; }
-.class-guerreiro { background: #ffe3c2; color: #9c5311; }
-.class-mago { background: #dbe4ff; color: #3a4fc1; }
+.class-warrior { background: #ffe3c2; color: #9c5311; }
+.class-mage { background: #dbe4ff; color: #3a4fc1; }
 
 /* ---- Cards adesivo ---- */
 

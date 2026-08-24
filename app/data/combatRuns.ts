@@ -17,7 +17,7 @@ export const combatRuns: CombatRun[] = [
     timerAtBoss: "derrota no nível 10/15",
     markerLabel: "RESULTADO",
     status: "confirmada na tela",
-    summary: "A primeira tentativa documentada de Moonshade não chegou à Corrosive Empress: caiu na sequência do elite Octopus King. O mapa mostrou Restrain contra Summoner e fraqueza azul nos alvos principais.",
+    summary: "A primeira tentativa documentada de Moonshade não chegou à Corrosive Empress: caiu na sequência do elite Octopus King. O mapa mostrou Restrain contra Summon e fraqueza azul nos alvos principais.",
     damage: [
       { hero: "Bounty Hunter", damage: "Lv.7 na tentativa", note: "linha de munições" },
       { hero: "Onmyoji", damage: "Lv.5 na tentativa", note: "escudos e controle" },
@@ -103,7 +103,7 @@ export const combatRuns: CombatRun[] = [
   },
   {
     title: "Bounty Hunter contra inimigos que atrapalham atiradores", stage: "Andar 15", timerAtBoss: "1:45", status: "confirmada na tela",
-    summary: "Nesta tentativa específica, apareceram efeitos que paralisavam Arqueiros e confiscavam munição de Marksman. Mesmo assim, Bounty Hunter terminou com 17,58M.",
+    summary: "Nesta tentativa específica, apareceram efeitos que paralisavam Archer e confiscavam munição de Marksman. Mesmo assim, Bounty Hunter terminou com 17,58M.",
     damage: [
       { hero: "Sword Demon", damage: "23,96M", note: "maior dano" }, { hero: "Bounty Hunter", damage: "17,58M", note: "sob mecânica desfavorável" },
       { hero: "Robin", damage: "3,94M" }, { hero: "Rumble", damage: "206K" }, { hero: "Onmyoji", damage: "186K", note: "suporte" },
@@ -133,5 +133,5 @@ export const coreTeam = [
 
 export const fifthSlotRule = {
   title: "Quinta vaga flexível",
-  text: "Arqueiro quando falta DPS; Controller quando uma interrupção decide a luta; Tank apenas quando frontline e summons não bastam; segundo Summoner quando mais corpos e aggro oferecem mais valor.",
+  text: "Archer quando falta DPS; Controller quando uma interrupção decide a luta; Tank apenas quando frontline e summons não bastam; segundo Summon quando mais corpos e aggro oferecem mais valor.",
 };

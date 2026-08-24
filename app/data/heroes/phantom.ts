@@ -4,7 +4,7 @@ export const phantom: HeroRecord = {
   slug: "phantom",
   name: "Selina Shadowblade",
   aliases: ["SSR Phantom", "Phantom"],
-  className: "Assassino",
+  className: "Assasin",
   rarity: "SSR",
   role: "Assassina de alvo único / lâminas em sequência (White, Pink e Red Blade)",
   summary:

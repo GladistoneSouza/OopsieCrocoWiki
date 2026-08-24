@@ -168,6 +168,66 @@
   font-size: 14px;
 }
 
+/* ---- Método de pesquisa ---- */
+
+.research-roadmap {
+  margin-top: 18px;
+}
+
+.class-reference {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.class-reference > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.research-roadmap > div {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.research-roadmap article {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  min-height: 150px;
+  padding: 16px;
+  border: 2px solid rgba(43, 37, 67, 0.18);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.research-roadmap article > b {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  background: var(--sun);
+  font-family: var(--font-display);
+  font-size: 15px;
+}
+
+.research-roadmap h3 {
+  font-size: 18px;
+}
+
+.research-roadmap p {
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
 /* ---- Heróis em destaque ---- */
 
 .hero-cards {
@@ -264,10 +324,23 @@
   .rarity-row {
     grid-template-columns: 1fr 1fr;
   }
+
+  .class-reference {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .research-roadmap > div {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (max-width: 520px) {
   .rarity-row {
+    grid-template-columns: 1fr;
+  }
+
+  .research-roadmap > div {
     grid-template-columns: 1fr;
   }
 

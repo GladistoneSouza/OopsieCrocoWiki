@@ -1,15 +1,15 @@
 export const newlyDocumentedEnemies = [
-  { name: "Shrinkshell Seaweed", skill: "Seaweed Tangle", effect: "Após cada 4 ataques, paralisa Arqueiros por 3 segundos.", confidence: "confirmada na tela" },
+  { name: "Shrinkshell Seaweed", skill: "Seaweed Tangle", effect: "Após cada 4 ataques, paralisa heróis Archer por 3 segundos.", confidence: "confirmada na tela" },
   { name: "Inimigo confiscador de munição", skill: "Confiscating the Marksman's bullets!", effect: "Durante a run, mensagens indicaram confisco ou neutralização das balas de personagens Marksman. O nome do inimigo e a regra completa ainda precisam de ficha própria.", confidence: "observada em run" },
   { name: "Catfish Monster", skill: "Mud Armor", effect: "Começa a batalha com Mud Armor, reduzindo o dano recebido. A armadura desaparece quando o HP cai abaixo de 40%.", confidence: "confirmada na tela" },
   { name: "Hardshell Rhinoceros Beetle", skill: "Iron Steel Shell", effect: "Imune a efeitos de Calamity — atrapalha diretamente Sword Demon e Lilith. Uma fala de inimigo em batalha reforça: “My shell is completely immune to the Calamity buff!”.", confidence: "confirmada na tela" },
-  { name: "Mist Octopus", skill: "Blind", effect: "Aura que reduz em 50% a precisão (Accuracy) de Assassinos; também aplica Sluggish (reduz Attack Speed).", confidence: "confirmada na tela" },
-  { name: "Nightshade Charm Fox", skill: "Emerald Leaf Offering", effect: "Encanta (charm) Assassinos por 15 segundos.", confidence: "confirmada na tela" },
+  { name: "Mist Octopus", skill: "Blind", effect: "Aura que reduz em 50% a precisão (Accuracy) de heróis Assasin; também aplica Sluggish (reduz Attack Speed).", confidence: "confirmada na tela" },
+  { name: "Nightshade Charm Fox", skill: "Emerald Leaf Offering", effect: "Encanta (charm) heróis Assasin por 15 segundos.", confidence: "confirmada na tela" },
   { name: "Hermit Crab", skill: "Shell Rebirth", effect: "Perto da morte, restaura uma grande quantidade de HP.", confidence: "confirmada na tela" },
   { name: "Cactus", skill: "Rebound", effect: "Reflete 10% do dano recebido.", confidence: "confirmada na tela" },
   { name: "Sea Anemone Monster", skill: "Bloodsucking Tentacle", effect: "Rouba vida equivalente a 100% do dano causado.", confidence: "confirmada na tela" },
   { name: "Spiny Mouse", skill: "Group Spike", effect: "A cada 4º ataque, causa 100% do ATK em dano de área.", confidence: "confirmada na tela" },
-  { name: "Seed Flower", skill: "Parasite Bullet", effect: "Atinge Magos e reduz a recuperação de Energia deles em 25% (Restrain contra Magos).", confidence: "confirmada na tela" },
+  { name: "Seed Flower", skill: "Parasite Bullet", effect: "Atinge heróis Mage e reduz a recuperação de Energia deles em 25% (Restrain contra Mage).", confidence: "confirmada na tela" },
   { name: "Poison Bug", skill: "Poison Bullet", effect: "30% de chance de aplicar Poison; cada acúmulo causa 1% do HP máximo por segundo em dano verdadeiro até o fim da batalha.", confidence: "confirmada na tela" },
   { name: "Bigmouth Man-eating Flower", skill: "Silent Kiss", effect: "A cada 5 segundos devora 1 unidade invocada — silencia e mata instantaneamente. Counter direto de composições de summon.", confidence: "confirmada na tela" },
   { name: "Crab Monster", skill: "Counterstrike", effect: "Ganha um escudo de 3% do HP máximo sempre que é atacado.", confidence: "confirmada na tela" },
@@ -34,7 +34,7 @@ export const documentedBosses: DocumentedBoss[] = [
   {
     name: "Land Shark King",
     context: "Elite de dungeon (Level 10 observado)",
-    weakness: "Fraqueza: Arqueiro",
+    weakness: "Fraqueza: Archer",
     skills: [
       { name: "Charge", text: "Lança uma onda de investida contra o alvo mais distante." },
       { name: "Hardened Hide", text: "Começa a batalha com um escudo que bloqueia 40 instâncias de dano." },
@@ -64,7 +64,7 @@ export const documentedBosses: DocumentedBoss[] = [
   {
     name: "Stone Giant / Mountain Titan",
     context: "Boss do estágio Bone Desert; também apareceu nomeado Mountain Titan com o mesmo kit (tradução inconsistente)",
-    weakness: "Fraqueza: Arqueiro",
+    weakness: "Fraqueza: Archer",
     skills: [
       { name: "Seismic Wave", text: "Dano massivo em todos os inimigos + Stun." },
       { name: "Petrified Skin", text: "Nega 100 instâncias de dano." },
@@ -118,7 +118,7 @@ export const documentedBosses: DocumentedBoss[] = [
 export const enemyShots = [
   { src: "/screenshots/enemies/catfish-monster.jpg", alt: "Ficha do Catfish Monster com Mud Armor", caption: "Catfish Monster: Mud Armor até o HP cair abaixo de 40%." },
   { src: "/screenshots/enemies/hardshell-rhinoceros-beetle.jpg", alt: "Ficha do Hardshell Rhinoceros Beetle imune a Calamity", caption: "Hardshell Rhinoceros Beetle: imune a efeitos de Calamity." },
-  { src: "/screenshots/enemies/land-shark-king.jpg", alt: "Ficha do boss Land Shark King", caption: "Land Shark King: escudo de 40 instâncias e fraqueza contra Arqueiro." },
+  { src: "/screenshots/enemies/land-shark-king.jpg", alt: "Ficha do boss Land Shark King", caption: "Land Shark King: escudo de 40 instâncias e fraqueza contra Archer." },
   { src: "/screenshots/enemies/igris-rage-mode.jpg", alt: "Boss Igris em Rage Mode com dano +20000%", caption: "Igris: Rage Mode com dano +20000% no fim da luta." },
   { src: "/screenshots/campaign/stage-83-moonshade-overview.png", alt: "Estágio 83 Moonshade com Corrosive Empress e Octopus King", caption: "Moonshade (estágio 83): Corrosive Empress, Octopus King e fraquezas exibidas antes da primeira tentativa." },
   { src: "/screenshots/campaign/stage-83-regeneration.png", alt: "Skill Regeneration da Corrosive Empress no estágio 83", caption: "Regeneration: cura contínua que escala com o tempo de canalização." },

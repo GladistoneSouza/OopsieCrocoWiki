@@ -3,7 +3,7 @@ import type { HeroRecord } from "../types";
 export const mayaNecromancerApprentice: HeroRecord = {
   slug: "maya-necromancer-apprentice",
   name: "Maya Spirit Vine",
-  aliases: ["Maya", "Necromancer Apprentice", "Necromancer", "Necro", "Summoner roxa"],
+  aliases: ["Maya", "Necromancer Apprentice", "Necromancer", "Necro", "Summon roxa"],
   className: "Summon",
   rarity: "SR",
   role: "Exército de esqueletos / aggro / dano constante",

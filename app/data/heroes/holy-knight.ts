@@ -4,7 +4,7 @@ export const holyKnight: HeroRecord = {
   slug: "holy-knight",
   name: "Serena · Dawn",
   aliases: ["SSR Holy Knight", "Holy Knight"],
-  className: "Guerreiro",
+  className: "Warrior",
   rarity: "SSR",
   role: "Frontline / tank de marcas / redução de dano / escudos",
   summary:

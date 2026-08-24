@@ -56,7 +56,7 @@ export const strategyNotes: StrategyNote[] = [
   {
     kicker: "ESTÁGIO 83 • PRIMEIRA TENTATIVA",
     title: "O primeiro bloqueio veio antes da chefe",
-    text: "A primeira tentativa documentada de Moonshade caiu no nível 10/15, ainda contra a sequência do elite Octopus King. O estágio 83 mostrou Restrain contra Summoner e fraqueza azul nos alvos principais, sem evidência de inimigo anti-Calamity nesse mapa. O bloqueio prático veio antes da Corrosive Empress.",
+    text: "A primeira tentativa documentada de Moonshade caiu no nível 10/15, ainda contra a sequência do elite Octopus King. O estágio 83 mostrou Restrain contra Summon e fraqueza azul nos alvos principais, sem evidência de inimigo anti-Calamity nesse mapa. O bloqueio prático veio antes da Corrosive Empress.",
     confidence: "confirmada na tela",
   },
   {
@@ -98,7 +98,7 @@ export const strategyNotes: StrategyNote[] = [
   {
     kicker: "COMPOSIÇÃO TEÓRICA",
     title: "Núcleo com Dragon Warrior",
-    text: "Composição desenhada no papel, ainda sem run: Dragon Warrior provocando e acumulando HP/sustain via Dragon Soul Link; Sword Demon gerando clone a cada 8s e espalhando Fear; Bounty Hunter limpando com Barrage; Onmyoji/healer sustentando; quinta vaga flexível — provavelmente um Summoner para dar corpos ao Link · Spread.",
+    text: "Composição desenhada no papel, ainda sem run: Dragon Warrior provocando e acumulando HP/sustain via Dragon Soul Link; Sword Demon gerando clone a cada 8s e espalhando Fear; Bounty Hunter limpando com Barrage; Onmyoji/healer sustentando; quinta vaga flexível — provavelmente um herói Summon para dar corpos ao Link · Spread.",
     confidence: "estratégia do jogador",
   },
 ];

@@ -4,7 +4,7 @@ export const artemis: HeroRecord = {
   slug: "artemis",
   name: "Artemis",
   aliases: ["UR Goddess of the Hunt", "Goddess of the Hunt", "Arqueira UR"],
-  className: "Arqueiro",
+  className: "Archer",
   rarity: "UR",
   role: "DPS de marca / área",
   summary:
@@ -108,7 +108,7 @@ export const artemis: HeroRecord = {
     },
   ],
   synergies: [
-    "Boss fraco contra Arqueiro",
+    "Boss fraco contra Archer",
     "Attack Speed para acelerar aplicação de marcas",
     "Talento nv5: crit +5% dobra quando \"Athena\" também está em campo (referência ainda não identificada na wiki)",
     "Hunt Mark · Spirit Blessing buffa permanentemente o ATK dela e o HP máximo de um companheiro (até 30 stacks) — valoriza runs longas com aliados de linha de frente",

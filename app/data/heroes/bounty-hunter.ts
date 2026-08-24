@@ -4,7 +4,7 @@ export const bountyHunter: HeroRecord = {
   slug: "bounty-hunter",
   name: "Eria · Ironwing",
   aliases: ["Bounty Hunter", "Pistoleira", "SSR Bounty Hunter"],
-  className: "Arqueiro",
+  className: "Archer",
   rarity: "SSR",
   role: "DPS por munições",
   summary: "Atiradora SSR baseada em munições especiais, velocidade de ataque, acúmulo de ataque e Barrage.",
@@ -56,7 +56,7 @@ export const bountyHunter: HeroRecord = {
       priorities: ["Ammunition Expert", "Gunsling · Loading", "Ammunition · Steel Core", "Ammunition · Mercury ou Tear", "Spearmanship · Double Shot", "Barrage Time +1"],
     },
   ],
-  synergies: ["Attack Speed", "Efeitos que aumentam o número de balas", "Boss vulnerável a Arqueiro"],
+  synergies: ["Attack Speed", "Efeitos que aumentam o número de balas", "Boss vulnerável a Archer"],
   evidence: [
     "Ficha SSR Bounty Hunter — Eria · Ironwing no nível 15",
     "Run dificuldade 5: MVP com 4,31M",

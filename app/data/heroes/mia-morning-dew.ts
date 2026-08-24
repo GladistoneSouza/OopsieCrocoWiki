@@ -3,7 +3,7 @@ import type { HeroRecord } from "../types";
 export const miaMorningDew: HeroRecord = {
   slug: "mia-morning-dew",
   name: "Mia Morning Dew",
-  aliases: ["SSR Fire Spirit Master", "Flame Spirit Master", "Summoner dourada"],
+  aliases: ["SSR Fire Spirit Master", "Flame Spirit Master", "Summon dourada"],
   className: "Summon",
   rarity: "SSR",
   role: "Invocação / queimadura / amplificação de dano",

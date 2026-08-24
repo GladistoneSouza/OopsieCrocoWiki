@@ -4,11 +4,11 @@ export const onmyoji: HeroRecord = {
   slug: "onmyoji",
   name: "Sakura",
   aliases: ["Onmyoji", "SSR Onmyoji", "Healer dourada"],
-  className: "Suporte",
+  className: "Support",
   rarity: "SSR",
   role: "Cura / escudo / buffs e debuffs",
   summary:
-    "Suporte SSR do círculo Yin-Yang: mantém formações vivas com cura, escudos e aceleração, enquanto enfraquece os inimigos dentro do círculo.",
+    "Support SSR do círculo Yin-Yang: mantém formações vivas com cura, escudos e aceleração, enquanto enfraquece os inimigos dentro do círculo.",
   fieldNote:
     "Identidade consolidada em 21 ago.: a ficha exibe SSR Onmyoji com o nome Sakura — a wiki tratava “Sakura” e “Onmyoji” como personagens separados e as duas fichas foram fundidas. Nas runs documentadas, o dano pessoal é baixo porque a contribuição principal vem de cura, escudos, mitigação e Attack Speed.",
   identity: [

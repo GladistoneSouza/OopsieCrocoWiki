@@ -39,10 +39,10 @@ export const equipmentLayers: EquipmentLayer[] = [
 
 export const gemBonuses: [string, string, string][] = [
   ["Shadow Wolf", "+15% dano", "Armadura"],
-  ["Assassino", "+35% dano", "Arma + anel + escudo"],
+  ["Assasin", "+35% dano", "Arma + anel + escudo"],
   ["Elite e boss", "+64% dano", "Arma + armadura"],
   ["Alvo acima de 70% HP", "+50% dano", "Arma + anel"],
-  ["Arqueiro", "+12,5% dano", "Capacete"],
+  ["Archer", "+12,5% dano", "Capacete"],
   ["Primeiros 5 andares", "+64% dano", "Colar + escudo"],
 ];
 

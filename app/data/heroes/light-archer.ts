@@ -4,7 +4,7 @@ export const lightArcher: HeroRecord = {
   slug: "light-archer",
   name: "Veliana Purple Flame",
   aliases: ["Light Archer", "SP Light Archer"],
-  className: "Arqueiro",
+  className: "Archer",
   rarity: "SP",
   role: "Arqueira / velocidade de ataque / Demon-Banishing State",
   summary:

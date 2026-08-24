@@ -50,25 +50,25 @@ export const inRunMechanics = [
   {
     kicker: "INIMIGOS • VARIAÇÃO",
     title: "Restrições dependem do estágio",
-    text: "Os inimigos não parecem mudar aleatoriamente por tentativa: cada estágio/mapa observado tem seu próprio conjunto. Por isso, efeitos que prejudicam Mago, Calamity, Arqueiro/Shooter ou Summoner devem ser registrados no estágio correto. O 82 Silver Beach tinha inimigos com resposta contra Calamity; o 83 Moonshade mostrou Restrain contra Summoner, sem evidência de anti-Calamity nesse mapa. Bone Desert aparece nas capturas como 11.Bone Desert, com Not Recommended para Summoner e boss/elite fracos contra azul.",
+    text: "Os inimigos não parecem mudar aleatoriamente por tentativa: cada estágio/mapa observado tem seu próprio conjunto. Por isso, efeitos que prejudicam Mage, Calamity, Archer/Shooter ou Summon devem ser registrados no estágio correto. O 82 Silver Beach tinha inimigos com resposta contra Calamity; o 83 Moonshade mostrou Restrain contra Summon, sem evidência de anti-Calamity nesse mapa. Bone Desert aparece nas capturas como 11.Bone Desert, com Not Recommended para Summon e boss/elite fracos contra azul.",
   },
   {
     kicker: "CLASS BONUS",
     title: "Classes sorteadas com +30%",
-    text: "No início de runs de Co-op, o jogo sorteia classes que recebem +30% de dano naquela run (ex.: Archer e Summoner na dificuldade 5 capturada) — muda a escolha de carry a cada tentativa.",
+    text: "No início de runs de Co-op, o jogo sorteia classes que recebem +30% de dano naquela run (ex.: Archer e Summon na dificuldade 5 capturada) — muda a escolha de carry a cada tentativa.",
   },
 ];
 
 export const inRunMechanicShots = [
   {
     src: "/screenshots/campaign/early-campaign-green-restrain-opening-pick.jpg",
-    alt: "Escolha inicial de heróis em Bone Desert com Restrain contra Summoner",
-    caption: "11.Bone Desert: escolha 2 de 4 heróis, item Go to Level 10 e Restrain contra Summoner.",
+    alt: "Escolha inicial de heróis em Bone Desert com Restrain contra Summon",
+    caption: "11.Bone Desert: escolha 2 de 4 heróis, item Go to Level 10 e Restrain contra Summon.",
   },
   {
     src: "/screenshots/campaign/stage-11-bone-desert-map.jpg",
-    alt: "Mapa Bone Desert com Not Recommended para Summoner",
-    caption: "11.Bone Desert: mapa marcado como Not Recommended para Summoner.",
+    alt: "Mapa Bone Desert com Not Recommended para Summon",
+    caption: "11.Bone Desert: mapa marcado como Not Recommended para Summon.",
   },
   {
     src: "/screenshots/campaign/stage-11-bone-desert-bosses.jpg",

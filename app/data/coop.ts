@@ -33,7 +33,7 @@ export const pickGallery = [
 ];
 
 export const coopCosts = [
-  { kicker: "CLASS BONUS", title: "+30% para classes sorteadas", text: "No início da run, o jogo sorteia classes que ganham +30% de dano (ex.: Archer e Summoner numa run de dificuldade 5). O número de peças de equipamento obtidas acompanha o número de ondas vencidas." },
+  { kicker: "CLASS BONUS", title: "+30% para classes sorteadas", text: "No início da run, o jogo sorteia classes que ganham +30% de dano (ex.: Archer e Summon numa run de dificuldade 5). O número de peças de equipamento obtidas acompanha o número de ondas vencidas." },
   { kicker: "RECOMPENSA DE DERROTA", title: "Perder também paga", text: "Uma derrota no andar 10 ainda entregou 612 moedas, 200 EXP, 12 gemas, equipamentos nível 83-88 e tomos de classe — proporcional ao progresso." },
   { kicker: "LEADER REWARD", title: "Baús do líder por andar", text: "Na dificuldade 6, o líder tem baús nos andares L3, L7 e L10; na dificuldade 7 foi visto L7 com 42 itens. O ranking exibe progresso como dificuldade-andar (líder observado em 9-5), indicando dificuldades além da 7." },
   { kicker: "CUSTO DO LÍDER", title: "1 ticket + 20 stamina", text: "O jogador que convida consome um ticket por partida. O primeiro ticket é recuperado automaticamente todos os dias." },
@@ -88,7 +88,7 @@ export const dropTableNote =
 
 export const boneDesert = {
   kicker: "ESTÁGIO • BONE DESERT",
-  weakness: "Fraqueza: Arqueiro",
+  weakness: "Fraqueza: Archer",
   name: "Stone Giant",
   description: "Monstro de alta defesa com múltiplas camadas de escudos imunes a dano.",
   skills: [
@@ -100,7 +100,7 @@ export const boneDesert = {
 };
 
 export const difficulty4Enemies = [
-  { name: "Mutated Slime", skill: "Death Splitting", text: "Sempre que é atingido por um Arqueiro, possui 40% de chance de se dividir e criar uma nova cópia." },
+  { name: "Mutated Slime", skill: "Death Splitting", text: "Sempre que é atingido por um herói Archer, possui 40% de chance de se dividir e criar uma nova cópia." },
   { name: "Goblin Warrior", skill: "Stun ATK", text: "Ataques básicos possuem 40% de chance de atordoar o alvo durante 1 segundo. Também foi observado Sluggish, que reduz Attack Speed." },
   { name: "Ammonite Beast", skill: "Charged Blast", text: "Os ataques básicos exigem uma carga de 3 segundos e, quando disparados, causam dano em área." },
 ];
@@ -119,7 +119,7 @@ export const floorMap: { floor: string; entries?: FloorEntry[]; unknown?: string
 ];
 
 export const enemyGallery = [
-  { src: "/screenshots/mutated-slime.jpg", alt: "Ficha do inimigo Mutated Slime", caption: "Mutated Slime: ataques de Arqueiro podem multiplicar a onda." },
+  { src: "/screenshots/mutated-slime.jpg", alt: "Ficha do inimigo Mutated Slime", caption: "Mutated Slime: ataques de Archer podem multiplicar a onda." },
   { src: "/screenshots/goblin-warrior.jpg", alt: "Ficha do inimigo Goblin Warrior", caption: "Goblin Warrior: 40% de stun por ataque básico." },
   { src: "/screenshots/ammonite-beast.jpg", alt: "Ficha do inimigo Ammonite Beast", caption: "Ammonite Beast: carrega por 3 segundos e causa dano em área." },
 ];
@@ -141,7 +141,7 @@ export const coopGallery = [
   { src: "/screenshots/coop/instructions.jpg", alt: "Popup Co-op Spire Instructions com regras oficiais", title: "Instructions", caption: "Regras oficiais: tickets, 20 stamina, first-clear do líder e correio em caso de desconexão." },
   { src: "/screenshots/coop/reward-preview-diff-3.jpg", alt: "Reward Preview da dificuldade 3 com Mythic 2,5%", title: "Drops dificuldade 3", caption: "Mythic entra na tabela a partir da dificuldade 3 (2,5%)." },
   { src: "/screenshots/coop/reward-preview-diff-4.jpg", alt: "Reward Preview da dificuldade 4 com Mythic 5%", title: "Drops dificuldade 4", caption: "Dificuldade 4: Mythic sobe para 5% e Normal cai para 2,5%." },
-  { src: "/screenshots/coop/bone-desert.jpg", alt: "Bestiário do estágio Bone Desert com Stone Giant e Octopus King", title: "Bone Desert", caption: "Boss Stone Giant (fraqueza: Arqueiro) e elite Octopus King." },
+  { src: "/screenshots/coop/bone-desert.jpg", alt: "Bestiário do estágio Bone Desert com Stone Giant e Octopus King", title: "Bone Desert", caption: "Boss Stone Giant (fraqueza: Archer) e elite Octopus King." },
   { src: "/screenshots/coop/stone-giant-seismic-wave.jpg", alt: "Tooltip da habilidade Seismic Wave do Stone Giant", title: "Seismic Wave", caption: "Dano massivo em todos os inimigos + Stun." },
   { src: "/screenshots/coop-difficulty-6.jpg", alt: "Tela da dificuldade 6 do Co-op Spire", title: "Dificuldade 6", caption: "Slime Queen, fraqueza contra Invocador e recompensas do líder." },
   { src: "/screenshots/slime-queen-regeneration.jpg", alt: "Ficha da Slime Queen mostrando Regeneration", title: "Ficha do boss", caption: "Regeneration restaura HP e escala com o tempo de canalização." },

@@ -4,11 +4,11 @@ export const dragonWarrior: HeroRecord = {
   slug: "dragon-warrior",
   name: "Rain Flame Soul",
   aliases: ["Dragon Warrior", "SP Dragon Warrior"],
-  className: "Guerreiro",
+  className: "Warrior",
   rarity: "SP",
   role: "Tank / redução de dano / vínculo com aliados",
   summary:
-    "Guerreiro SP construído em torno de Dragon Soul Link: compartilha o dano dos aliados, acumula Dragon Heart para crescer o HP máximo e escala redução de dano própria e do grupo.",
+    "Tank SP da classe Warrior construído em torno de Dragon Soul Link: compartilha o dano dos aliados, acumula Dragon Heart para crescer o HP máximo e escala redução de dano própria e do grupo.",
   fieldNote:
     "Ficha documentada entre 21 e 23 ago. 2026: progressão agora mapeada até o nível 30, Blessing Bestiary completo e primeiros registros do herói em batalha (painel de skill, escolhas de blessing e ranking de dano em 21 ago.). Ainda não há run dedicada em que o Dragon Warrior seja o foco do time.",
   image: "/screenshots/dragon-warrior/profile-level-1.jpg",

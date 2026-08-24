@@ -10,6 +10,7 @@ import { newlyDocumentedEnemies, documentedBosses, enemyShots, fieldDebuffs } fr
 import { otherModes, inRunMechanics, inRunMechanicShots } from "../data/modes";
 import { campaignStatus, strategyNotes, levelGrowth } from "../data/strategy";
 import { accountTimeline } from "../data/timeline";
+import { screenshotChecklist } from "../data/research";
 
 export const metadata: Metadata = {
   title: "Runs documentadas — Oopsie Croco Wiki",
@@ -95,6 +96,23 @@ export default function RunsPage() {
               <p><strong>Poder geral:</strong> {entry.power}</p>
               <p>{entry.note}</p>
               <small className="chip">{entry.confidence}</small>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section" id="checklist">
+        <SectionHead
+          eyebrow="PADRÃO DE CAPTURA"
+          title="Checklist para próximas runs"
+          description="Formato mínimo para comparar runs sem confundir bônus globais, estágio, escolha e resultado."
+        />
+        <div className="checklist-grid">
+          {screenshotChecklist.map((item, index) => (
+            <article className="sticker-card" key={item.title}>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
             </article>
           ))}
         </div>

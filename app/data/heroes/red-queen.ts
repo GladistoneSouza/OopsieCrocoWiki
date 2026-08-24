@@ -4,7 +4,7 @@ export const redQueen: HeroRecord = {
   slug: "red-queen",
   name: "Livia · Flameveil",
   aliases: ["Red Queen", "SP Red Queen"],
-  className: "Mago",
+  className: "Mage",
   rarity: "SP",
   role: "Maga de fogo / dano em área contínuo (Flame Storm + Lava Tiles)",
   summary:

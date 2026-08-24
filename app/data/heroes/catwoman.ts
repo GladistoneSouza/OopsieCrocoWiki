@@ -4,7 +4,7 @@ export const catwoman: HeroRecord = {
   slug: "catwoman",
   name: "Mitia",
   aliases: ["Catwoman", "SP Catwoman"],
-  className: "Assassino",
+  className: "Assasin",
   rarity: "SP",
   role: "Assassina / snowball de dano / execução de presas",
   summary:

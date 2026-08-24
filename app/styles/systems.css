@@ -601,6 +601,40 @@
   color: var(--ink-soft);
 }
 
+.checklist-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+.checklist-grid article {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+}
+
+.checklist-grid span {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  background: var(--sun);
+  font-family: var(--font-display);
+  font-size: 16px;
+}
+
+.checklist-grid h3 {
+  font-size: 19px;
+}
+
+.checklist-grid p {
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
 /* ---- Responsivo ---- */
 
 @media (max-width: 900px) {
@@ -619,6 +653,10 @@
     grid-template-columns: 1fr;
   }
 
+  .checklist-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .damage-board {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -631,6 +669,7 @@
 
 @media (max-width: 520px) {
   .layer-grid,
+  .checklist-grid,
   .damage-board,
   .documented-run > ul {
     grid-template-columns: 1fr;

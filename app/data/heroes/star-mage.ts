@@ -4,7 +4,7 @@ export const starMage: HeroRecord = {
   slug: "star-mage",
   name: "Liana · Nightrose",
   aliases: ["SSR Star Mage", "Star Mage", "Liana"],
-  className: "Mago",
+  className: "Mage",
   rarity: "SSR",
   role: "Dano em área / spells de Starfall e Star Waterfall",
   summary:
@@ -15,7 +15,7 @@ export const starMage: HeroRecord = {
   identity: [
     "Título exibido: SSR Star Mage",
     "Nome exibido na ficha: Liana · Nightrose",
-    "Classe: Mage (Mago)",
+    "Classe: Mage (Mage)",
     "Posição/alvo exibido na ficha: 8",
     "Descrição de seleção in-run: \"Starfall / High Area Damage Spells\"",
     "Disponível no Hero Exchange por 500 Hero Coins (50% off, limite semanal 8/8)",
