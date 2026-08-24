@@ -2,6 +2,7 @@ export type CombatRun = {
   title: string;
   stage: string;
   timerAtBoss: string;
+  markerLabel?: string;
   status: "confirmada na tela" | "observada em run";
   summary: string;
   damage: { hero: string; damage: string; note?: string }[];
@@ -10,6 +11,31 @@ export type CombatRun = {
 };
 
 export const combatRuns: CombatRun[] = [
+  {
+    title: "Clear do 82 Silver Beach",
+    stage: "Estágio 82",
+    timerAtBoss: "snapshot pós-clear",
+    markerLabel: "REGISTRO",
+    status: "confirmada na tela",
+    summary: "Clear confirmado com Sword Demon no time final. O snapshot pós-82 registrou 132,02K de poder de conta no mapa, conta Lv.85 e Global Critical DMG de 672,2%.",
+    damage: [
+      { hero: "Kazer’s Darkblade / Sword Demon", damage: "Lv.15 · 10/60", note: "Calamity" },
+      { hero: "Warrior vermelho", damage: "Lv.5 · 1/10", note: "frontline" },
+      { hero: "Mia Morning Dew / Fire Spirit Master", damage: "Lv.16 · 17/60", note: "Summon" },
+      { hero: "Suporte de chapéu", damage: "Lv.16 · 0/60", note: "Support" },
+      { hero: "Bounty Hunter / Gunner", damage: "Lv.15 · 19/60", note: "Archer" },
+    ],
+    highlights: [
+      "Composição efetivamente usada para passar o 82, separada dos heróis temporários vistos dentro da run.",
+      "O estágio 82 destravou o farming AFK registrado como 395 gold/h + 17 recursos/h, com limite exibido de 12 horas.",
+      "A recompensa AFK/Raid mostrou EXP, gold, materiais de upgrade, livros/scrolls, equipamentos Lv.80 e materiais coloridos de progressão.",
+      "O pacote de US$20 e o UR Way seguem fora do registro por falta de prints claros.",
+    ],
+    evidenceImages: [
+      { src: "/screenshots/campaign/stage-82-clear-hero-comp.png", alt: "Composição usada no clear do estágio 82 Silver Beach" },
+      { src: "/screenshots/campaign/stage-82-afk-rewards.png", alt: "AFK Rewards do estágio 82 Silver Beach com 395 gold/h e 17 recursos/h" },
+    ],
+  },
   {
     title: "Exército de invocações", stage: "Andar 15", timerAtBoss: "1:43", status: "confirmada na tela",
     summary: "Sword Demon dominou as ondas com clones, Blade Storm, Fear e autocura; Shadow Wolf acelerou o dano contra o boss.",

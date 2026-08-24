@@ -50,7 +50,7 @@ export default function RunsPage() {
             <article className="documented-run sticker-card" key={run.title}>
               <header>
                 <div>
-                  <span className="kicker">{run.stage} • BOSS EM {run.timerAtBoss}</span>
+                  <span className="kicker">{run.stage} • {run.markerLabel ?? "BOSS EM"} {run.timerAtBoss}</span>
                   <h3>{run.title}</h3>
                 </div>
                 <b className="chip chip-green">{run.status}</b>

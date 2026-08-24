@@ -11,9 +11,9 @@ export type StrategyNote = {
 
 export const campaignStatus = {
   kicker: "CAMPANHA",
-  title: "Estágio 83 alcançado",
-  text: "A conta passou do estágio 82 (Silver Beach, Corrosive Empress com counter de Calamity) e está no 83. A run da virada foi um draft em que os dois personagens iniciais entraram só com as blessings gratuitas do nível permanente — a Bounty Hunter começou com contador 3 e o Sword Demon com 2. Prints do estágio 83 ainda não foram capturados; a página do estágio fica pendente.",
-  confidence: "observada em run" as const,
+  title: "Estágio 83 Moonshade alcançado",
+  text: "A conta passou do estágio 82 Silver Beach e chegou ao 83 Moonshade em 24 ago. 2026. O ponto zero do estágio 83 foi registrado antes da primeira tentativa: Highest Record Wave 0/15, conta Lv.85 e 132,02K de poder geral. A composição pós-clear do 82 também ficou capturada: Sword Demon, guerreiro vermelho, Fire Spirit Master, suporte de chapéu e Bounty Hunter/Gunner, com Global Critical DMG de 672,2%.",
+  confidence: "confirmada na tela" as const,
 };
 
 export const strategyNotes: StrategyNote[] = [
@@ -44,8 +44,14 @@ export const strategyNotes: StrategyNote[] = [
   {
     kicker: "RAID • AFK",
     title: "Raid instantânea converte 10 de energia em horas de produção",
-    text: "A mecânica de Raid instantânea entrega, por 10 de energia, o equivalente à produção AFK acumulada (renda exibida “por hora”). Snapshot registrado em 12 ago., no estágio 69: conta com 87,41K de poder geral produzindo 361 gold/h + 16 recursos/h — a renda escala com o estágio alcançado, reforçando o ciclo do Stage Mastery.",
+    text: "A mecânica de Raid instantânea entrega, por 10 de energia, o equivalente à produção AFK acumulada (renda exibida por hora). Snapshot de 12 ago., no estágio 69: 87,41K de poder geral, 361 gold/h + 16 recursos/h. Snapshot de 24 ago., após o 82 Silver Beach: 395 gold/h + 17 recursos/h, limite de 12 horas e recompensas incluindo EXP, gold, materiais, livros/scrolls e equipamentos Lv.80.",
     confidence: "observada em run",
+  },
+  {
+    kicker: "ESTÁGIO 83 • REGENERATION",
+    title: "Moonshade é outro teste contra cura",
+    text: "A ficha do 83 documenta a Corrosive Empress com Devour, Split e Regeneration. A cura é formalmente canalizada: ela restaura HP continuamente e a cura aumenta conforme o tempo de canalização. Isso separa o 83 do histórico do 75: o 75 registra uma solução prática anti-heal/DOT, enquanto o 83 traz evidência direta de uma mecânica oficial de Regeneration.",
+    confidence: "confirmada na tela",
   },
   {
     kicker: "BLESSINGS • ROTA",

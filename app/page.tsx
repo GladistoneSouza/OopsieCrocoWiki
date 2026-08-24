@@ -6,7 +6,7 @@ import { FactCard } from "./components/FactCard";
 import { CalloutNote } from "./components/CalloutNote";
 import { heroes } from "./data/heroes";
 import { rarities } from "./data/equipment";
-import { summonEconomy } from "./data/economy";
+import { afkEconomy, summonEconomy } from "./data/economy";
 import { summonRules, heroSummonRates, mythicalSummon, heroExchange } from "./data/summons";
 
 const systems = [
@@ -98,6 +98,20 @@ export default function Home() {
             </Link>
           ))}
         </div>
+      </section>
+
+      <section className="section" id="afk">
+        <SectionHead
+          eyebrow="ECONOMIA"
+          title="AFK e Raid"
+          description={afkEconomy.intro}
+        />
+        <div className="fact-grid">
+          {afkEconomy.stages.map((stage) => (
+            <FactCard key={stage.kicker} kicker={stage.kicker} title={stage.title} text={stage.text} />
+          ))}
+        </div>
+        <CalloutNote tone="warning" title={afkEconomy.note.title} text={afkEconomy.note.text} />
       </section>
 
       <section className="section" id="herois">

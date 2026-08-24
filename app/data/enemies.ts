@@ -103,13 +103,15 @@ export const documentedBosses: DocumentedBoss[] = [
   },
   {
     name: "Corrosive Empress",
-    context: "Boss do estágio 82 — Silver Beach",
+    context: "Boss do estágio 83 — Moonshade",
     weakness: "Fraqueza: classe Beast",
     skills: [
-      { name: "Devorar e autocura", text: "Descrição oficial: monstro que gosta de devorar inimigos e tem poderosa capacidade de autocura." },
+      { name: "Devour", text: "Arremessa uma gosma para engolir 1 alvo, priorizando unidades invocadas." },
+      { name: "Split", text: "Ao morrer, divide-se em numerosas pequenas slimes." },
+      { name: "Regeneration", text: "Restaura HP continuamente; a cura escala com o tempo de canalização." },
     ],
-    notes: "O elite do mesmo estágio é o Venomous Catfish King. O estágio exibiu um Counter Notice restringindo a classe Calamity.",
-    image: "/screenshots/enemies/silver-beach-corrosive-empress.jpg",
+    notes: "Descrição oficial: monstro que gosta de devorar inimigos e tem poderosa capacidade de autocura. O elite do estágio é Octopus King, fraco contra a classe azul exibida na tela, com descrição de retaliação por vingança. Registro feito antes da primeira tentativa: Wave 0/15.",
+    image: "/screenshots/campaign/stage-83-moonshade-overview.png",
   },
 ];
 
@@ -118,5 +120,7 @@ export const enemyShots = [
   { src: "/screenshots/enemies/hardshell-rhinoceros-beetle.jpg", alt: "Ficha do Hardshell Rhinoceros Beetle imune a Calamity", caption: "Hardshell Rhinoceros Beetle: imune a efeitos de Calamity." },
   { src: "/screenshots/enemies/land-shark-king.jpg", alt: "Ficha do boss Land Shark King", caption: "Land Shark King: escudo de 40 instâncias e fraqueza contra Arqueiro." },
   { src: "/screenshots/enemies/igris-rage-mode.jpg", alt: "Boss Igris em Rage Mode com dano +20000%", caption: "Igris: Rage Mode com dano +20000% no fim da luta." },
-  { src: "/screenshots/enemies/silver-beach-corrosive-empress.jpg", alt: "Estágio 82 Silver Beach com Corrosive Empress", caption: "Silver Beach (estágio 82): Corrosive Empress e Venomous Catfish King." },
+  { src: "/screenshots/campaign/stage-83-moonshade-overview.png", alt: "Estágio 83 Moonshade com Corrosive Empress e Octopus King", caption: "Moonshade (estágio 83): Corrosive Empress, Octopus King e fraquezas exibidas antes da primeira tentativa." },
+  { src: "/screenshots/campaign/stage-83-regeneration.png", alt: "Skill Regeneration da Corrosive Empress no estágio 83", caption: "Regeneration: cura contínua que escala com o tempo de canalização." },
+  { src: "/screenshots/campaign/stage-83-devour.png", alt: "Skill Devour da Corrosive Empress no estágio 83", caption: "Devour: prioriza unidades invocadas." },
 ];
