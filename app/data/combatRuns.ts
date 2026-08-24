@@ -12,6 +12,34 @@ export type CombatRun = {
 
 export const combatRuns: CombatRun[] = [
   {
+    title: "Primeira tentativa do 83 Moonshade",
+    stage: "Estágio 83",
+    timerAtBoss: "derrota no nível 10/15",
+    markerLabel: "RESULTADO",
+    status: "confirmada na tela",
+    summary: "A primeira run documentada de Moonshade não chegou à Corrosive Empress: caiu no bloco do elite Octopus King, com Restrain ativo e fraqueza azul exibida.",
+    damage: [
+      { hero: "Bounty Hunter", damage: "Lv.7 na run", note: "build de munições" },
+      { hero: "Onmyoji", damage: "Lv.5 na run", note: "escudos e controle" },
+      { hero: "Sword Demon", damage: "Lv.4 na run", note: "Fear/Blade Storm" },
+      { hero: "Fire Spirit Master", damage: "Lv.2 na run", note: "summons" },
+    ],
+    highlights: [
+      "Primeiro pick confirmado: Sword Demon + Onmyoji. Dragon Warrior e Fire Spirit Master também apareceram no conjunto inicial, mas não foram os dois escolhidos.",
+      "Bounty Hunter entrou cedo e acumulou pacote completo de munições: Steel Core, Loading, Mercury, Ammunition Expert e Kinetic Energy.",
+      "A run chegou ao nível 9 com Sword Demon, Onmyoji, Fire Spirit Master e Bounty Hunter vivos; o primeiro defeat apareceu antes do nível 10, com opção de revive por anúncio.",
+      "O resultado final foi derrota no nível 10/15, ainda no bloco do elite Octopus King, antes de enfrentar o boss final de Regeneration.",
+      "A recompensa de derrota confirmou materiais de classe e upgrade, mas não trouxe painel de dano final preservado.",
+    ],
+    evidenceImages: [
+      { src: "/screenshots/campaign/stage-83-first-try-opening-pick.jpg", alt: "Primeiro pick da tentativa do estágio 83 com Sword Demon e Onmyoji selecionados" },
+      { src: "/screenshots/campaign/stage-83-first-try-bounty-build.jpg", alt: "Build da Bounty Hunter na primeira tentativa do estágio 83" },
+      { src: "/screenshots/campaign/stage-83-first-try-level-9.jpg", alt: "Primeira tentativa do estágio 83 chegando ao nível 9" },
+      { src: "/screenshots/campaign/stage-83-first-try-revive.jpg", alt: "Primeiro defeat da tentativa do estágio 83 com opção de revive" },
+      { src: "/screenshots/campaign/stage-83-first-try-defeat-reward.jpg", alt: "Derrota final da primeira tentativa do estágio 83 no nível 10/15" },
+    ],
+  },
+  {
     title: "A barreira de regeneração",
     stage: "Estágio 75",
     timerAtBoss: "sem painel preservado",

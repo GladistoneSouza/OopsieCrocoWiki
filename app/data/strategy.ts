@@ -54,6 +54,12 @@ export const strategyNotes: StrategyNote[] = [
     confidence: "confirmada na tela",
   },
   {
+    kicker: "ESTÁGIO 83 • PRIMEIRA TENTATIVA",
+    title: "O primeiro bloqueio veio antes do boss",
+    text: "A primeira tentativa documentada de Moonshade caiu no nível 10/15, ainda contra o bloco do elite Octopus King com Restrain e fraqueza azul. Portanto, a próxima leitura prática não é só resolver a Regeneration da Corrosive Empress; primeiro é atravessar o pacote de elite que derrubou a composição antes do boss final.",
+    confidence: "confirmada na tela",
+  },
+  {
     kicker: "BLESSINGS • ROTA",
     title: "Monte a build por rota, não por carta isolada",
     text: "Não basta pegar a carta mais forte da rodada: é preciso decidir cedo a rota da run e escolher dentro dela — boss (scaling, marca e execução), ondas (AoE, correntes e invocações), sobrevivência (cura e escudo) ou counter (interrupção/burst contra a habilidade perigosa da fase). Uma escolha fora da rota ocupa a vaga de uma peça do combo e pode atrasar a ultimate que fecha a build.",

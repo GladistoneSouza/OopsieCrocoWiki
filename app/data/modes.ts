@@ -40,7 +40,12 @@ export const inRunMechanics = [
   {
     kicker: "REFRESH & TIMER",
     title: "Regras da escolha de blessings",
-    text: "A partir do nível 5 da run dá para atualizar as opções assistindo anúncio (3 visualizações por rodada) e existe 1 refresh próprio por rodada. Se o tempo esgotar, o jogo escolhe sozinho — timers observados de 2 a 8 segundos no co-op e 14 segundos no draft de dungeon.",
+    text: "A run começa escolhendo 2 de 4 heróis. Depois, as rodadas de Choose misturam novas entradas de herói com blessings/upgrades dos heróis já presentes. Cada rodada mostrou 1 refresh próprio; a partir do meio da run também aparecem refreshes por anúncio (3 views por rodada). Se o tempo esgotar, o jogo escolhe sozinho — timers observados de 2 a 14 segundos.",
+  },
+  {
+    kicker: "DRAFT • ROTA",
+    title: "Escolhas criam ou travam a build",
+    text: "A primeira tentativa do estágio 83 mostrou o sistema em prática: Sword Demon + Onmyoji foram escolhidos no início, Bounty Hunter entrou depois, e as ofertas seguintes passaram a puxar linhas específicas como munições, Yang/Yin e Fear. Como heróis fora da rota continuam aparecendo, cada escolha também decide quais famílias de cartas vão disputar espaço nas próximas rodadas.",
   },
   {
     kicker: "CLASS BONUS",

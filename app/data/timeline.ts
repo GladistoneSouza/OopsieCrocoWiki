@@ -34,4 +34,11 @@ export const accountTimeline = [
     note: "Ponto zero antes da primeira tentativa documentada: Highest Record Wave 0/15, conta Lv.85.",
     confidence: "confirmada na tela",
   },
+  {
+    date: "24 ago. 2026",
+    stage: "Estágio 83 Moonshade",
+    power: "132,02K",
+    note: "Primeira tentativa documentada caiu no nível 10/15, ainda no bloco do elite Octopus King e antes da Corrosive Empress.",
+    confidence: "confirmada na tela",
+  },
 ] as const;
