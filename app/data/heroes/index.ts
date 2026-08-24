@@ -7,9 +7,17 @@ import { mayaNecromancerApprentice } from "./maya-necromancer-apprentice";
 import { karinPharaoh } from "./karin-pharaoh";
 import { bountyHunter } from "./bounty-hunter";
 import { onmyoji } from "./onmyoji";
-import { necromancerApprentice } from "./necromancer-apprentice";
 import { artemis } from "./artemis";
-import { sakura } from "./sakura";
+import { dragonWarrior } from "./dragon-warrior";
+import { tidecaller } from "./tidecaller";
+import { flowerSpirit } from "./flower-spirit";
+import { catwoman } from "./catwoman";
+import { redQueen } from "./red-queen";
+import { lightArcher } from "./light-archer";
+import { succubus } from "./succubus";
+import { holyKnight } from "./holy-knight";
+import { starMage } from "./star-mage";
+import { phantom } from "./phantom";
 
 export type { HeroRecord, HeroSkill, HeroBuild } from "../types";
 
@@ -22,11 +30,27 @@ export const heroes: HeroRecord[] = [
   karinPharaoh,
   bountyHunter,
   onmyoji,
-  necromancerApprentice,
   artemis,
-  sakura,
+  dragonWarrior,
+  tidecaller,
+  flowerSpirit,
+  catwoman,
+  redQueen,
+  lightArcher,
+  succubus,
+  holyKnight,
+  starMage,
+  phantom,
 ];
 
+// Fichas antigas fundidas em 24 ago. 2026: Sakura é o Onmyoji e a
+// Necromancer Apprentice é a Maya — os slugs antigos redirecionam.
+const mergedSlugs: Record<string, string> = {
+  sakura: "onmyoji",
+  "necromancer-apprentice": "maya-necromancer-apprentice",
+};
+
 export function getHero(slug: string) {
-  return heroes.find((hero) => hero.slug === slug);
+  const canonical = mergedSlugs[slug] ?? slug;
+  return heroes.find((hero) => hero.slug === canonical);
 }

@@ -10,11 +10,20 @@ import {
   gemBonuses,
   refiningEffects,
   refiningFacts,
+  refiningRule,
+  refiningCosts,
+  refiningCostsNote,
+  refineTierNames,
+  refineTierTable,
+  refineTierNote,
+  refineTierGallery,
+  massDismantle,
   dismantleRows,
   dismantleBatch,
   dismantleFilters,
   dismantleGallery,
 } from "../data/equipment";
+import { wings, wingsIntro, wingsGallery } from "../data/wings";
 
 export const metadata: Metadata = {
   title: "Equipamentos — Oopsie Croco Wiki",
@@ -104,10 +113,16 @@ export default function EquipmentPage() {
           <span>{dismantleFilters.level}</span>
           <span>{dismantleFilters.quality}</span>
         </div>
+        <CalloutNote tone="info" title={massDismantle.title} text={massDismantle.text} />
         <div className="shot-grid wide">
           {dismantleGallery.map((shot) => (
             <ShotFigure key={shot.src} src={shot.src} alt={shot.alt} caption={shot.caption} />
           ))}
+          <ShotFigure
+            src="/screenshots/refining/dismantle-mass-batch.jpg"
+            alt="Desmontagem em massa com filtros Below 120 e Below Mythical"
+            caption="Lote em massa: 25,86K de ouro + 8.705 poções de refino de uma vez."
+          />
         </div>
       </section>
 
@@ -189,6 +204,90 @@ export default function EquipmentPage() {
               caption={`${item.value} • ${item.slot} • custo ${item.cost}`}
               linked
             />
+          ))}
+        </div>
+      </section>
+
+      <section className="section" id="refino-detalhes">
+        <SectionHead
+          eyebrow="REFINO • REGRAS E LIMITES"
+          title="Custos e faixas por tier"
+          description={refiningRule.text}
+        />
+        <div className="dismantle-layout">
+          <div className="table-wrap sticker-card">
+            <table className="game-table">
+              <thead>
+                <tr><th>Peça</th><th>Custo por tentativa</th></tr>
+              </thead>
+              <tbody>
+                {refiningCosts.map((row) => (
+                  <tr key={row.slot}><td>{row.slot}</td><td>{row.cost} poções</td></tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <aside className="callout callout-warning">
+            <b>Sobre os custos</b>
+            <span>{refiningCostsNote}</span>
+          </aside>
+        </div>
+        <div className="table-wrap sticker-card">
+          <table className="game-table">
+            <thead>
+              <tr>
+                <th>Efeito especial</th>
+                <th>Aplicação</th>
+                {refineTierNames.map((tier) => <th key={tier}>{tier}</th>)}
+              </tr>
+            </thead>
+            <tbody>
+              {refineTierTable.map((row) => (
+                <tr key={row.effect}>
+                  <td>{row.effect}</td>
+                  <td>{row.target}</td>
+                  {row.tiers.map((value, index) => <td key={index}>{value}</td>)}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <CalloutNote tone="info" title="Fonte da tabela" text={refineTierNote} />
+        <div className="shot-grid four">
+          {refineTierGallery.map((shot) => (
+            <ShotFigure key={shot.src} src={shot.src} alt={shot.alt} caption={shot.caption} linked />
+          ))}
+        </div>
+      </section>
+
+      <section className="section" id="asas">
+        <SectionHead eyebrow="SISTEMA NOVO" title="Asas (Wings)" description={wingsIntro} />
+        <div className="detail-grid">
+          {wings.map((wing) => (
+            <article className="sticker-card" key={wing.name}>
+              <div className="detail-title">
+                <span className="kicker">WING SKILL POR ESTRELA</span>
+                <b className="chip chip-green">{wing.stats}</b>
+              </div>
+              <h3>{wing.name}</h3>
+              <div className="skill-list">
+                {wing.skills.map((skill) => (
+                  <div key={skill.level}>
+                    <b>{skill.level}</b>
+                    <span>{skill.text}</span>
+                  </div>
+                ))}
+              </div>
+              {wing.note ? <p className="boss-desc" style={{ marginTop: 12 }}>{wing.note}</p> : null}
+            </article>
+          ))}
+        </div>
+        <div className="shot-grid four">
+          {wings.map((wing) => (
+            <ShotFigure key={wing.image} src={wing.image} alt={`Tela da asa ${wing.name}`} caption={wing.name} />
+          ))}
+          {wingsGallery.map((shot) => (
+            <ShotFigure key={shot.src} src={shot.src} alt={shot.alt} caption={shot.caption} />
           ))}
         </div>
       </section>

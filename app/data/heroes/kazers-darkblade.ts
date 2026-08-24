@@ -11,6 +11,7 @@ export const kazersDarkblade: HeroRecord = {
   fieldNote: "Confirmado no nível 15. Em uma observação antiga, a cura durante Blade Storm estava bloqueada; no Bestiary atual, Bloody Swordsmanship aparece disponível e nas runs posteriores sua cura foi observada funcionando. A disponibilidade depende da progressão e das escolhas de cada run.",
   image: "/screenshots/sword-demon/profile-level-15.jpg",
   stats: [
+    "Nível 15 (23 ago.): poder 25.977 · ataque 19,43K · HP 354,22K · defesa 12,06K · Dano Crítico global +24,0% · fragmentos 10/60",
     "Nível observado: 15",
     "Poder observado: 24.654",
     "Ataque observado: 18,37K",
@@ -90,6 +91,7 @@ export const kazersDarkblade: HeroRecord = {
   evidence: ["Ficha SP Sword Demon — Kazres · Darkblade no nível 15", "Blessing Bestiary completo", "Run andar 15: 23,79M", "Segunda run andar 15: 23,96M"],
   evidenceImages: [
     { src: "/screenshots/sword-demon/profile-level-15.jpg", alt: "Kazres · Darkblade, SP Sword Demon, no nível 15" },
+    { src: "/screenshots/sword-demon/profile-level-15-updated.jpg", alt: "Ficha atualizada em 23 ago. com poder 25.977" },
     { src: "/screenshots/sword-demon/bestiary-fear-core.jpg", alt: "Dreadblade, Swift Wind Swordsmanship, Fear Abyss e Yishou Swordsmanship" },
     { src: "/screenshots/sword-demon/bestiary-fear-damage.jpg", alt: "Fear Attacks, Ranbu Kenjutsu, Fear Blow e Ronin Swordsmanship" },
     { src: "/screenshots/sword-demon/bestiary-ultimates.jpg", alt: "Fear into the Soul, Bloody Swordsmanship, Fear Resolution e Many Shadows" },
