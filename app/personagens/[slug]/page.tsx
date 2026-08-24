@@ -12,6 +12,18 @@ const confidenceLegend = [
   { key: "translation", label: "Tradução inconsistente", description: "Nomes ou efeitos conflitantes entre telas, idiomas ou partes da interface." },
 ] as const;
 
+function evidenceKind(src: string, label?: string) {
+  const text = `${src} ${label ?? ""}`.toLowerCase();
+  if (text.includes("profile") || text.includes("ficha")) return "Ficha";
+  if (text.includes("bestiary") || text.includes("blessing")) return "Bestiary";
+  if (text.includes("progress") || text.includes("level") || text.includes("nível") || text.includes("nivel")) return "Progressão";
+  if (text.includes("story") || text.includes("background")) return "História";
+  if (text.includes("run") || text.includes("battle") || text.includes("damage")) return "Run";
+  if (text.includes("exchange") || text.includes("shop")) return "Loja";
+  if (text.includes("gem")) return "Gema";
+  return "Evidência";
+}
+
 function storyTitle(slug: string, name: string) {
   if (slug === "lilith") return "Pesadelos de Runecity";
   if (slug === "mia-morning-dew") return "Origem da Fire Spirit Master";
@@ -189,18 +201,29 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
         </aside>
 
         {hero.evidenceImages?.length ? (
-          <section className="evidence-gallery">
-            <p className="eyebrow">EVIDÊNCIAS VISUAIS</p>
-            <h2>Prints originais</h2>
-            <div className="shot-grid three tall">
-              {hero.evidenceImages.map((item) => (
-                <figure className="shot" key={item.src}>
-                  <a href={item.src} target="_blank" rel="noreferrer">
-                    <img src={item.src} alt={item.caption ?? item.alt ?? "Evidência visual"} loading="lazy" />
-                  </a>
-                  <figcaption><span>{item.caption ?? item.alt}</span></figcaption>
-                </figure>
-              ))}
+          <section className="evidence-gallery sticker-card">
+            <div className="gallery-head">
+              <div>
+                <p className="eyebrow">EVIDÊNCIAS VISUAIS</p>
+                <h2>Galeria de referência</h2>
+              </div>
+              <span>{hero.evidenceImages.length} prints catalogados</span>
+            </div>
+            <div className="evidence-board">
+              {hero.evidenceImages.map((item, index) => {
+                const label = item.caption ?? item.alt ?? "Evidência visual";
+                return (
+                  <figure className="evidence-shot" key={item.src}>
+                    <a href={item.src} target="_blank" rel="noreferrer">
+                      <img src={item.src} alt={label} loading="lazy" />
+                    </a>
+                    <figcaption>
+                      <b>{String(index + 1).padStart(2, "0")} · {evidenceKind(item.src, label)}</b>
+                      <span>{label}</span>
+                    </figcaption>
+                  </figure>
+                );
+              })}
             </div>
           </section>
         ) : null}

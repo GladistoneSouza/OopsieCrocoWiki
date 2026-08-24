@@ -54,11 +54,11 @@ export default function Home() {
         <div className="home-hero-copy">
           <p className="eyebrow">GUIA CONSTRUÍDO JOGANDO</p>
           <h1>
-            O sistema que o jogo <em>não explica direito.</em>
+            Mecânicas de Oopsie Croco, <em>documentadas em campo.</em>
           </h1>
           <p className="lede">
-            Uma wiki prática de Oopsie Croco sobre progressão, equipamentos, builds e modos de jogo —
-            documentada a partir das telas e testes reais.
+            Uma wiki prática sobre progressão, equipamentos, composições e modos de jogo,
+            organizada a partir de prints, runs e testes reais.
           </p>
           <div className="hero-actions">
             <Link className="btn btn-primary" href="/equipamentos">Entender equipamentos</Link>
@@ -87,7 +87,7 @@ export default function Home() {
         <SectionHead
           eyebrow="MAPA DA WIKI"
           title="Escolha um sistema"
-          description="Cada área tem página própria, alimentada por prints e runs reais. Nada aqui é adivinhação."
+          description="Cada área separa dado confirmado, observação de run e interpretação provável."
         />
         <div className="system-grid">
           {systems.map((system) => (
@@ -105,7 +105,7 @@ export default function Home() {
         <SectionHead
           eyebrow="MÉTODO"
           title="Como o material é organizado"
-          description="A wiki separa print forte, contexto, hipótese e pendência para evitar jogar tudo no mesmo peso."
+          description="Print forte, contexto, hipótese e pendência ficam separados para facilitar consulta e revisão."
         />
         <div className="fact-grid">
           {evidenceStandards.map((item) => (
