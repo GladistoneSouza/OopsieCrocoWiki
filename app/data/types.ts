@@ -15,6 +15,7 @@ export type HeroStorySlide = {
   title: string;
   eyebrow?: string;
   status?: string;
+  caption?: string;
   sourceImage?: string;
   portraitImage?: string;
   body: string[];
