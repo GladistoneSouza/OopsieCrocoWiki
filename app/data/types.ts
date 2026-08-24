@@ -11,6 +11,16 @@ export type HeroBuild = {
   priorities: string[];
 };
 
+export type HeroStorySlide = {
+  title: string;
+  eyebrow?: string;
+  status?: string;
+  sourceImage?: string;
+  portraitImage?: string;
+  body: string[];
+  note?: string;
+};
+
 export type HeroRecord = {
   slug: string;
   name: string;
@@ -24,6 +34,7 @@ export type HeroRecord = {
   artImage?: string;
   identity?: string[];
   story?: string[];
+  storySlides?: HeroStorySlide[];
   storyImages?: { src: string; alt?: string; caption?: string; title?: string }[];
   stats?: string[];
   exclusiveGems?: { name: string; slot: string; baseStat: string; effect: string }[];

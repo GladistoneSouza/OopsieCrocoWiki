@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { SiteHeader } from "../../components/SiteHeader";
 import { SiteFooter } from "../../components/SiteFooter";
 import { EvidenceCarousel } from "../../components/EvidenceCarousel";
+import { StoryCarousel } from "../../components/StoryCarousel";
 import { getHero, heroes } from "../../data/heroes";
 
 const confidenceLegend = [
@@ -67,7 +68,10 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
     );
   }
 
-  const storyImageSources = new Set(hero.storyImages?.flatMap((item) => [item.src, originalStorySource(item.src)]) ?? []);
+  const storyImageSources = new Set([
+    ...(hero.storyImages?.flatMap((item) => [item.src, originalStorySource(item.src)]) ?? []),
+    ...(hero.storySlides?.flatMap((item) => item.sourceImage ? [item.sourceImage, item.sourceImage.replace("/story-crops/", "/")] : []) ?? []),
+  ]);
   const evidenceImages = hero.evidenceImages?.filter((item) => !storyImageSources.has(item.src)) ?? [];
 
   return (
@@ -122,7 +126,11 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
           <section className="character-story">
             <p className="eyebrow">HISTÓRIA</p>
             <h2>{storyTitle(hero.slug, hero.name)}</h2>
-            {hero.storyImages?.length ? (
+            {hero.storySlides?.length ? (
+              <div className="story-carousel-panel" aria-label={`História de ${hero.name}`}>
+                <StoryCarousel slides={hero.storySlides} />
+              </div>
+            ) : hero.storyImages?.length ? (
               <div className="story-carousel-panel" aria-label={`Prints da história de ${hero.name}`}>
                 <EvidenceCarousel
                   items={hero.storyImages.map((item) => {
@@ -132,7 +140,7 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
                 />
               </div>
             ) : null}
-            {hero.story.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+            {!hero.storySlides?.length ? hero.story.map((paragraph) => <p key={paragraph}>{paragraph}</p>) : null}
           </section>
         ) : null}
 
