@@ -86,7 +86,7 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
           {hero.image || hero.artImage ? (
             <figure className={`character-portrait rarity-${hero.rarity?.toLowerCase() ?? "unknown"}`}>
               <img src={hero.artImage ?? hero.image} alt={`Arte de ${hero.name}`} />
-              <figcaption>{hero.artImage ? "Arte recortada para consulta" : "Visual oficial no jogo"}</figcaption>
+              <figcaption>{hero.artImage ? `${hero.rarity ?? "Arte"} · Arte tratada` : "Visual oficial no jogo"}</figcaption>
             </figure>
           ) : null}
         </header>
