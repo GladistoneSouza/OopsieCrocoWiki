@@ -8,7 +8,7 @@ export const shadowWolf: HeroRecord = {
   rarity: "SR",
   role: "Dano bruto / Bloodlust / execução de boss",
   summary: "Assassino físico que acumula Bloodlust com Wild Bite, cresce com múltiplas mordidas e ganha efeitos adicionais ao atingir 10 e 15 camadas.",
-  fieldNote: "Separação documental: as camadas e seus gatilhos são confirmados pela tela; o desempenho acima de 100M é observação de campo; Berserk State e Violent State serem o mesmo estado é uma interpretação provável, pois o jogo alterna os nomes sem explicar o efeito.",
+  fieldNote: "Separação documental: as camadas e seus gatilhos são confirmados pela tela; o desempenho acima de 100M é observação de campo; Berserk State e Violent State serem o mesmo estado é uma interpretação provável, pois o jogo alterna os nomes sem explicar o efeito. Contra o boss Igris, o teto observado até agora é dele: 104,86M no painel capturado e, numa run posterior relatada com print, 48,3M representando ~93% do dano do time (segundo colocado com 1,41M).",
   identity: ["Nome exibido na ficha: Karl", "Título: SR Shadow Wolf", "Profissão: Assassin", "Alcance exibido: 1"],
   stats: ["Nível observado: 20"],
   levelSkills: [
@@ -32,6 +32,12 @@ export const shadowWolf: HeroRecord = {
       summary: "Build preferida para acelerar as camadas, multiplicar o número de mordidas e concentrar dano em bosses.",
       priorities: ["Bloody • Surging", "Bite • Crazy", "Bite • Continuous Attack", "Bite • Hunt", "Bite • Deadly", "Night Raid"],
     },
+    {
+      name: "Execução total contra Igris",
+      status: "confirmada",
+      summary: "Ciclo completo fechado numa run contra o Igris: Bloody dobrado e prolongado alimenta o Berserk, Bite duplicada dispara o dano extra do Continuous Attack e o Night Raid empilha mordidas automáticas abaixo de 50% de HP do boss. Resultado relatado: 48,3M, ~34× o dano do Sword Demon na mesma luta.",
+      priorities: ["Bite • Crazy", "Bite • Continuous Attack", "Bloody • Surging", "Bloody • Rapid", "Bloody and Violent", "Night Raid", "Bite • Break Armor"],
+    },
   ],
   synergies: [
     "Yang: Rapid da Sakura acelera o motor de habilidades.",
@@ -39,12 +45,21 @@ export const shadowWolf: HeroRecord = {
     "Bite • Continuous Attack aproveita habilidades que acertam o mesmo alvo 3 vezes.",
     "Bite • Hunt e Night Raid concentram o pico de dano quando o inimigo está com HP baixo.",
     "Cura e mitigação ajudam a mantê-lo vivo enquanto acumula Bloodlust contra bosses.",
+    "Interpretação provável — o ciclo Bloody → Berserk → Bite duplicada → Continuous Attack se comporta como efeito multiplicador, não como soma: cada peça amplia o valor das outras.",
+    "Interpretação provável — o pico acontece quando as duas condições de execução se alinham: boss abaixo de 50% (Night Raid automático) enquanto o próprio Lobão está com HP baixo.",
   ],
-  evidence: ["Blessing Bestiary completo do Shadow Wolf", "Build completa registrada numa run de 15 níveis", "Runs em que o Lobão ultrapassou 100M de dano"],
+  evidence: [
+    "Blessing Bestiary completo do Shadow Wolf",
+    "Build completa registrada numa run de 15 níveis",
+    "Runs em que o Lobão ultrapassou 100M de dano",
+    "Painel contra Igris: 104,86M com o time inteiro atrás (print no repositório)",
+    "Run posterior contra Igris relatada com print em conversa externa: 48,3M (~93% do dano do time), barra do boss saindo de 1,93B",
+  ],
   evidenceImages: [
     { src: "/screenshots/shadow-wolf/bloodlust-opening.jpg", alt: "Wild Bite e bênçãos iniciais de Bite e Bloodlust" },
     { src: "/screenshots/shadow-wolf/berserk-violent.jpg", alt: "Gatilho de Berserk State com 10 camadas e referência ao Violent State" },
     { src: "/screenshots/shadow-wolf/blood-sucking-night-raid.jpg", alt: "Gatilho de blood sucking com 15 camadas e Ultimate Night Raid" },
+    { src: "/screenshots/enemies/igris-rage-mode.jpg", alt: "Shadow Wolf com 104,86M no painel contra Igris durante o Rage Mode" },
   ],
   pending: [
     "Descobrir o efeito exato e a duração normal de Berserk/Violent State.",
@@ -54,5 +69,8 @@ export const shadowWolf: HeroRecord = {
     "Confirmar como Bloody • Surging interage com Wild Bite e Bite • Crazy quando ocorrem várias mordidas.",
     "Medir Continuous Attack contra outras Blessings ofensivas.",
     "Separar posteriormente quais bênçãos são obtidas gratuitamente por nível.",
+    "Importar o print da run de 48,3M contra Igris (hoje só existe na conversa externa).",
+    "Confirmar se o Lobão tem bônus próprio de dano com HP baixo — citado na análise da run, mas nenhuma blessing documentada descreve esse efeito (Bite • Hunt olha o HP do inimigo).",
+    "Verificar em tela o efeito real de Bite • Break Armor na run de execução: o tooltip documentado fala em esquiva, não em quebra de armadura.",
   ],
 };
