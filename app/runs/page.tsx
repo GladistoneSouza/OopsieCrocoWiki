@@ -6,7 +6,7 @@ import { FactCard } from "../components/FactCard";
 import { CalloutNote } from "../components/CalloutNote";
 import { ShotFigure } from "../components/ShotFigure";
 import { combatRuns, coreTeam, fifthSlotRule } from "../data/combatRuns";
-import { newlyDocumentedEnemies } from "../data/enemies";
+import { newlyDocumentedEnemies, documentedBosses, enemyShots } from "../data/enemies";
 
 export const metadata: Metadata = {
   title: "Runs documentadas — Oopsie Croco Wiki",
@@ -92,6 +92,31 @@ export default function RunsPage() {
               <p>{enemy.effect}</p>
               <small className="chip">{enemy.confidence}</small>
             </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section" id="bosses">
+        <SectionHead
+          eyebrow="BESTIÁRIO DE CAMPO"
+          title="Bosses documentados"
+          description="Fichas e comportamentos de bosses registrados fora do Co-op — dungeons, estágios da história e desafios."
+        />
+        <div className="enemy-grid">
+          {documentedBosses.map((boss) => (
+            <article className="sticker-card" key={boss.name}>
+              <h4>{boss.name}</h4>
+              <b>{boss.context}{boss.weakness ? ` • ${boss.weakness}` : ""}</b>
+              {boss.skills.map((skill) => (
+                <p key={skill.name}><strong>{skill.name}:</strong> {skill.text}</p>
+              ))}
+              {boss.notes ? <p>{boss.notes}</p> : null}
+            </article>
+          ))}
+        </div>
+        <div className="shot-grid five">
+          {enemyShots.map((shot) => (
+            <ShotFigure key={shot.src} src={shot.src} alt={shot.alt} caption={shot.caption} linked />
           ))}
         </div>
       </section>

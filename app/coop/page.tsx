@@ -7,13 +7,16 @@ import { CalloutNote } from "../components/CalloutNote";
 import { ShotFigure } from "../components/ShotFigure";
 import {
   coopRules,
+  dropQualityColumns,
+  dropTable,
+  dropTableNote,
+  boneDesert,
   mvpRun,
   pickStages,
   counterRule,
   pickGallery,
   coopCosts,
   slimeQueen,
-  dropRates,
   difficulty4Enemies,
   floorMap,
   enemyGallery,
@@ -107,21 +110,43 @@ export default function CoopPage() {
               ))}
             </div>
           </article>
-          <article className="reward-card sticker-card">
+          <article className="boss-card sticker-card">
             <div className="detail-title">
-              <span className="kicker">{dropRates.kicker}</span>
-              <b className="chip chip-green">{dropRates.minimum}</b>
+              <span className="kicker">{boneDesert.kicker}</span>
+              <b className="chip chip-green">{boneDesert.weakness}</b>
             </div>
-            <h3>Probabilidade de raridade</h3>
-            {dropRates.rows.map((row) => (
-              <div className={`drop-row ${row.quality}`} key={row.quality}>
-                <b>{row.label}</b>
-                <span>{row.chance}</span>
-              </div>
-            ))}
-            <p>{dropRates.note}</p>
+            <h3>{boneDesert.name}</h3>
+            <p className="boss-desc">{boneDesert.description}</p>
+            <div className="skill-list">
+              {boneDesert.skills.map((skill) => (
+                <div key={skill.name}>
+                  <b>{skill.name}</b>
+                  <span>{skill.text}</span>
+                </div>
+              ))}
+            </div>
+            <p className="boss-desc">{boneDesert.elite}</p>
           </article>
         </div>
+        <div className="table-wrap sticker-card">
+          <table className="game-table">
+            <thead>
+              <tr>
+                <th>Dificuldade</th>
+                {dropQualityColumns.map((column) => <th key={column.key}>{column.label}</th>)}
+              </tr>
+            </thead>
+            <tbody>
+              {dropTable.map((row) => (
+                <tr key={row.difficulty}>
+                  <td>{row.difficulty}</td>
+                  {dropQualityColumns.map((column) => <td key={column.key}>{row.rates[column.key]}</td>)}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <CalloutNote tone="info" title="Probabilidades oficiais por dificuldade" text={dropTableNote} />
       </section>
 
       <section className="section" id="bestiario">

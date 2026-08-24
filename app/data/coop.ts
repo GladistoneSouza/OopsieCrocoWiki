@@ -64,6 +64,38 @@ export const dropRates = {
   note: "*O nível mínimo exibido escala com o nível do Adventurer. A quantidade de peças depende das ondas vencidas: mais ondas, recompensa maior.",
 };
 
+export const dropQualityColumns = [
+  { key: "normal", label: "Normal" },
+  { key: "excellent", label: "Excellent" },
+  { key: "rare", label: "Rare" },
+  { key: "epic", label: "Epic" },
+  { key: "legendary", label: "Legendary" },
+  { key: "mythic", label: "Mythic" },
+] as const;
+
+export const dropTable: { difficulty: string; rates: Record<string, string> }[] = [
+  { difficulty: "1", rates: { normal: "10%", excellent: "35%", rare: "30%", epic: "20%", legendary: "5%", mythic: "—" } },
+  { difficulty: "2", rates: { normal: "10%", excellent: "15%", rare: "40%", epic: "25%", legendary: "10%", mythic: "—" } },
+  { difficulty: "3", rates: { normal: "5%", excellent: "15%", rare: "40%", epic: "25%", legendary: "12,5%", mythic: "2,5%" } },
+  { difficulty: "4", rates: { normal: "2,5%", excellent: "15%", rare: "40%", epic: "25%", legendary: "12,5%", mythic: "5%" } },
+];
+
+export const dropTableNote =
+  "Percentuais lidos nos Reward Previews oficiais das dificuldades 1 a 4 (23 ago.). Mythic passa a dropar a partir da dificuldade 3. Nas dificuldades 2+, o nível mínimo exibido foi ≥ 83, escalando com o nível do Adventurer. As dificuldades 5+ ainda não foram capturadas.";
+
+export const boneDesert = {
+  kicker: "ESTÁGIO • BONE DESERT",
+  weakness: "Fraqueza: Arqueiro",
+  name: "Stone Giant",
+  description: "Monstro de alta defesa com múltiplas camadas de escudos imunes a dano.",
+  skills: [
+    { name: "Seismic Wave", text: "Causa dano massivo a todos os inimigos e aplica Stun." },
+    { name: "Petrified Skin", text: "Endurece a pele, negando 100 instâncias de dano." },
+    { name: "Fortified Defense", text: "Cada inimigo atingido por Seismic Wave aumenta a própria DEF do gigante." },
+  ],
+  elite: "Elite do estágio: Octopus King — descrito como vingativo: retalia cada ofensa recebida.",
+};
+
 export const difficulty4Enemies = [
   { name: "Mutated Slime", skill: "Death Splitting", text: "Sempre que é atingido por um Arqueiro, possui 40% de chance de se dividir e criar uma nova cópia." },
   { name: "Goblin Warrior", skill: "Stun ATK", text: "Ataques básicos possuem 40% de chance de atordoar o alvo durante 1 segundo. Também foi observado Sluggish, que reduz Attack Speed." },
@@ -103,6 +135,11 @@ export const rankingNote = {
 };
 
 export const coopGallery = [
+  { src: "/screenshots/coop/instructions.jpg", alt: "Popup Co-op Spire Instructions com regras oficiais", title: "Instructions", caption: "Regras oficiais: tickets, 20 stamina, first-clear do líder e correio em caso de desconexão." },
+  { src: "/screenshots/coop/reward-preview-diff-3.jpg", alt: "Reward Preview da dificuldade 3 com Mythic 2,5%", title: "Drops dificuldade 3", caption: "Mythic entra na tabela a partir da dificuldade 3 (2,5%)." },
+  { src: "/screenshots/coop/reward-preview-diff-4.jpg", alt: "Reward Preview da dificuldade 4 com Mythic 5%", title: "Drops dificuldade 4", caption: "Dificuldade 4: Mythic sobe para 5% e Normal cai para 2,5%." },
+  { src: "/screenshots/coop/bone-desert.jpg", alt: "Bestiário do estágio Bone Desert com Stone Giant e Octopus King", title: "Bone Desert", caption: "Boss Stone Giant (fraqueza: Arqueiro) e elite Octopus King." },
+  { src: "/screenshots/coop/stone-giant-seismic-wave.jpg", alt: "Tooltip da habilidade Seismic Wave do Stone Giant", title: "Seismic Wave", caption: "Dano massivo em todos os inimigos + Stun." },
   { src: "/screenshots/coop-difficulty-6.jpg", alt: "Tela da dificuldade 6 do Co-op Spire", title: "Dificuldade 6", caption: "Slime Queen, fraqueza contra Invocador e recompensas do líder." },
   { src: "/screenshots/slime-queen-regeneration.jpg", alt: "Ficha da Slime Queen mostrando Regeneration", title: "Ficha do boss", caption: "Regeneration restaura HP e escala com o tempo de canalização." },
   { src: "/screenshots/coop-ranking.jpg", alt: "Ranking do Co-op Spire", title: "Ranking", caption: "Conta L2darkness no 15º lugar, com progresso 5–10." },
