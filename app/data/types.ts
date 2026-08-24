@@ -21,6 +21,7 @@ export type HeroRecord = {
   summary: string;
   fieldNote: string;
   image?: string;
+  artImage?: string;
   identity?: string[];
   story?: string[];
   stats?: string[];

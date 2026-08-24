@@ -87,29 +87,75 @@
 }
 
 .character-portrait {
+  position: relative;
   margin: 0;
+  padding: 14px;
   overflow: hidden;
-  border: var(--border);
+  border: 4px solid var(--ink);
   border-radius: var(--radius-md);
-  background: var(--sun);
+  background:
+    radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.62), transparent 36%),
+    linear-gradient(145deg, #302448, #171020);
   box-shadow: 10px 10px 0 rgba(20, 14, 32, 0.4);
   transform: rotate(1.5deg);
 }
 
+.character-portrait::before {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  pointer-events: none;
+  border: 3px solid rgba(255, 255, 255, 0.28);
+  border-radius: calc(var(--radius-md) - 4px);
+  z-index: 1;
+}
+
+.character-portrait.rarity-ssr {
+  border-color: #2a1b08;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.55), transparent 28%),
+    linear-gradient(145deg, #fff2b8, #d79b22 45%, #5b2e0c);
+}
+
+.character-portrait.rarity-sp {
+  border-color: #2a0808;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.52), transparent 28%),
+    linear-gradient(145deg, #ffd1c9, #d74242 48%, #5f1010);
+}
+
+.character-portrait.rarity-ur {
+  border-color: #201642;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.56), transparent 28%),
+    linear-gradient(145deg, #7ba4ff, #b65ed2 45%, #d99a34);
+}
+
 .character-portrait img {
+  position: relative;
+  z-index: 0;
   display: block;
   width: 100%;
   aspect-ratio: 9 / 10;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center bottom;
+  border: 3px solid rgba(43, 37, 67, 0.78);
+  border-radius: var(--radius-sm);
+  background:
+    radial-gradient(circle at 50% 44%, rgba(255, 255, 255, 0.58), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.32), rgba(0, 0, 0, 0.16));
 }
 
 .character-portrait figcaption {
+  position: relative;
+  z-index: 2;
+  margin: 10px -14px -14px;
   padding: 10px 14px;
   font-size: 10px;
   font-weight: 800;
   color: #eadff0;
   background: #1a1320;
-  border-top: var(--border);
+  border-top: 3px solid var(--ink);
 }
 
 /* ---- Blocos da ficha ---- */

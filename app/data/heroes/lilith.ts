@@ -10,6 +10,7 @@ export const lilith: HeroRecord = {
   summary: "Dark Knight SSR baseada em Nightmare: combina dano contínuo, redução de cura, propagação, controle e recuperação própria.",
   fieldNote: "Ficha mais recente confirmada no nível 15 (24 ago.), com a passiva exclusiva de mana desbloqueada. O Blessing Bestiary de Apply Nightmare foi mapeado por completo (12 blessings, 2 douradas). Nightmare é a mecânica própria dela e não deve ser confundida com o Fear do Sword Demon.",
   image: "/screenshots/lilith/lilith-hero.jpg",
+  artImage: "/screenshots/lilith/lilith-art-crop.png",
   identity: [
     "Nome exibido na ficha: Lilith · Charmflame",
     "Gênero: feminino",

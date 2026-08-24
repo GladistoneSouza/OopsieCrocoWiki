@@ -83,10 +83,10 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
               <span className="chip chip-light">Dados de campo</span>
             </div>
           </div>
-          {hero.image ? (
-            <figure className="character-portrait">
-              <img src={hero.image} alt={`Visual oficial de ${hero.name}`} />
-              <figcaption>Visual oficial no jogo</figcaption>
+          {hero.image || hero.artImage ? (
+            <figure className={`character-portrait rarity-${hero.rarity?.toLowerCase() ?? "unknown"}`}>
+              <img src={hero.artImage ?? hero.image} alt={`Arte de ${hero.name}`} />
+              <figcaption>{hero.artImage ? "Arte recortada para consulta" : "Visual oficial no jogo"}</figcaption>
             </figure>
           ) : null}
         </header>
