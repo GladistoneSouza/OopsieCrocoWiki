@@ -1,0 +1,46 @@
+:root {
+  /* Superfícies */
+  --paper: #fdf3dc;
+  --panel: #fffdf6;
+  --ink: #2b2543;
+  --ink-soft: #5d5878;
+  --line: #2b2543;
+
+  /* Marca e acentos */
+  --croco: #46a832;
+  --croco-deep: #2e7d24;
+  --sun: #ffc233;
+  --sun-deep: #b57e00;
+  --coral: #ff7847;
+  --sky: #3fb9f5;
+  --berry: #9c6cf5;
+
+  /* Qualidades de equipamento */
+  --q-normal: #8d87a5;
+  --q-excellent: #62ac2f;
+  --q-rare: #3f75bb;
+  --q-epic: #8f3fd1;
+  --q-legendary: #eba123;
+  --q-mythic: #ef5350;
+
+  /* Raridades de herói */
+  --r-blue: #4a90d9;
+  --r-purple: #9a6ff0;
+  --r-gold: #eda92c;
+  --r-red: #ef5350;
+
+  /* Forma */
+  --radius-lg: 26px;
+  --radius-md: 18px;
+  --radius-sm: 12px;
+  --border: 3px solid var(--ink);
+  --shadow-sticker: 0 6px 0 rgba(43, 37, 67, 0.22);
+  --shadow-sticker-hover: 0 10px 0 rgba(43, 37, 67, 0.22);
+
+  /* Tipografia */
+  --font-display: "Lilita One", "Arial Black", sans-serif;
+  --font-body: "Nunito", "Segoe UI", Arial, sans-serif;
+
+  /* Movimento */
+  --pop: 160ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}

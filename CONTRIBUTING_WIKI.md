@@ -6,12 +6,16 @@ Uma conversa ou agente deve cuidar de um assunto por vez. Não coloque conhecime
 
 ## Onde registrar cada informação
 
-- Personagens, aliases, habilidades por nível, builds e pendências: `app/data/heroes.ts`
+- Personagens, aliases, habilidades por nível, builds e pendências: `app/data/heroes/<slug>.ts` (um arquivo por herói; registre novos heróis também no `app/data/heroes/index.ts`)
+- Tipos compartilhados das fichas: `app/data/types.ts`
 - Página individual de personagem: gerada automaticamente em `/personagens/<slug>`
-- Co-op, regras gerais e recompensas: futuro módulo `app/data/coop.ts`
-- Monstros e formações por andar: futuro módulo `app/data/enemies.ts`
-- Equipamentos, gemas, refino e desmontagem: futuro módulo `app/data/equipment.ts`
+- Co-op (regras, custos, boss, andares, drops): `app/data/coop.ts` → página `/coop`
+- Runs documentadas e núcleo de time: `app/data/combatRuns.ts` → página `/runs`
+- Monstros descobertos fora do Co-op: `app/data/enemies.ts`
+- Equipamentos, gemas, refino e desmontagem: `app/data/equipment.ts` → página `/equipamentos`
+- Economia de invocações: `app/data/economy.ts` (exibida na home)
 - Prints publicados: `public/screenshots/`
+- Visual (cores, cards, tipografia): `app/styles/` — não estilize inline nas páginas
 
 ## Regra de confiabilidade
 

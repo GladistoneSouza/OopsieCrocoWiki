@@ -1,8 +1,31 @@
-# vinext-starter
+# Oopsie Croco Wiki
 
-A clean full-stack starter running on
-[vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and
-Drizzle support.
+Wiki não oficial de **Oopsie Croco** (Croco Studio Interactive, Android/iOS):
+guia prático de equipamentos, gemas, builds, heróis e modos de jogo,
+documentado a partir de prints e runs reais. Regras de conteúdo e níveis de
+confiabilidade estão em [CONTRIBUTING_WIKI.md](CONTRIBUTING_WIKI.md).
+
+## Estrutura
+
+```
+app/
+├── page.tsx               # Home (vitrine: sistemas, heróis, economia)
+├── equipamentos/          # Camadas, desmontagem, gemas e refino
+├── coop/                  # Co-op Spire: regras, boss, andares, drops
+├── runs/                  # Runs documentadas e mecânicas de inimigos
+├── personagens/           # Índice + ficha por slug
+├── components/            # SiteHeader, SiteFooter, SectionHead, FactCard...
+├── data/                  # Conteúdo da wiki (fonte da verdade)
+│   ├── heroes/            # Um arquivo por herói + index
+│   ├── equipment.ts · coop.ts · economy.ts · combatRuns.ts · enemies.ts
+│   └── types.ts
+└── styles/                # tokens, base, layout, home, systems, characters
+public/screenshots/        # Prints que sustentam cada afirmação
+```
+
+O texto abaixo é a documentação operacional do template
+[vinext](https://github.com/cloudflare/vinext) (deploy Sites/Cloudflare, com
+D1 e Drizzle opcionais).
 
 ## Prerequisites
 
