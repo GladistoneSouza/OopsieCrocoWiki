@@ -1,0 +1,58 @@
+import type { HeroRecord } from "../types";
+
+export const shadowWolf: HeroRecord = {
+  slug: "shadow-wolf",
+  name: "Shadow Wolf",
+  aliases: ["Lobão"],
+  className: "Assassino",
+  rarity: "SR",
+  role: "Dano bruto / Bloodlust / execução de boss",
+  summary: "Assassino físico que acumula Bloodlust com Wild Bite, cresce com múltiplas mordidas e ganha efeitos adicionais ao atingir 10 e 15 camadas.",
+  fieldNote: "Separação documental: as camadas e seus gatilhos são confirmados pela tela; o desempenho acima de 100M é observação de campo; Berserk State e Violent State serem o mesmo estado é uma interpretação provável, pois o jogo alterna os nomes sem explicar o efeito.",
+  identity: ["Nome exibido na ficha: Karl", "Título: SR Shadow Wolf", "Profissão: Assassin", "Alcance exibido: 1"],
+  stats: ["Nível observado: 20"],
+  levelSkills: [
+    { name: "Habilidade base — Wild Bite", description: "Executa de 1 a 3 mordidas no alvo. Cada mordida causa dano, concede 1 camada de Bloodlust e cada camada aumenta o ataque em 18%.", source: "Blessing Bestiary" },
+    { name: "Bite • Break Armor", description: "Depois que Bite mata um inimigo, aumenta a esquiva. O valor e a duração não são informados; o efeito exibido não corresponde ao nome Break Armor.", source: "Blessing Bestiary" },
+    { name: "Bloody • Rapid", description: "Aumenta a duração de Bloodlust. O aumento e a duração base não são informados.", source: "Blessing Bestiary" },
+    { name: "Bite • Hunt", description: "Bite causa dano dobrado contra inimigos com HP baixo; o limite de HP não é informado nessa descrição.", source: "Blessing Bestiary" },
+    { name: "Bloody • Surging", description: "Dobra a quantidade de camadas de Bloody/Bloodlust recebidas.", source: "Blessing Bestiary" },
+    { name: "Bite • Crazy", description: "Dobra a quantidade de ataques de Bite.", source: "Blessing Bestiary" },
+    { name: "Bloody and Violent", description: "Ao alcançar 10 camadas de Bloody, entra em Berserk State. O bônus concedido pelo estado não é descrito.", source: "Blessing Bestiary" },
+    { name: "Bite • Continuous Attack", description: "Quando uma única habilidade atinge o mesmo alvo 3 vezes, causa dano adicional. O multiplicador não é informado.", source: "Blessing Bestiary" },
+    { name: "Bloody • Eternal", description: "Depois de matar um inimigo, o Violent State permanece até o fim da batalha. A tela não esclarece se Violent State é o mesmo Berserk State ativado com 10 camadas.", source: "Blessing Bestiary" },
+    { name: "Bite • Deadly", description: "Bite possui 50% de chance de causar dano dobrado.", source: "Blessing Bestiary" },
+    { name: "Bloody and Greedy", description: "Ao alcançar 15 camadas de Bloody, recebe blood sucking até o fim da batalha. A porcentagem de roubo de vida não é informada.", source: "Blessing Bestiary" },
+    { name: "Ultimate — Night Raid", description: "Quando a vida do inimigo fica abaixo de 50%, libera Bite automaticamente.", source: "Blessing Bestiary" },
+  ],
+  builds: [
+    {
+      name: "Dupla mordida + sangue duplo",
+      status: "confirmada",
+      summary: "Build preferida para acelerar as camadas, multiplicar o número de mordidas e concentrar dano em bosses.",
+      priorities: ["Bloody • Surging", "Bite • Crazy", "Bite • Continuous Attack", "Bite • Hunt", "Bite • Deadly", "Night Raid"],
+    },
+  ],
+  synergies: [
+    "Yang: Rapid da Sakura acelera o motor de habilidades.",
+    "Bite • Crazy e Bloody • Surging aceleram o número de golpes e o ganho de camadas.",
+    "Bite • Continuous Attack aproveita habilidades que acertam o mesmo alvo 3 vezes.",
+    "Bite • Hunt e Night Raid concentram o pico de dano quando o inimigo está com HP baixo.",
+    "Cura e mitigação ajudam a mantê-lo vivo enquanto acumula Bloodlust contra bosses.",
+  ],
+  evidence: ["Blessing Bestiary completo do Shadow Wolf", "Build completa registrada numa run de 15 níveis", "Runs em que o Lobão ultrapassou 100M de dano"],
+  evidenceImages: [
+    { src: "/screenshots/shadow-wolf/bloodlust-opening.jpg", alt: "Wild Bite e bênçãos iniciais de Bite e Bloodlust" },
+    { src: "/screenshots/shadow-wolf/berserk-violent.jpg", alt: "Gatilho de Berserk State com 10 camadas e referência ao Violent State" },
+    { src: "/screenshots/shadow-wolf/blood-sucking-night-raid.jpg", alt: "Gatilho de blood sucking com 15 camadas e Ultimate Night Raid" },
+  ],
+  pending: [
+    "Descobrir o efeito exato e a duração normal de Berserk/Violent State.",
+    "Confirmar se Berserk State e Violent State representam o mesmo estado.",
+    "Medir a porcentagem de vida recuperada por blood sucking.",
+    "Verificar se as camadas expiram juntas ou individualmente e se existe limite acima de 15.",
+    "Confirmar como Bloody • Surging interage com Wild Bite e Bite • Crazy quando ocorrem várias mordidas.",
+    "Medir Continuous Attack contra outras Blessings ofensivas.",
+    "Separar posteriormente quais bênçãos são obtidas gratuitamente por nível.",
+  ],
+};
