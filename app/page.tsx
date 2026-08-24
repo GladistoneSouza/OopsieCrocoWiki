@@ -6,7 +6,7 @@ import { FactCard } from "./components/FactCard";
 import { CalloutNote } from "./components/CalloutNote";
 import { heroes } from "./data/heroes";
 import { rarities } from "./data/equipment";
-import { summonEconomy } from "./data/economy";
+import { dailyShopHistory, summonEconomy } from "./data/economy";
 import { summonRules, heroSummonRates, mythicalSummon, heroExchange } from "./data/summons";
 
 const systems = [
@@ -171,6 +171,19 @@ export default function Home() {
           </div>
         </div>
         <CalloutNote tone="warning" title="Leituras com ressalva" text={heroSummonRates.note} />
+      </section>
+
+      <section className="section" id="loja-diaria">
+        <SectionHead
+          eyebrow="ECONOMIA HISTÓRICA"
+          title="Rotação da loja diária"
+          description="Valores vistos em julho/agosto de 2026; snapshots antigos não substituem os preços atuais."
+        />
+        <div className="fact-grid">
+          {dailyShopHistory.map((item) => (
+            <FactCard key={item.title} kicker={item.kicker} title={item.title} text={item.text} />
+          ))}
+        </div>
       </section>
 
       <section className="section" id="raridades">
