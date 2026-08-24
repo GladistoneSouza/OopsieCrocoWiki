@@ -77,7 +77,7 @@ export const lilith: HeroRecord = {
         "Ela escapava facilmente dos guardas e espalhava armadilhas ilusórias, fazendo seus inimigos hesitarem a cada passo.",
         "Mas os magos da cidade começaram a enxergar através dos pesadelos. Sentindo uma força desconhecida na escuridão, Lilith decidiu investigar por conta própria.",
       ],
-      note: "Texto consolidado a partir de dois prints rolados da Story 2.",
+      note: "Texto consolidado a partir da Story 2.",
     },
     {
       title: "Story 3",
