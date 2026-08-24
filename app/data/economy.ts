@@ -9,3 +9,16 @@ export const summonEconomy = {
   projection: "250 summons normais completam cinco ciclos: 2.500 moedas do Hero Exchange + 10 fichas míticas. A recompensa opcional marcada como “Chance to Obtain” é adicional; ela não apareceu na coleta documentada.",
   pity: { title: "Pity paralelo", text: "O contador de Legendary continuou ativo depois da coleta. O marco dos baús não substitui nem reinicia a garantia de herói dourado." },
 };
+
+export const dailyShopHistory = [
+  {
+    kicker: "LOJA DIÁRIA • JUL./AGO. 2026",
+    title: "Até 10 refreshes pagos com ouro",
+    text: "A rotação diária permitia até 10 atualizações usando ouro. O refresh podia antecipar fragmentos do núcleo, mas seu custo acumulado competia com os demais usos do recurso.",
+  },
+  {
+    kicker: "PREÇOS HISTÓRICOS",
+    title: "SR por 125–250; SSR por 500–1.000",
+    text: "Capturas da rotação mostraram SR nas faixas de 125 e 250 moedas e SSR nas faixas de 500 e 1.000. Personagem, promoção e limite alteravam o preço; este snapshot não substitui os valores atuais do Hero Exchange.",
+  },
+];
