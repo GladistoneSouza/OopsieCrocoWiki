@@ -52,7 +52,7 @@ export const bountyHunter: HeroRecord = {
     {
       name: "Barrage de munições",
       status: "confirmada",
-      summary: "Converte frequência de ataques e variedade de munições em escala de dano.",
+      summary: "Converte frequência de ataques e variedade de munições em escala de dano. O motor por trás (interpretação provável): a diversidade de balas especiais alimenta o Ammunition Expert (até 50 acúmulos de ATK), Attack Speed multiplica a frequência dos procs e o Barrage Time converte o acúmulo em limpeza de área dobrando a ultimate.",
       priorities: ["Ammunition Expert", "Gunsling · Loading", "Ammunition · Steel Core", "Ammunition · Mercury ou Tear", "Spearmanship · Double Shot", "Barrage Time +1"],
     },
   ],

@@ -8,6 +8,7 @@ import { ShotFigure } from "../components/ShotFigure";
 import { combatRuns, coreTeam, fifthSlotRule } from "../data/combatRuns";
 import { newlyDocumentedEnemies, documentedBosses, enemyShots, fieldDebuffs } from "../data/enemies";
 import { otherModes, inRunMechanics } from "../data/modes";
+import { campaignStatus, strategyNotes, levelGrowth } from "../data/strategy";
 
 export const metadata: Metadata = {
   title: "Runs documentadas — Oopsie Croco Wiki",
@@ -155,6 +156,42 @@ export default function RunsPage() {
               </div>
               <p>{debuff.text}</p>
               <small className="chip">{debuff.confidence}</small>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section" id="estrategia">
+        <SectionHead
+          eyebrow="CADERNO DE ESTRATÉGIA"
+          title="Conclusões das conversas de campo"
+          description="Leituras práticas do jogador, sempre rotuladas — estratégia e interpretação nunca viram regra confirmada."
+        />
+        <div className="new-enemies">
+          <article className="sticker-card" key={campaignStatus.title}>
+            <div>
+              <h3>{campaignStatus.title}</h3>
+              <b>{campaignStatus.kicker}</b>
+            </div>
+            <p>{campaignStatus.text}</p>
+            <small className="chip">{campaignStatus.confidence}</small>
+          </article>
+          <article className="sticker-card" key={levelGrowth.title}>
+            <div>
+              <h3>{levelGrowth.title}</h3>
+              <b>{levelGrowth.kicker}</b>
+            </div>
+            <p>{levelGrowth.text}</p>
+            <small className="chip">{levelGrowth.confidence}</small>
+          </article>
+          {strategyNotes.map((note) => (
+            <article className="sticker-card" key={note.title}>
+              <div>
+                <h3>{note.title}</h3>
+                <b>{note.kicker}</b>
+              </div>
+              <p>{note.text}</p>
+              <small className="chip">{note.confidence}</small>
             </article>
           ))}
         </div>
