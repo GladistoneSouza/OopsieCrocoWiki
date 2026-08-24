@@ -44,8 +44,14 @@ export const strategyNotes: StrategyNote[] = [
   {
     kicker: "RAID • AFK",
     title: "Raid instantânea converte 10 de energia em horas de produção",
-    text: "A mecânica de Raid instantânea entrega, por 10 de energia, o equivalente à produção AFK acumulada (renda exibida “por hora”). Os valores exatos por hora ainda não foram capturados em print.",
+    text: "A mecânica de Raid instantânea entrega, por 10 de energia, o equivalente à produção AFK acumulada (renda exibida “por hora”). Snapshot registrado em 12 ago., no estágio 69: conta com 87,41K de poder geral produzindo 361 gold/h + 16 recursos/h — a renda escala com o estágio alcançado, reforçando o ciclo do Stage Mastery.",
     confidence: "observada em run",
+  },
+  {
+    kicker: "BLESSINGS • ROTA",
+    title: "Monte a build por rota, não por carta isolada",
+    text: "Não basta pegar a carta mais forte da rodada: é preciso decidir cedo a rota da run e escolher dentro dela — boss (scaling, marca e execução), ondas (AoE, correntes e invocações), sobrevivência (cura e escudo) ou counter (interrupção/burst contra a habilidade perigosa da fase). Uma escolha fora da rota ocupa a vaga de uma peça do combo e pode atrasar a ultimate que fecha a build.",
+    confidence: "estratégia do jogador",
   },
   {
     kicker: "INVOCAÇÕES",
@@ -57,6 +63,18 @@ export const strategyNotes: StrategyNote[] = [
     kicker: "FRAGMENTOS",
     title: "Preço cheio só quando fecha um breakpoint",
     text: "Comprar fragmentos a preço cheio no Hero Exchange só compensa quando a compra completa imediatamente um nível decisivo (ex.: levar uma heroína de 14 para 15, destravando o talento do breakpoint). Apenas “aproximar” do nível não justifica o custo.",
+    confidence: "estratégia do jogador",
+  },
+  {
+    kicker: "FRAGMENTOS • GANHO MARGINAL",
+    title: "Compare o que o mesmo pacote melhora no núcleo",
+    text: "Regra mais ampla que o breakpoint: antes de investir, compare quanto o mesmo pacote de fragmentos melhora efetivamente o núcleo da conta em cada opção — em vez de despejar automaticamente no herói de maior raridade. Um SR do núcleo fechando breakpoint costuma render mais que um SP parado no banco.",
+    confidence: "estratégia do jogador",
+  },
+  {
+    kicker: "HERÓIS R/AZUIS",
+    title: "Herói barato também paga o investimento",
+    text: "Os níveis de heróis R/azuis destravam bônus globais (Dano Crítico da conta) e bônus de profissão que valem para TODOS os personagens daquela classe. Quando a profissão é a mesma do carry do núcleo, subir o herói barato é das formas mais baratas de fortalecer o time inteiro — mesmo que ele nunca entre em campo.",
     confidence: "estratégia do jogador",
   },
   {
