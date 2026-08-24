@@ -22,7 +22,7 @@ export const otherModes = [
   {
     kicker: "ARENA",
     title: "PvP com recompensa diária por ranking",
-    text: "Recompensas diárias por faixa de colocação (1º lugar leva item exclusivo + 100 diamantes + 15 tickets; faixas até 101-150 documentadas). Tickets extras custam 100 diamantes (limite 5/dia).",
+    text: "São 3 tentativas normais por dia; tickets extras custam 100 diamantes (limite 5/dia). Recompensas diárias por faixa de colocação (1º lugar leva item exclusivo + 100 diamantes + 15 tickets; faixas até 101-150 documentadas).",
   },
 ];
 
