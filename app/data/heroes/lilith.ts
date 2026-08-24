@@ -49,7 +49,7 @@ export const lilith: HeroRecord = {
         "Ela empunha armas revestidas de ossos e cristais mágicos, carrega asas demoníacas nas costas e se move com velocidade imprevisível.",
         "Seus cortes de curta distância se misturam à magia de pesadelo, arrastando inimigos para reinos de medo e abrindo caminho para o caos.",
       ],
-      note: "Texto consolidado a partir de dois prints rolados do Hero Background.",
+      note: "Texto consolidado a partir do Hero Background.",
     },
     {
       title: "Story 1",
