@@ -8,7 +8,7 @@ import { ShotFigure } from "../components/ShotFigure";
 import { combatRuns, coreTeam, fifthSlotRule } from "../data/combatRuns";
 import { newlyDocumentedEnemies, documentedBosses, enemyShots, fieldDebuffs } from "../data/enemies";
 import { otherModes, inRunMechanics } from "../data/modes";
-import { campaignStatus, strategyNotes, levelGrowth } from "../data/strategy";
+import { campaignStatus, historicalNotes, strategyNotes, levelGrowth } from "../data/strategy";
 
 export const metadata: Metadata = {
   title: "Runs documentadas — Oopsie Croco Wiki",
@@ -185,6 +185,26 @@ export default function RunsPage() {
             <small className="chip">{levelGrowth.confidence}</small>
           </article>
           {strategyNotes.map((note) => (
+            <article className="sticker-card" key={note.title}>
+              <div>
+                <h3>{note.title}</h3>
+                <b>{note.kicker}</b>
+              </div>
+              <p>{note.text}</p>
+              <small className="chip">{note.confidence}</small>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section" id="arquivo-historico">
+        <SectionHead
+          eyebrow="ARQUIVO DA CONTA"
+          title="Progressão, loja e ofertas antigas"
+          description="Snapshots preservados com contexto de data. Valores antigos documentam a evolução, mas não prometem preços ou regras atuais."
+        />
+        <div className="new-enemies">
+          {historicalNotes.map((note) => (
             <article className="sticker-card" key={note.title}>
               <div>
                 <h3>{note.title}</h3>
