@@ -1,8 +1,8 @@
 export const otherModes = [
   {
-    kicker: "RAID • IGRIS",
-    title: "Dano acumulado entre tentativas",
-    text: "A raid do Igris soma o dano de várias tentativas (Current / Accumulated / Best Damage) e paga recompensa fixa de 40 emblemas de coroa por vitória. O Boss Damage Boost cresce a cada tentativa (+210% → +230% observados). Barras de HP vistas: 575M a 2,26B, conforme o nível da escada.",
+    kicker: "BOSS DA GUILDA • IGRIS",
+    title: "3 tentativas diárias, dano acumulado",
+    text: "Igris é o boss da guilda: 3 tentativas por dia, com o dano somado entre elas (Current / Accumulated / Best Damage) e recompensa fixa de 40 emblemas de coroa por vitória. O boss começa sem fúria; depois de um tempo (algo entre 50 e 80 segundos, ainda sem medição exata) ele se bufa com Boss Damage Boost +200% e o valor sobe a cada segundo (+210% → +230% capturados). Barras de HP vistas: 575M a 2,26B, conforme o nível da escada.",
   },
   {
     kicker: "ABYSS REALM",
