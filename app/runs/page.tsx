@@ -8,7 +8,8 @@ import { ShotFigure } from "../components/ShotFigure";
 import { combatRuns, coreTeam, fifthSlotRule } from "../data/combatRuns";
 import { newlyDocumentedEnemies, documentedBosses, enemyShots, fieldDebuffs } from "../data/enemies";
 import { otherModes, inRunMechanics } from "../data/modes";
-import { campaignStatus, historicalNotes, strategyNotes, levelGrowth } from "../data/strategy";
+import { campaignStatus, strategyNotes, levelGrowth } from "../data/strategy";
+import { accountTimeline } from "../data/timeline";
 
 export const metadata: Metadata = {
   title: "Runs documentadas — Oopsie Croco Wiki",
@@ -50,7 +51,7 @@ export default function RunsPage() {
             <article className="documented-run sticker-card" key={run.title}>
               <header>
                 <div>
-                  <span className="kicker">{run.stage} • BOSS EM {run.timerAtBoss}</span>
+                  <span className="kicker">{run.stage}{run.timerAtBoss ? ` • BOSS EM ${run.timerAtBoss}` : ""}</span>
                   <h3>{run.title}</h3>
                 </div>
                 <b className="chip chip-green">{run.status}</b>
@@ -73,6 +74,27 @@ export default function RunsPage() {
                   <ShotFigure key={item.src} src={item.src} alt={item.alt} caption={item.alt} linked />
                 ))}
               </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section" id="linha-do-tempo">
+        <SectionHead
+          eyebrow="PROGRESSÃO DA CONTA"
+          title="Do estágio 69 ao 83"
+          description="Snapshots datados preservam a evolução real sem misturar bônus globais de momentos diferentes."
+        />
+        <div className="new-enemies">
+          {accountTimeline.map((entry) => (
+            <article className="sticker-card" key={`${entry.date}-${entry.stage}`}>
+              <div>
+                <h3>{entry.stage}</h3>
+                <b>{entry.date}</b>
+              </div>
+              <p><strong>Poder geral:</strong> {entry.power}</p>
+              <p>{entry.note}</p>
+              <small className="chip">{entry.confidence}</small>
             </article>
           ))}
         </div>
@@ -185,26 +207,6 @@ export default function RunsPage() {
             <small className="chip">{levelGrowth.confidence}</small>
           </article>
           {strategyNotes.map((note) => (
-            <article className="sticker-card" key={note.title}>
-              <div>
-                <h3>{note.title}</h3>
-                <b>{note.kicker}</b>
-              </div>
-              <p>{note.text}</p>
-              <small className="chip">{note.confidence}</small>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="section" id="arquivo-historico">
-        <SectionHead
-          eyebrow="ARQUIVO DA CONTA"
-          title="Progressão, loja e ofertas antigas"
-          description="Snapshots preservados com contexto de data. Valores antigos documentam a evolução, mas não prometem preços ou regras atuais."
-        />
-        <div className="new-enemies">
-          {historicalNotes.map((note) => (
             <article className="sticker-card" key={note.title}>
               <div>
                 <h3>{note.title}</h3>
