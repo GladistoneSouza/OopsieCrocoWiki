@@ -8,6 +8,7 @@ import { karinPharaoh } from "./karin-pharaoh";
 import { bountyHunter } from "./bounty-hunter";
 import { onmyoji } from "./onmyoji";
 import { artemis } from "./artemis";
+import { athena } from "./athena";
 import { dragonWarrior } from "./dragon-warrior";
 import { tidecaller } from "./tidecaller";
 import { flowerSpirit } from "./flower-spirit";
@@ -31,6 +32,7 @@ export const heroes: HeroRecord[] = [
   bountyHunter,
   onmyoji,
   artemis,
+  athena,
   dragonWarrior,
   tidecaller,
   flowerSpirit,

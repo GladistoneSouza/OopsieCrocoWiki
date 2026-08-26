@@ -14,6 +14,8 @@ Uma conversa ou agente deve cuidar de um assunto por vez. Não coloque conhecime
 - Monstros descobertos fora do Co-op: `app/data/enemies.ts`
 - Equipamentos, gemas, refino e desmontagem: `app/data/equipment.ts` → página `/equipamentos`
 - Economia de invocações: `app/data/economy.ts` (exibida na home)
+- Heróis UR e o evento Immortal Hero: `app/data/immortal.ts` → página `/ur`
+- Expedition Squad (fonte gratuita de Grail): `app/data/expedition.ts` → seção em `/ur`
 - Prints publicados: `public/screenshots/`
 - Visual (cores, cards, tipografia): `app/styles/` — não estilize inline nas páginas
 

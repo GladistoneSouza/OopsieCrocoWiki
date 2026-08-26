@@ -6,7 +6,7 @@ export const summonEconomy = {
     { kicker: "LIFETIME PASS", title: "2 fichas míticas", text: "Fichas vermelhas para a linha de invocação mítica." },
     { kicker: "TOTAL COM PASSES", title: "500 + 2", text: "500 moedas de troca e 2 fichas míticas a cada ciclo de 50 summons normais." },
   ],
-  projection: "250 summons normais completam cinco ciclos: 2.500 moedas do Hero Exchange + 10 fichas míticas. A recompensa opcional marcada como “Chance to Obtain” é adicional; ela não apareceu na coleta documentada.",
+  projection: "250 summons normais completam cinco ciclos: 2.500 moedas do Hero Exchange + 10 fichas míticas. A recompensa marcada como “Chance to Obtain” foi identificada em 26 ago. 2026: é a Mythical Hero Random Box, que entrega um herói Mythic aleatório entre os oito. Ela não caiu na coleta documentada — e, pelo relato do jogador, cai raríssimo: uma ou duas em três meses de jogo ativo.",
   pity: { title: "Pity paralelo", text: "O contador de Legendary continuou ativo depois da coleta. O marco dos baús não substitui nem reinicia a garantia de herói dourado." },
 };
 
@@ -42,3 +42,21 @@ export const dailyShopHistory = [
     text: "Capturas da rotação mostraram SR nas faixas de 125 e 250 moedas e SSR nas faixas de 500 e 1.000. Personagem, promoção e limite alteravam o preço; este snapshot não substitui os valores atuais do Hero Exchange.",
   },
 ];
+
+// Loja de diamantes (Gems) — base de conversão para tudo que a wiki precifica
+// em diamante. Capturado em 26 ago. 2026.
+export const gemStore = {
+  intro:
+    "Seis tiers, cada um com um First Purchase Bonus que dobra a compra uma única vez. Fora do bônus a taxa é quase plana: os tiers de 680 para cima entregam entre 47 e 49 diamantes por dólar; os dois menores são visivelmente piores.",
+  columns: ["Pacote", "Preço", "Diamantes por US$", "Com o bônus de estreia"],
+  rows: [
+    { pack: "60 Gems", price: "US$ 1,39", rate: "43,2", first: "120 diamantes" },
+    { pack: "300 Gems", price: "US$ 6,99", rate: "42,9", first: "600 diamantes" },
+    { pack: "680 Gems", price: "US$ 13,99", rate: "48,6", first: "1.360 diamantes" },
+    { pack: "1.280 Gems", price: "US$ 26,99", rate: "47,4", first: "2.560 diamantes" },
+    { pack: "3.280 Gems", price: "US$ 68,99", rate: "47,5", first: "6.560 diamantes" },
+    { pack: "6.480 Gems", price: "US$ 134,99", rate: "48,0", first: "12.960 diamantes" },
+  ],
+  note:
+    "Referência de conversão da wiki, na melhor taxa sem bônus (tier de 680, US$ 0,0206 por diamante): o Daily Immortal EXP do Immortal Shop custa 2.000 diamantes ≈ US$ 41, e o Mythic Selection, 3.000 ≈ US$ 62.",
+};

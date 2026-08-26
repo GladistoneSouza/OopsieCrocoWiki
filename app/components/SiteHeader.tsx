@@ -5,6 +5,7 @@ const links = [
   { href: "/coop", label: "Co-op" },
   { href: "/runs", label: "Runs" },
   { href: "/personagens", label: "Personagens" },
+  { href: "/ur", label: "UR" },
 ];
 
 type Props = {

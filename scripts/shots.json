@@ -166,6 +166,23 @@
     "note": "Tooltip da Lucky Star: troca por Immortal Hero escolhido; fontes Expedition Squad e Immortal Summon"
   },
   {
+    "src": "img_game/Screenshot_2026-08-26-13-46-13-647_com.oopsie.croco.challenge.leisure.battle.game.jpg",
+    "out": "expedition/squad-empty.jpg",
+    "crop": [
+      55,
+      690,
+      1175,
+      2300
+    ],
+    "focus": {
+      "matte": "#2b2543",
+      "radius": 30,
+      "inset": 40,
+      "shadow": true
+    },
+    "note": "Apos a coleta: times vazios, Not enough team members e Quick Deploy"
+  },
+  {
     "src": "img_game/Screenshot_2026-08-26-13-46-20-728_com.oopsie.croco.challenge.leisure.battle.game.jpg",
     "out": "expedition/squad-rules.jpg",
     "crop": [
@@ -283,5 +300,124 @@
       "shadow": true
     },
     "note": "Loja de diamantes: seis tiers e o First Purchase Bonus que dobra cada um"
+  },
+  {
+    "src": "img_game/vermelhos/Screenshot_2026-08-26-15-01-36-598_com.oopsie.croco.challenge.leisure.battle.game.jpg",
+    "out": "summon/mythical-rules.jpg",
+    "crop": [
+      56,
+      720,
+      1164,
+      2065
+    ],
+    "focus": {
+      "matte": "#2b2543",
+      "radius": 30,
+      "inset": 40,
+      "shadow": true
+    },
+    "note": "Mythical Summoning Rules: pity de 10 e de 50"
+  },
+  {
+    "src": "img_game/vermelhos/Screenshot_2026-08-26-15-01-41-329_com.oopsie.croco.challenge.leisure.battle.game.jpg",
+    "out": "summon/mythical-rates.jpg",
+    "crop": [
+      56,
+      720,
+      1164,
+      2065
+    ],
+    "focus": {
+      "matte": "#2b2543",
+      "radius": 30,
+      "inset": 40,
+      "shadow": true
+    },
+    "note": "Rate Details do Mythical Summon"
+  },
+  {
+    "src": "img_game/vermelhos/Screenshot_2026-08-26-15-01-45-589_com.oopsie.croco.challenge.leisure.battle.game.jpg",
+    "out": "summon/mythic-up-selection.jpg",
+    "crop": [
+      58,
+      665,
+      1175,
+      2150
+    ],
+    "focus": {
+      "matte": "#2b2543",
+      "radius": 30,
+      "inset": 40,
+      "shadow": true
+    },
+    "note": "Selecao do heroi UP: os oito miticos"
+  },
+  {
+    "src": "img_game/vermelhos/Screenshot_2026-08-26-15-01-47-503_com.oopsie.croco.challenge.leisure.battle.game.jpg",
+    "out": "summon/mythic-pity-counter.jpg",
+    "crop": [
+      30,
+      380,
+      1190,
+      2120
+    ],
+    "focus": {
+      "matte": "#2b2543",
+      "radius": 30,
+      "inset": 40,
+      "shadow": true
+    },
+    "note": "Contador de pity SP 19/50 e o alvo escolhido"
+  },
+  {
+    "src": "img_game/vermelhos/Screenshot_2026-08-26-15-03-07-070_com.oopsie.croco.challenge.leisure.battle.game.jpg",
+    "out": "summon/draw-milestone-chest.jpg",
+    "crop": [
+      58,
+      675,
+      1180,
+      2160
+    ],
+    "focus": {
+      "matte": "#2b2543",
+      "radius": 30,
+      "inset": 40,
+      "shadow": true
+    },
+    "note": "Draw Milestone Chest: 2 fichas garantidas + chance de caixa mitica"
+  },
+  {
+    "src": "img_game/vermelhos/Screenshot_2026-08-26-15-03-09-791_com.oopsie.croco.challenge.leisure.battle.game.jpg",
+    "out": "summon/mythical-hero-random-box.jpg",
+    "crop": [
+      60,
+      805,
+      1180,
+      1970
+    ],
+    "focus": {
+      "matte": "#2b2543",
+      "radius": 30,
+      "inset": 40,
+      "shadow": true
+    },
+    "note": "Mythical Hero Random Box: um mitico aleatorio entre os oito"
+  },
+  {
+    "src": "img_game/vermelhos/Screenshot_2026-08-26-15-02-25-708_com.oopsie.croco.challenge.leisure.battle.game.jpg",
+    "out": "summon/battle-pass.jpg",
+    "crop": [
+      20,
+      550,
+      1200,
+      2450
+    ],
+    "focus": {
+      "matte": "#2b2543",
+      "radius": 30,
+      "inset": 40,
+      "shadow": true
+    },
+    "note": "Battle Pass como fonte de fichas miticas"
   }
 ]

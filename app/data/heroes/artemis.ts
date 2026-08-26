@@ -39,7 +39,7 @@ export const artemis: HeroRecord = {
     {
       name: "Nível 5 — Crit +5% (dobrado com Athena)",
       description:
-        "Increases crit rate by 5%; when Athena is also deployed, this bonus is doubled — +5% de chance de crítico, dobrado quando \"Athena\" também está em campo. \"Athena\" é uma referência ainda não identificada na wiki (nenhum herói catalogado com esse nome até agora).",
+        "Increases crit rate by 5%; when Athena is also deployed, this bonus is doubled — +5% de chance de crítico, dobrado quando Athena também está em campo. Athena é a outra heroína UR da linha Immortal Hero, identificada no banner de 26 ago. 2026; as duas são os core Immortal Heroes da mesma edição.",
       source: "Texto confirmado na tela de progressão (ficha nv2, bloqueado).",
     },
     {
@@ -110,11 +110,12 @@ export const artemis: HeroRecord = {
   synergies: [
     "Boss fraco contra Archer",
     "Attack Speed para acelerar aplicação de marcas",
-    "Talento nv5: crit +5% dobra quando \"Athena\" também está em campo (referência ainda não identificada na wiki)",
+    "Talento nv5: crit +5% dobra para +10% quando Athena está em campo — as duas são as UR da mesma edição do Immortal Hero, o que torna a dupla o pareamento pretendido pelo jogo",
     "Hunt Mark · Spirit Blessing buffa permanentemente o ATK dela e o HP máximo de um companheiro (até 30 stacks) — valoriza runs longas com aliados de linha de frente",
   ],
   evidence: [
     "Ficha UR Goddess of the Hunt — Artemis nv2 (16 ago.): stats e talentos nv3/5/8",
+    "Banner Immortal Hero (26 ago.): Artemis e Athena como os 2 core Immortal Heroes da edição — identifica a Athena citada no talento nv5",
     "Run de aventura de 16 ago. (Sword Demon + Goddess of the Hunt + Dark Knight + Onmyoji): set completo de 6 blessings da run",
     "Painel de dano da run: Goddess of the Hunt 2,96M (2º lugar)",
     "Runs do Igris (13 ago.): Goddess of the Hunt nos painéis Ally com 720,95K / ~756,61K / 676,97K",
@@ -135,7 +136,7 @@ export const artemis: HeroRecord = {
     { src: "/screenshots/artemis/run-damage-panel.jpg", alt: "Painel de dano da run de 16 ago.", caption: "Goddess of the Hunt em 2º com 2,96M, atrás do Sword Demon (5,68M)." },
   ],
   pending: [
-    "Identificar quem é \"Athena\" (citada no talento nv5) — nenhum herói com esse nome catalogado até agora",
+    "Abrir a ficha da Athena e medir a dupla UR na prática (o talento nv5 promete crítico dobrado)",
     "Capturar os textos das blessings Hunt Mark · Precision e Moonlit · Enhancement (concedidas pelos talentos nv3/nv8, ainda sem print do tooltip)",
     "Capturar em print as demais blessings do kit citadas em observações antigas (Divine Eagle, Pursuit, Moonlit · Charge) e os tooltips das skills base na ficha (Moonlit Arrow Rain / Hunter God Mark)",
     "Mapear a progressão acima do nível 8 (nv10, 12, 15...)",

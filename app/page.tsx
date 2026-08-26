@@ -36,6 +36,14 @@ const systems = [
     cta: "Ver o laboratório",
   },
   {
+    href: "/ur",
+    icon: "🏆",
+    tone: "gold",
+    title: "Heróis UR",
+    text: "O Immortal Hero, a economia do Grail e a Expedition Squad — todo o caminho até a raridade mais alta do jogo.",
+    cta: "Ver a linha UR",
+  },
+  {
     href: "/personagens",
     icon: "🎴",
     tone: "croco",
