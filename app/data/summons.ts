@@ -126,35 +126,37 @@ export const summonEvent = {
 // Battle Pass — mecânica lida no print de 26 ago. 2026, temporada com 09d:17h restantes.
 export const battlePass = {
   kicker: "BATTLE PASS",
-  title: "Stamina vira nível, e o preço sobe",
+  title: "O custo sobe de cinco em cinco níveis",
   text:
-    "A trilha não sobe por missão: o próprio texto diz \"Consume stamina to level up\". O custo é progressivo — o jogador relata degraus na faixa de 100, 150, 200, 250, 300 e 400 conforme a trilha avança. A captura pegou a conta no nível 23 com a barra em 10/300, e o contador do dia em 180 de um teto de 1.500.",
+    "A trilha não sobe por missão: o texto diz \"Consume stamina to level up\". E o custo não é fixo — ele degrau em faixas de cinco níveis. A captura pegou a conta no nível 23 com a barra em 10/300, e o contador do dia em 180 de um teto de 1.500.",
+  tiers: {
+    title: "A escada de custo",
+    intro:
+      "Faixas de cinco níveis. As duas do topo foram testadas pelo jogador, e o print do nível 23 pagando 300 confirma a faixa 20–25 de forma independente.",
+    columns: ["Faixa de nível", "Stamina por nível", "Níveis que o teto diário compra", "Confiança"],
+    rows: [
+      { band: "1 – 5", cost: "100", perDay: "15", trust: "Provável, não confirmado" },
+      { band: "5 – 10", cost: "150", perDay: "10", trust: "Provável, não confirmado" },
+      { band: "10 – 15", cost: "200", perDay: "7", trust: "Valor visto em jogo; faixa a confirmar" },
+      { band: "15 – 20", cost: "250", perDay: "6", trust: "Provável, não confirmado" },
+      { band: "20 – 25", cost: "300", perDay: "5", trust: "Testado, e batendo com o print do nível 23" },
+      { band: "25 em diante", cost: "400", perDay: "3", trust: "Testado" },
+    ],
+    note:
+      "Correção: a primeira versão desta página tratava os 300 da barra como custo constante e anunciava cinco níveis por dia como número fixo. É só o degrau da faixa 20–25.",
+  },
   facts: [
-    { label: "Custo do nível na captura", value: "300 de stamina (nível 23)" },
-    { label: "Curva de custo", value: "progressiva, ~100 a 400 — relato" },
     { label: "Teto diário", value: "1.500 de stamina contabilizada" },
-    { label: "Temporada capturada", value: "09d:17h restantes" },
+    { label: "Temporada capturada", value: "09d:17h restantes, conta no nível 23" },
     { label: "Faixa paga", value: "Deluxe a US$ 13,99, com Extra 5 Levels" },
     { label: "Rebate anunciado", value: "7.900%" },
   ],
-  ceiling: {
-    title: "Quantos níveis o teto diário compra",
-    intro: "O teto de 1.500 é fixo, o custo do nível não — então o ritmo da trilha cai conforme ela avança.",
-    rows: [
-      { cost: "100 por nível", levels: "15 por dia" },
-      { cost: "150 por nível", levels: "10 por dia" },
-      { cost: "200 por nível", levels: "7 por dia" },
-      { cost: "250 por nível", levels: "6 por dia" },
-      { cost: "300 por nível", levels: "5 por dia — a faixa da captura" },
-      { cost: "400 por nível", levels: "3 por dia" },
-    ],
-    note:
-      "Correção: a primeira versão desta página anunciava cinco níveis por dia como número fixo. Aquilo tomava os 300 da barra por custo constante, quando é só o degrau do nível 23.",
-  },
   relevance:
-    "Importa para a linha mítica porque a trilha distribui fichas — dez de uma vez no nível 30 da faixa observada. Com o custo subindo, alcançar níveis altos é questão de tempo de temporada, e o teto diário impede compensar com maratona.",
+    "Importa para a linha mítica porque a trilha distribui fichas — dez de uma vez no nível 30 da faixa observada. Com o custo dobrando entre o começo e o nível 25, e o teto diário fixo em 1.500, o ritmo cai de quinze níveis por dia para três. Passar do 25 é questão de tempo de temporada; maratona não compensa o degrau.",
   pending: [
-    "Mapear a curva de custo por nível — os degraus relatados (100/150/200/250/300/400) precisam de print",
+    "Confirmar em print os degraus das faixas 1–5, 5–10 e 15–20",
+    "Verificar em qual faixa exatamente aparece o custo de 200",
+    "Confirmar se a escada continua subindo depois do 25 ou estaciona em 400",
     "Registrar a trilha completa: quantas fichas míticas por faixa e em quais níveis",
     "Confirmar a duração total de uma temporada de Battle Pass",
     "Verificar se o teto de 1.500 de stamina por dia é fixo ou escala com o nível da conta",

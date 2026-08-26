@@ -100,33 +100,31 @@ export default function InvocacaoPage() {
             <FactCard key={fact.label} kicker="BATTLE PASS" title={fact.value} text={fact.label} />
           ))}
         </div>
-        <div className="coop-grid">
-          <div className="table-wrap sticker-card">
-            <h3>{battlePass.ceiling.title}</h3>
-            <p>{battlePass.ceiling.intro}</p>
-            <table className="game-table">
-              <thead>
-                <tr>
-                  <th>Custo do nível</th>
-                  <th>Níveis que o teto compra</th>
-                </tr>
-              </thead>
-              <tbody>
-                {battlePass.ceiling.rows.map((row) => (
-                  <tr key={row.cost}>
-                    <td>{row.cost}</td>
-                    <td>{row.levels}</td>
-                  </tr>
+        <div className="table-wrap sticker-card">
+          <h3>{battlePass.tiers.title}</h3>
+          <p>{battlePass.tiers.intro}</p>
+          <table className="game-table">
+            <thead>
+              <tr>
+                {battlePass.tiers.columns.map((column) => (
+                  <th key={column}>{column}</th>
                 ))}
-              </tbody>
-            </table>
-            <small>{battlePass.ceiling.note}</small>
-          </div>
-          <aside className="mvp-card sticker-card">
-            <span className="kicker">POR QUE ENTRA AQUI</span>
-            <p>{battlePass.relevance}</p>
-          </aside>
+              </tr>
+            </thead>
+            <tbody>
+              {battlePass.tiers.rows.map((row) => (
+                <tr key={row.band}>
+                  <td>{row.band}</td>
+                  <td>{row.cost}</td>
+                  <td>{row.perDay}</td>
+                  <td>{row.trust}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <small>{battlePass.tiers.note}</small>
         </div>
+        <CalloutNote tone="info" title="Por que entra aqui" text={battlePass.relevance} />
       </section>
 
       <section className="section" id="pendencias">
