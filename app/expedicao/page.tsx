@@ -17,6 +17,8 @@ import {
   levelLever,
   unlockFirst,
   levelCostCurve,
+  levelMilestones,
+  spreadVsFocus,
   fragmentTradeoff,
   rosterFit,
   acquisitionPlan,
@@ -172,10 +174,11 @@ export default function ExpedicaoPage() {
               </thead>
               <tbody>
                 {levelCostCurve.rows.map((row) => (
-                  <tr key={row.level}>
-                    <td>{row.level}</td>
-                    <td>{row.cost}</td>
+                  <tr key={row.band}>
+                    <td>{row.band}</td>
+                    <td>{row.per}</td>
                     <td>{row.total}</td>
+                    <td>{row.acc}</td>
                   </tr>
                 ))}
               </tbody>
@@ -215,6 +218,38 @@ export default function ExpedicaoPage() {
             <small>{acquisitionPlan.note}</small>
           </article>
         </div>
+        <SectionHead eyebrow={levelMilestones.kicker} title={levelMilestones.title} description={levelMilestones.intro} />
+        <div className="fact-grid three">
+          {levelMilestones.rows.map((row) => (
+            <FactCard key={row.level} kicker={`NÍVEL ${row.level} · ${row.cost}`} title={row.level} text={row.what} />
+          ))}
+        </div>
+        <CalloutNote tone="info" title="Confiança" text={levelMilestones.note} />
+
+        <SectionHead eyebrow={spreadVsFocus.kicker} title={spreadVsFocus.title} description={spreadVsFocus.intro} />
+        <div className="table-wrap sticker-card">
+          <table className="game-table">
+            <thead>
+              <tr>
+                {spreadVsFocus.columns.map((column) => (
+                  <th key={column}>{column}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {spreadVsFocus.rows.map((row) => (
+                <tr key={row.path}>
+                  <td>{row.path}</td>
+                  <td>{row.result}</td>
+                  <td>{row.total}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <CalloutNote tone="warning" title="O que a conta mede" text={spreadVsFocus.reading} />
+        <CalloutNote tone="dark" title="E o que ela não mede" text={spreadVsFocus.counterpoint} />
+
         <div className="shot-grid three">
           {expeditionGallery.map((shot) => (
             <ShotFigure key={shot.src} src={shot.src} alt={shot.alt} title={shot.title} caption={shot.caption} />

@@ -176,25 +176,65 @@ export const acquisitionPlan = {
     "Falta confirmar se todo herói SP ganha passiva exclusiva no 15 como a Lilith.",
 };
 
-// Curva de custo de nível de herói — dado geral de progressão, documentado aqui
-// porque é o que decide entre desbloquear uma vaga nova e subir um herói existente.
+// Curva de custo de nível de herói, em fragmentos — dado geral de progressão,
+// documentado aqui porque é o que decide entre abrir uma vaga nova e subir um herói.
 export const levelCostCurve = {
   kicker: "O QUE CUSTA SUBIR",
-  title: "5, depois 10, depois 30",
+  title: "Faixas de cinco, e o preço sextuplica",
   intro:
-    "Custos em fragmentos por nível, relatados pelo jogador. Os acumulados conferem entre si — 20 no nível 5, 30 no 7, 60 no 10, 90 no 11.",
-  columns: ["Nível", "Custo", "Acumulado"],
+    "Custos em fragmentos, relatados pelo jogador. As faixas fecham certinho: a de 10 a 15 sai a 30 por nível, o que confirma o \"10 → 11 = 30\" medido antes por outro caminho.",
+  columns: ["Faixa", "Por nível", "Total da faixa", "Acumulado desde o 1"],
   rows: [
-    { level: "1 → 5", cost: "5 por nível", total: "20" },
-    { level: "5 → 7", cost: "5 por nível", total: "30" },
-    { level: "7 → 10", cost: "10 por nível", total: "60" },
-    { level: "10 → 11", cost: "30", total: "90" },
-    { level: "15 → 16", cost: "60", total: "não medido" },
-    { level: "20 → 21", cost: "100", total: "não medido" },
+    { band: "1 – 5", per: "5", total: "20", acc: "20" },
+    { band: "5 – 10", per: "10", total: "50", acc: "70" },
+    { band: "10 – 15", per: "30", total: "150", acc: "220" },
+    { band: "15 – 20", per: "60", total: "300", acc: "520" },
   ],
   note:
-    "Os degraus entre 11 e 15 e entre 16 e 20 não foram medidos. Se o custo se mantivesse em 30 por nível até o 15, chegar lá custaria cerca de 210 fragmentos — mas o salto para 60 no 15→16 sugere que ele sobe antes disso. Nível 21 é o teto alcançado na conta observada.",
+    "Correção: a primeira versão desta tabela vinha de uma lembrança nível a nível que dava 60 acumulados no 10. As faixas dão 70, e a diferença é a faixa 5–10, que sai a 10 por nível e não a 5. As faixas são autoconsistentes e batem com o degrau de 30 medido no 10 → 11.",
 };
+
+export const levelMilestones = {
+  kicker: "OS NÍVEIS QUE IMPORTAM",
+  title: "12, 15 e 20",
+  intro:
+    "Nem todo nível vale igual. Três deles mudam o que o herói faz, e o resto entre eles é atributo.",
+  rows: [
+    {
+      level: "12",
+      cost: "130 fragmentos desde o 1",
+      what: "Libera o potencial completo de skills: duas blessings iniciais assim que o personagem é escolhido, e uma sétima escolha depois da ultimate — antes o draft se encerrava nela.",
+    },
+    {
+      level: "15",
+      cost: "220 fragmentos desde o 1",
+      what: "Upgrade forte em SP e SSR. Na Lilith é onde a passiva exclusiva abre, ainda bloqueada no 13.",
+    },
+    {
+      level: "20",
+      cost: "520 fragmentos desde o 1",
+      what: "O próximo pico de poder. Os níveis 16 a 19 entregam só atributos, então a faixa inteira de 300 fragmentos existe para chegar aqui.",
+    },
+  ],
+  note: "Efeitos relatados pelo jogador a partir de uso; o nível 15 tem confirmação parcial nas fichas de Lilith, Onmyoji e Catwoman.",
+};
+
+export const spreadVsFocus = {
+  kicker: "A CONTA DA BIFURCAÇÃO",
+  title: "300 fragmentos rendem o dobro espalhados",
+  intro:
+    "Trezentos fragmentos é exatamente o que custa levar um vermelho do 15 ao 20. Partindo de oito heróis no nível 1, dá para comparar os dois destinos.",
+  columns: ["Destino", "Resultado", "Total Level somado dos 4 times"],
+  rows: [
+    { path: "Tudo num herói", result: "Um vermelho no nível 16, os outros sete no 1", total: "23" },
+    { path: "Espalhado entre os oito", result: "Seis no nível 7 e dois no 6", total: "54" },
+  ],
+  reading:
+    "Para a expedição a resposta é clara: espalhar mais que dobra o Total Level somado, e é ele que a regra 4 converte em itens. O herói concentrado ainda ficaria no 16, sem alcançar nenhum dos marcos que importam — o 20 pede 520 fragmentos desde o nível 1.",
+  counterpoint:
+    "O contrário também é verdade e não se anula: oito heróis no nível 7 não passam de figurantes numa run, enquanto um no 12 já traz o kit completo de skills. A escolha é entre destravar renda e destravar poder, e a conta acima só mede o lado da renda.",
+};
+
 
 export const fragmentTradeoff = {
   kicker: "ONDE GASTAR FRAGMENTO SP",
@@ -272,7 +312,8 @@ export const expeditionPending = [
   "Medir a renda de Grail por faixa de Total Level — a regra 4 promete ganho, falta dimensionar",
   "Confirmar em campo que um quarto time SP também recebe o Grail no Chance to Obtain",
   "Fotografar a tela de desbloqueio de um SP para registrar o custo em fragmentos",
-  "Medir os degraus de custo entre os níveis 11 e 15 e entre 16 e 20 — as duas lacunas da curva",
+  "Confirmar em print os totais das faixas de fragmento e os efeitos dos níveis 12, 15 e 20",
+  "Descobrir quantos fragmentos rende um mítico repetido — fecha a conta entre invocação e nível",
   "Confirmar se todo herói SP abre passiva exclusiva no nível 15, como a Lilith",
   "Catalogar as demais fontes de seleção mítica em eventos e pacotes",
   "Confirmar se coletar duas vezes ao dia realmente dobra a renda, ou se há teto diário",
