@@ -142,6 +142,8 @@ export default function Home() {
             </li>
           ))}
         </ol>
+        <CalloutNote tone="dark" title={resourceChain.loop.title} text={resourceChain.loop.text} />
+        <CalloutNote tone="warning" title="A bifurcação do fragmento" text={resourceChain.loop.fork} />
         <CalloutNote tone="dark" title="A corrente se fecha num nó" text={resourceChain.irony} />
         <CalloutNote tone="info" title="O que isso muda na prática" text={resourceChain.lesson} />
       </section>

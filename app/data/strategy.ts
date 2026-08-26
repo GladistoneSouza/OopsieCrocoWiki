@@ -125,8 +125,15 @@ export const resourceChain = {
     { from: "10 Grails", to: "Um draw, e com ele 1 Lucky Star", note: "O sorteio do Immortal Hero encerra no prêmio principal, então uma edição rende no máximo 8." },
     { from: "8 Lucky Stars", to: "Uma heroína UR escolhida", note: "Primeira troca da edição; as seguintes custam 12, 24 e 24, e o saldo zera quando o evento acaba." },
   ],
+  loop: {
+    title: "E aí a corrente vira ciclo",
+    text:
+      "Depois do oitavo desbloqueio a invocação mítica não para de valer — ela muda de função. Cada mítico repetido vira fragmento vermelho, fragmento vira nível nos heróis SP que você já tem, e nível é exatamente o que a regra 4 da expedição converte em mais itens por ciclo. Mais itens por ciclo é mais Grail, que é mais draw, que é mais Lucky Star. O sistema que começou pedindo heróis passa a pagar em recurso conforme a conta avança.",
+    fork:
+      "Isso abre uma bifurcação real. Para combate, concentrar fragmentos num vermelho forte vence espalhar entre vários meia-boca. Para expedição, o que conta é o nível somado de cada dupla, e as quatro duplas rendem em paralelo. Os dois objetivos puxam o fragmento para lados opostos, e qual vence depende de a conta estar travada em estágio ou travada em Grail.",
+  },
   irony:
     "A corrente se fecha num nó: herói de qualidade Immortal não participa de expedições. As UR que você acabou de conquistar não ajudam a farmar o Grail que compra a próxima — quem sustenta a fonte gratuita é o resto do elenco.",
   lesson:
-    "A consequência prática atravessa tudo: desbloquear heróis SP que você nunca levaria para uma run é o investimento que mais rende, porque a expedição lê qualidade e não poder. Isso só ficou visível ao ler as três telas de regras lado a lado.",
+    "A consequência prática atravessa tudo: até o oitavo desbloqueio, abrir heróis SP que você nunca levaria para uma run é o investimento que mais rende, porque a expedição lê qualidade e não poder. Depois do oitavo, o mesmo fragmento passa a comprar nível — e nível também vira Grail. Nada disso apareceu numa tela só; apareceu ao ler as três telas de regras lado a lado.",
 };
