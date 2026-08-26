@@ -1,0 +1,287 @@
+[
+  {
+    "src": "img_game/Screenshot_2026-08-26-11-20-57-310_com.oopsie.croco.challenge.leisure.battle.game.jpg",
+    "out": "immortal-hero/banner-athena-artemis.jpg",
+    "crop": [
+      70,
+      240,
+      1180,
+      1640
+    ],
+    "focus": {
+      "matte": "#2b2543",
+      "radius": 30,
+      "inset": 40,
+      "shadow": true,
+      "fade_bottom": 190
+    },
+    "note": "Banner do evento, enquadrado na arte (botao Gift Pack apagado do canto)",
+    "patches": [
+      {
+        "box": [
+          0,
+          200,
+          275,
+          512
+        ],
+        "feather": 8
+      }
+    ]
+  },
+  {
+    "src": "img_game/Screenshot_2026-08-26-11-20-57-310_com.oopsie.croco.challenge.leisure.battle.game.jpg",
+    "out": "immortal-hero/athena-portrait.jpg",
+    "crop": [
+      140,
+      455,
+      620,
+      1520
+    ],
+    "max_width": 480,
+    "focus": {
+      "matte": "#2b2543",
+      "radius": 24,
+      "inset": 28,
+      "shadow": true
+    },
+    "note": "Retrato da Athena recortado do banner do evento"
+  },
+  {
+    "src": "img_game/Screenshot_2026-08-26-11-20-57-310_com.oopsie.croco.challenge.leisure.battle.game.jpg",
+    "out": "immortal-hero/draw-prize-pool.jpg",
+    "crop": [
+      10,
+      1590,
+      1220,
+      2255
+    ],
+    "focus": {
+      "matte": "#2b2543",
+      "radius": 30,
+      "inset": 40,
+      "shadow": true
+    },
+    "note": "Pool de 8 premios, custo 10 Grails, contador 0/8"
+  },
+  {
+    "src": "img_game/Screenshot_2026-08-26-11-21-02-270_com.oopsie.croco.challenge.leisure.battle.game.jpg",
+    "out": "immortal-hero/shop-grail-packs-1-3.jpg",
+    "crop": [
+      48,
+      676,
+      1196,
+      2112
+    ],
+    "focus": {
+      "matte": "#2b2543",
+      "radius": 30,
+      "inset": 40,
+      "shadow": true
+    },
+    "note": "Immortal Shop: Daily Benefits + Grail Pack I-III"
+  },
+  {
+    "src": "img_game/Screenshot_2026-08-26-11-21-08-193_com.oopsie.croco.challenge.leisure.battle.game.jpg",
+    "out": "immortal-hero/shop-grail-packs-3-6.jpg",
+    "crop": [
+      48,
+      676,
+      1196,
+      2112
+    ],
+    "focus": {
+      "matte": "#2b2543",
+      "radius": 30,
+      "inset": 40,
+      "shadow": true
+    },
+    "note": "Immortal Shop: Grail Pack III-VI"
+  },
+  {
+    "src": "img_game/Screenshot_2026-08-26-11-21-11-833_com.oopsie.croco.challenge.leisure.battle.game.jpg",
+    "out": "immortal-hero/shop-daily-exp-mythic.jpg",
+    "crop": [
+      48,
+      676,
+      1196,
+      2112
+    ],
+    "focus": {
+      "matte": "#2b2543",
+      "radius": 30,
+      "inset": 40,
+      "shadow": true
+    },
+    "note": "Immortal Shop: Daily Immortal EXP + Mythic Selection"
+  },
+  {
+    "src": "img_game/Screenshot_2026-08-26-11-21-24-599_com.oopsie.croco.challenge.leisure.battle.game.jpg",
+    "out": "immortal-hero/event-rules.jpg",
+    "crop": [
+      48,
+      676,
+      1196,
+      2024
+    ],
+    "focus": {
+      "matte": "#2b2543",
+      "radius": 30,
+      "inset": 40,
+      "shadow": true
+    },
+    "note": "Event Rules + Draw Rules"
+  },
+  {
+    "src": "img_game/Screenshot_2026-08-26-11-22-43-132_com.oopsie.croco.challenge.leisure.battle.game.jpg",
+    "out": "immortal-hero/grail-sources.jpg",
+    "crop": [
+      124,
+      1024,
+      1097,
+      1778
+    ],
+    "focus": {
+      "matte": "#2b2543",
+      "radius": 30,
+      "inset": 40,
+      "shadow": true
+    },
+    "note": "Tooltip do Grail: fontes Immortal Shop e Expedition Squad"
+  },
+  {
+    "src": "img_game/Screenshot_2026-08-26-14-00-37-642_com.oopsie.croco.challenge.leisure.battle.game.jpg",
+    "out": "immortal-hero/lucky-star-sources.jpg",
+    "crop": [
+      119,
+      940,
+      1100,
+      1862
+    ],
+    "focus": {
+      "matte": "#2b2543",
+      "radius": 30,
+      "inset": 40,
+      "shadow": true
+    },
+    "note": "Tooltip da Lucky Star: troca por Immortal Hero escolhido; fontes Expedition Squad e Immortal Summon"
+  },
+  {
+    "src": "img_game/Screenshot_2026-08-26-13-46-20-728_com.oopsie.croco.challenge.leisure.battle.game.jpg",
+    "out": "expedition/squad-rules.jpg",
+    "crop": [
+      55,
+      725,
+      1175,
+      2075
+    ],
+    "focus": {
+      "matte": "#2b2543",
+      "radius": 30,
+      "inset": 40,
+      "shadow": true
+    },
+    "note": "Regras oficiais da expedicao (6 itens)"
+  },
+  {
+    "src": "img_game/Screenshot_2026-08-26-13-46-23-322_com.oopsie.croco.challenge.leisure.battle.game.jpg",
+    "out": "expedition/squad-ready.jpg",
+    "crop": [
+      55,
+      690,
+      1175,
+      2300
+    ],
+    "focus": {
+      "matte": "#2b2543",
+      "radius": 30,
+      "inset": 40,
+      "shadow": true
+    },
+    "note": "Chance to Obtain por time antes de partir \u2014 Grail so nos times SP"
+  },
+  {
+    "src": "img_game/Screenshot_2026-08-26-13-46-30-612_com.oopsie.croco.challenge.leisure.battle.game.jpg",
+    "out": "expedition/squad-exploring.jpg",
+    "crop": [
+      55,
+      690,
+      1175,
+      2300
+    ],
+    "focus": {
+      "matte": "#2b2543",
+      "radius": 30,
+      "inset": 40,
+      "shadow": true
+    },
+    "note": "Ciclo recem-iniciado: Remaining Time 11:59:58"
+  },
+  {
+    "src": "img_game/Screenshot_2026-08-26-13-45-59-946_com.oopsie.croco.challenge.leisure.battle.game.jpg",
+    "out": "expedition/squad-complete.jpg",
+    "crop": [
+      55,
+      690,
+      1175,
+      2300
+    ],
+    "focus": {
+      "matte": "#2b2543",
+      "radius": 30,
+      "inset": 40,
+      "shadow": true
+    },
+    "note": "Quatro expedicoes concluidas com o loot obtido por time"
+  },
+  {
+    "src": "img_game/Screenshot_2026-08-26-13-46-05-215_com.oopsie.croco.challenge.leisure.battle.game.jpg",
+    "out": "expedition/reward-top.jpg",
+    "crop": [
+      225,
+      930,
+      1010,
+      1520
+    ],
+    "focus": {
+      "matte": "#2b2543",
+      "radius": 30,
+      "inset": 40,
+      "shadow": true
+    },
+    "note": "Popup Reward: Grail x2 e ticket dourado x3"
+  },
+  {
+    "src": "img_game/Screenshot_2026-08-26-13-46-09-036_com.oopsie.croco.challenge.leisure.battle.game.jpg",
+    "out": "expedition/reward-bottom.jpg",
+    "crop": [
+      225,
+      1140,
+      1010,
+      1580
+    ],
+    "focus": {
+      "matte": "#2b2543",
+      "radius": 30,
+      "inset": 40,
+      "shadow": true
+    },
+    "note": "Popup Reward: as oito fichas circulares de classe"
+  },
+  {
+    "src": "img_game/Screenshot_2026-08-26-14-20-42-255_com.oopsie.croco.challenge.leisure.battle.game.jpg",
+    "out": "immortal-hero/gem-store.jpg",
+    "crop": [
+      45,
+      600,
+      1180,
+      1900
+    ],
+    "focus": {
+      "matte": "#2b2543",
+      "radius": 30,
+      "inset": 40,
+      "shadow": true
+    },
+    "note": "Loja de diamantes: seis tiers e o First Purchase Bonus que dobra cada um"
+  }
+]

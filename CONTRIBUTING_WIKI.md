@@ -17,6 +17,36 @@ Uma conversa ou agente deve cuidar de um assunto por vez. Não coloque conhecime
 - Prints publicados: `public/screenshots/`
 - Visual (cores, cards, tipografia): `app/styles/` — não estilize inline nas páginas
 
+## Prints
+
+Print bruto de celular carrega barra de status, HUD do mapa e o overlay escurecido
+por trás dos modais — contexto que compete com o assunto. Todo print publicado passa
+por recorte antes de entrar em `public/screenshots/`.
+
+```bash
+python3 scripts/shots.py detect img_game/*.jpg     # sugere a caixa do painel
+python3 scripts/shots.py build scripts/shots.json  # gera os recortes
+```
+
+O manifesto `scripts/shots.json` guarda uma entrada por print: origem, destino,
+caixa de corte (`"auto"` detecta o painel claro sobre o overlay) e o `focus`, que
+assenta o recorte como cartão arredondado sobre o fundo neutro `--ink`. Quando a
+tela do jogo já corta a arte — e não há enquadramento que resolva —, o
+`fade_bottom` do `focus` dissolve a base no fundo neutro: a transição lê como
+decisão de layout, o corte reto lê como erro.
+
+Regras do recorte:
+
+- Enquadre só o assunto. Se o print mostra um modal, a caixa é o modal — com a
+  barra de título, que identifica a tela.
+- Prefira a origem mais limpa. Um banner aparece tanto no popup do mapa quanto na
+  tela do próprio evento; a segunda não tem HUD atravessando o fundo.
+- Não descentralize para fugir de um ícone. Se o HUD encosta na arte, use `patches`
+  em vez de cortar por cima dela: cada patch apaga um retângulo preenchendo-o com o
+  gradiente do entorno. Vale só para enfeite — nunca sobre texto ou número que sirva
+  de evidência, e sempre registrado na nota da entrada.
+- Os brutos ficam em `img_game/`, fora do git. Só o recorte é versionado.
+
 ## Regra de confiabilidade
 
 Classifique mentalmente cada afirmação antes de escrever:
