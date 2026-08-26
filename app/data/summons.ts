@@ -88,6 +88,33 @@ export const mythicAcquisition = {
 
 // Evento de invocação — capturado dormente ("Event Not Started") em 26 ago. 2026,
 // durante a semana do evento de pet. Os valores são legíveis; o progresso, não.
+export const passTrack = {
+  kicker: "A TRILHA",
+  title: "Trinta níveis, e a ficha mítica só nas faixas pagas",
+  intro:
+    "A trilha termina no nível 30 — a linha fica fixa no rodapé enquanto se rola. As fichas míticas aparecem só nos marcos de cinco em cinco, e quase todas na coluna Deluxe.",
+  columns: ["Nível", "Coluna", "Fichas míticas"],
+  rows: [
+    { level: "5", column: "Deluxe", scrolls: "10" },
+    { level: "10", column: "Advanced", scrolls: "5" },
+    { level: "15", column: "Deluxe", scrolls: "5" },
+    { level: "20", column: "Deluxe", scrolls: "10" },
+    { level: "25", column: "Deluxe", scrolls: "5" },
+    { level: "30", column: "Advanced", scrolls: "10" },
+  ],
+  totals:
+    "Somando: a coluna Free não entrega ficha mítica nenhuma. A Advanced rende 15 na temporada inteira, e a Deluxe acrescenta outras 30 — mais um baú mítico no nível 10. Como o pity exige 50, nenhuma das faixas fecha um Mythic sozinha, mas a Deluxe chega perto.",
+  reach:
+    "Alcançar o fim da trilha é barato em tempo: da conta observada, no nível 23, faltavam 600 de stamina para o 25 e mais 2.000 até o 30, cerca de 2.600 no total. Com o teto diário de 1.500, menos de dois dias — contra os 9,7 que restavam de temporada. O gargalo do passe é o custo por nível, não o calendário.",
+  correction:
+    "Correção: esta página dizia antes que \"a trilha distribui fichas — dez de uma vez no nível 30\". Aquelas dez estão na coluna Advanced, não na gratuita; sem comprar nenhuma faixa, o passe não dá ficha mítica alguma.",
+  gallery: [
+    { src: "/screenshots/summon/pass-track-1-5.jpg", alt: "Trilha do Battle Pass nos níveis 1 a 5", title: "Início da trilha", caption: "O nível 5 já traz 10 fichas míticas, na coluna Deluxe." },
+    { src: "/screenshots/summon/pass-track-16-20.jpg", alt: "Trilha do Battle Pass nos níveis 16 a 20", title: "O marco do 20", caption: "Outras 10 fichas no Deluxe; o Advanced dá ficha de herói comum." },
+    { src: "/screenshots/summon/pass-track-26-30.jpg", alt: "Trilha do Battle Pass nos níveis 26 a 30", title: "Fim da trilha", caption: "O nível 30 encerra a temporada com 10 fichas míticas na coluna Advanced." },
+  ],
+};
+
 export const summonEvent = {
   kicker: "EVENTO DE INVOCAÇÃO",
   title: "Onde a ficha mítica fica barata",
@@ -147,18 +174,18 @@ export const battlePass = {
   },
   facts: [
     { label: "Teto diário", value: "1.500 de stamina contabilizada" },
+    { label: "Trilha", value: "30 níveis — o nível 30 é o último" },
     { label: "Temporada capturada", value: "09d:17h restantes, conta no nível 23" },
     { label: "Faixa paga", value: "Deluxe a US$ 13,99, com Extra 5 Levels" },
     { label: "Rebate anunciado", value: "7.900%" },
   ],
   relevance:
-    "Importa para a linha mítica porque a trilha distribui fichas — dez de uma vez no nível 30 da faixa observada. Com o custo dobrando entre o começo e o nível 25, e o teto diário fixo em 1.500, o ritmo cai de quinze níveis por dia para três. Passar do 25 é questão de tempo de temporada; maratona não compensa o degrau.",
+    "Importa para a linha mítica pelo que a trilha distribui nos marcos de cinco — detalhado abaixo. Com o custo subindo de 100 para 400 e o teto diário fixo em 1.500, o ritmo cai de quinze níveis por dia para três, mas a temporada é longa o bastante para absorver isso.",
   pending: [
     "Confirmar em print os degraus das faixas 1–5, 5–10 e 15–20 — só visíveis recomeçando do nível 1, ou seja, na virada de temporada (a capturada terminava por volta de 5 set. 2026)",
     "Verificar em qual faixa exatamente aparece o custo de 200 — mesma janela da virada de temporada",
     "Confirmar se a escada continua subindo depois do 25 ou estaciona em 400",
-    "Registrar a trilha completa: quantas fichas míticas por faixa e em quais níveis",
-    "Confirmar a duração total de uma temporada de Battle Pass",
+      "Confirmar a duração total de uma temporada — só temos o tempo restante, não o total",
     "Verificar se o teto de 1.500 de stamina por dia é fixo ou escala com o nível da conta",
   ],
 };

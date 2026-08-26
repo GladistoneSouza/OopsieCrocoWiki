@@ -6,7 +6,7 @@ import { SectionHead } from "../components/SectionHead";
 import { FactCard } from "../components/FactCard";
 import { CalloutNote } from "../components/CalloutNote";
 import { ShotFigure } from "../components/ShotFigure";
-import { mythicAcquisition, summonEvent, battlePass } from "../data/summons";
+import { mythicAcquisition, summonEvent, battlePass, passTrack } from "../data/summons";
 
 export const metadata: Metadata = {
   title: "Invocação mítica — Oopsie Croco Wiki",
@@ -125,6 +125,40 @@ export default function InvocacaoPage() {
           <small>{battlePass.tiers.note}</small>
         </div>
         <CalloutNote tone="info" title="Por que entra aqui" text={battlePass.relevance} />
+        <SectionHead eyebrow={passTrack.kicker} title={passTrack.title} description={passTrack.intro} />
+        <div className="coop-grid">
+          <div className="table-wrap sticker-card">
+            <table className="game-table">
+              <thead>
+                <tr>
+                  {passTrack.columns.map((column) => (
+                    <th key={column}>{column}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {passTrack.rows.map((row) => (
+                  <tr key={row.level}>
+                    <td>{row.level}</td>
+                    <td>{row.column}</td>
+                    <td>{row.scrolls}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <aside className="mvp-card sticker-card">
+            <span className="kicker">O QUE SOBRA PARA CADA FAIXA</span>
+            <p>{passTrack.totals}</p>
+            <p>{passTrack.reach}</p>
+            <small>{passTrack.correction}</small>
+          </aside>
+        </div>
+        <div className="shot-grid three">
+          {passTrack.gallery.map((shot) => (
+            <ShotFigure key={shot.src} src={shot.src} alt={shot.alt} title={shot.title} caption={shot.caption} />
+          ))}
+        </div>
       </section>
 
       <section className="section" id="pendencias">

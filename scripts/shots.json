@@ -453,5 +453,56 @@
       "shadow": true
     },
     "note": "Event Packs: Sprint Packs com fichas miticas e Sprint Diamond Packs"
+  },
+  {
+    "src": "img_game/pass/Screenshot_2026-08-26-15-37-01-232_com.oopsie.croco.challenge.leisure.battle.game.jpg",
+    "out": "summon/pass-track-1-5.jpg",
+    "crop": [
+      20,
+      745,
+      1200,
+      2270
+    ],
+    "focus": {
+      "matte": "#2b2543",
+      "radius": 30,
+      "inset": 40,
+      "shadow": true
+    },
+    "note": "Trilha do Battle Pass, niveis 1-5"
+  },
+  {
+    "src": "img_game/pass/Screenshot_2026-08-26-15-37-19-664_com.oopsie.croco.challenge.leisure.battle.game.jpg",
+    "out": "summon/pass-track-16-20.jpg",
+    "crop": [
+      20,
+      745,
+      1200,
+      2270
+    ],
+    "focus": {
+      "matte": "#2b2543",
+      "radius": 30,
+      "inset": 40,
+      "shadow": true
+    },
+    "note": "Trilha do Battle Pass, niveis 16-20"
+  },
+  {
+    "src": "img_game/pass/Screenshot_2026-08-26-15-37-31-747_com.oopsie.croco.challenge.leisure.battle.game.jpg",
+    "out": "summon/pass-track-26-30.jpg",
+    "crop": [
+      20,
+      745,
+      1200,
+      2270
+    ],
+    "focus": {
+      "matte": "#2b2543",
+      "radius": 30,
+      "inset": 40,
+      "shadow": true
+    },
+    "note": "Trilha do Battle Pass, niveis 26-30 e o fim da trilha"
   }
 ]
