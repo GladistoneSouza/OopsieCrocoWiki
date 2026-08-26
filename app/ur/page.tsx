@@ -33,26 +33,7 @@ import {
   immortalPending,
   nextEditionChecklist,
 } from "../data/immortal";
-import {
-  expeditionIntro,
-  expeditionRules,
-  expeditionTeams,
-  cycleLoop,
-  expeditionHaul,
-  expeditionMath,
-  dropVariance,
-  levelLever,
-  fourthSlot,
-  unlockFirst,
-  fragmentTradeoff,
-  levelCostCurve,
-  rosterFit,
-  acquisitionPlan,
-  expeditionGallery,
-  expeditionPending,
-} from "../data/expedition";
 import { gemStore } from "../data/economy";
-import { mythicAcquisition, summonEvent } from "../data/summons";
 
 export const metadata: Metadata = {
   title: "Heróis UR e o Immortal Hero — Oopsie Croco Wiki",
@@ -312,239 +293,37 @@ export default function UrPage() {
         <CalloutNote tone="warning" title="Modelo, não taxa oficial" text={grandPrizeGamble.note} />
       </section>
 
-      <section className="section" id="expedicao">
-        <SectionHead eyebrow={expeditionIntro.kicker} title={expeditionIntro.title} description={expeditionIntro.text} />
-        <div className="coop-grid">
-          <ol className="rule-list">
-            {expeditionRules.map((rule) => (
-              <li key={rule.title}>
-                <b>{rule.title}</b>
-                <span>
-                  <i>“{rule.original}”</i> — {rule.text}
-                </span>
-              </li>
-            ))}
-          </ol>
-          <aside className="mvp-card sticker-card">
-            <span className="kicker">{expeditionHaul.kicker}</span>
-            <h3>{expeditionHaul.title}</h3>
-            <p>{expeditionHaul.text}</p>
-          </aside>
-        </div>
-        <div className="fact-grid">
-          {cycleLoop.steps.map((step) => (
-            <FactCard key={step.title} kicker={cycleLoop.kicker} title={step.title} text={step.text} />
-          ))}
+      <section className="section" id="fontes">
+        <SectionHead
+          eyebrow="DE ONDE VEM O RECURSO"
+          title="Dois sistemas alimentam esta página"
+          description="Ambos são grandes o bastante para ter página própria; aqui fica só o que eles significam para a linha UR."
+        />
+        <div className="system-grid">
+          <Link className="system-card tone-croco" href="/expedicao">
+            <span className="system-icon" aria-hidden="true">🚩</span>
+            <h3>Expedition Squad</h3>
+            <p>
+              A única fonte gratuita de Grail: quatro duplas em ciclos de 12h, com a qualidade
+              do pior herói decidindo se o Grail sequer entra no sorteio.
+            </p>
+            <b>Ver o sistema →</b>
+          </Link>
+          <Link className="system-card tone-berry" href="/invocacao">
+            <span className="system-icon" aria-hidden="true">🎟️</span>
+            <h3>Invocação mítica</h3>
+            <p>
+              Como se desbloqueia um herói SP — e por que os oito importam para a renda de
+              Grail muito antes de importarem em combate.
+            </p>
+            <b>Ver as rotas →</b>
+          </Link>
         </div>
         <CalloutNote
           tone="dark"
           title="A regra que morde quem caça UR"
           text="Herói de qualidade Immortal não participa de expedições. Athena e Artemis não ajudam a farmar o Grail que as compra — quem sustenta a fonte gratuita é o resto do elenco."
         />
-        <div className="table-wrap sticker-card">
-          <table className="game-table">
-            <thead>
-              <tr>
-                {expeditionTeams.columns.map((column) => (
-                  <th key={column}>{column}</th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {expeditionTeams.rows.map((row) => (
-                <tr key={row.team}>
-                  <td>{row.team}</td>
-                  <td>{row.quality}</td>
-                  <td>{row.level}</td>
-                  <td>{row.chance}</td>
-                  <td>{row.got}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <CalloutNote tone="info" title="Como ler a tabela" text={expeditionTeams.reading} />
-        <CalloutNote tone="info" title="Total Level é por time, não da conta" text={levelLever.definition} />
-        <CalloutNote tone="dark" title={unlockFirst.title} text={`${unlockFirst.text} ${unlockFirst.conclusion}`} />
-        <CalloutNote tone="warning" title={levelLever.title} text={`${levelLever.text} ${levelLever.note}`} />
-        <div className="fact-grid">
-          {expeditionMath.map((item) => (
-            <FactCard key={item.kicker} kicker={item.kicker} title={item.title} text={item.text} />
-          ))}
-        </div>
-        <div className="coop-grid">
-          <div className="table-wrap sticker-card">
-            <table className="game-table">
-              <thead>
-                <tr>
-                  <th>Resultado do ciclo</th>
-                  <th>Chance estimada</th>
-                </tr>
-              </thead>
-              <tbody>
-                {dropVariance.distribution.rows.map((row) => (
-                  <tr key={row.outcome}>
-                    <td>{row.outcome}</td>
-                    <td>{row.chance}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <aside className="mvp-card sticker-card">
-            <span className="kicker">{dropVariance.kicker}</span>
-            <h3>{dropVariance.title}</h3>
-            <p>{dropVariance.text}</p>
-            <p>{dropVariance.distribution.intro}</p>
-            <small>{dropVariance.distribution.note}</small>
-          </aside>
-        </div>
-        <div className="coop-grid">
-          <div className="table-wrap sticker-card">
-            <table className="game-table">
-              <thead>
-                <tr>
-                  {fourthSlot.columns.map((column) => (
-                    <th key={column}>{column}</th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {fourthSlot.rows.map((row) => (
-                  <tr key={row.teams}>
-                    <td>{row.teams}</td>
-                    <td>{row.avg}</td>
-                    <td>{row.dry}</td>
-                    <td>{row.cycle}</td>
-                    <td>{row.days}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <div className="table-wrap sticker-card">
-            <p className="eyebrow">{levelCostCurve.kicker}</p>
-            <h3>{levelCostCurve.title}</h3>
-            <p>{levelCostCurve.intro}</p>
-            <table className="game-table">
-              <thead>
-                <tr>
-                  {levelCostCurve.columns.map((column) => (
-                    <th key={column}>{column}</th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {levelCostCurve.rows.map((row) => (
-                  <tr key={row.level}>
-                    <td>{row.level}</td>
-                    <td>{row.cost}</td>
-                    <td>{row.total}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-            <small>{levelCostCurve.note}</small>
-          </div>
-          <aside className="mvp-card sticker-card">
-            <span className="kicker">{fragmentTradeoff.kicker}</span>
-            <h3>{fragmentTradeoff.title}</h3>
-            <p>{fragmentTradeoff.text}</p>
-            <p>{fragmentTradeoff.rule}</p>
-            <small>{fragmentTradeoff.note}</small>
-          </aside>
-          <aside className="mvp-card sticker-card">
-            <span className="kicker">{fourthSlot.kicker}</span>
-            <h3>{fourthSlot.title}</h3>
-            <p>{fourthSlot.text}</p>
-            <small>{fourthSlot.note}</small>
-          </aside>
-        </div>
-        <div className="detail-grid">
-          <article className="boss-card sticker-card">
-            <div className="detail-title">
-              <span className="kicker">{rosterFit.kicker}</span>
-            </div>
-            <h3>{rosterFit.title}</h3>
-            <p className="boss-desc">{rosterFit.text}</p>
-            <small>{rosterFit.note}</small>
-          </article>
-          <article className="boss-card sticker-card">
-            <div className="detail-title">
-              <span className="kicker">{acquisitionPlan.kicker}</span>
-            </div>
-            <h3>{acquisitionPlan.title}</h3>
-            <p className="boss-desc">{acquisitionPlan.text}</p>
-            <p className="boss-desc">{acquisitionPlan.phase2}</p>
-            <small>{acquisitionPlan.note}</small>
-          </article>
-        </div>
-        <div className="shot-grid three">
-          {expeditionGallery.map((shot) => (
-            <ShotFigure key={shot.src} src={shot.src} alt={shot.alt} title={shot.title} caption={shot.caption} />
-          ))}
-        </div>
-      </section>
-
-      <section className="section" id="invocacao">
-        <SectionHead
-          eyebrow={mythicAcquisition.kicker}
-          title={mythicAcquisition.title}
-          description={mythicAcquisition.targeting}
-        />
-        <ol className="rule-list">
-          {mythicAcquisition.rules.map((rule) => (
-            <li key={rule.original}>
-              <span>
-                <i>“{rule.original}”</i> — {rule.text}
-              </span>
-            </li>
-          ))}
-        </ol>
-        <CalloutNote tone="warning" title="A caixa aleatória não escolhe — e quase não cai" text={mythicAcquisition.randomBox} />
-        <CalloutNote tone="info" title="A caixa de seleção é outro item" text={mythicAcquisition.selectionBox} />
-        <CalloutNote tone="warning" title="Qual das duas está na Immortal Shop?" text={mythicAcquisition.shopAmbiguity} />
-        <CalloutNote tone="dark" title="Qual rota usar depende de quantos faltam" text={mythicAcquisition.consequence} />
-        <CalloutNote tone="info" title="Outras fontes de ficha mítica" text={mythicAcquisition.otherSources} />
-        <SectionHead
-          eyebrow={summonEvent.kicker}
-          title={summonEvent.title}
-          description={summonEvent.intro}
-        />
-        <CalloutNote tone="dark" title={summonEvent.headline.title} text={summonEvent.headline.text} />
-        <div className="table-wrap sticker-card">
-          <table className="game-table">
-            <thead>
-              <tr>
-                {summonEvent.columns.map((column) => (
-                  <th key={column}>{column}</th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {summonEvent.rows.map((row) => (
-                <tr key={row.pack}>
-                  <td>{row.pack}</td>
-                  <td>{row.content}</td>
-                  <td>{row.limit}</td>
-                  <td>{row.price}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <CalloutNote tone="warning" title="A rota mais barata até um SP escolhido" text={summonEvent.pityMath} />
-        <CalloutNote tone="info" title="Pontos por invocar" text={summonEvent.challenge} />
-        <div className="shot-grid wide">
-          {summonEvent.gallery.map((shot) => (
-            <ShotFigure key={shot.src} src={shot.src} alt={shot.alt} title={shot.title} caption={shot.caption} />
-          ))}
-        </div>
-        <div className="shot-grid three">
-          {mythicAcquisition.gallery.map((shot) => (
-            <ShotFigure key={shot.src} src={shot.src} alt={shot.alt} title={shot.title} caption={shot.caption} />
-          ))}
-        </div>
       </section>
 
       <section className="section" id="evidencias">
@@ -570,38 +349,13 @@ export default function UrPage() {
             ))}
           </ol>
         </article>
-        <div className="coop-grid">
-          <div>
-            <p className="eyebrow">IMMORTAL HERO</p>
-            <ol className="rule-list">
-              {immortalPending.map((item) => (
-                <li key={item}>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ol>
-          </div>
-          <div>
-            <p className="eyebrow">INVOCAÇÃO MÍTICA</p>
-            <ol className="rule-list">
-              {[...mythicAcquisition.pending, ...summonEvent.pending].map((item) => (
-                <li key={item}>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ol>
-          </div>
-          <div>
-            <p className="eyebrow">EXPEDITION SQUAD</p>
-            <ol className="rule-list">
-              {expeditionPending.map((item) => (
-                <li key={item}>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </div>
+        <ol className="rule-list">
+          {immortalPending.map((item) => (
+            <li key={item}>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ol>
       </section>
 
       <SiteFooter />

@@ -44,6 +44,22 @@ const systems = [
     cta: "Ver a linha UR",
   },
   {
+    href: "/expedicao",
+    icon: "🚩",
+    tone: "croco",
+    title: "Expedition Squad",
+    text: "Quatro duplas em ciclos de 12h — a renda passiva da conta e a única fonte gratuita de Grail.",
+    cta: "Ver o sistema",
+  },
+  {
+    href: "/invocacao",
+    icon: "🎟️",
+    tone: "berry",
+    title: "Invocação mítica",
+    text: "As rotas até um herói SP: pity de 50, caixas de seleção e onde a ficha mítica sai mais barata.",
+    cta: "Ver as rotas",
+  },
+  {
     href: "/personagens",
     icon: "🎴",
     tone: "croco",

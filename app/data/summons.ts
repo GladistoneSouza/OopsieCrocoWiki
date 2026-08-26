@@ -122,3 +122,25 @@ export const summonEvent = {
     "Registrar o conteúdo do baú da rodada de 4 do Challenge Objective",
   ],
 };
+
+// Battle Pass — mecânica lida no print de 26 ago. 2026, temporada com 09d:17h restantes.
+export const battlePass = {
+  kicker: "BATTLE PASS",
+  title: "Stamina vira nível, com teto diário",
+  text:
+    "A trilha não sobe por missão: o próprio texto diz \"Consume stamina to level up\". São 300 de stamina por nível, e o contador do dia marcava 180 de um teto de 1.500 — ou seja, no máximo cinco níveis por dia, por mais que se jogue.",
+  facts: [
+    { label: "Custo por nível", value: "300 de stamina" },
+    { label: "Teto diário", value: "1.500 de stamina — 5 níveis" },
+    { label: "Temporada capturada", value: "09d:17h restantes, conta no nível 23" },
+    { label: "Faixa paga", value: "Deluxe a US$ 13,99, com Extra 5 Levels" },
+    { label: "Rebate anunciado", value: "7.900%" },
+  ],
+  relevance:
+    "Importa para a linha UR porque a trilha distribui fichas míticas — dez de uma vez no nível 30 da faixa observada. Com o teto de cinco níveis por dia, chegar lá custa tempo de temporada, não dinheiro.",
+  pending: [
+    "Registrar a trilha completa: quantas fichas míticas por faixa e em quais níveis",
+    "Confirmar a duração total de uma temporada de Battle Pass",
+    "Verificar se o teto de 1.500 de stamina por dia é fixo ou escala com o nível da conta",
+  ],
+};

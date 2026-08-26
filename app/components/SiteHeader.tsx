@@ -6,6 +6,8 @@ const links = [
   { href: "/runs", label: "Runs" },
   { href: "/personagens", label: "Personagens" },
   { href: "/ur", label: "UR" },
+  { href: "/expedicao", label: "Expedição" },
+  { href: "/invocacao", label: "Invocação" },
 ];
 
 type Props = {

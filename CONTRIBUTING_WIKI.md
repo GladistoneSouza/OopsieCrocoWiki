@@ -15,7 +15,8 @@ Uma conversa ou agente deve cuidar de um assunto por vez. Não coloque conhecime
 - Equipamentos, gemas, refino e desmontagem: `app/data/equipment.ts` → página `/equipamentos`
 - Economia de invocações: `app/data/economy.ts` (exibida na home)
 - Heróis UR e o evento Immortal Hero: `app/data/immortal.ts` → página `/ur`
-- Expedition Squad (fonte gratuita de Grail): `app/data/expedition.ts` → seção em `/ur`
+- Expedition Squad: `app/data/expedition.ts` → página `/expedicao`
+- Invocação mítica, evento de invocação e Battle Pass: `app/data/summons.ts` → página `/invocacao`
 - Prints publicados: `public/screenshots/`
 - Visual (cores, cards, tipografia): `app/styles/` — não estilize inline nas páginas
 
