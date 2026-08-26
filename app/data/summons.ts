@@ -129,6 +129,8 @@ export const deluxeTiming = {
     { at: "25", to: "30", saved: "2.000 — o máximo" },
     { at: "26", to: "30", saved: "1.600, e perde um nível" },
   ],
+  totalCost:
+    "A trilha inteira, do 1 ao 30 sem comprar nada, custa 7.000 de stamina — 4,7 dias no teto diário. O raciocínio que fixa o 25 é simples: até ali você sobe com energia própria de qualquer jeito, então os cinco níveis de brinde têm que cair no trecho mais caro. Comprando no 25, o total sai de 7.000 para 5.000; comprando no 10, só cai para 6.000.",
   why:
     "O pico é estreito. No 24, dois dos cinco níveis pulados ainda estão na faixa de 300. No 26, o trigésimo primeiro nível não existe e um dos cinco se perde. Só no 25 os cinco caem inteiros na faixa de 400 sem desperdício: 2.000 de stamina, ou um dia e um terço do teto diário.",
   retroactive:
