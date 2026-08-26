@@ -154,8 +154,8 @@ export const battlePass = {
   relevance:
     "Importa para a linha mítica porque a trilha distribui fichas — dez de uma vez no nível 30 da faixa observada. Com o custo dobrando entre o começo e o nível 25, e o teto diário fixo em 1.500, o ritmo cai de quinze níveis por dia para três. Passar do 25 é questão de tempo de temporada; maratona não compensa o degrau.",
   pending: [
-    "Confirmar em print os degraus das faixas 1–5, 5–10 e 15–20",
-    "Verificar em qual faixa exatamente aparece o custo de 200",
+    "Confirmar em print os degraus das faixas 1–5, 5–10 e 15–20 — só visíveis recomeçando do nível 1, ou seja, na virada de temporada (a capturada terminava por volta de 5 set. 2026)",
+    "Verificar em qual faixa exatamente aparece o custo de 200 — mesma janela da virada de temporada",
     "Confirmar se a escada continua subindo depois do 25 ou estaciona em 400",
     "Registrar a trilha completa: quantas fichas míticas por faixa e em quais níveis",
     "Confirmar a duração total de uma temporada de Battle Pass",
