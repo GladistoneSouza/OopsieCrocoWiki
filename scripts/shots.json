@@ -419,5 +419,39 @@
       "shadow": true
     },
     "note": "Battle Pass como fonte de fichas miticas"
+  },
+  {
+    "src": "img_game/vermelhos/Screenshot_2026-08-26-15-19-21-959_com.oopsie.croco.challenge.leisure.battle.game.jpg",
+    "out": "summon/event-challenge-objective.jpg",
+    "crop": [
+      20,
+      200,
+      1200,
+      2400
+    ],
+    "focus": {
+      "matte": "#2b2543",
+      "radius": 30,
+      "inset": 40,
+      "shadow": true
+    },
+    "note": "Challenge Objective do evento de invocacao: pontos por invocar herois"
+  },
+  {
+    "src": "img_game/vermelhos/Screenshot_2026-08-26-15-19-25-719_com.oopsie.croco.challenge.leisure.battle.game.jpg",
+    "out": "summon/event-packs.jpg",
+    "crop": [
+      20,
+      200,
+      1200,
+      2450
+    ],
+    "focus": {
+      "matte": "#2b2543",
+      "radius": 30,
+      "inset": 40,
+      "shadow": true
+    },
+    "note": "Event Packs: Sprint Packs com fichas miticas e Sprint Diamond Packs"
   }
 ]

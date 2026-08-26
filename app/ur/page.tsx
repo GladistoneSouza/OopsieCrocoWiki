@@ -52,7 +52,7 @@ import {
   expeditionPending,
 } from "../data/expedition";
 import { gemStore } from "../data/economy";
-import { mythicAcquisition } from "../data/summons";
+import { mythicAcquisition, summonEvent } from "../data/summons";
 
 export const metadata: Metadata = {
   title: "Heróis UR e o Immortal Hero — Oopsie Croco Wiki",
@@ -506,6 +506,40 @@ export default function UrPage() {
         <CalloutNote tone="warning" title="Qual das duas está na Immortal Shop?" text={mythicAcquisition.shopAmbiguity} />
         <CalloutNote tone="dark" title="Qual rota usar depende de quantos faltam" text={mythicAcquisition.consequence} />
         <CalloutNote tone="info" title="Outras fontes de ficha mítica" text={mythicAcquisition.otherSources} />
+        <SectionHead
+          eyebrow={summonEvent.kicker}
+          title={summonEvent.title}
+          description={summonEvent.intro}
+        />
+        <CalloutNote tone="dark" title={summonEvent.headline.title} text={summonEvent.headline.text} />
+        <div className="table-wrap sticker-card">
+          <table className="game-table">
+            <thead>
+              <tr>
+                {summonEvent.columns.map((column) => (
+                  <th key={column}>{column}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {summonEvent.rows.map((row) => (
+                <tr key={row.pack}>
+                  <td>{row.pack}</td>
+                  <td>{row.content}</td>
+                  <td>{row.limit}</td>
+                  <td>{row.price}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <CalloutNote tone="warning" title="A rota mais barata até um SP escolhido" text={summonEvent.pityMath} />
+        <CalloutNote tone="info" title="Pontos por invocar" text={summonEvent.challenge} />
+        <div className="shot-grid wide">
+          {summonEvent.gallery.map((shot) => (
+            <ShotFigure key={shot.src} src={shot.src} alt={shot.alt} title={shot.title} caption={shot.caption} />
+          ))}
+        </div>
         <div className="shot-grid three">
           {mythicAcquisition.gallery.map((shot) => (
             <ShotFigure key={shot.src} src={shot.src} alt={shot.alt} title={shot.title} caption={shot.caption} />
@@ -550,7 +584,7 @@ export default function UrPage() {
           <div>
             <p className="eyebrow">INVOCAÇÃO MÍTICA</p>
             <ol className="rule-list">
-              {mythicAcquisition.pending.map((item) => (
+              {[...mythicAcquisition.pending, ...summonEvent.pending].map((item) => (
                 <li key={item}>
                   <span>{item}</span>
                 </li>

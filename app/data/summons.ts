@@ -85,3 +85,40 @@ export const mythicAcquisition = {
     "Verificar se o pity de 50 reinicia ao trocar o herói com Probability UP",
   ],
 };
+
+// Evento de invocação — capturado dormente ("Event Not Started") em 26 ago. 2026,
+// durante a semana do evento de pet. Os valores são legíveis; o progresso, não.
+export const summonEvent = {
+  kicker: "EVENTO DE INVOCAÇÃO",
+  title: "Onde a ficha mítica fica barata",
+  intro:
+    "O evento paga pontos por invocar heróis e vende pacotes próprios. Capturado com o aviso \"Event Not Started\" — a semana era do evento de pet —, então preços e conteúdos aparecem, mas as barras de progresso e os contadores de compra são resíduo da edição anterior.",
+  headline: {
+    title: "As fichas míticas vêm de graça junto dos diamantes",
+    text:
+      "O Sprint Pack 1 custa US$ 1,39 e entrega 60 diamantes; a loja de diamantes vende esses mesmos 60 por US$ 1,39. O Sprint Pack 2 custa US$ 6,99 e entrega 300 diamantes; a loja cobra US$ 6,99 pelos mesmos 300. Nos dois casos o preço é exatamente o do diamante avulso — as 5 e as 20 fichas míticas, mais o All Class Exp, entram sem custo adicional.",
+  },
+  columns: ["Pacote", "Conteúdo", "Limite em 7 dias", "Preço"],
+  rows: [
+    { pack: "Free Pack", content: "20 diamantes", limit: "1/dia", price: "Grátis" },
+    { pack: "Sprint Diamond Pack 1", content: "20 fichas de herói + esfera azul ×20", limit: "3", price: "Não legível (esgotado)" },
+    { pack: "Sprint Diamond Pack 2", content: "30 fichas de herói + esfera azul", limit: "3", price: "680 diamantes" },
+    { pack: "Sprint Diamond Pack 3", content: "100 fichas de herói + esfera azul ×200", limit: "3", price: "2.980 diamantes" },
+    { pack: "Sprint Pack 1", content: "5 fichas míticas + 60 diamantes + All Class Exp ×100", limit: "3", price: "US$ 1,39" },
+    { pack: "Sprint Pack 2", content: "20 fichas míticas + 300 diamantes + All Class Exp ×300", limit: "3", price: "US$ 6,99" },
+  ],
+  pityMath:
+    "O teto semanal são 3 de cada. Três Sprint Pack 2 dão 60 fichas míticas por US$ 20,97 — sozinhos já ultrapassam o pity de 50 que garante um Mythic, e o herói é escolhido no Probability UP. Somando os três Sprint Pack 1, sobem para 75 fichas por US$ 25,14. Para comparar: o baú Mythic Selection da Immortal Shop custa 3.000 diamantes, cerca de US$ 62, e nem se sabe se deixa escolher.",
+  challenge:
+    "A aba Challenge Objective paga por Hero Recruitment Points acumulados, em degraus de 30, 60, 90, 120, 240 e 450. Cada degrau devolve esferas azuis (30 nos três primeiros, 50 nos demais) e 5 fichas de herói. Concluir a rodada de 4 rende 100 diamantes, um baú e All Class Exp ×300.",
+  gallery: [
+    { src: "/screenshots/summon/event-packs.jpg", alt: "Event Packs do evento de invocação", title: "Os pacotes", caption: "Sprint Packs entregam ficha mítica; Sprint Diamond Packs entregam ficha de herói comum." },
+    { src: "/screenshots/summon/event-challenge-objective.jpg", alt: "Challenge Objective do evento de invocação", title: "Pontos por invocar", caption: "Seis degraus de Hero Recruitment Points, de 30 a 450." },
+  ],
+  pending: [
+    "Recapturar com o evento ativo: preço do Sprint Diamond Pack 1 e a quantidade de esferas do Pack 2",
+    "Identificar a esfera azul com \"?\" — aparece aqui, no loot da expedição e nos Diamond Packs",
+    "Confirmar quantos Hero Recruitment Points cada invocação rende",
+    "Registrar o conteúdo do baú da rodada de 4 do Challenge Objective",
+  ],
+};
