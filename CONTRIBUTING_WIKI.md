@@ -50,6 +50,25 @@ Regras do recorte:
   de evidência, e sempre registrado na nota da entrada.
 - Os brutos ficam em `img_game/`, fora do git. Só o recorte é versionado.
 
+## Leia o painel de regras primeiro
+
+A lição mais cara de 26 ago. 2026: quase toda descoberta grande daquele dia
+veio de abrir o `?` de uma tela e transcrever o texto — regras que já estavam
+em prints antigos e nunca tinham sido lidas.
+
+Antes de deduzir taxa, custo ou teto a partir de observação:
+
+- Abra o `?` da tela e transcreva as regras na íntegra, em inglês, junto da
+  tradução. É a convenção que as fichas de personagem já seguem.
+- Procure a regra que impõe teto. Três derivações caíram naquele dia por
+  assumir uniformidade onde havia estrutura: a renda de Grail não era plana,
+  o sorteio não era ilimitado, o custo de nível não era constante.
+- Rotule a aritmética da wiki como tal e escreva a premissa que a sustenta.
+  Quando a premissa cair, fica claro o que cai junto — e a retratação vira
+  uma linha, não uma reescrita.
+- Quem joga tem contagem real. Antes de projetar renda a partir de um ciclo
+  fotografado, pergunte o acumulado.
+
 ## Regra de confiabilidade
 
 Classifique mentalmente cada afirmação antes de escrever:

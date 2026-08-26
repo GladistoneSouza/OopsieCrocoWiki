@@ -109,3 +109,24 @@ export const levelGrowth = {
   text: "Usando a escada limpa do Dragon Warrior (níveis 3→4→5 capturados na mesma sessão), cada nível rendeu de forma praticamente linear: +758 de poder, +440 de ataque, +12,21K de HP e +416-417 de defesa. Já a diferença entre snapshots de datas distintas (ex.: os dois níveis 1 dele, ou os níveis 3 da Flower Spirit em julho vs. agosto) NÃO serve para essa conta: os valores da ficha embutem bônus globais que mudam com a progressão geral. Comparações válidas exigem capturas na mesma sessão.",
   confidence: "confirmada na tela" as const,
 };
+
+// A cadeia que liga os sistemas documentados em 26 ago. 2026. Cada elo foi
+// confirmado na sua própria página; o valor aqui é ver a corrente inteira.
+export const resourceChain = {
+  kicker: "COMO OS SISTEMAS SE ALIMENTAM",
+  title: "Do Battle Pass até uma heroína UR",
+  intro:
+    "Nenhum destes sistemas foi desenhado isolado. Lendo de trás para frente, o caminho até a raridade mais alta do jogo atravessa quatro telas que não parecem ter relação nenhuma entre si.",
+  links: [
+    { from: "Battle Pass, Sprint Packs e o marco de 50 invocações", to: "Fichas míticas", note: "A trilha do passe dá 15 na faixa Advanced e 30 na Deluxe; os Sprint Packs do evento vendem 5 e 20 pelo preço do diamante avulso." },
+    { from: "50 fichas míticas", to: "Um herói SP escolhido", note: "O pity do Mythical Summon garante um Mythic, e o Probability UP deixa mirar qual dos oito." },
+    { from: "8 heróis SP desbloqueados", to: "Quatro times de expedição de qualidade SP", note: "A regra 2 amarra o time ao pior herói do par, então o gargalo é o oitavo desbloqueio — e nível 1 já basta." },
+    { from: "Times SP", to: "Grail", note: "O Grail só entra na lista Chance to Obtain de time SP. É a única fonte gratuita." },
+    { from: "10 Grails", to: "Um draw, e com ele 1 Lucky Star", note: "O sorteio do Immortal Hero encerra no prêmio principal, então uma edição rende no máximo 8." },
+    { from: "8 Lucky Stars", to: "Uma heroína UR escolhida", note: "Primeira troca da edição; as seguintes custam 12, 24 e 24, e o saldo zera quando o evento acaba." },
+  ],
+  irony:
+    "A corrente se fecha num nó: herói de qualidade Immortal não participa de expedições. As UR que você acabou de conquistar não ajudam a farmar o Grail que compra a próxima — quem sustenta a fonte gratuita é o resto do elenco.",
+  lesson:
+    "A consequência prática atravessa tudo: desbloquear heróis SP que você nunca levaria para uma run é o investimento que mais rende, porque a expedição lê qualidade e não poder. Isso só ficou visível ao ler as três telas de regras lado a lado.",
+};

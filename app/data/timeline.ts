@@ -41,4 +41,11 @@ export const accountTimeline = [
     note: "Primeira tentativa documentada caiu no nível 10/15, ainda na sequência do elite Octopus King e antes da Corrosive Empress.",
     confidence: "confirmada na tela",
   },
+  {
+    date: "26 ago. 2026",
+    stage: "Estágio 84 Waste Gorge",
+    power: "135,94K",
+    note: "Conta Lv.86, com o estágio marcado como Not Recommended e Perfect Clear no 83. Snapshot lateral das capturas do evento Immortal Hero: 12 Grails, pity mítico em 19/50, Cumulative Draw Chest em 20/50 e Battle Pass no nível 23.",
+    confidence: "confirmada na tela",
+  },
 ] as const;

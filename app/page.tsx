@@ -9,6 +9,7 @@ import { rarities } from "./data/equipment";
 import { afkEconomy, dailyShopHistory, summonEconomy } from "./data/economy";
 import { summonRules, heroSummonRates, mythicalSummon, heroExchange } from "./data/summons";
 import { evidenceStandards, cleanupRoadmap, officialClasses } from "./data/research";
+import { resourceChain } from "./data/strategy";
 
 const systems = [
   {
@@ -123,6 +124,26 @@ export default function Home() {
             </Link>
           ))}
         </div>
+      </section>
+
+      <section className="section" id="cadeia">
+        <SectionHead
+          eyebrow={resourceChain.kicker}
+          title={resourceChain.title}
+          description={resourceChain.intro}
+        />
+        <ol className="rule-list">
+          {resourceChain.links.map((link) => (
+            <li key={link.from}>
+              <b>
+                {link.from} → {link.to}
+              </b>
+              <span>{link.note}</span>
+            </li>
+          ))}
+        </ol>
+        <CalloutNote tone="dark" title="A corrente se fecha num nó" text={resourceChain.irony} />
+        <CalloutNote tone="info" title="O que isso muda na prática" text={resourceChain.lesson} />
       </section>
 
       <section className="section" id="metodo">
