@@ -19,6 +19,7 @@ import {
   levelCostCurve,
   levelMilestones,
   spreadVsFocus,
+  fragmentSource,
   fragmentTradeoff,
   rosterFit,
   acquisitionPlan,
@@ -225,6 +226,57 @@ export default function ExpedicaoPage() {
           ))}
         </div>
         <CalloutNote tone="info" title="Confiança" text={levelMilestones.note} />
+
+        <SectionHead eyebrow={fragmentSource.kicker} title={fragmentSource.title} description={fragmentSource.text} />
+        <div className="coop-grid">
+          <div className="table-wrap sticker-card">
+            <h3>{fragmentSource.leverage.title}</h3>
+            <table className="game-table">
+              <thead>
+                <tr>
+                  {fragmentSource.leverage.columns.map((c) => (
+                    <th key={c}>{c}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {fragmentSource.leverage.rows.map((row) => (
+                  <tr key={row.band}>
+                    <td>{row.band}</td>
+                    <td>{row.cost}</td>
+                    <td>{row.buys}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <small>{fragmentSource.leverage.note}</small>
+          </div>
+          <div className="table-wrap sticker-card">
+            <h3>{fragmentSource.price.title}</h3>
+            <p>{fragmentSource.price.intro}</p>
+            <table className="game-table">
+              <thead>
+                <tr>
+                  {fragmentSource.price.columns.map((c) => (
+                    <th key={c}>{c}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {fragmentSource.price.rows.map((row) => (
+                  <tr key={row.span}>
+                    <td>{row.span}</td>
+                    <td>{row.frags}</td>
+                    <td>{row.scrolls}</td>
+                    <td>{row.cost}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <small>{fragmentSource.price.note}</small>
+          </div>
+        </div>
+        <CalloutNote tone="dark" title="UR corre por fora" text={fragmentSource.urCaveat} />
 
         <SectionHead eyebrow={spreadVsFocus.kicker} title={spreadVsFocus.title} description={spreadVsFocus.intro} />
         <div className="table-wrap sticker-card">

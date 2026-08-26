@@ -219,6 +219,42 @@ export const levelMilestones = {
   note: "Efeitos relatados pelo jogador a partir de uso; o nível 15 tem confirmação parcial nas fichas de Lilith, Onmyoji e Catwoman.",
 };
 
+export const fragmentSource = {
+  kicker: "DE ONDE VEM O FRAGMENTO",
+  title: "Um mítico repetido dá 10, sempre",
+  text:
+    "A primeira vez que um mítico sai, ele libera o personagem. Da segunda em diante rende exatamente 10 fragmentos, sem variação. É o câmbio que liga a invocação à expedição — e ele torna o momento do gasto mais importante que o volume.",
+  leverage: {
+    title: "O mesmo repetido vale 12 vezes mais num herói nível 1",
+    columns: ["Herói na faixa", "Custo por nível", "O que 10 fragmentos compram"],
+    rows: [
+      { band: "1 – 5", cost: "5", buys: "2 níveis inteiros" },
+      { band: "5 – 10", cost: "10", buys: "1 nível" },
+      { band: "10 – 15", cost: "30", buys: "um terço de nível" },
+      { band: "15 – 20", cost: "60", buys: "um sexto de nível" },
+    ],
+    note:
+      "É a prova aritmética do que a expedição já sugeria: enquanto houver herói SP em nível baixo, cada repetido gasto ali rende doze vezes o que renderia no vermelho que você está empurrando para o 20.",
+  },
+  price: {
+    title: "O que isso custa em invocação",
+    intro:
+      "O pity garante um mítico a cada 50 fichas, então 50 fichas equivalem a 10 fragmentos depois que os oito estão desbloqueados. Convertendo pelo Sprint Pack 2, que vende 20 fichas por US$ 6,99 — o preço do diamante avulso:",
+    columns: ["Trecho", "Fragmentos", "Fichas míticas", "Custo aproximado"],
+    rows: [
+      { span: "Nível 1 → 5", frags: "20", scrolls: "100", cost: "US$ 35" },
+      { span: "Nível 5 → 10", frags: "50", scrolls: "250", cost: "US$ 87" },
+      { span: "Nível 10 → 15", frags: "150", scrolls: "750", cost: "US$ 262" },
+      { span: "Nível 15 → 20", frags: "300", scrolls: "1.500", cost: "US$ 524" },
+      { span: "Nível 1 → 20", frags: "520", scrolls: "2.600", cost: "US$ 909" },
+    ],
+    note:
+      "Teto, não preço de tabela: o pity é \"dentro de 50\", e a taxa base de 2,47% adianta parte das invocações. Também ignora fragmento vindo de baú, evento ou loja. Serve para dimensionar a ordem de grandeza — um único vermelho do 1 ao 20 custa, em invocação comprada, quase mil dólares.",
+  },
+  urCaveat:
+    "Nada disso vale para UR. Athena e Artemis correm numa escala à parte, com a própria moeda e a própria escada de troca; a curva de fragmento medida aqui é dos heróis SP.",
+};
+
 export const spreadVsFocus = {
   kicker: "A CONTA DA BIFURCAÇÃO",
   title: "300 fragmentos rendem o dobro espalhados",
@@ -313,7 +349,7 @@ export const expeditionPending = [
   "Confirmar em campo que um quarto time SP também recebe o Grail no Chance to Obtain",
   "Fotografar a tela de desbloqueio de um SP para registrar o custo em fragmentos",
   "Confirmar em print os totais das faixas de fragmento e os efeitos dos níveis 12, 15 e 20",
-  "Descobrir quantos fragmentos rende um mítico repetido — fecha a conta entre invocação e nível",
+  "Medir a curva de fragmento dos heróis UR, que segue escala própria e não foi observada",
   "Confirmar se todo herói SP abre passiva exclusiva no nível 15, como a Lilith",
   "Catalogar as demais fontes de seleção mítica em eventos e pacotes",
   "Confirmar se coletar duas vezes ao dia realmente dobra a renda, ou se há teto diário",
