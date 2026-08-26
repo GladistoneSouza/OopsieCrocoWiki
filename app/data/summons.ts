@@ -131,10 +131,11 @@ export const deluxeTiming = {
   ],
   why:
     "O pico é estreito. No 24, dois dos cinco níveis pulados ainda estão na faixa de 300. No 26, o trigésimo primeiro nível não existe e um dos cinco se perde. Só no 25 os cinco caem inteiros na faixa de 400 sem desperdício: 2.000 de stamina, ou um dia e um terço do teto diário.",
-  caveat:
-    "A estratégia pressupõe que comprar a faixa depois libere retroativamente o que já passou — as fichas míticas dos níveis 5, 15 e 20 da coluna Deluxe. Nos prints essas casas aparecem com cadeado mesmo em níveis já resgatados nas outras colunas, o que sugere liberação retroativa, mas isso não foi visto acontecer.",
+  retroactive:
+    "Comprar a faixa libera retroativamente tudo que já passou — verificado em jogo pelo dono da conta. É o que fecha a estratégia: no nível 25, a compra entrega de uma vez os marcos de 5, 15 e 20 que ficaram para trás, e os Extra 5 Levels levam até o 30 destravando também o 25 e o 30. A coluna Deluxe inteira, os trinta níveis, cai no colo numa única compra.",
+  payoff:
+    "Somando: US$ 13,99 no nível 25 rendem as 30 fichas míticas da coluna Deluxe, o baú mítico do nível 10, todo o resto da faixa e ainda poupam 2.000 de stamina. Comprar cedo entrega as mesmas recompensas, só que pagando os cinco níveis mais caros da trilha com energia.",
   pending: [
-    "Confirmar que comprar o Deluxe libera retroativamente os marcos já passados — a compra no nível 25 depende disso",
     "Verificar se os \"Extra 5 Levels\" são creditados na hora da compra ou entram como bônus de progresso",
   ],
 };

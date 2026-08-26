@@ -179,7 +179,8 @@ export default function InvocacaoPage() {
           <aside className="mvp-card sticker-card">
             <span className="kicker">POR QUE O PICO É ESTREITO</span>
             <p>{deluxeTiming.why}</p>
-            <small>{deluxeTiming.caveat}</small>
+            <p>{deluxeTiming.retroactive}</p>
+            <small>{deluxeTiming.payoff}</small>
           </aside>
         </div>
         <div className="shot-grid three">
