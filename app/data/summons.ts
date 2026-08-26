@@ -115,6 +115,30 @@ export const passTrack = {
   ],
 };
 
+export const deluxeTiming = {
+  kicker: "QUANDO COMPRAR O DELUXE",
+  title: "No nível 25, e o ponto é exato",
+  text:
+    "A faixa Deluxe custa US$ 13,99 e vem com \"Extra 5 Levels\" — cinco níveis somados a partir de onde você estiver. Como o custo por nível sobe em degraus e a trilha termina no 30, o valor desse empurrão depende inteiramente do momento da compra.",
+  columns: ["Compra no nível", "Salta para", "Stamina poupada"],
+  rows: [
+    { at: "10", to: "15", saved: "1.000" },
+    { at: "15", to: "20", saved: "1.250" },
+    { at: "20", to: "25", saved: "1.500" },
+    { at: "24", to: "29", saved: "1.900" },
+    { at: "25", to: "30", saved: "2.000 — o máximo" },
+    { at: "26", to: "30", saved: "1.600, e perde um nível" },
+  ],
+  why:
+    "O pico é estreito. No 24, dois dos cinco níveis pulados ainda estão na faixa de 300. No 26, o trigésimo primeiro nível não existe e um dos cinco se perde. Só no 25 os cinco caem inteiros na faixa de 400 sem desperdício: 2.000 de stamina, ou um dia e um terço do teto diário.",
+  caveat:
+    "A estratégia pressupõe que comprar a faixa depois libere retroativamente o que já passou — as fichas míticas dos níveis 5, 15 e 20 da coluna Deluxe. Nos prints essas casas aparecem com cadeado mesmo em níveis já resgatados nas outras colunas, o que sugere liberação retroativa, mas isso não foi visto acontecer.",
+  pending: [
+    "Confirmar que comprar o Deluxe libera retroativamente os marcos já passados — a compra no nível 25 depende disso",
+    "Verificar se os \"Extra 5 Levels\" são creditados na hora da compra ou entram como bônus de progresso",
+  ],
+};
+
 export const summonEvent = {
   kicker: "EVENTO DE INVOCAÇÃO",
   title: "Onde a ficha mítica fica barata",

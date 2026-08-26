@@ -6,7 +6,7 @@ import { SectionHead } from "../components/SectionHead";
 import { FactCard } from "../components/FactCard";
 import { CalloutNote } from "../components/CalloutNote";
 import { ShotFigure } from "../components/ShotFigure";
-import { mythicAcquisition, summonEvent, battlePass, passTrack } from "../data/summons";
+import { mythicAcquisition, summonEvent, battlePass, passTrack, deluxeTiming } from "../data/summons";
 
 export const metadata: Metadata = {
   title: "Invocação mítica — Oopsie Croco Wiki",
@@ -154,6 +154,34 @@ export default function InvocacaoPage() {
             <small>{passTrack.correction}</small>
           </aside>
         </div>
+        <SectionHead eyebrow={deluxeTiming.kicker} title={deluxeTiming.title} description={deluxeTiming.text} />
+        <div className="coop-grid">
+          <div className="table-wrap sticker-card">
+            <table className="game-table">
+              <thead>
+                <tr>
+                  {deluxeTiming.columns.map((column) => (
+                    <th key={column}>{column}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {deluxeTiming.rows.map((row) => (
+                  <tr key={row.at}>
+                    <td>{row.at}</td>
+                    <td>{row.to}</td>
+                    <td>{row.saved}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <aside className="mvp-card sticker-card">
+            <span className="kicker">POR QUE O PICO É ESTREITO</span>
+            <p>{deluxeTiming.why}</p>
+            <small>{deluxeTiming.caveat}</small>
+          </aside>
+        </div>
         <div className="shot-grid three">
           {passTrack.gallery.map((shot) => (
             <ShotFigure key={shot.src} src={shot.src} alt={shot.alt} title={shot.title} caption={shot.caption} />
@@ -164,7 +192,7 @@ export default function InvocacaoPage() {
       <section className="section" id="pendencias">
         <SectionHead eyebrow="PENDÊNCIAS" title="O que ainda falta capturar" />
         <ol className="rule-list">
-          {[...mythicAcquisition.pending, ...summonEvent.pending, ...battlePass.pending].map((item) => (
+          {[...mythicAcquisition.pending, ...summonEvent.pending, ...battlePass.pending, ...deluxeTiming.pending].map((item) => (
             <li key={item}>
               <span>{item}</span>
             </li>
