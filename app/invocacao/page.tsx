@@ -100,7 +100,33 @@ export default function InvocacaoPage() {
             <FactCard key={fact.label} kicker="BATTLE PASS" title={fact.value} text={fact.label} />
           ))}
         </div>
-        <CalloutNote tone="info" title="Por que entra aqui" text={battlePass.relevance} />
+        <div className="coop-grid">
+          <div className="table-wrap sticker-card">
+            <h3>{battlePass.ceiling.title}</h3>
+            <p>{battlePass.ceiling.intro}</p>
+            <table className="game-table">
+              <thead>
+                <tr>
+                  <th>Custo do nível</th>
+                  <th>Níveis que o teto compra</th>
+                </tr>
+              </thead>
+              <tbody>
+                {battlePass.ceiling.rows.map((row) => (
+                  <tr key={row.cost}>
+                    <td>{row.cost}</td>
+                    <td>{row.levels}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <small>{battlePass.ceiling.note}</small>
+          </div>
+          <aside className="mvp-card sticker-card">
+            <span className="kicker">POR QUE ENTRA AQUI</span>
+            <p>{battlePass.relevance}</p>
+          </aside>
+        </div>
       </section>
 
       <section className="section" id="pendencias">
