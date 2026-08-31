@@ -11,6 +11,7 @@ export const bountyHunter: HeroRecord = {
   fieldNote:
     "Foi MVP numa run documentada da dificuldade 5, com 4,31M, e depois alcançou 17,58M no andar 15 mesmo sob efeitos daquela tentativa que prejudicavam atiradores. Identidade confirmada em 23 ago.: SSR Bounty Hunter, Eria · Ironwing.",
   image: "/screenshots/bounty-hunter/profile-level-15.jpg",
+  artImage: "/screenshots/art/bounty-hunter-card.jpg",
   identity: [
     "Título exibido: SSR Bounty Hunter",
     "Nome exibido na ficha: Eria · Ironwing",

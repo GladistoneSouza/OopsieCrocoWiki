@@ -12,6 +12,7 @@ export const artemis: HeroRecord = {
   fieldNote:
     "No nível observado, entra sem as duas habilidades gratuitas que personagens mais evoluídos costumam possuir (os talentos nv3 e nv8, que concedem blessings iniciais, aparecem bloqueados na ficha nv2).",
   image: "/screenshots/artemis/profile-level-2.jpg",
+  artImage: "/screenshots/art/artemis-card.jpg",
   identity: [
     "Título exibido: UR Goddess of the Hunt",
     "Nome exibido na ficha: Artemis",

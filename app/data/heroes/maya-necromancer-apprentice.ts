@@ -71,6 +71,7 @@ export const mayaNecromancerApprentice: HeroRecord = {
     { src: "/screenshots/runs/summon-army-necromancer.jpg", alt: "Árvore do Necromancer Apprentice no andar 15" },
   ],
   pending: [
+    "Fotografar a ficha da Maya — é a única do elenco sem nenhuma imagem na wiki",
     "Comparar o dano total do tornado/Wild com Rage of the Dead",
     "Confirmar se efeitos globais de contra-ataque também afetam esqueletos",
     "Capturar o Blessing Bestiary pela tela própria para fixar a lista completa e os textos oficiais",

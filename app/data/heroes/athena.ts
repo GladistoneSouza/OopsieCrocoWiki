@@ -12,6 +12,7 @@ export const athena: HeroRecord = {
   fieldNote:
     "Athena era, até esta captura, um nome solto: o talento nível 5 da Artemis dobra o crítico \"quando Athena também está em campo\", e nenhum herói com esse nome estava catalogado. O banner do Immortal Hero fecha a lacuna — ela é a outra UR da mesma linha de recrutamento.",
   image: "/screenshots/immortal-hero/athena-portrait.jpg",
+  artImage: "/screenshots/art/athena-card.jpg",
   identity: [
     "Título exibido: Goddess of Wisdom",
     "Nome exibido no banner: Athena",

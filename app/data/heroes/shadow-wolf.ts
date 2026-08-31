@@ -2,13 +2,14 @@ import type { HeroRecord } from "../types";
 
 export const shadowWolf: HeroRecord = {
   slug: "shadow-wolf",
-  name: "Shadow Wolf",
-  aliases: ["Lobão", "Karl"],
+  name: "Karl",
+  aliases: ["Shadow Wolf", "SR Shadow Wolf", "Lobão", "Karl"],
   className: "Assasin",
   rarity: "SR",
   role: "Dano bruto / Bloodlust / execução de boss",
   summary: "Assasin físico que acumula Bloodlust com Wild Bite, cresce com múltiplas mordidas e ganha efeitos adicionais ao atingir 10 e 15 camadas. Em batalha, as camadas foram observadas subindo muito além de 15 (até 99), escalando o ataque continuamente.",
   fieldNote: "Separação documental: as camadas e seus gatilhos são confirmados pela tela; o desempenho acima de 100M é observação de campo; Berserk State e Violent State serem o mesmo estado é uma interpretação provável, pois o jogo alterna os nomes sem explicar o efeito. Contra o boss Igris, o teto observado até agora é dele: 104,86M no painel capturado e, numa run posterior relatada com print, 48,3M representando ~93% do dano do time (segundo colocado com 1,41M). Em 21 ago., uma série de prints contra Igris mostrou o painel do próprio Lobão com o tooltip 'Bloodlust Stacks' subindo 27 → 54 → 84 → 99 enquanto o ATK exibido subia 91,13K → 118,47K → 172,47K → 199,47K, demonstrando em tela a escalada de ataque por camada descrita em Wild Bite (+18% por stack). A localização do jogo alterna 'Bloodlust' e 'Bloodthirst' para o mesmo recurso, e o talento de nível 10 chama a ultimate de 'Dark Night Raid' enquanto o Bestiary usa 'Night Raid'.",
+  artImage: "/screenshots/art/shadow-wolf-card.jpg",
   identity: ["Nome exibido na ficha: Karl", "Título: SR Shadow Wolf", "Profissão: Assassin", "Alcance exibido: 1"],
   stats: [
     "Snapshot em batalha contra Igris (21 ago., boss com 2,69B de HP): HP máx. 254.079 · DEF 7.410 · ATK crescendo com Bloodlust: 91,13K com 27 stacks → 118,47K com 54 → 172,47K com 84 → 199,47K com 99.",

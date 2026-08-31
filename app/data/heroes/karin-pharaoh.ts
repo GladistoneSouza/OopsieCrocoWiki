@@ -5,9 +5,11 @@ export const karinPharaoh: HeroRecord = {
   name: "Karin · Pharaoh",
   aliases: ["Karin", "Maga de controle"],
   className: "Control",
+  rarity: "SSR",
   role: "Stun / debuff / amplificação",
   summary: "Controller centrada em Solar Flare e Sun Beams, capaz de aplicar stun, reduzir o dano inimigo e ampliar o dano dos aliados.",
   fieldNote: "O kit é coerente no papel, mas o controle foi pouco impactante nos testes. Deve ser tratada como ferramenta situacional até que duração, resistência de bosses e tempo de conjuração sejam medidos.",
+  artImage: "/screenshots/art/karin-pharaoh-card.jpg",
   levelSkills: [
     { name: "Solar Flare", description: "Aplica stun e libera Sun Beams." },
     { name: "+1 Solar Flare", description: "Adiciona uma conjuração de Solar Flare." },
@@ -25,5 +27,5 @@ export const karinPharaoh: HeroRecord = {
   ],
   synergies: ["Fases com muitos inimigos vulneráveis a controle", "Interrupção de uma habilidade decisiva", "Amplificação para carries já protegidos"],
   evidence: ["Ficha e Bestiary exibidos no nível 10", "Testes de campo com stun e tempo de conjuração"],
-  pending: ["Confirmar raridade e nome completo na ficha", "Medir resistência ou imunidade de bosses a stun", "Comparar uma vaga de Karin com a proteção indireta produzida por summons"],
+  pending: ["Abrir o Blessing Bestiary da Karin — nenhuma blessing dela foi capturada", "Medir resistência ou imunidade de bosses a stun", "Comparar uma vaga de Karin com a proteção indireta produzida por summons"],
 };

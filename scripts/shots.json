@@ -830,5 +830,29 @@
     ],
     "max_width": 720,
     "note": "Arte de onmyoji, recortada da tela de exibicao do heroi"
+  },
+  {
+    "src": "img_game/herois-ficha/2026-08-31_00-21-07.jpg",
+    "out": "art/bounty-hunter-card.jpg",
+    "crop": [
+      213,
+      423,
+      985,
+      1284
+    ],
+    "max_width": 720,
+    "note": "Arte de bounty-hunter, recortada da ficha do heroi"
+  },
+  {
+    "src": "img_game/herois-ficha/2026-08-31_00-21-20.jpg",
+    "out": "art/karin-pharaoh-card.jpg",
+    "crop": [
+      213,
+      423,
+      985,
+      1284
+    ],
+    "max_width": 720,
+    "note": "Arte de karin-pharaoh, recortada da ficha do heroi"
   }
 ]
