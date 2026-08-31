@@ -79,6 +79,7 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
     hero.story?.length ? { id: "historia", label: "História" } : null,
     { id: "campo", label: "Observação prática" },
     hero.kit ? { id: "motor", label: "O motor" } : null,
+    hero.breakpoints ? { id: "degraus", label: "Níveis que valem" } : null,
     hero.strengths?.length || hero.weaknesses?.length ? { id: "forcas", label: "Ganha e quebra" } : null,
     hero.combos?.length ? { id: "combos", label: "Combos" } : null,
     hero.exclusiveGems?.length ? { id: "gemas", label: "Gemas exclusivas" } : null,
@@ -196,6 +197,13 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
                 ))}
               </div>
             ) : null}
+          </section>
+        ) : null}
+
+        {hero.breakpoints ? (
+          <section className="character-note" id="degraus">
+            <b>Quais níveis valem a pena neste herói</b>
+            <p>{hero.breakpoints}</p>
           </section>
         ) : null}
 

@@ -20,6 +20,7 @@ import {
   fragmentCurveGallery,
   upgradeInputs,
   globalCritReward,
+  rarityCostCompare,
   levelMilestones,
   spreadVsFocus,
   fragmentSource,
@@ -207,6 +208,38 @@ export default function ExpedicaoPage() {
           {fragmentCurveGallery.map((shot) => (
             <ShotFigure key={shot.src} src={shot.src} alt={shot.alt} caption={shot.caption} linked />
           ))}
+        </div>
+        <SectionHead
+          eyebrow={rarityCostCompare.kicker}
+          title={rarityCostCompare.title}
+          description={rarityCostCompare.intro}
+        />
+        <div className="table-wrap sticker-card">
+          <table className="game-table">
+            <thead>
+              <tr>
+                {rarityCostCompare.columns.map((c) => (
+                  <th key={c}>{c}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {rarityCostCompare.rows.map((row) => (
+                <tr key={row.tier}>
+                  <td>{row.tier}</td>
+                  <td>{row.frags}</td>
+                  <td>{row.exp}</td>
+                  <td>{row.crit}</td>
+                  <td>{row.eff}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <small>{rarityCostCompare.naming}</small>
+        </div>
+        <div className="coop-grid">
+          <CalloutNote tone="info" title="O que a razão mostra" text={rarityCostCompare.reading} />
+          <CalloutNote tone="warning" title="O que isso não diz" text={rarityCostCompare.caveat} />
         </div>
         <SectionHead
           eyebrow={globalCritReward.kicker}

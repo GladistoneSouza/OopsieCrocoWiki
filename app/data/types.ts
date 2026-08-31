@@ -56,6 +56,7 @@ export type HeroRecord = {
   exclusiveGems?: { name: string; slot: string; baseStat: string; effect: string }[];
   levelSkills: HeroSkill[];
   kit?: HeroKit;
+  breakpoints?: string;
   combos?: HeroCombo[];
   strengths?: string[];
   weaknesses?: string[];

@@ -208,6 +208,8 @@ export const tidecaller: HeroRecord = {
       text: "Damage Mastery corta a vida do water element e sobe muito o ataque dele. Numa heroína em que morrer é o pagamento, vida baixa não é defeito: acelera a flecha da Water Arrow Mastery, a cura da Healing Mastery e a mana do nível 5. É a peça mais contraintuitiva do kit e provavelmente a mais forte.",
     },
   ],
+  breakpoints:
+    "O nível 5 dela é provavelmente o degrau mais barato do elenco vermelho em relação ao que entrega: mana a cada unidade que morre, numa heroína cuja profissão fabrica unidades descartáveis. Custa 20 fragmentos desde o 1 e liga o ciclo econômico inteiro. Os degraus 20 e 25 melhoram muito o kit, mas entram na faixa em que o fragmento por nível já é sessenta.",
   strengths: [
     "Presença permanente no campo: ela ocupa espaço com corpos, o que divide aggro sem gastar peça defensiva",
     "Economia fechada de mana — as mortes que ela mesma provoca pagam as próximas invocações",

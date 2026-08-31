@@ -206,6 +206,8 @@ export const catwoman: HeroRecord = {
       text: "cruel habits faz o Hunt causar dano proporcional ao HP que o alvo já perdeu. É a única peça do kit que não depende de haver muitos inimigos, e por isso a escolha obrigatória em sala de boss sem acompanhantes.",
     },
   ],
+  breakpoints:
+    "A escada geral da wiki aponta 12, 15 e 20 como os níveis que mudam um herói. Na Mitia os degraus que importam vêm antes: o 5 liga a catraca (dano permanente por abate), o 8 acrescenta crítico crescente conforme o campo esvazia e o 10 abre o Hunt recursivo, que é o único talento capaz de mudar o comportamento do kit em vez de somar a ele. Ela já está no 5, então o próximo alvo real é o 8 — não o 6.",
   strengths: [
     "Catraca de abate: o ganho de dano por morte é permanente dentro da run, então cada sala deixa a próxima mais barata",
     "Curva invertida — fica mais forte conforme o campo esvazia, o que a entrega no boss no melhor momento dela",
@@ -230,6 +232,7 @@ export const catwoman: HeroRecord = {
     },
   ],
   synergies: [
+    "Hipótese de composição — se o aumento de dano recebido do Prey valer para o time, ela vira preparadora de alvo: espalha 3 marcas com search for prey e os heróis de pico entram no alvo amplificado. Depende inteiramente da pendência sobre a quem o aumento se aplica",
     "Hipótese — fases com muitas ondas de inimigos fracos alimentam o acúmulo permanente de dano",
     "Hipótese — hunting habits + nibbling prey invertem a curva usual: Mitia fica mais forte quanto menos inimigos restam, apontando para dueto com um limpador de ondas que deixe o boss para ela",
   ],

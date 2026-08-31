@@ -239,6 +239,33 @@ export const upgradeInputs = {
 // Toda ficha mostra uma linha "Global reward: Critical DMG +X%". Cruzando os
 // numeros espalhados pelas fichas, o valor e simplesmente nivel x uma taxa fixa
 // da raridade — o que muda a conta de "vale subir um heroi que nao jogo?".
+// O fragmento por nivel e igual para todas as raridades; o EXP de classe nao e.
+// Cruzando isso com a recompensa global, a raridade mais barata para comprar
+// critico de conta nao e a vermelha.
+export const rarityCostCompare = {
+  kicker: "QUEM PAGA MAIS BARATO",
+  title: "No mesmo nível, o roxo compra crítico mais barato que o vermelho",
+  intro:
+    "Três heróis parados no nível 15, um de cada raridade, mostram as duas metades do custo. O fragmento pedido é idêntico — 60 para os três. O EXP de classe não: sai numa razão limpa de 3 para 4 para 5.",
+  columns: ["Raridade", "Fragmentos no nível 15", "EXP de classe", "Crítico global", "Crítico por 1.000 de EXP"],
+  rows: [
+    { tier: "SR — Karl", frags: "60", exp: "1.008", crit: "18,0%", eff: "17,9%" },
+    { tier: "SSR — Lilith", frags: "60", exp: "1.344", crit: "21,0%", eff: "15,6%" },
+    { tier: "SP — Kazres", frags: "60", exp: "1.680", crit: "24,0%", eff: "14,3%" },
+  ],
+  reading:
+    "O vermelho paga mais crítico global por nível, mas cobra mais EXP de classe do que paga a mais: a recompensa sobe na razão 6:7:8 e o custo sobe na razão 3:4:5. Por unidade de EXP de classe, o roxo entrega cerca de 25% mais crítico de conta que o vermelho.",
+  caveat:
+    "Isso não diz \"suba roxos em vez de vermelhos\". Vermelho é melhor em combate, tem kit próprio e é o que abre time de expedição SP. Diz outra coisa, mais estreita: se a intenção for especificamente comprar crítico de conta com um estoque de EXP de classe parado, o roxo é a compra mais eficiente — e a reserva de EXP é por classe, então nem sempre o estoque que sobra é o do herói que você quer subir.",
+  naming:
+    "Atenção ao ler as fichas antigas: quatro delas registram esse mesmo recurso como \"essência\" (Red Queen, Star Mage, Shadow Wolf) ou como \"material de upgrade\" (Lilith). É o EXP de classe com outro nome, anotado antes de o sistema ser catalogado.",
+  pending: [
+    "Levantar o EXP de classe pedido em outros níveis para desenhar a curva; hoje só o nível 15 tem as três raridades juntas",
+    "Confirmar se a razão 3:4:5 se mantém fora do nível 15",
+    "Conferir o ponto discrepante da Red Queen, que registra \"essência Mage 1524/60\" no nível 1 — o 60 não bate com os 120 lidos na Succubus em nível baixo",
+  ],
+};
+
 export const globalCritReward = {
   kicker: "O QUE TODO NÍVEL PAGA",
   title: "Subir qualquer herói aumenta o crítico da conta",
