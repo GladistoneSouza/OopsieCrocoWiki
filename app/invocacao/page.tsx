@@ -6,7 +6,7 @@ import { SectionHead } from "../components/SectionHead";
 import { FactCard } from "../components/FactCard";
 import { CalloutNote } from "../components/CalloutNote";
 import { ShotFigure } from "../components/ShotFigure";
-import { mythicAcquisition, summonEvent, battlePass, passTrack, deluxeTiming, summonRules, heroSummonRates } from "../data/summons";
+import { mythicAcquisition, summonEvent, battlePass, passTrack, deluxeTiming, summonRules, heroSummonRates, exchangeStructure } from "../data/summons";
 
 export const metadata: Metadata = {
   title: "Invocação mítica — Oopsie Croco Wiki",
@@ -66,6 +66,43 @@ export default function InvocacaoPage() {
         </div>
         <div className="shot-grid wide">
           {heroSummonRates.gallery.map((shot) => (
+            <ShotFigure key={shot.src} src={shot.src} alt={shot.alt} title={shot.title} caption={shot.caption} linked />
+          ))}
+        </div>
+        <SectionHead
+          eyebrow={exchangeStructure.kicker}
+          title={exchangeStructure.title}
+          description={exchangeStructure.intro}
+        />
+        <div className="table-wrap sticker-card">
+          <table className="game-table">
+            <thead>
+              <tr>
+                {exchangeStructure.columns.map((c) => (
+                  <th key={c}>{c}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {exchangeStructure.rows.map((row) => (
+                <tr key={row.tier}>
+                  <td>{row.tier}</td>
+                  <td>{row.limit}</td>
+                  <td>{row.full}</td>
+                  <td>{row.off}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <small>{exchangeStructure.proof}</small>
+        </div>
+        <CalloutNote
+          tone="info"
+          title="Três divergências de preço que eram a mesma coisa"
+          text={exchangeStructure.resolves}
+        />
+        <div className="shot-grid three">
+          {exchangeStructure.gallery.map((shot) => (
             <ShotFigure key={shot.src} src={shot.src} alt={shot.alt} title={shot.title} caption={shot.caption} linked />
           ))}
         </div>

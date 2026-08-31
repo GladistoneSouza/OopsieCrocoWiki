@@ -5,7 +5,7 @@ export const summonRules = {
 };
 
 export const heroSummonRates = {
-  intro: "Taxas oficiais exibidas no Rate Details por nível de banner. No Lv.1 não há SSR na tabela; o SSR entra a partir do Lv.2. A captura de 31 ago. 2026 fechou a aba Lv.4, incluindo ficha mítica e EXP de classe.",
+  intro: "Taxas oficiais exibidas no Rate Details por nível de banner. No Lv.1 não há SSR na tabela; o SSR entra a partir do Lv.2. A captura de 31 ago. 2026 fechou a aba Lv.4, incluindo ficha mítica e EXP de classe — e identificou de passagem a esfera azul com \"?\" que aparecia sem nome no loot da expedição e nos Diamond Packs: é Random Class Exp, EXP de classe sorteada.",
   rows: [
     { item: "SSR", lv1: "—", lv2: "1,99%", lv3: "2,22%", lv4: "2,50%" },
     { item: "Mythic Summon Ticket", lv1: "—", lv2: "—", lv3: "0,98%", lv4: "1,94%" },
@@ -38,13 +38,41 @@ export const mythicalSummon = {
 export const heroExchange = {
   kicker: "HERO EXCHANGE",
   title: "Fragmentos por Hero Coins",
-  text: "Hero Coins vêm dos baús de marco de invocação e compram fragmentos de herói com limites semanais. Preços observados variaram entre capturas — provavelmente promoções rotativas; os conflitos ficam registrados.",
+  text: "Hero Coins vêm dos baús de marco de invocação e compram fragmentos de herói com limite semanal. A varredura completa da loja em 31 ago. 2026 mostrou que preço e limite não variam por herói: variam por raridade.",
   rows: [
-    { hero: "Sword Demon, Red Queen, Catwoman, Flower Spirit", price: "3.000", limit: "1/semana" },
-    { hero: "Light Archer", price: "3.000 (também visto a 1.000)", limit: "1/semana" },
-    { hero: "Onmyoji, Phantom, Star Mage, Dark Knight (Lilith), Holy Knight, Pharaoh, Fire Spirit Master", price: "500 com 50% off (Onmyoji também visto a 1.000)", limit: "8/semana" },
-    { hero: "Bounty Hunter", price: "1.000 (também vista a 500 com 50% off)", limit: "5-8/semana" },
-    { hero: "Snow Witch, Necromancer Apprentice", price: "125", limit: "13/semana" },
+    { hero: "SP — os oito míticos", price: "3.000", limit: "1/semana" },
+    { hero: "SSR", price: "1.000", limit: "8/semana" },
+    { hero: "SR", price: "250", limit: "13/semana" },
+  ],
+};
+
+// A leitura de 31 ago. 2026 desfez os conflitos de preco que estavam registrados
+// como "tambem visto a X": nao eram precos diferentes, era a mesma tabela com
+// metade dos cartoes em promocao.
+export const exchangeStructure = {
+  kicker: "COMO A LOJA ESTÁ ORGANIZADA",
+  title: "Três preços, e um desconto que engana",
+  intro:
+    "A loja lista todos os heróis já obtidos numa grade única. O que parecia preço irregular por personagem é uma regra simples com uma promoção por cima: o limite semanal denuncia a faixa antes do preço.",
+  columns: ["Faixa", "Limite semanal", "Preço cheio", "Com o selo 50% off"],
+  rows: [
+    { tier: "SP", limit: "1/1", full: "3.000", off: "não observado" },
+    { tier: "SSR", limit: "x/8", full: "1.000", off: "500" },
+    { tier: "SR", limit: "x/13", full: "250", off: "125" },
+  ],
+  proof:
+    "O preço cheio de cada faixa aparece nos cartões sem o selo: Pharaoh a 1.000 (SSR, 5/8) e Shadow Wolf a 250 (SR, 10/13), lado a lado com vizinhos da mesma faixa marcados a 500 e 125 com o selo. Os oito SP nunca apareceram com desconto — Dragon Warrior, Catwoman, Flower Spirit, Light Archer, Tidecaller, Succubus, Sword Demon e Red Queen, todos a 3.000 e todos com limite 1/1.",
+  resolves:
+    "Isso encerra três divergências que a wiki carregava como \"também visto a\": Light Archer a 3.000 é o preço cheio de SP e nunca foi 1.000; Onmyoji a 500 e a 1.000 é o mesmo cartão SSR com e sem o selo; Bounty Hunter idem. Não havia promoção rotativa mudando o preço de um herói — havia um selo de 50% cobrindo parte da grade.",
+  gallery: [
+    { src: "/screenshots/summon/hero-exchange-sp.jpg", alt: "Faixa SP do Hero Exchange, todos a 3.000 com limite 1/1", title: "SP: 3.000, um por semana", caption: "Os oito míticos, preço uniforme e sem selo de desconto." },
+    { src: "/screenshots/summon/hero-exchange-ssr.jpg", alt: "Faixa SSR com Pharaoh a 1.000 sem desconto ao lado de dois a 500", title: "SSR: o preço cheio aparece", caption: "Pharaoh a 1.000 sem selo, ao lado de Dark Knight e Holy Knight a 500 com selo." },
+    { src: "/screenshots/summon/hero-exchange-sr.jpg", alt: "Faixa SR com Shadow Wolf a 250 sem desconto ao lado de dois a 125", title: "SR: mesma lógica", caption: "Shadow Wolf a 250 sem selo; Pumpkin e Pain Sorceress a 125 com selo." },
+  ],
+  pending: [
+    "Descobrir o que determina quais cartões recebem o selo de 50% e por quanto tempo",
+    "Confirmar se a faixa SP algum dia entra em promoção",
+    "Medir quantas Hero Coins um ciclo de invocação rende, para precificar a compra de fragmento em fichas",
   ],
 };
 
@@ -180,7 +208,6 @@ export const summonEvent = {
   ],
   pending: [
     "Recapturar com o evento ativo: preço do Sprint Diamond Pack 1 e a quantidade de esferas do Pack 2",
-    "Identificar a esfera azul com \"?\" — aparece aqui, no loot da expedição e nos Diamond Packs",
     "Confirmar quantos Hero Recruitment Points cada invocação rende",
     "Registrar o conteúdo do baú da rodada de 4 do Challenge Objective",
   ],

@@ -18,7 +18,7 @@ export const lightArcher: HeroRecord = {
     "Profissão: Archer",
     "Posição exibida: 5",
     "É um dos 8 heróis míticos selecionáveis como 'UP' no Mythical Summon (junto de Sword Demon, Tidecaller, Succubus, Flower Spirit, Catwoman, Dragon Warrior e Red Queen) e também aparece na seleção de heróis míticos do Abyss Realm.",
-    "Disponível no Hero Exchange por Hero Coins; o preço apareceu como 3000 em duas capturas e como 1000 em outra — inconsistência entre prints, possivelmente promoção ou mudança de preço.",
+    "Disponível no Hero Exchange por 3.000 Hero Coins, limite semanal 1/1 — o preço cheio da faixa SP, resolvido na varredura da loja em 31 ago. 2026. A leitura antiga de 1.000 não se sustenta: nenhum dos oito SP apareceu abaixo de 3.000, e 1.000 é o preço cheio da faixa SSR.",
   ],
   stats: [
     "Snapshot no nível 1 (22 ago. 2026): poder 14.279 · ataque 13,04K · HP 159,27K · defesa 5.450 · Dano Crítico global +1,6% · fragmentos 0/5",
@@ -197,7 +197,6 @@ export const lightArcher: HeroRecord = {
     "Confirmar se Demon-Slaying Arrow · Speed, · Swift e Demon-killing Arrow · Speed são de fato a mesma blessing (traduções divergentes)",
     "Esclarecer o texto truncado de Advanced level of demon slaying (relação exata entre 3 ataques e 6 Starlight Arrows)",
     "Entender a divergência de atributos entre os dois snapshots de nível 1 (21 e 22 ago.) — possivelmente bônus de conta/temporada",
-    "Confirmar o preço real no Hero Exchange (3000 vs 1000 Hero Coins)",
     "Registrar uma run com a Light Archer para validar as builds rascunhadas",
   ],
 };

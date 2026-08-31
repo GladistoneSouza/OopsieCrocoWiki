@@ -240,11 +240,11 @@ export default function Home() {
           <div className="table-wrap sticker-card">
             <table className="game-table">
               <thead>
-                <tr><th>Hero Summon (Rate Details)</th><th>Banner Lv.1</th><th>Lv.2</th><th>Lv.3</th></tr>
+                <tr><th>Hero Summon (Rate Details)</th><th>Banner Lv.1</th><th>Lv.2</th><th>Lv.3</th><th>Lv.4</th></tr>
               </thead>
               <tbody>
                 {heroSummonRates.rows.map((row) => (
-                  <tr key={row.item}><td>{row.item}</td><td>{row.lv1}</td><td>{row.lv2}</td><td>{row.lv3}</td></tr>
+                  <tr key={row.item}><td>{row.item}</td><td>{row.lv1}</td><td>{row.lv2}</td><td>{row.lv3}</td><td>{row.lv4}</td></tr>
                 ))}
               </tbody>
             </table>

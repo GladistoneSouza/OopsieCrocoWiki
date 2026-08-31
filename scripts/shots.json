@@ -589,5 +589,90 @@
       "shadow": true
     },
     "note": "Grade de elenco: SSR e SR com o mesmo custo no nivel 15"
+  },
+  {
+    "src": "img_game/invocacao/2026-08-31_00-07-47.jpg",
+    "out": "summon/hero-exchange-sp.jpg",
+    "crop": [
+      70,
+      630,
+      1150,
+      1720
+    ],
+    "focus": {
+      "matte": "#2b2543",
+      "radius": 30,
+      "inset": 40,
+      "shadow": true
+    },
+    "note": "Hero Exchange: faixa SP a 3000 moedas, limite 1 por semana"
+  },
+  {
+    "src": "img_game/invocacao/2026-08-31_00-07-56.jpg",
+    "out": "summon/hero-exchange-ssr.jpg",
+    "crop": [
+      70,
+      630,
+      1150,
+      1720
+    ],
+    "focus": {
+      "matte": "#2b2543",
+      "radius": 30,
+      "inset": 40,
+      "shadow": true
+    },
+    "note": "Hero Exchange: faixa SSR com Pharaoh a 1000 sem desconto"
+  },
+  {
+    "src": "img_game/invocacao/2026-08-31_00-07-58.jpg",
+    "out": "summon/hero-exchange-sr.jpg",
+    "crop": [
+      70,
+      630,
+      1150,
+      1720
+    ],
+    "focus": {
+      "matte": "#2b2543",
+      "radius": 30,
+      "inset": 40,
+      "shadow": true
+    },
+    "note": "Hero Exchange: faixa SR com Shadow Wolf a 250 sem desconto"
+  },
+  {
+    "src": "img_game/herois-roster/2026-08-31_00-04-12.jpg",
+    "out": "progression/warrior-class-exp.jpg",
+    "crop": [
+      90,
+      900,
+      1130,
+      1800
+    ],
+    "focus": {
+      "matte": "#2b2543",
+      "radius": 30,
+      "inset": 40,
+      "shadow": true
+    },
+    "note": "Warrior Class Exp e suas fontes: Level Challenge, AFK, Black Market"
+  },
+  {
+    "src": "img_game/herois-ficha/2026-08-26_23-32-46.jpg",
+    "out": "progression/sword-demon-lv12-15.jpg",
+    "crop": [
+      60,
+      1680,
+      1160,
+      2560
+    ],
+    "focus": {
+      "matte": "#2b2543",
+      "radius": 30,
+      "inset": 40,
+      "shadow": true
+    },
+    "note": "Escada do Sword Demon: niveis 12 e 15 legiveis, e o rodape com as duas moedas"
   }
 ]

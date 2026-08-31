@@ -14,6 +14,7 @@ export const phantom: HeroRecord = {
   image: "/screenshots/phantom/profile-level-10.jpg",
   identity: [
     "Título exibido: SSR Phantom",
+    "Disponível no Hero Exchange por 1.000 Hero Coins, limite semanal 8/8 — sai por 500 quando o cartão está com o selo de 50% off. A base de 1.000 deixou de ser hipótese em 31 ago. 2026: na mesma grade, Pharaoh aparece a 1.000 sem selo enquanto os vizinhos SSR aparecem a 500 com ele.",
     "Nome exibido na ficha: Selina Shadowblade",
     "Classe: Assassin",
     "Alvos: 1 (alvo único)",
@@ -153,7 +154,6 @@ export const phantom: HeroRecord = {
     "Verificar se Phantom possui gemas exclusivas (nenhuma tela de gemas capturada).",
     "Abrir Hero Background e Stories (nenhum print de história).",
     "Confirmar a relação entre o estado \"Ultimate Flash Strike\" do talento de nível 10 e a blessing lendária \"Ultimate instant strike\" — hipótese de serem o mesmo mecanismo com traduções diferentes.",
-    "Confirmar o preço base de Phantom no Hero Exchange (500 com 50% off sugere base 1000 — hipótese; o preço sem desconto nunca aparece legível).",
     "Registrar stats completos em nível 13 ou superior (no roster de 16 ago. só o nível e 2/30 são visíveis).",
     "Nenhuma run com Phantom foi observada; comportamento em combate ainda sem evidência.",
   ],
