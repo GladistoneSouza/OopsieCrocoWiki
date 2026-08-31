@@ -495,3 +495,21 @@ a:hover > .sticker-card {
     white-space: normal;
   }
 }
+
+/* ---- Superficies escuras ----
+   Titulo dentro de bloco escuro nao pode depender de herdar a cor do container:
+   qualquer regra mais especifica sobre h2/h3 o apaga contra o fundo. */
+.character-header.with-portrait h1,
+.character-header.with-portrait h2,
+.character-note h2,
+.character-note h3,
+.exclusive-gems h2,
+.exclusive-gems h3,
+.callout-dark h2,
+.callout-dark h3,
+.cycle-card h2,
+.cycle-card h3,
+.batch-proof h2,
+.batch-proof h3 {
+  color: #fff;
+}

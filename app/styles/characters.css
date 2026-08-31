@@ -210,6 +210,7 @@
 .character-header.with-portrait h1 {
   font-size: clamp(30px, 2.6vw, 40px);
   margin: 4px 0 8px;
+  color: #fff;
 }
 
 .character-header.with-portrait .aliases {
@@ -719,6 +720,9 @@
 .exclusive-gems h2 {
   font-size: 28px;
   margin-bottom: 18px;
+  /* cor explicita: herdar do container quebra se algo mais especifico pintar
+     h2/h3, e o titulo some no fundo roxo */
+  color: #fff;
 }
 
 .exclusive-gems > div {
@@ -748,6 +752,11 @@
   background: rgba(217, 169, 255, 0.15);
 }
 
+.exclusive-gems article p {
+  color: #ece4f5;
+  line-height: 1.55;
+}
+
 .exclusive-gems span {
   font-size: 9px;
   font-weight: 900;
@@ -759,6 +768,7 @@
 .exclusive-gems h3 {
   font-size: 24px;
   margin: 10px 0 8px;
+  color: #fff;
 }
 
 .exclusive-gems article b {
