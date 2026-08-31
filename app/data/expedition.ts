@@ -242,6 +242,42 @@ export const upgradeInputs = {
 // O fragmento por nivel e igual para todas as raridades; o EXP de classe nao e.
 // Cruzando isso com a recompensa global, a raridade mais barata para comprar
 // critico de conta nao e a vermelha.
+// Junta tres coisas que a wiki ja tinha separadas: a curva de fragmento por
+// faixa, o nivel atual de cada heroi lido nas telas de 30-31 ago. e o degrau que
+// a ficha dele aponta como o proximo que muda alguma coisa. O resultado e o
+// custo real de atravessar cada breakpoint.
+export const breakpointMap = {
+  kicker: "ONDE O FRAGMENTO RENDE MAIS",
+  title: "O mesmo avanço custa doze vezes mais em um herói que em outro",
+  intro:
+    "Qualidade de kit e prioridade de investimento são perguntas diferentes, e a wiki vinha respondendo só a primeira. Esta tabela responde a segunda: quanto custa, em fragmentos, levar cada herói do nível em que ele está até o próximo degrau que muda alguma coisa nele — e quanto de crítico de conta esse mesmo gasto compra de quebra.",
+  columns: ["Herói", "Nível hoje", "Próximo degrau", "Fragmentos", "Crítico global", "Crítico por fragmento", "O que liga"],
+  rows: [
+    { hero: "Lia — Flower Spirit", now: "3", target: "5", frags: "10", crit: "+3,2%", eff: "0,320%", opens: "Cura extra e o começo da folha; degrau barato" },
+    { hero: "Veliana — Light Archer", now: "1", target: "3", frags: "10", crit: "+3,2%", eff: "0,320%", opens: "Começa a run com +105% de velocidade dentro do estado" },
+    { hero: "Ice Blue Snowbud — Tidecaller", now: "1", target: "5", frags: "20", crit: "+6,4%", eff: "0,320%", opens: "Mana a cada unidade que morre — liga o ciclo econômico dela" },
+    { hero: "Livia — Red Queen", now: "1", target: "5", frags: "20", crit: "+6,4%", eff: "0,320%", opens: "Chance de Firestorm consecutivo" },
+    { hero: "Veliana — Light Archer", now: "1", target: "8", frags: "50", crit: "+11,2%", eff: "0,224%", opens: "Light Arrow · Mastery — a segunda peça do motor" },
+    { hero: "Veliana — Light Archer", now: "1", target: "10", frags: "70", crit: "+14,4%", eff: "0,206%", opens: "A bifurcação: penetração de defesa ou Overclock mais cedo" },
+    { hero: "Mitia — Catwoman", now: "5", target: "8", frags: "30", crit: "+4,8%", eff: "0,160%", opens: "Devouring Prey — crítico crescente conforme o campo esvazia" },
+    { hero: "Mitia — Catwoman", now: "5", target: "10", frags: "50", crit: "+8,0%", eff: "0,160%", opens: "Cat Claw Divine Art — o Hunt que pode se relançar" },
+    { hero: "Rain Flame Soul — Dragon Warrior", now: "8", target: "10", frags: "20", crit: "+3,2%", eff: "0,160%", opens: "Summon Dragon ou Dragon God's Blessing" },
+    { hero: "Selina · Frostcharm — Succubus", now: "8", target: "10", frags: "20", crit: "+3,2%", eff: "0,160%", opens: "Stun de 2s em 30% ou corte de 20% na cura inimiga" },
+    { hero: "Kazres · Darkblade", now: "15", target: "20", frags: "300", crit: "+8,0%", eff: "0,027%", opens: "Fear em cada corte e reinvocação de clone" },
+  ],
+  reading:
+    "Os mesmos +8,0% de crítico de conta custam 50 fragmentos na Mitia e 300 no Kazres. O degrau mais barato do elenco é a Tidecaller do 1 ao 5 — vinte fragmentos ligam o motor de mana dela inteiro. E a Veliana do 1 ao 3 sai por dez, entregando a peça de velocidade que o kit dela usa como multiplicador de tudo.",
+  twoRankings:
+    "Vale separar as duas perguntas de vez. Qualidade de kit mede o herói ignorando o preço; prioridade de investimento pesa nível atual, custo do próximo degrau, função que falta no time e redundância com quem você já tem. Um herói excelente pode não ser prioridade justamente porque a maior parte da função dele chega cedo — é o caso da Tidecaller, cujo ciclo abre no nível 5 e cujos degraus seguintes custam sessenta por nível. E o contrário também existe: a Mitia melhora conforme as peças passam a conversar entre si, então ela é a que mais pede recurso continuado.",
+  caveat:
+    "Três ressalvas. Os níveis vêm das telas de 30-31 ago. 2026 e envelhecem. A tabela conta só fragmento, e subir também consome EXP de classe, que é por classe e pode ser o gargalo real. E o crítico por fragmento é um critério entre outros: ele ignora completamente o que o degrau faz em combate, que é justamente o motivo de a coluna \"o que liga\" existir ao lado.",
+  pending: [
+    "Refazer a tabela com os níveis atuais sempre que houver uma leva nova de prints do elenco",
+    "Acrescentar o custo em EXP de classe por degrau, quando a curva desse recurso estiver levantada",
+    "Medir em run se o degrau mais barato da Tidecaller entrega mesmo a maior parte da função dela",
+  ],
+};
+
 export const rarityCostCompare = {
   kicker: "QUEM PAGA MAIS BARATO",
   title: "No mesmo nível, o roxo compra crítico mais barato que o vermelho",

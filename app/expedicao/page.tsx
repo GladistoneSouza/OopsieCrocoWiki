@@ -21,6 +21,7 @@ import {
   upgradeInputs,
   globalCritReward,
   rarityCostCompare,
+  breakpointMap,
   levelMilestones,
   spreadVsFocus,
   fragmentSource,
@@ -208,6 +209,40 @@ export default function ExpedicaoPage() {
           {fragmentCurveGallery.map((shot) => (
             <ShotFigure key={shot.src} src={shot.src} alt={shot.alt} caption={shot.caption} linked />
           ))}
+        </div>
+        <SectionHead
+          eyebrow={breakpointMap.kicker}
+          title={breakpointMap.title}
+          description={breakpointMap.intro}
+        />
+        <div className="table-wrap sticker-card">
+          <table className="game-table">
+            <thead>
+              <tr>
+                {breakpointMap.columns.map((c) => (
+                  <th key={c}>{c}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {breakpointMap.rows.map((row) => (
+                <tr key={`${row.hero}-${row.target}`}>
+                  <td>{row.hero}</td>
+                  <td>{row.now}</td>
+                  <td>{row.target}</td>
+                  <td>{row.frags}</td>
+                  <td>{row.crit}</td>
+                  <td>{row.eff}</td>
+                  <td>{row.opens}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <small>{breakpointMap.reading}</small>
+        </div>
+        <div className="coop-grid">
+          <CalloutNote tone="info" title="Dois rankings, não um" text={breakpointMap.twoRankings} />
+          <CalloutNote tone="warning" title="O que a tabela não conta" text={breakpointMap.caveat} />
         </div>
         <SectionHead
           eyebrow={rarityCostCompare.kicker}
