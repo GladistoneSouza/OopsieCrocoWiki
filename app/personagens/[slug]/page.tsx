@@ -74,6 +74,20 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
   ]);
   const evidenceImages = hero.evidenceImages?.filter((item) => !storyImageSources.has(item.src)) ?? [];
 
+  // Índice da coluna da esquerda: só entra seção que este herói realmente tem.
+  const secoes = [
+    hero.story?.length ? { id: "historia", label: "História" } : null,
+    { id: "campo", label: "Observação prática" },
+    hero.kit ? { id: "motor", label: "O motor" } : null,
+    hero.strengths?.length || hero.weaknesses?.length ? { id: "forcas", label: "Ganha e quebra" } : null,
+    hero.combos?.length ? { id: "combos", label: "Combos" } : null,
+    hero.exclusiveGems?.length ? { id: "gemas", label: "Gemas exclusivas" } : null,
+    { id: "habilidades", label: "Habilidades e builds" },
+    { id: "sinergias", label: "Sinergias e pendências" },
+    evidenceImages.length ? { id: "evidencias", label: "Evidências" } : null,
+    { id: "legenda", label: "Legenda da ficha" },
+  ].filter((item): item is { id: string; label: string } => item !== null);
+
   return (
     <main>
       <SiteHeader active="/personagens" />
@@ -105,25 +119,22 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
           ) : null}
         </header>
 
-        {hero.identity?.length || hero.stats?.length ? (
-          <div className="character-facts">
-            {hero.identity?.length ? (
-              <section className="sticker-card">
-                <p className="eyebrow">IDENTIDADE</p>
-                <ul>{hero.identity.map((item) => <li key={item}>{item}</li>)}</ul>
-              </section>
-            ) : null}
-            {hero.stats?.length ? (
-              <section className="sticker-card">
-                <p className="eyebrow">CONTA OBSERVADA</p>
-                <ul>{hero.stats.map((item) => <li key={item}>{item}</li>)}</ul>
-              </section>
-            ) : null}
-          </div>
-        ) : null}
+        <div className="character-layout">
+          <nav className="character-index" aria-label={`Seções de ${hero.name}`}>
+            <p className="eyebrow">NESTA FICHA</p>
+            <ul>
+              {secoes.map((item) => (
+                <li key={item.id}>
+                  <a href={`#${item.id}`}>{item.label}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          <div className="character-main">
 
         {hero.story?.length ? (
-          <section className="character-story">
+          <section className="character-story" id="historia">
             <p className="eyebrow">HISTÓRIA</p>
             <h2>{storyTitle(hero.slug, hero.name)}</h2>
             {hero.storySlides?.length ? (
@@ -144,26 +155,13 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
           </section>
         ) : null}
 
-        <section className="character-note">
+        <section className="character-note" id="campo">
           <b>Observação prática</b>
           <p>{hero.fieldNote}</p>
         </section>
 
-        <section className="confidence-legend sticker-card" aria-labelledby="confidence-title">
-          <p className="eyebrow">LEGENDA DA FICHA</p>
-          <h2 id="confidence-title">Como tratamos cada informação</h2>
-          <div>
-            {confidenceLegend.map((item) => (
-              <article data-confidence={item.key} key={item.key}>
-                <b>{item.label}</b>
-                <p>{item.description}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-
         {hero.exclusiveGems?.length ? (
-          <section className="exclusive-gems">
+          <section className="exclusive-gems" id="gemas">
             <p className="eyebrow">GEMAS EXCLUSIVAS</p>
             <h2>Equipamentos próprios da personagem</h2>
             <div>
@@ -180,7 +178,7 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
         ) : null}
 
         {hero.kit ? (
-          <section className="sticker-card">
+          <section className="sticker-card" id="motor">
             <p className="eyebrow">O MOTOR</p>
             <h2>Como as peças conversam</h2>
             <p>{hero.kit.engine}</p>
@@ -198,7 +196,7 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
         ) : null}
 
         {hero.strengths?.length || hero.weaknesses?.length ? (
-          <div className="character-columns">
+          <div className="character-columns" id="forcas">
             {hero.strengths?.length ? (
               <section className="sticker-card">
                 <p className="eyebrow">ONDE ELE GANHA</p>
@@ -215,7 +213,7 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
         ) : null}
 
         {hero.combos?.length ? (
-          <section className="sticker-card">
+          <section className="sticker-card" id="combos">
             <p className="eyebrow">COMBOS</p>
             <h2>Cadeias que valem procurar na run</h2>
             {hero.combos.map((combo) => (
@@ -229,7 +227,7 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
           </section>
         ) : null}
 
-        <div className="character-columns">
+        <div className="character-columns" id="habilidades">
           <section className="sticker-card">
             <p className="eyebrow">POR NÍVEL</p>
             <h2>Habilidades gratuitas</h2>
@@ -263,7 +261,7 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
           </section>
         </div>
 
-        <div className="character-columns">
+        <div className="character-columns" id="sinergias">
           <section className="sticker-card">
             <p className="eyebrow">SINERGIAS</p>
             <ul className="plain-list">{hero.synergies.map((item) => <li key={item}>{item}</li>)}</ul>
@@ -274,13 +272,8 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
           </section>
         </div>
 
-        <aside className="callout callout-info">
-          <b>Fontes desta ficha</b>
-          <span>{hero.evidence.join(" • ")}</span>
-        </aside>
-
         {evidenceImages.length ? (
-          <section className="evidence-gallery sticker-card">
+          <section className="evidence-gallery sticker-card" id="evidencias">
             <div className="gallery-head">
               <div>
                 <p className="eyebrow">EVIDÊNCIAS VISUAIS</p>
@@ -296,6 +289,39 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
             />
           </section>
         ) : null}
+        <section className="confidence-legend sticker-card" id="legenda" aria-labelledby="confidence-title">
+          <p className="eyebrow">LEGENDA DA FICHA</p>
+          <h2 id="confidence-title">Como tratamos cada informação</h2>
+          <div>
+            {confidenceLegend.map((item) => (
+              <article data-confidence={item.key} key={item.key}>
+                <b>{item.label}</b>
+                <p>{item.description}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+          </div>
+
+          <aside className="character-side">
+            {hero.identity?.length ? (
+              <section className="sticker-card">
+                <p className="eyebrow">IDENTIDADE</p>
+                <ul>{hero.identity.map((item) => <li key={item}>{item}</li>)}</ul>
+              </section>
+            ) : null}
+            {hero.stats?.length ? (
+              <section className="sticker-card">
+                <p className="eyebrow">CONTA OBSERVADA</p>
+                <ul>{hero.stats.map((item) => <li key={item}>{item}</li>)}</ul>
+              </section>
+            ) : null}
+            <section className="sticker-card">
+              <p className="eyebrow">FONTES</p>
+              <p className="side-sources">{hero.evidence.join(" • ")}</p>
+            </section>
+          </aside>
+        </div>
       </article>
       <SiteFooter />
     </main>

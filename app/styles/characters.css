@@ -35,9 +35,152 @@
 /* ---- Página do personagem ---- */
 
 .character-page {
-  max-width: 1040px;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 60px 24px;
+  padding: 48px 24px 60px;
+}
+
+/* ---- Ficha em tres colunas: indice fixo, miolo variavel, dados fixos ---- */
+
+.character-layout {
+  display: grid;
+  grid-template-columns: 196px minmax(0, 1fr) 320px;
+  gap: 22px;
+  align-items: start;
+  margin-top: 22px;
+}
+
+.character-main {
+  min-width: 0;
+}
+
+/* a barra superior tem 74px e e sticky; as ancoras param abaixo dela */
+.character-main > [id],
+.character-story[id],
+.character-note[id] {
+  scroll-margin-top: 96px;
+}
+
+.character-index,
+.character-side {
+  position: sticky;
+  top: 96px;
+  /* se a coluna passar da altura da janela, ela rola por dentro em vez de cortar */
+  max-height: calc(100vh - 116px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.character-index {
+  padding: 16px 14px;
+  border: var(--border);
+  border-radius: var(--radius-md);
+  background: var(--panel);
+  box-shadow: 5px 5px 0 rgba(20, 14, 32, 0.14);
+}
+.character-index ul {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 2px;
+}
+.character-index a {
+  display: block;
+  padding: 7px 10px;
+  border-radius: 10px;
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  transition: background 140ms ease, color 140ms ease, border-color 140ms ease;
+}
+.character-index a:hover,
+.character-index a:focus-visible {
+  background: rgba(70, 168, 50, 0.12);
+  border-left-color: var(--croco);
+  color: var(--ink);
+}
+.character-index a:target,
+.character-main [id]:target ~ * {
+  color: var(--ink);
+}
+
+.character-side {
+  display: grid;
+  gap: 14px;
+}
+.character-side .sticker-card {
+  padding: 16px 16px 14px;
+}
+.character-side ul {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+.character-side li {
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--ink-soft);
+  padding-bottom: 8px;
+  border-bottom: 2px solid rgba(43, 37, 67, 0.1);
+}
+.character-side li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.side-sources {
+  margin: 8px 0 0;
+  font-size: 11.5px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+/* Duas colunas: o indice vira uma tira horizontal acima do miolo */
+@media (max-width: 1240px) {
+  .character-layout {
+    grid-template-columns: minmax(0, 1fr) 300px;
+  }
+  .character-index {
+    grid-column: 1 / -1;
+    position: static;
+    padding: 12px 14px;
+    max-height: none;
+    overflow: visible;
+  }
+  .character-index ul {
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 6px;
+    overflow-x: auto;
+    padding-bottom: 2px;
+  }
+  .character-index a {
+    white-space: nowrap;
+    border-left: 0;
+    border-bottom: 3px solid transparent;
+  }
+  .character-index a:hover,
+  .character-index a:focus-visible {
+    border-left-color: transparent;
+    border-bottom-color: var(--croco);
+  }
+}
+
+/* Coluna unica: os dados fixos vao para o fim */
+@media (max-width: 900px) {
+  .character-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .character-side {
+    position: static;
+    max-height: none;
+    overflow: visible;
+  }
 }
 
 .character-header {
