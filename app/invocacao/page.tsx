@@ -6,7 +6,7 @@ import { SectionHead } from "../components/SectionHead";
 import { FactCard } from "../components/FactCard";
 import { CalloutNote } from "../components/CalloutNote";
 import { ShotFigure } from "../components/ShotFigure";
-import { mythicAcquisition, summonEvent, battlePass, passTrack, deluxeTiming } from "../data/summons";
+import { mythicAcquisition, summonEvent, battlePass, passTrack, deluxeTiming, summonRules, heroSummonRates } from "../data/summons";
 
 export const metadata: Metadata = {
   title: "Invocação mítica — Oopsie Croco Wiki",
@@ -32,7 +32,43 @@ export default function InvocacaoPage() {
         </p>
       </section>
 
-<section className="section" id="invocacao">
+      <section className="section" id="invocacao">
+        <SectionHead
+          eyebrow={summonRules.kicker}
+          title={summonRules.title}
+          description={summonRules.text}
+        />
+        <div className="table-wrap sticker-card">
+          <p>{heroSummonRates.intro}</p>
+          <table className="game-table">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Lv.1</th>
+                <th>Lv.2</th>
+                <th>Lv.3</th>
+                <th>Lv.4</th>
+              </tr>
+            </thead>
+            <tbody>
+              {heroSummonRates.rows.map((row) => (
+                <tr key={row.item}>
+                  <td>{row.item}</td>
+                  <td>{row.lv1}</td>
+                  <td>{row.lv2}</td>
+                  <td>{row.lv3}</td>
+                  <td>{row.lv4}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <small>{heroSummonRates.note}</small>
+        </div>
+        <div className="shot-grid wide">
+          {heroSummonRates.gallery.map((shot) => (
+            <ShotFigure key={shot.src} src={shot.src} alt={shot.alt} title={shot.title} caption={shot.caption} linked />
+          ))}
+        </div>
         <SectionHead
           eyebrow={mythicAcquisition.kicker}
           title={mythicAcquisition.title}
@@ -49,6 +85,7 @@ export default function InvocacaoPage() {
         </ol>
         <CalloutNote tone="warning" title="A caixa aleatória não escolhe — e quase não cai" text={mythicAcquisition.randomBox} />
         <CalloutNote tone="info" title="A caixa de seleção é outro item" text={mythicAcquisition.selectionBox} />
+        <CalloutNote tone="info" title="E há uma terceira, quase idêntica, que não é mítica" text={mythicAcquisition.legendarySelection} />
         <CalloutNote tone="warning" title="Qual das duas está na Immortal Shop?" text={mythicAcquisition.shopAmbiguity} />
         <CalloutNote tone="dark" title="Qual rota usar depende de quantos faltam" text={mythicAcquisition.consequence} />
         <CalloutNote tone="info" title="Outras fontes de ficha mítica" text={mythicAcquisition.otherSources} />

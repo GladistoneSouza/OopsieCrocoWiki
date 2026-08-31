@@ -1,21 +1,26 @@
 export const summonRules = {
   kicker: "HERO SUMMON",
   title: "10 tickets por invocação",
-  text: "Cada invocação de herói consome 10 Hero Summon Tickets. Invocar dá EXP de banner: o Banner Level sobe (Lv.1 → Lv.3 observados) e melhora as recompensas da tabela de taxas.",
+  text: "Cada invocação de herói consome 10 Hero Summon Tickets. Invocar dá EXP de banner: o Banner Level sobe (Lv.1 → Lv.4 observados) e melhora as recompensas da tabela de taxas.",
 };
 
 export const heroSummonRates = {
-  intro: "Taxas oficiais exibidas no Rate Details por nível de banner. No Lv.1 não há SSR na tabela; o SSR entra a partir do Lv.2.",
+  intro: "Taxas oficiais exibidas no Rate Details por nível de banner. No Lv.1 não há SSR na tabela; o SSR entra a partir do Lv.2. A captura de 31 ago. 2026 fechou a aba Lv.4, incluindo ficha mítica e EXP de classe.",
   rows: [
-    { item: "SSR", lv1: "—", lv2: "1,99%", lv3: "2,22%" },
-    { item: "Mythic Summon Ticket", lv1: "—", lv2: "—", lv3: "0,98%" },
-    { item: "SR", lv1: "5,24%", lv2: "—", lv3: "6,46%" },
-    { item: "R", lv1: "19,82%", lv2: "—", lv3: "19,46%" },
-    { item: "Gold ×100", lv1: "—", lv2: "—", lv3: "15,22%" },
-    { item: "Gem Cube", lv1: "—", lv2: "—", lv3: "2,28%" },
-    { item: "Random Class Exp ×40 / ×20 / ×10", lv1: "—", lv2: "—", lv3: "1,14% / 1,98% / 4,57%" },
+    { item: "SSR", lv1: "—", lv2: "1,99%", lv3: "2,22%", lv4: "2,50%" },
+    { item: "Mythic Summon Ticket", lv1: "—", lv2: "—", lv3: "0,98%", lv4: "1,94%" },
+    { item: "SR", lv1: "5,24%", lv2: "—", lv3: "6,46%", lv4: "9,58%" },
+    { item: "R", lv1: "19,82%", lv2: "—", lv3: "19,46%", lv4: "19,14%" },
+    { item: "Gold ×100", lv1: "—", lv2: "—", lv3: "15,22%", lv4: "14,85%" },
+    { item: "Gem Cube", lv1: "—", lv2: "—", lv3: "2,28%", lv4: "2,23%" },
+    { item: "Random Class Exp ×40", lv1: "—", lv2: "—", lv3: "1,14%", lv4: "1,49%" },
+    { item: "Random Class Exp ×20", lv1: "—", lv2: "—", lv3: "1,98%", lv4: "2,23%" },
+    { item: "Random Class Exp ×10", lv1: "—", lv2: "—", lv3: "4,57%", lv4: "4,46%" },
   ],
-  note: "Células com — não foram capturadas naquele nível de banner, não significam taxa zero (exceto o SSR no Lv.1, ausente da tabela oficial). O contador de Legendary garantido apareceu com valores diferentes em momentos distintos (35 e 39) — pendente confirmar a regra exata.",
+  note: "Células com — não foram capturadas naquele nível de banner, não significam taxa zero (exceto o SSR no Lv.1, ausente da tabela oficial). Só a coluna Lv.4 tem print; as demais vêm de leituras avulsas anteriores, e por isso a tabela continua cheia de buracos. O contador de Legendary garantido apareceu com valores diferentes em momentos distintos (35, 39 e 45) — pendente confirmar a regra exata.",
+  gallery: [
+    { src: "/screenshots/summon/hero-summon-rates-lv4.jpg", alt: "Rate Details do Hero Summon no Lv.4", title: "Lv.4 oficial", caption: "SSR 2,50%, ficha mítica 1,94%, SR 9,58% e R 19,14%." },
+  ],
 };
 
 export const mythicalSummon = {
@@ -59,7 +64,9 @@ export const mythicAcquisition = {
   randomBox:
     "A Mythical Hero Random Box entrega \"a random Mythic Hero\" entre os oito, sem escolha — e é rara: em cerca de três meses de jogo ativo o dono da conta tirou uma ou duas. Ela aparece como a recompensa \"Chance to Obtain\" do baú Lifetime Pass no marco de 50 invocações do Hero Summon, que já garante 2 fichas míticas por marco.",
   selectionBox:
-    "Existe um segundo item, distinto, e a diferença entre os dois foi verificada em jogo pelo dono da conta: a caixa de seleção — Mythical Hero Selection Box ou nome muito próximo — vem de eventos e pacotes, e nela o jogador escolhe qual herói SP quer. Recebendo mais de uma, ainda decide quantos fragmentos de cada herói levar, o que permite adiantar vários desbloqueios em paralelo em vez de fechar um de cada vez. Comportamento observado em uso repetido; o que falta é só o print da tela e o nome exato.",
+    "Existe um segundo item, distinto, e agora fotografado: o Mythic Hero Select Chest. A tela lista os oito míticos e diz \"Select one Mythic Hero\" — um herói por baú, com um seletor de quantidade e o saldo restante embaixo (\"Remaining item quantity: 2\" na captura). É por aí que sai o efeito descrito pelo dono da conta: gastando um baú em cada herói, ele reparte os fragmentos entre vários desbloqueios em vez de fechar um de cada vez.",
+  legendarySelection:
+    "Cuidado para não confundir com a Legendary Hero Selection, que é do andar de baixo: cartas douradas, oito SSR (Fire Spirit Master, Pharaoh, Holy Knight, Dark Knight, Star Mage, Bounty Hunter, Phantom e Onmyoji) e o texto \"please check the heroes you want to redeem\", com caixas de marcação. Ali sim dá para marcar vários de uma vez. As duas telas são quase gêmeas no leiaute e foram capturadas com nove segundos de diferença — o que separa uma da outra é o título e a cor das cartas.",
   shopAmbiguity:
     "A linha Mythic Selection da Immortal Shop (3.000 diamantes, 1 por semana) usa o mesmo ícone da Random Box — baú vermelho com o medalhão dourado —, mas o conteúdo dela nunca foi aberto num print. Se é a caixa aleatória ou a de seleção continua em aberto, e a diferença é grande: uma repete heróis que você já tem, a outra não.",
   consequence:
@@ -73,11 +80,13 @@ export const mythicAcquisition = {
     { src: "/screenshots/summon/mythical-rates.jpg", alt: "Rate Details do Mythical Summon", title: "Taxas oficiais", caption: "Mythic 2,47% · Legendary 10,28% · All Class Exp ×5 8,88% e ×10 78,37%." },
     { src: "/screenshots/summon/draw-milestone-chest.jpg", alt: "Draw Milestone Chest no marco de 50 invocações", title: "O marco de 50", caption: "Lifetime Pass garante 2 fichas míticas e dá chance da caixa aleatória." },
     { src: "/screenshots/summon/mythical-hero-random-box.jpg", alt: "Mythical Hero Random Box com os oito heróis", title: "A caixa aleatória", caption: "Um Mythic aleatório entre os oito — sem escolha." },
+    { src: "/screenshots/summon/mythic-hero-select-chest.jpg", alt: "Mythic Hero Select Chest com os oito míticos", title: "A caixa de seleção mítica", caption: "\"Select one Mythic Hero\": um SP por baú, com seletor de quantidade." },
+    { src: "/screenshots/summon/legendary-hero-selection.jpg", alt: "Legendary Hero Selection com oito SSR marcáveis", title: "A prima dourada", caption: "Andar de baixo: oito SSR e marcação múltipla. Não confundir com a mítica." },
     { src: "/screenshots/summon/battle-pass.jpg", alt: "Trilha do Battle Pass com fichas míticas", title: "Battle Pass", caption: "Fichas míticas ao longo da trilha; Deluxe a US$ 13,99 na temporada capturada." },
   ],
   pending: [
     "Confirmar se a Mythical Hero Random Box pode repetir um herói já desbloqueado",
-  "Capturar a Mythical Hero Selection Box — o comportamento já está testado, falta o print da tela e o nome exato",
+    "Confirmar no Mythic Hero Select Chest se gastar vários baús no mesmo herói acumula fragmentos, já que a tela só deixa marcar um por vez",
   "Abrir a linha Mythic Selection da Immortal Shop e registrar se é a caixa aleatória ou a de seleção",
   "Fotografar o e-mail de recompensa do ranking semanal do evento — possível fonte de Selection Box",
     "Registrar quantas fichas míticas a trilha completa do Battle Pass entrega, por faixa",
