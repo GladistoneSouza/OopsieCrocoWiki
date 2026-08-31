@@ -67,6 +67,78 @@ export const kazersDarkblade: HeroRecord = {
     { name: "Nível 45 — bônus de profissão", description: "Aumenta em 8% o dano dos personagens da profissão Calamity." },
     { name: "Nível 50 — bônus de profissão", description: "Aumenta em 8% o dano dos personagens da profissão Calamity." },
   ],
+  kit: {
+    engine:
+      "Blade Storm é a bomba, Fear é o dinheiro e Fear Resolution é o caixa. O giro não mata: ele aplica camadas. As camadas causam dano contínuo, cortam a cura do inimigo e, a cada 10 segundos, viram um pico proporcional ao que foi acumulado. Ler a ficha do Kazres é decidir três coisas — com que frequência aplicar, até que teto empilhar e quantos emissores existem no campo.",
+    loops: [
+      {
+        name: "O giro é uma bomba de Fear",
+        text: "Blade Storm aplica Fear a cada pulso, Dreadblade dobra a aplicação para 2 camadas e Swift Wind Swordsmanship encurta o intervalo entre os pulsos. Nenhuma dessas três soma dano diretamente: as três aumentam camadas por segundo, que é a variável que todo o resto lê.",
+      },
+      {
+        name: "Sem teto, a bomba satura",
+        text: "Fear Abyss soma 20 ao limite máximo de camadas. Não é dano, é espaço — e o valor dela depende inteiramente de quão rápido a bomba está aplicando. Numa run com pouca frequência de aplicação, Fear Abyss é a pior escolha do Bestiary; numa com Dreadblade e Swift Wind já pegos, é a que mais rende.",
+      },
+      {
+        name: "O caixa converte pressão em pico",
+        text: "Fear Resolution executa vários cortes a cada 10 segundos com dano crescendo conforme a quantidade de Fear no alvo. É a única peça que gasta o acúmulo em vez de somar a ele — e a razão de o kit inteiro funcionar como bomba, teto e válvula, nessa ordem.",
+      },
+      {
+        name: "Clone é um segundo emissor",
+        text: "Many Shadows invoca um clone a cada 8 segundos para liberar Blade Storm. Como Blade Storm é a bomba, o clone não é dano extra: é uma segunda bomba, que multiplica aplicação, sustain e dano ao mesmo tempo. O nível 10 mantém os clones lutando, o 20 dá chance de reinvocá-los e o 25 dá chance de somar mais um. É a única linha que multiplica o motor em vez de melhorá-lo.",
+      },
+      {
+        name: "Fear não é só dano",
+        text: "Fear into the Soul faz cada camada cortar mais a cura do inimigo, e o talento de nível 15 impede inimigos com Fear de atacar a cada 12 segundos. Num kit que mantém o campo permanentemente marcado, isso deixa de ser efeito colateral: vira anticura contra quem se cura e vira atordoamento periódico de área.",
+      },
+    ],
+  },
+  combos: [
+    {
+      name: "Bomba, teto e válvula",
+      status: "confirmado",
+      needs: ["Dreadblade", "Swift Wind Swordsmanship", "Fear Abyss", "Fear Resolution"],
+      text: "A espinha do herói, e a ordem importa: primeiro subir camadas por segundo (Dreadblade e Swift Wind), depois abrir espaço para elas caberem (Fear Abyss), por último a peça que gasta o acúmulo (Fear Resolution). Pegar a válvula antes da bomba entrega um pico pequeno de dez em dez segundos. As runs medidas no andar 15 — 23,79M e 23,96M — saíram desta linha.",
+    },
+    {
+      name: "Dois giros no campo",
+      status: "confirmado",
+      needs: ["Many Shadows", "Shadowy Demon (nível 10)", "Shadow Overlap (nível 20)", "Shadows Lurking (nível 25)"],
+      text: "Cada clone libera um Blade Storm inteiro, então cada clone multiplica de uma vez aplicação de Fear, dano contínuo e a cura da Bloody Swordsmanship. Os três degraus de nível existem só para manter mais clones vivos por mais tempo. É a rota que mais escala com nível alto.",
+    },
+    {
+      name: "Giro longo é giro caro",
+      status: "hipótese",
+      needs: ["Ranbu Kenjutsu", "Ronin Swordsmanship", "Yishou Swordsmanship"],
+      text: "Ranbu faz o dano por segundo crescer ao longo do giro, Ronin dá chance de dobrar e Yishou soma dano e imunidade a controle durante ele. As três pagam por permanência, não por frequência — e por isso brigam com a leitura de \"aplicar rápido\". É a bifurcação real do Bestiary: bomba curta e repetida contra giro longo e valioso.",
+    },
+    {
+      name: "Trancar quem se cura",
+      status: "hipótese",
+      needs: ["Fear into the Soul", "Fear Abyss", "supressão do nível 15"],
+      text: "Com o teto aberto, a pilha de Fear vira duas ferramentas de negação ao mesmo tempo: corte pesado de cura pela Fear into the Soul e bloqueio de ataque a cada 12 segundos pelo talento de nível 15. Contra boss que se cura ou invoca, esse pacote vale mais que dano bruto.",
+    },
+    {
+      name: "Sustain que vem de graça",
+      status: "confirmado",
+      needs: ["Bloody Swordsmanship", "Blade Storm permanente"],
+      text: "Bloody Swordsmanship cura no mesmo evento em que o Blade Storm causa dano. Como o giro é a peça que ele já quer manter ligada o tempo todo, o sustain escala junto com o dano sem custar prioridade — e é o que permite ao Kazres ficar na frente sem peça defensiva dedicada.",
+    },
+  ],
+  strengths: [
+    "Uma habilidade só entrega dano em área, sustain e imunidade a controle ao mesmo tempo, o que libera as escolhas para escalar em vez de tapar buraco",
+    "Fear faz três trabalhos: dano contínuo, corte de cura e, a partir do nível 15, bloqueio periódico de ataque",
+    "A linha de clones multiplica o motor inteiro em vez de somar dano, o que a torna a rota com melhor escala em nível alto",
+    "É o único SP com desempenho medido em run repetida — 23,79M e 23,96M no andar 15, com o Bestiary completo transcrito",
+    "Frontline que não precisa de peça defensiva dedicada: o sustain sai do mesmo giro que causa o dano",
+  ],
+  weaknesses: [
+    "Tudo depende do tempo de Blade Storm ligado; interrupção ou reposicionamento forçado apaga bomba, sustain e imunidade de uma vez",
+    "Fear precisa de tempo para empilhar, então sala que exige matar agora é o pior caso — a válvula só paga bem depois de a pilha subir",
+    "Sem Fear Abyss a pilha satura e metade das escolhas seguintes deixa de render, o que faz uma peça sem dano virar pré-requisito",
+    "Alcance curto e nenhuma mobilidade: contra inimigo que fica longe, o giro não alcança e o kit inteiro fica ocioso",
+    "Vários valores não aparecem — a porcentagem do nível 5, o corte de cura da Fear into the Soul —, então comparar duas escolhas de Fear é qualitativo",
+  ],
   builds: [
     {
       name: "Motor completo de Fear",

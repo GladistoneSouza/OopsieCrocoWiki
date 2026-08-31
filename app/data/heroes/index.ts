@@ -20,7 +20,7 @@ import { holyKnight } from "./holy-knight";
 import { starMage } from "./star-mage";
 import { phantom } from "./phantom";
 
-export type { HeroRecord, HeroSkill, HeroBuild } from "../types";
+export type { HeroRecord, HeroSkill, HeroBuild, HeroKit, HeroCombo } from "../types";
 
 export const heroes: HeroRecord[] = [
   lilith,

@@ -1,3 +1,18 @@
+// Como as pecas do kit conversam entre si. Separado de builds: uma build e uma
+// ordem de escolha dentro da run; o motor e o que o heroi faz quando ela fecha.
+export type HeroKit = {
+  engine: string;
+  loops?: { name: string; text: string }[];
+};
+
+// Um combo e uma cadeia especifica de pecas, com o que ela exige para existir.
+export type HeroCombo = {
+  name: string;
+  status: "confirmado" | "em teste" | "hipótese";
+  needs: string[];
+  text: string;
+};
+
 export type HeroSkill = {
   name: string;
   description: string;
@@ -40,6 +55,10 @@ export type HeroRecord = {
   stats?: string[];
   exclusiveGems?: { name: string; slot: string; baseStat: string; effect: string }[];
   levelSkills: HeroSkill[];
+  kit?: HeroKit;
+  combos?: HeroCombo[];
+  strengths?: string[];
+  weaknesses?: string[];
   builds: HeroBuild[];
   synergies: string[];
   evidence: string[];

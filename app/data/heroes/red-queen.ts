@@ -147,6 +147,67 @@ export const redQueen: HeroRecord = {
       source: "Tela de progressão — texto parcialmente cortado.",
     },
   ],
+  kit: {
+    engine:
+      "Duas famílias com nome próprio no Bestiary: Wind Flame para a tempestade e Earth/Ground Fire para o chão de lava. Elas não são paralelas — a tempestade fabrica o chão, porque toda Flame Storm termina deixando 6 blocos. Quem investe em tempestade recebe lava de brinde; quem investe em lava não recebe tempestade nenhuma. Essa assimetria é a coisa mais importante da ficha.",
+    loops: [
+      {
+        name: "A tempestade produz o terreno",
+        text: "Wind Flame · Twins soma uma tempestade, The wind and flames never cease soma 2 segundos de duração e Wind Flame · Singing acelera a conjuração depois de cada invocação. Como cada tempestade encerrada gera 6 blocos, cada peça do ramo do vento também multiplica o ramo do chão sem custar escolha.",
+      },
+      {
+        name: "O chão se replanta",
+        text: "Earth fire · Frequent occurrence soma +3 blocos, Ground fire · spread dá chance de o bloco se espalhar quando termina e Earth fire · boiling encurta o intervalo de dano. Com spread no jogo, o campo deixa de precisar de reposição constante e passa a se manter sozinho.",
+      },
+      {
+        name: "Duas douradas, dois contadores",
+        text: "Hell of Fire is Coming conta tempestades — a cada 2, 285% do ataque em todos os inimigos. Molten Core conta campos de lava liberados — passado um limiar, 120% do ataque por segundo em todos. Cada família alimenta a sua dourada, e como a tempestade fabrica lava, a rota do vento carrega as duas ao mesmo tempo. A rota do chão carrega uma só.",
+      },
+      {
+        name: "Multiplicar instância, não dano",
+        text: "Molten Heart dá chance de cada instância de dano acertar 2 vezes extras no nível 10 e mais 1 no 25, e o talento de nível 15 soma dano toda vez que tempestade ou lava causam dano. Como o kit dela é feito de muitos tiques pequenos, encurtar o intervalo do bloco e alongar a duração da tempestade não somam dano: aumentam a quantidade de eventos que esses multiplicadores podem pegar.",
+      },
+    ],
+  },
+  combos: [
+    {
+      name: "A rota do vento cobra em dobro",
+      status: "hipótese",
+      needs: ["Wind Flame · Twins", "The wind and flames never cease", "Wind Flame · Singing", "Hell of Fire is Coming (dourada)", "Molten Core (dourada)"],
+      text: "Priorizar tempestade é a única escolha da ficha que carrega os dois contadores dourados ao mesmo tempo, porque cada tempestade encerrada entrega 6 blocos para o contador da Molten Core. É a razão para tratar o ramo Wind Flame como padrão e o Earth Fire como especialização.",
+    },
+    {
+      name: "Fábrica de instâncias",
+      status: "hipótese",
+      needs: ["Earth fire · boiling", "The wind and flames never cease", "Molten Heart (níveis 10 e 25)"],
+      text: "boiling encurta o intervalo do bloco e never cease alonga a tempestade: as duas aumentam quantos tiques de dano acontecem por segundo. Molten Heart multiplica por tique. Empilhar frequência antes de multiplicador é o que faz a diferença entre um ganho somado e um ganho composto.",
+    },
+    {
+      name: "Derreter vida grande",
+      status: "hipótese",
+      needs: ["Earth Fire · Melt", "Earth fire · Frequent occurrence", "Earth fire · boiling"],
+      text: "Melt faz o bloco causar 1% da vida atual do inimigo. Dano percentual não olha o ataque dela, olha a frequência: mais blocos e intervalo mais curto viram mais aplicações do percentual. É a resposta da Red Queen a alvo de vida alta, e a única parte do kit que não depende de escalar ataque.",
+    },
+    {
+      name: "Sala cheia acelera a próxima",
+      status: "hipótese",
+      needs: ["Inferno Descends (nível 20)", "Inferno Descends (nível 25)", "Wind Flame · Singing"],
+      text: "O nível 20 aumenta a velocidade de conjuração depois de matar inimigos e o 25 gera 3 bolas de fogo em alvos aleatórios. Com Singing acelerando a cada invocação, sala com muitos alvos fracos vira um ciclo em que matar acelera conjurar, que mata mais rápido.",
+    },
+  ],
+  strengths: [
+    "Dano em área permanente sem precisar mirar: a lava fica no chão trabalhando enquanto ela conjura a próxima tempestade",
+    "Duas douradas independentes com contadores próprios, então há duas condições de vitória no draft em vez de uma",
+    "Earth Fire · Melt entrega dano percentual, coisa rara no elenco e a melhor ferramenta contra alvo de vida alta",
+    "A rota do vento carrega os dois contadores dourados ao mesmo tempo — eficiência de escolha que nenhuma outra ficha oferece",
+  ],
+  weaknesses: [
+    "Nenhuma peça defensiva no kit inteiro: nem escudo, nem redução, nem cura, nem mobilidade",
+    "O dano é por tempo, não por explosão — inimigo que entra e sai rápido, ou que precisa morrer agora, é o pior caso dela",
+    "A lava é terreno, então depende de o inimigo estar em cima; nenhum texto do jogo confirma o que acontece contra alvo que se move muito, e isso não foi testado",
+    "Earth Fire · Penetration tem dois textos oficiais que se contradizem — penetração de defesa a cada 6 blocos no Bestiary, dano do bloco levemente aumentado no tooltip da ficha",
+    "Quase nenhum valor exibido nas peças do vento: \"greatly increased\", \"slightly increased\" e chances não numeradas dominam o ramo",
+  ],
   builds: [
     {
       name: "Tempestade incessante",

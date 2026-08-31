@@ -142,6 +142,71 @@ export const lightArcher: HeroRecord = {
       source: "Blessing Bestiary",
     },
   ],
+  kit: {
+    engine:
+      "Duas linhas de escala que dividem a mesma moeda. Uma é o Demon-Banishing State, janela de 4 segundos aberta a cada 5 ataques, dentro da qual quase tudo fica melhor. A outra são as Light Arrows, disparo por chance que escala em volume até virar Overclock. A moeda comum é velocidade de ataque, e é por isso que \"misturar as duas\" não é diluir: os dois eixos pagam com a mesma coisa.",
+    loops: [
+      {
+        name: "Velocidade compra a própria entrada",
+        text: "O estado abre a cada 5 ataques e, dentro dele, a blessing de nível 3 dá +105% de velocidade de ataque. Atacar mais rápido dentro da janela enche mais rápido o contador da janela seguinte. Light Arrow · Start ainda tira 2 ataques da conta. O estado financia o próximo estado.",
+      },
+      {
+        name: "A flecha também paga em velocidade",
+        text: "Light Arrow · Fashion sobe a velocidade de ataque a cada Light Arrow disparada e o talento de nível 15 sobe de novo ao terminar o encantamento. Como velocidade alimenta os dois eixos, cada flecha disparada aproxima também a próxima janela de estado.",
+      },
+      {
+        name: "Dentro do estado, ela vira outra heroína",
+        text: "60% da defesa inimiga ignorada no nível 10, dano em área com scatter, dois ricochetes com arrows and bullets, crítico subindo no mesmo alvo com Broken e dano extra no terceiro golpe com Exorcist Arrow Company. Nenhum desses efeitos existe fora da janela — o kit tem um botão liga-desliga de 4 segundos.",
+      },
+      {
+        name: "A dourada que apaga a pergunta",
+        text: "Advanced level of demon slaying torna o estado permanente. No instante em que ela sai, o contador de 5 ataques deixa de existir e todo efeito condicionado a \"em demon-killing state\" passa a ser passiva pura. É de longe a escolha que mais muda a heroína, e reordena a prioridade de tudo que veio antes.",
+      },
+      {
+        name: "Overclock é limiar, não rampa",
+        text: "Overclocking mode não dá bônus progressivo: exige 8 Light Arrows disparadas e então cada tiro passa a soltar de 1 a 5 flechas. Antes do oitavo disparo vale zero; depois dele, multiplica. Light Arrow · Mastery e Light Arrow · Start existem para encurtar a distância até esse limiar.",
+      },
+    ],
+  },
+  combos: [
+    {
+      name: "Estado permanente",
+      status: "hipótese",
+      needs: ["Advanced level of demon slaying (dourada)", "Demon-killing arrow · scatter", "Demon-killing arrows and bullets", "Demon-Banishing Upgrade (nível 10)"],
+      text: "Com o estado permanente, a arqueira passa a ter, o tempo todo, dano em área, dois ricochetes e 60% de penetração de defesa. É a rota que transforma condicionais em passivas, e por isso toda blessing \"em demon-killing state\" recolhida antes da dourada dobra de valor quando ela cai.",
+    },
+    {
+      name: "Chegar ao oitavo disparo",
+      status: "hipótese",
+      needs: ["Light Arrow · Mastery", "Light Arrow · Start", "Light Arrow · Fashion", "Overclocking mode (dourada)"],
+      text: "Mastery sobe muito a chance de disparo e Fashion converte cada disparo em velocidade, que gera mais ataques e mais chances. O conjunto existe para atravessar o limiar de 8 flechas; depois disso o Overclock devolve de 1 a 5 flechas por tiro e o ciclo se realimenta sozinho.",
+    },
+    {
+      name: "Grudar num alvo só",
+      status: "hipótese",
+      needs: ["Demon-killing arrow · Broken", "Exorcist Arrow Company", "Demon-Banishing Upgrade (nível 10)"],
+      text: "Broken sobe o crítico gradualmente atacando o mesmo alvo e Exorcist Arrow Company premia o terceiro golpe repetido. As duas querem alvo fixo e brigam com scatter e ricochete, que querem multidão. É a bifurcação prática do kit dentro da run: sala de boss pede este par, sala cheia pede o outro.",
+    },
+    {
+      name: "Starlight Arrow encurtada",
+      status: "hipótese",
+      needs: ["Demon-Banishing Upgrade (nível 20)", "Demon-Banishing Upgrade (nível 25)", "Advanced level of demon slaying (dourada)"],
+      text: "O nível 20 tira um gatilho da conta da Starlight Arrow e o 25 faz ela subir a velocidade de ataque, realimentando o ciclo. A dourada, na leitura possível do texto truncado, dispara 6 Starlight Arrows a cada 3 ataques com dano baseado na vida do inimigo. A tradução do jogo está quebrada nesse ponto e o combo é hipótese até alguém abrir o tooltip inteiro.",
+    },
+  ],
+  strengths: [
+    "Dois eixos de escala independentes, então o draft raramente fica sem caminho — se o estado não vier, as flechas vêm",
+    "Os dois eixos pagam na mesma moeda (velocidade de ataque), o que faz escolhas \"híbridas\" continuarem somando em vez de dividir",
+    "60% de penetração de defesa dentro do estado é a resposta mais direta do elenco a alvo blindado",
+    "A dourada do estado permanente converte metade do Bestiary de condicional em passiva, num salto único de patamar",
+  ],
+  weaknesses: [
+    "Sem a dourada, ela é intermitente: 4 segundos ligada a cada 5 ataques, e tudo de bom mora dentro da janela",
+    "Overclock é limiar e não rampa — antes das 8 flechas o investimento no eixo rende zero, o que o torna uma aposta ruim em run curta",
+    "Os dois eixos disputam espaço de escolha; comprometer-se tarde entrega uma arqueira medíocre nos dois",
+    "O talento de nível 5 dá velocidade que decai com o tempo, então luta longa perde o abre-alas",
+    "Nomes divergentes em quase toda linha — Demon-Slaying/Demon-killing, Speed/Swift, Holy Enchantment/sacred enchantment/demon-killing state —, o que dificulta reconhecer no draft o que já foi pego",
+  ],
   builds: [
     {
       name: "Metralhadora de Light Arrows (Overclock)",

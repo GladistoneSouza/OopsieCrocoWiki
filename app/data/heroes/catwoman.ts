@@ -147,6 +147,74 @@ export const catwoman: HeroRecord = {
       source: "Texto confirmado na tela de progressão (nível bloqueado).",
     },
   ],
+  kit: {
+    engine:
+      "O kit inteiro tem um verbo só: Hunt. Toda blessing da Mitia ou dispara Hunt, ou marca Prey para o Hunt render mais, ou converte abate em atributo permanente. Não existe uma segunda linha de dano competindo por espaço — o que faz dela a heroína mais fácil de montar do elenco vermelho e a mais fácil de estragar, porque uma run que não ofereça gatilho de Hunt não oferece nada.",
+    loops: [
+      {
+        name: "O gatilho se realimenta",
+        text: "murderous habit faz ataque básico disparar Hunt. Cada Hunt lançado soma dano em Claw Habits e, se o alvo tinha Prey, soma velocidade de ataque em Play with prey. Mais velocidade de ataque significa mais ataques básicos, que significam mais Hunt. O ciclo fecha sozinho e não depende de aliado nenhum.",
+      },
+      {
+        name: "Prey vira munição",
+        text: "mark prey põe Prey no básico, search for prey põe 3 acúmulos em todo mundo a cada 7 segundos, e a dourada wild hunt lança Hunt em todos os marcados com dano proporcional aos acúmulos. Marcar deixou de ser preparação e virou a própria fonte de dano em área.",
+      },
+      {
+        name: "A catraca do abate",
+        text: "hunting habits sobe o dano a cada morte, o talento de nível 5 torna parte desse ganho permanente e Wild Hunt no nível 20 dá chance de o abate contar duas vezes. Nada disso volta atrás dentro da run: cada inimigo morto deixa a Mitia melhor para o próximo.",
+      },
+      {
+        name: "A curva ao contrário",
+        text: "nibbling prey aumenta o crítico conforme o campo esvazia e hunting habits entrega alta velocidade de ataque e roubo de vida quando resta um único inimigo. Ela é o oposto do padrão do jogo: chega no boss mais forte do que começou a sala.",
+      },
+    ],
+  },
+  combos: [
+    {
+      name: "Execução automática a cada 7 segundos",
+      status: "hipótese",
+      needs: ["search for prey", "execute prey"],
+      text: "execute prey abre execução direta em inimigos com pouca vida quando o alvo acumula 3 marcas de Prey. search for prey aplica exatamente 3 acúmulos em todos os inimigos a cada 7 segundos. As duas juntas armam a execução no campo inteiro em pulso, sem precisar mirar nada. O casamento do número é forte demais para ser coincidência, mas nenhuma run registrada confirmou o disparo.",
+    },
+    {
+      name: "A segunda fonte dos três acúmulos",
+      status: "hipótese",
+      needs: ["Wild Hunt (nível 25)", "execute prey"],
+      text: "O talento de nível 25 termina dando 3 acúmulos de Prey a todos os inimigos — de novo o número exato que execute prey pede. Quem chegar ao 25 tem a execução armada mesmo sem a search for prey aparecer no draft.",
+    },
+    {
+      name: "Cinco Hunts de uma vez",
+      status: "hipótese",
+      needs: ["Cat Claw Magic (dourada)", "Claw Habits", "Play with prey"],
+      text: "A dourada dispara 5 Hunts consecutivos a cada 8 segundos. Como Claw Habits e Play with prey contam por lançamento, o pulso entrega cinco camadas de dano e cinco de velocidade de ataque de uma vez em vez de uma. É o maior multiplicador de acúmulo do kit.",
+    },
+    {
+      name: "Dobrar tudo no nível 10",
+      status: "hipótese",
+      needs: ["Cat Claw Divine Art (nível 10)"],
+      text: "Cada Hunt ganha chance de ser lançado outra vez em alvo aleatório. Como praticamente todo ganho da Mitia é contado por lançamento, esse talento não soma dano: multiplica a taxa de acúmulo do kit inteiro.",
+    },
+    {
+      name: "O que sobra contra um alvo só",
+      status: "hipótese",
+      needs: ["cruel habits"],
+      text: "cruel habits faz o Hunt causar dano proporcional ao HP que o alvo já perdeu. É a única peça do kit que não depende de haver muitos inimigos, e por isso a escolha obrigatória em sala de boss sem acompanhantes.",
+    },
+  ],
+  strengths: [
+    "Catraca de abate: o ganho de dano por morte é permanente dentro da run, então cada sala deixa a próxima mais barata",
+    "Curva invertida — fica mais forte conforme o campo esvazia, o que a entrega no boss no melhor momento dela",
+    "Execução por acúmulo ignora barra de vida: passar de 3 marcas de Prey vale mais que somar dano bruto",
+    "O motor fecha sozinho, sem depender de aliado, escudo ou buff externo",
+    "Kit de direção única: quase toda escolha oferecida empurra para o mesmo lugar, o que torna o draft difícil de errar",
+  ],
+  weaknesses: [
+    "Tudo passa por Hunt: uma run que não ofereça gatilho de Hunt não entrega motor nenhum, e não há linha alternativa de dano",
+    "Ela começa pior — a catraca só existe depois dos primeiros abates, e é justo na sala cheia que ela ainda não tem nada",
+    "Sala de boss sem acompanhantes é o pior cenário: sem mortes não há catraca, sem multidão não há bônus por campo vazio, e só cruel habits continua funcionando",
+    "Nenhuma redução de dano, nenhum escudo; o assassinato do nível 15 é o único sustain e depende de já estar com vida baixa",
+    "Quase nenhum valor numérico aparece na tela — o percentual da esquiva do nível 10 sai literalmente como \"x%\" —, então priorizar entre duas escolhas é comparação qualitativa",
+  ],
   builds: [
     {
       name: "Motor de Prey e execução",

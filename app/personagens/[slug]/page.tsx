@@ -179,6 +179,56 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
           </section>
         ) : null}
 
+        {hero.kit ? (
+          <section className="sticker-card">
+            <p className="eyebrow">O MOTOR</p>
+            <h2>Como as peças conversam</h2>
+            <p>{hero.kit.engine}</p>
+            {hero.kit.loops?.length ? (
+              <div className="fact-grid">
+                {hero.kit.loops.map((loop) => (
+                  <article className="info-card" key={loop.name}>
+                    <h3>{loop.name}</h3>
+                    <p>{loop.text}</p>
+                  </article>
+                ))}
+              </div>
+            ) : null}
+          </section>
+        ) : null}
+
+        {hero.strengths?.length || hero.weaknesses?.length ? (
+          <div className="character-columns">
+            {hero.strengths?.length ? (
+              <section className="sticker-card">
+                <p className="eyebrow">ONDE ELE GANHA</p>
+                <ul className="plain-list">{hero.strengths.map((item) => <li key={item}>{item}</li>)}</ul>
+              </section>
+            ) : null}
+            {hero.weaknesses?.length ? (
+              <section className="sticker-card">
+                <p className="eyebrow">ONDE ELE QUEBRA</p>
+                <ul className="plain-list pending">{hero.weaknesses.map((item) => <li key={item}>{item}</li>)}</ul>
+              </section>
+            ) : null}
+          </div>
+        ) : null}
+
+        {hero.combos?.length ? (
+          <section className="sticker-card">
+            <p className="eyebrow">COMBOS</p>
+            <h2>Cadeias que valem procurar na run</h2>
+            {hero.combos.map((combo) => (
+              <article className="build-detail" key={combo.name}>
+                <span className="chip chip-green">{combo.status}</span>
+                <h3>{combo.name}</h3>
+                <p>{combo.text}</p>
+                <ol>{combo.needs.map((item) => <li key={item}>{item}</li>)}</ol>
+              </article>
+            ))}
+          </section>
+        ) : null}
+
         <div className="character-columns">
           <section className="sticker-card">
             <p className="eyebrow">POR NÍVEL</p>

@@ -147,6 +147,61 @@ export const dragonWarrior: HeroRecord = {
         "Blessing Bestiary; também oferecida como dourada em picker de batalha nível 12 (21 ago.). As linhas de progressão dos níveis 10/20/25 acrescentam efeitos a esta ultimate (hipótese).",
     },
   ],
+  kit: {
+    engine:
+      "Dragon Soul Link é o eixo, e quase toda blessing começa com \"durante o Link\", \"por aliado vinculado\" ou \"ao receber dano\". O Dragon Warrior não converte tempo em dano: converte dano recebido em redução de dano, em HP máximo permanente e em retaliação passiva. Quem escolhe as peças dele está escolhendo quanto tempo o Link fica de pé e quantos aliados ele alcança.",
+    loops: [
+      {
+        name: "Tempo de Link vira HP permanente",
+        text: "Dragon Heart · Protection e Dragonheart · Sustain entregam um Dragonheart por segundo enquanto o Link está ativo, e cada Dragonheart aumenta permanentemente o HP máximo. Duração do Link não é conforto momentâneo: é atributo que fica. Dragonheart · Sword Intent adiciona uma segunda torneira, dando chance de Dragonheart no ataque básico.",
+      },
+      {
+        name: "Quanto mais gente no Link, mais duro ele fica",
+        text: "Link · Thick Skin aumenta bastante a própria redução de dano para cada aliado no compartilhamento, e Link · Spread vincula o time inteiro. Sozinha, Thick Skin é um bônus pequeno; com Spread, ela passa a contar o time todo. São as duas peças que mais mudam o patamar do herói, e só valem juntas.",
+      },
+      {
+        name: "Apanhar é o recurso",
+        text: "Link · Enhancement soma redução de dano a cada instância recebida, o talento de nível 5 e Link · Survival aumentam a redução conforme a vida cai, e Link · Nourishment restaura vida no HP baixo. O kit inteiro fica melhor exatamente quando ele está sendo focado — a pior hora dele é a sala em que ninguém o ataca.",
+      },
+      {
+        name: "O dano é efeito colateral",
+        text: "Dragonheart · Feedback devolve dano ao ser atingido, Dragonheart · Intimidation causa dano por segundo e reduz o ataque de quem está perto, e o nível 25 sobe a taxa de reflexão. Nenhuma dessas peças pede que ele ataque: ele machuca por estar no meio apanhando.",
+      },
+    ],
+  },
+  combos: [
+    {
+      name: "Spread antes de Thick Skin",
+      status: "hipótese",
+      needs: ["Link · Spread", "Link · Thick Skin"],
+      text: "Thick Skin conta aliados vinculados e o Link base alcança de 1 a 3. Spread leva para o time inteiro. Pegar Thick Skin sem Spread é comprar a metade fraca do combo; pegar Spread primeiro faz Thick Skin valer o dobro ou mais quando aparecer. É a única ordem de prioridade do kit que dá para afirmar sem medir número.",
+    },
+    {
+      name: "Provocar para escolher quem apanha",
+      status: "hipótese",
+      needs: ["Dragonheart · Scale Armor", "Summon Dragon (nível 10)", "Link · Enhancement"],
+      text: "Scale Armor provoca ao ativar o Link e o nível 10 faz o sopro do dragão provocar todo mundo. Puxar o aggro não é só proteger a retaguarda: é alimentar Link · Enhancement, que soma redução a cada instância de dano recebida. Provocação vira geração de recurso.",
+    },
+    {
+      name: "A segunda vida",
+      status: "hipótese",
+      needs: ["Dragon God's Blessing (dourada)", "Dragonheart · Sustain"],
+      text: "A dourada revive uma vez ao chegar a 0 e devolve muita vida. Como o HP máximo dele cresce com os Dragonhearts acumulados na run, a revivida vale mais quanto mais tempo de Link ele somou antes — a mesma blessing vale pouco no começo e muito no fim.",
+    },
+  ],
+  strengths: [
+    "Melhora sob pressão: metade do kit lê dano recebido como recurso, então ele fica mais duro na sala mais perigosa",
+    "HP máximo cresce permanentemente dentro da run via Dragonheart, então cada sala longa o deixa maior para a próxima",
+    "Contribui sem precisar de espaço de dano: provoca, reduz ataque inimigo, reflete e escuda como efeito colateral de existir",
+    "Escala com o tamanho do time — Link · Spread transforma cada aliado vivo num multiplicador de redução",
+  ],
+  weaknesses: [
+    "Dano próprio irrelevante: no ranking observado no estágio 15 ele fechou 1,88M enquanto o time passava de 20M — ele não fecha sala nenhuma sozinho",
+    "Sala em que ele não é atacado é sala em que metade do kit não liga",
+    "Depende de aliados vivos: com o time reduzido, Spread e Thick Skin perdem a base de contagem justamente quando a defesa faria falta",
+    "Nenhum valor numérico do kit aparece na tela — \"greatly increased\", \"reflect ratio\", nada quantificado —, então não dá para comparar duas escolhas defensivas a não ser por direção",
+    "Sem run dedicada registrada: toda a leitura acima vem do Bestiary e de pickers fotografados, não de desempenho medido",
+  ],
   builds: [
     {
       name: "Âncora de frontline",
@@ -192,6 +247,8 @@ export const dragonWarrior: HeroRecord = {
     { src: "/screenshots/dragon-warrior/hero-details-level-5-coop.jpg", caption: "Hero Details nível 5 em contexto co-op, com stats divergentes da ficha própria" },
   ],
   pending: [
+    "Resolver a direção do compartilhamento do Dragon Soul Link: ele absorve parte do dano dos aliados ou despeja 30% do próprio dano neles? O texto (\"compartilha 30% do dano recebido por 1 a 3 aliados\") aceita as duas leituras, e a build inteira muda conforme a resposta",
+    "Medir o ganho de Link · Thick Skin com 1, 2 e 4 aliados vinculados para saber se Link · Spread vale prioridade máxima",
     "Registrar uma run completa focada no Dragon Warrior para validar a direção de build (os registros de 21 ago. mostram pickers e ranking, mas não quais blessings foram escolhidas)",
     "Confirmar a hipótese de que as linhas de progressão dos níveis 10/20/25 são melhorias das ultimates do Bestiary, e não textos alternativos",
     "Esclarecer a ficha nível 5 divergente de 21 ago. (CP 13,7K, stats abaixo do próprio nível 1): pela cronologia, foi vista via Hero Details em co-op antes de o herói ser obtido — hipótese: ficha do Dragon Warrior de outro jogador",

@@ -60,6 +60,67 @@ export const flowerSpirit: HeroRecord = {
     { name: "Nível 25 — Abundance / Flower Rain aprimoradas", description: "Abundance: Additional damage reduction — redução de dano adicional. Flower Rain: Petal Leaf permanently increases target ATK — Petal Leaf aumenta permanentemente o ATK do alvo.", source: "Texto confirmado na tela de progressão." },
     { name: "Nível 30 — bônus de profissão", description: "Increase the DMG of this profession by 8% — aumenta em 8% o dano dos personagens da profissão Support.", source: "Texto confirmado na tela de progressão; o degrau do nível 35 aparece cortado." },
   ],
+  kit: {
+    engine:
+      "Ela tem uma habilidade só, e o Bestiary inteiro serve para alargar o alcance dela ou para pendurar coisas na Petal Leaf. A cura é o pretexto; o produto é a folha. Cada blessing nova não cria efeito novo — faz o mesmo lançamento valer mais e chegar em mais gente.",
+    loops: [
+      {
+        name: "O alcance vai abrindo",
+        text: "A habilidade base pega 2 aliados. Flower Shadow Twins soma +1 alvo. Spreading mosaic leaves dá chance de a folha pular para aliados próximos. A dourada flower rain põe folha em todo mundo a cada lançamento. É a mesma habilidade quatro vezes, cada vez cobrindo mais campo.",
+      },
+      {
+        name: "Petal Leaf é um recipiente, não um buff",
+        text: "A folha começa como aumento de ATK e vai acumulando passageiros: crítico com sharp mosaic leaves, imunidade a controle com Free of control mosaics, purificação com Protective Mosaic Leaves, redução de dano no nível 10, HP máximo permanente no nível 15 e ATK permanente no nível 25. Quem escolhe folha não está escolhendo um efeito: está engordando o pacote que todo lançamento futuro vai entregar.",
+      },
+      {
+        name: "A própria vida é moeda",
+        text: "Nourishing stamens gasta HP dela para curar de emergência um aliado em vida baixa, e The Blessing of the Flower God gasta HP dela para ressuscitar o primeiro aliado que morrer. É a única heroína do elenco cujo kit cobra a própria vida como preço — o que transforma cura em si mesma de conforto em recurso de operação.",
+      },
+      {
+        name: "O pulso de três lançamentos",
+        text: "Abundance dispara a cada três habilidades liberadas, curando e escudando o time inteiro; o nível 10 sobe 50%, o 20 dá chance de disparar duas vezes e o 25 acrescenta redução de dano. O talento de nível 5, que dá chance de a habilidade sair uma vez a mais, alimenta esse contador — frequência de lançamento vira defesa de time.",
+      },
+    ],
+  },
+  combos: [
+    {
+      name: "Pegar a chuva cedo",
+      status: "hipótese",
+      needs: ["flower rain (dourada)", "qualquer passageiro da Petal Leaf"],
+      text: "flower rain aplica a folha em todos os aliados a cada lançamento. Como a folha é um recipiente, pegá-la cedo faz cada passageiro escolhido depois nascer já valendo para o time inteiro, em vez de valer para dois aliados até a dourada aparecer. A ordem importa mais aqui do que em qualquer outra ficha do elenco.",
+    },
+    {
+      name: "A catraca do time",
+      status: "hipótese",
+      needs: ["Flower Rain (nível 25)", "flower rain (dourada)", "Petal Leaf (nível 15)"],
+      text: "No 25 a Petal Leaf passa a aumentar permanentemente o ATK do alvo e no 15 já aumentava permanentemente o HP máximo. Combinado com a dourada que aplica folha em todo mundo a cada lançamento, cada habilidade dela deixa de ser cura e vira estatística permanente para o time inteiro — o equivalente coletivo da catraca de abate da Catwoman.",
+    },
+    {
+      name: "Folha que não acaba",
+      status: "hipótese",
+      needs: ["tough mosaic / Tenacious Flower Leaf", "Flower Rain (nível 20)"],
+      text: "tough mosaic estende a duração da folha e o nível 20 dá chance de reobtê-la quando ela termina. Juntas, empurram a folha para cobertura contínua — o que importa porque metade dos passageiros dela (imunidade a controle, redução de dano) só vale se estiver ativo na hora errada.",
+    },
+    {
+      name: "Seguro contra o primeiro erro",
+      status: "hipótese",
+      needs: ["The Blessing of the Flower God", "petals guard", "Flowers in full bloom"],
+      text: "A ressurreição cobra HP dela. Quem pega o seguro precisa pagar a franquia: escudo próprio e recuperação extra existem para ela sobreviver ao preço que o próprio kit cobra. Pegar a ressurreição sem sustain é comprar um seguro que pode matar o segurado.",
+    },
+  ],
+  strengths: [
+    "É a única do elenco documentado que desfaz uma morte — The Blessing of the Flower God cobre o primeiro erro do time",
+    "Utilidade que ninguém mais entrega: purificação de efeitos negativos e imunidade a controle, ambas penduradas na mesma folha",
+    "Escala com o tamanho do time — cada aliado a mais é mais um alvo de folha e mais um alvo do pulso de Abundance",
+    "Do nível 15 em diante o buff deixa rastro permanente (HP máximo, depois ATK), então lançamento repetido vira acúmulo e não manutenção",
+  ],
+  weaknesses: [
+    "Dano próprio nenhum — ela ocupa uma vaga que não mata nada, e o time precisa fechar as salas sem ela",
+    "Cara no começo: antes de a folha ganhar passageiros, o lançamento é cura pequena em dois aliados, o que é pouco na fase em que o draft ainda está aberto",
+    "Duas das peças mais fortes cobram a própria vida, e ela não tem cura própria garantida para pagar",
+    "Nomenclatura caótica até para o padrão do jogo: mosaic leaves, Petal Leaf, Floral Leaf, variegated leaves e Flower Leaf aparecem para a mesma coisa, e Flower Spirit Bloom do nível 3 não foi ligado a nenhuma blessing conhecida",
+    "Se o time morre, ela não segura sala sozinha — o kit inteiro pressupõe alguém vivo para receber a folha",
+  ],
   builds: [
     {
       name: "Cura, escudo e ressurreição",

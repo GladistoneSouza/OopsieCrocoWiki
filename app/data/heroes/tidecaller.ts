@@ -159,6 +159,68 @@ export const tidecaller: HeroRecord = {
       source: "Blessing Bestiary",
     },
   ],
+  kit: {
+    engine:
+      "Duas economias de invocação rodando ao mesmo tempo, e elas se alimentam. De um lado o Water Elemental, descartável, um por skill lançada, cujo valor está em morrer. Do outro o Tidal Elemental, único e permanente, cujo valor está em crescer. Quase toda blessing da Tidecaller ou fabrica corpos descartáveis, ou converte a morte deles em recurso, ou engorda o colosso.",
+    loops: [
+      {
+        name: "O elemental de água nasce para morrer",
+        text: "Cada skill lançada invoca um Water Elemental. Water Arrow Mastery faz o corpo virar flecha ao morrer; Healing Mastery faz ele curar o aliado mais ferido ao morrer; o talento de nível 5 devolve mana a cada unidade que morre. Morrer é o pagamento, e a mana devolvida financia a próxima skill, que invoca o próximo corpo. O ciclo se fecha sozinho.",
+      },
+      {
+        name: "Morte no campo engorda o colosso",
+        text: "A dourada Recycle sobe dano e tamanho do Tidal Elemental a cada unidade morta, até 20 acúmulos, e a dourada tsunami solta uma onda a cada tantas mortes. tidal growth acrescenta crescimento por tempo vivo. O contador que manda no dano dela não é o relógio: é o número de corpos que caíram.",
+      },
+      {
+        name: "Onde os dois ciclos se cruzam",
+        text: "Se as unidades que ela mesma invoca contam como mortes no campo, os Water Elementals descartáveis deixam de ser dano de raspão e viram o combustível do colosso — ela fabricaria o próprio contador. As duas descrições usam a mesma expressão (\"cada unidade que morre\" / \"cada unidade no campo de batalha\") sem dizer de que lado, e a diferença muda a heroína inteira. Está na lista de pendências.",
+      },
+      {
+        name: "Duas estradas a partir do nível 10",
+        text: "Os níveis 10, 20 e 25 sempre oferecem a mesma bifurcação. Tsunami empurra para área: stun extra, três elementais por onda e onda mais barata em mortes. Reclaim empurra para o colosso: upgrades extras, crescimento melhorado e, no 25, imunidade a controle mais cura grande no acúmulo máximo. Não é escolha cosmética — são dois heróis diferentes saindo da mesma ficha.",
+      },
+    ],
+  },
+  combos: [
+    {
+      name: "Fábrica de corpos",
+      status: "hipótese",
+      needs: ["Summon Mastery", "Basic attack mastery", "tidal regeneration"],
+      text: "Summon Mastery soma +2 elementais por invocação e Basic attack mastery dá chance de invocar no ataque básico, tirando a invocação da dependência de lançar skill. Com tidal regeneration devolvendo vida aos tidal elements a cada skill, o campo fica permanentemente povoado — e cada corpo a mais é uma morte futura, ou seja, mana, cura, flecha e acúmulo de Recycle.",
+    },
+    {
+      name: "Colosso de 20 acúmulos",
+      status: "em teste",
+      needs: ["Recycle (dourada)", "tidal growth", "Tidal rebirth", "Reclaim (níveis 10/20/25)"],
+      text: "O objetivo declarado da build principal: levar o Tidal Elemental aos 20 acúmulos. tidal growth adianta o crescimento por tempo, Reclaim melhora cada degrau e o 25 fecha com imunidade a controle e cura grande no topo. Tidal rebirth existe justamente porque perder o colosso apaga a run inteira — é seguro, não dano. Já houve run de co-op com o contador observado em 20.",
+    },
+    {
+      name: "Onda barata",
+      status: "hipótese",
+      needs: ["tsunami (dourada)", "Tsunami (nível 25)", "Summon Mastery"],
+      text: "A dourada dispara a onda a cada certo número de mortes e o nível 25 reduz esse número. Se as invocações próprias contarem, encher o campo de elementais descartáveis passa a ser a forma mais barata de girar a onda — a mesma pergunta em aberto do ciclo cruzado decide se este combo existe.",
+    },
+    {
+      name: "Elemental de vidro",
+      status: "hipótese",
+      needs: ["Damage Mastery", "Water Arrow Mastery", "nível 5"],
+      text: "Damage Mastery corta a vida do water element e sobe muito o ataque dele. Numa heroína em que morrer é o pagamento, vida baixa não é defeito: acelera a flecha da Water Arrow Mastery, a cura da Healing Mastery e a mana do nível 5. É a peça mais contraintuitiva do kit e provavelmente a mais forte.",
+    },
+  ],
+  strengths: [
+    "Presença permanente no campo: ela ocupa espaço com corpos, o que divide aggro sem gastar peça defensiva",
+    "Economia fechada de mana — as mortes que ela mesma provoca pagam as próximas invocações",
+    "Escala com bagunça: quanto mais unidades morrem por segundo, mais rápido o colosso cresce e mais ondas saem",
+    "Duas rotas legítimas na mesma ficha, então o draft raramente fica sem caminho",
+    "Um corpo grande e resistente que, no topo do Reclaim, ganha imunidade a controle",
+  ],
+  weaknesses: [
+    "Rampa longa: 20 acúmulos não chegam cedo, e antes disso o colosso é um invocado comum",
+    "Boss sem acompanhantes é o pior cenário — sem mortes no campo não há Recycle nem tsunami, e sobra o dano base",
+    "Perder o Tidal Elemental apaga o acúmulo da run; Tidal rebirth cobre uma vez e mais nada",
+    "A ficha é um campo minado de nomes: Hydro/Water Arrow Mastery, Tsunami/Tidal Wave, Reclaim/Recycle, Tidal Counterstrike/tidal blowback — quatro pares divergentes só nesta heroína, o que dificulta reconhecer no draft o que já se tem",
+    "O ponto central do kit — se invocação própria conta como morte no campo — não está confirmado, e ele decide se ela é autossuficiente ou dependente do time",
+  ],
   builds: [
     {
       name: "Colosso de maré (Recycle)",
@@ -197,6 +259,8 @@ export const tidecaller: HeroRecord = {
     { src: "/screenshots/tidecaller/coop-tidal-regeneration-card.jpg", caption: "Carta de co-op com o texto completo de tidal regeneration" },
   ],
   pending: [
+    "Confirmar se a morte de invocações próprias conta para Recycle, para tsunami e para a mana do nível 5 — decide se a Tidecaller é um motor fechado ou dependente do campo inimigo",
+    "Comparar as rotas Tsunami e Reclaim numa mesma faixa de estágio; hoje só a rota do colosso tem run observada",
     "Abrir o tooltip específico de Tidal Counterstrike (confirmar ou descartar a hipótese de que é a tidal blowback)",
     "Confirmar o final possivelmente cortado do talento de nível 15 (\"...every time it attacks 5\")",
     "Verificar se existe linha de progressão no nível 50 (a ficha documentada vai até o 45)",
