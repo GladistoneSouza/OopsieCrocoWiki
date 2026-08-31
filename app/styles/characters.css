@@ -35,7 +35,7 @@
 /* ---- Página do personagem ---- */
 
 .character-page {
-  max-width: 1440px;
+  max-width: min(1760px, 96vw);
   margin: 0 auto;
   padding: 48px 24px 60px;
 }
@@ -44,14 +44,24 @@
 
 .character-layout {
   display: grid;
-  grid-template-columns: 196px minmax(0, 1fr) 320px;
-  gap: 22px;
+  grid-template-columns: 220px minmax(0, 1fr) 360px;
+  gap: 24px;
   align-items: start;
   margin-top: 22px;
 }
 
 .character-main {
   min-width: 0;
+}
+
+/* O miolo pode crescer com a tela, mas texto corrido nao: linha longa demais
+   cansa. Grades de duas colunas e galerias continuam usando a largura toda. */
+.character-main > section > p,
+.character-story p,
+.character-note p,
+.character-main .info-card p,
+.character-main .build-detail p {
+  max-width: 88ch;
 }
 
 /* a barra superior tem 74px e e sticky; as ancoras param abaixo dela */
@@ -140,48 +150,9 @@
   color: var(--ink-soft);
 }
 
-/* Duas colunas: o indice vira uma tira horizontal acima do miolo */
-@media (max-width: 1240px) {
-  .character-layout {
-    grid-template-columns: minmax(0, 1fr) 300px;
-  }
-  .character-index {
-    grid-column: 1 / -1;
-    position: static;
-    padding: 12px 14px;
-    max-height: none;
-    overflow: visible;
-  }
-  .character-index ul {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: 6px;
-    overflow-x: auto;
-    padding-bottom: 2px;
-  }
-  .character-index a {
-    white-space: nowrap;
-    border-left: 0;
-    border-bottom: 3px solid transparent;
-  }
-  .character-index a:hover,
-  .character-index a:focus-visible {
-    border-left-color: transparent;
-    border-bottom-color: var(--croco);
-  }
-}
 
-/* Coluna unica: os dados fixos vao para o fim */
-@media (max-width: 900px) {
-  .character-layout {
-    grid-template-columns: minmax(0, 1fr);
-  }
-  .character-side {
-    position: static;
-    max-height: none;
-    overflow: visible;
-  }
-}
+
+
 
 .character-header {
   max-width: 760px;
@@ -209,15 +180,33 @@
 .character-header.with-portrait {
   max-width: none;
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
-  gap: 40px;
+  /* coluna do retrato fixa: fracionaria fazia o card crescer junto com a tela
+     e o cabecalho ocupava a primeira tela inteira */
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 36px;
   align-items: center;
   background: linear-gradient(140deg, #2b2543 0%, #46346b 60%, #8a5aa8 100%);
   color: #fff;
   border: var(--border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sticker);
-  padding: 40px;
+  padding: 28px 32px;
+}
+
+.character-header.with-portrait h1 {
+  font-size: clamp(30px, 2.6vw, 40px);
+  margin: 4px 0 8px;
+}
+
+.character-header.with-portrait .aliases {
+  font-size: 11.5px;
+}
+
+.character-header.with-portrait .character-lede {
+  font-size: 14px;
+  line-height: 1.55;
+  max-width: 62ch;
+  margin-bottom: 12px;
 }
 
 .character-header.with-portrait .eyebrow,
@@ -290,10 +279,11 @@
 }
 
 .character-portrait figcaption {
+  container-type: inline-size;
   position: absolute;
-  top: 19px;
-  right: 19px;
-  left: 19px;
+  top: 15px;
+  right: 15px;
+  left: 15px;
   z-index: 2;
   display: flex;
   align-items: flex-start;
@@ -364,7 +354,11 @@
 
 .portrait-name-plate {
   flex: 0 1 auto;
-  max-width: min(62%, 230px);
+  /* com o retrato fixo em 300px, 62% cortava nomes compostos; a placa agora
+     cede a folga e encolhe a letra em vez de reticenciar */
+  max-width: min(76%, 230px);
+  font-size: clamp(8.5px, 3.1cqw, 11px);
+  letter-spacing: 0.05em;
   border-color: rgba(26, 17, 9, 0.94);
   text-align: right;
   color: #fff1c9;
@@ -1165,5 +1159,66 @@
 
   .carousel-nav.next {
     right: 8px;
+  }
+}
+
+/* ---- Quebras responsivas da ficha (no fim, para vencerem as regras base) ---- */
+
+/* Duas colunas: o indice vira uma tira horizontal acima do miolo */
+@media (max-width: 1240px) {
+  .character-layout {
+    grid-template-columns: minmax(0, 1fr) 300px;
+  }
+  .character-index {
+    grid-column: 1 / -1;
+    position: static;
+    padding: 12px 14px;
+    max-height: none;
+    overflow: visible;
+  }
+  .character-index ul {
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 6px;
+    overflow-x: auto;
+    padding-bottom: 2px;
+  }
+  .character-index a {
+    white-space: nowrap;
+    border-left: 0;
+    border-bottom: 3px solid transparent;
+  }
+  .character-index a:hover,
+  .character-index a:focus-visible {
+    border-left-color: transparent;
+    border-bottom-color: var(--croco);
+  }
+}
+
+/* Coluna unica: os dados fixos vao para o fim */
+@media (max-width: 900px) {
+  .character-header.with-portrait {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+  .character-header.with-portrait .character-portrait {
+    max-width: 300px;
+    justify-self: center;
+  }
+  .character-header.with-portrait {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+  .character-header.with-portrait .character-portrait {
+    max-width: 300px;
+    justify-self: center;
+  }
+  .character-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .character-side {
+    position: static;
+    max-height: none;
+    overflow: visible;
   }
 }
