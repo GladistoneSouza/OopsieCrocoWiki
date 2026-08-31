@@ -12,7 +12,7 @@ export const catwoman: HeroRecord = {
   fieldNote:
     "Ficha documentada no nível 3, com Blessing Bestiary de Hunt completo e progressão transcrita até o nível 30. O kit inteiro empurra na mesma direção: acumular marcas de Prey e abates para escalar dano, velocidade de ataque e crítico conforme o campo esvazia — potencial de snowball em runs longas, ainda sem teste prático.",
   image: "/screenshots/sp-heroes/catwoman-profile.jpg",
-  artImage: "/screenshots/art/catwoman.jpg",
+  artImage: "/screenshots/art/catwoman-card.jpg",
   identity: [
     "Título exibido: SP Catwoman",
     "Nome exibido na ficha: Mitia",

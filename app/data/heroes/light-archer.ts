@@ -12,7 +12,7 @@ export const lightArcher: HeroRecord = {
   fieldNote:
     "Ficha documentada no nível 1 com a progressão visível até o nível 25 (níveis acima de 3 bloqueados na conta). O talento do nível 8, antes cortado, foi identificado: Light Arrow · Mastery. O Blessing Bestiary de Demon-Banishing Holy Arrow foi capturado completo (10 blessings + 2 douradas). Nenhuma run com a heroína foi registrada ainda.",
   image: "/screenshots/sp-heroes/light-archer-profile.jpg",
-  artImage: "/screenshots/art/light-archer.jpg",
+  artImage: "/screenshots/art/light-archer-card.jpg",
   identity: [
     "Título exibido: SP Light Archer",
     "Nome exibido na ficha: Veliana Purple Flame",

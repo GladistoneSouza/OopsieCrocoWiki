@@ -677,7 +677,7 @@
   },
   {
     "src": "img_game/herois-arte/2026-08-30_23-47-01.jpg",
-    "out": "art/dragon-warrior.jpg",
+    "out": "art/dragon-warrior-card.jpg",
     "crop": [
       213,
       423,
@@ -689,7 +689,7 @@
   },
   {
     "src": "img_game/herois-arte/2026-08-30_23-43-28.jpg",
-    "out": "art/succubus.jpg",
+    "out": "art/succubus-card.jpg",
     "crop": [
       213,
       423,
@@ -701,7 +701,7 @@
   },
   {
     "src": "img_game/herois-arte/2026-08-30_23-50-05.jpg",
-    "out": "art/red-queen.jpg",
+    "out": "art/red-queen-card.jpg",
     "crop": [
       213,
       423,
@@ -713,7 +713,7 @@
   },
   {
     "src": "img_game/herois-arte/2026-08-30_23-52-16.jpg",
-    "out": "art/tidecaller.jpg",
+    "out": "art/tidecaller-card.jpg",
     "crop": [
       213,
       423,
@@ -725,7 +725,7 @@
   },
   {
     "src": "img_game/herois-arte/2026-08-30_23-55-10.jpg",
-    "out": "art/light-archer.jpg",
+    "out": "art/light-archer-card.jpg",
     "crop": [
       213,
       423,
@@ -737,7 +737,7 @@
   },
   {
     "src": "img_game/herois-arte/2026-08-30_23-57-05.jpg",
-    "out": "art/flower-spirit.jpg",
+    "out": "art/flower-spirit-card.jpg",
     "crop": [
       213,
       423,
@@ -749,7 +749,7 @@
   },
   {
     "src": "img_game/herois-arte/2026-08-30_23-58-48.jpg",
-    "out": "art/catwoman.jpg",
+    "out": "art/catwoman-card.jpg",
     "crop": [
       213,
       423,
@@ -761,7 +761,7 @@
   },
   {
     "src": "img_game/herois-ficha/2026-08-25_23-36-01.jpg",
-    "out": "art/kazers-darkblade.jpg",
+    "out": "art/kazers-darkblade-card.jpg",
     "crop": [
       213,
       423,
@@ -773,7 +773,7 @@
   },
   {
     "src": "img_game/herois-ficha/2026-08-30_09-10-28.jpg",
-    "out": "art/mia-morning-dew.jpg",
+    "out": "art/mia-morning-dew-card.jpg",
     "crop": [
       213,
       423,
@@ -785,7 +785,7 @@
   },
   {
     "src": "img_game/herois-ficha/2026-08-30_09-10-43.jpg",
-    "out": "art/holy-knight.jpg",
+    "out": "art/holy-knight-card.jpg",
     "crop": [
       213,
       423,
@@ -797,7 +797,7 @@
   },
   {
     "src": "img_game/herois-ficha/2026-08-30_09-11-05.jpg",
-    "out": "art/phantom.jpg",
+    "out": "art/phantom-card.jpg",
     "crop": [
       213,
       423,
@@ -809,7 +809,7 @@
   },
   {
     "src": "img_game/herois-ficha/2026-08-30_09-11-30.jpg",
-    "out": "art/star-mage.jpg",
+    "out": "art/star-mage-card.jpg",
     "crop": [
       213,
       423,
@@ -821,7 +821,7 @@
   },
   {
     "src": "img_game/herois-ficha/2026-08-30_09-32-37.jpg",
-    "out": "art/onmyoji.jpg",
+    "out": "art/onmyoji-card.jpg",
     "crop": [
       213,
       423,

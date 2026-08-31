@@ -10,7 +10,7 @@ export const kazersDarkblade: HeroRecord = {
   summary: "Frontliner SP que transforma Blade Storm em Fear, dano contínuo, redução de cura e sustain, podendo multiplicar os giros por meio de clones.",
   fieldNote: "Confirmado no nível 15. Em uma observação antiga, a cura durante Blade Storm estava bloqueada; no Bestiary atual, Bloody Swordsmanship aparece disponível e nas runs posteriores sua cura foi observada funcionando. A disponibilidade depende da progressão e das escolhas de cada run.",
   image: "/screenshots/sword-demon/profile-level-15.jpg",
-  artImage: "/screenshots/art/kazers-darkblade.jpg",
+  artImage: "/screenshots/art/kazers-darkblade-card.jpg",
   stats: [
     "Nível 15 (23 ago.): poder 25.977 · ataque 19,43K · HP 354,22K · defesa 12,06K · Dano Crítico global +24,0% · fragmentos 10/60",
     "Nível observado: 15",

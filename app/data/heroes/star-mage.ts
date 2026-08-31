@@ -12,7 +12,7 @@ export const starMage: HeroRecord = {
   fieldNote:
     "Ficha registrada no nível 9 (30 jul.), com o marco de nível 8 já obtido. Painel de blessings em batalha visto no nível 10 (17 ago.) confirma 7 blessings da linha Starfall/Star Waterfall. A descrição de seleção in-run resume o kit como \"Starfall / High Area Damage Spells\".",
   image: "/screenshots/star-mage/profile-level-9.jpg",
-  artImage: "/screenshots/art/star-mage.jpg",
+  artImage: "/screenshots/art/star-mage-card.jpg",
   identity: [
     "Título exibido: SSR Star Mage",
     "Nome exibido na ficha: Liana · Nightrose",
