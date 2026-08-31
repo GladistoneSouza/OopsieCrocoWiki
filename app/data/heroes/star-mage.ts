@@ -25,6 +25,18 @@ export const starMage: HeroRecord = {
     "No primeiro print da ficha o poder aparecia parcialmente coberto (~8362) e o HP cortado (\"…24K\"); o segundo print confirmou poder 8.362, ATK 7697 e HP 93,24K.",
   ],
   levelSkills: [
+    { name: "Bestiary — Comet · Continuous Hair", description: "A quantidade de cometas invocados pela habilidade Starfall aumenta em 3.", source: "Blessing Bestiary, página 1 (30 jul. 2026)." },
+    { name: "Bestiary — Star Falls · Diffusion", description: "A Star Waterfall passa a causar dano a todos os inimigos, em vez de apenas aos 3 alvos da habilidade base.", source: "Blessing Bestiary, página 1 (30 jul. 2026)." },
+    { name: "Bestiary — Comet · Automatic", description: "A cada 3 segundos, invoca 1 cometa automaticamente, sem gastar lançamento.", source: "Blessing Bestiary, página 1 (30 jul. 2026)." },
+    { name: "Bestiary — Star Falls · Penetration", description: "Cada vez que a Star Waterfall é disparada, aumenta a penetração de defesa dela; o valor está cortado no próprio texto do jogo.", source: "Blessing Bestiary, página 1 (30 jul. 2026)." },
+    { name: "Bestiary — Comet · Power", description: "Aumenta significativamente o dano do cometa.", source: "Blessing Bestiary, página 2 (30 jul. 2026)." },
+    { name: "Bestiary — Star Waterfall · Singing", description: "Quando a Star Waterfall é liberada, a velocidade de conjuração da Starfall é acelerada.", source: "Blessing Bestiary, página 2 (30 jul. 2026)." },
+    { name: "Bestiary — Comet · Charge", description: "Quando o cometa acerta, há chance de aumentar levemente o próprio dano.", source: "Blessing Bestiary, página 2 (30 jul. 2026)." },
+    { name: "Bestiary — Star waterfall · continuous hair", description: "A Star Waterfall tem probabilidade de acertar 3 vezes.", source: "Blessing Bestiary, página 2 (30 jul. 2026)." },
+    { name: "Bestiary — Comet · Echo", description: "Quando o cometa acerta, há chance de gerar 1 cometa adicional.", source: "Blessing Bestiary, página 3 (30 jul. 2026)." },
+    { name: "Bestiary — Star Falls · Affinity", description: "A probabilidade de geração da Star Waterfall aumenta muito.", source: "Blessing Bestiary, página 3 (30 jul. 2026)." },
+    { name: "Bestiary — super comet (dourada)", description: "A cada 5 cometas invocados, cometas gigantes caem causando dano em área igual a 250% do poder de ataque.", source: "Blessing Bestiary, página 3 (30 jul. 2026)." },
+    { name: "Bestiary — Milky Way Fall (dourada)", description: "Depois de invocar 3 vezes a Star Waterfall, invoca um campo de mana galáctico que causa dano igual a 75% do poder de ataque a todos os inimigos dentro do campo, a cada segundo.", source: "Blessing Bestiary, página 3 (30 jul. 2026)." },
     {
       name: "Starfall (habilidade base)",
       description:
@@ -109,6 +121,61 @@ export const starMage: HeroRecord = {
       source: "Blessing Bestiary",
     },
   ],
+  kit: {
+    engine:
+      "Duas famílias que se produzem em cadeia: o cometa e a Star Waterfall. A habilidade base invoca 2 cometas e, depois da invocação, tem chance de disparar a cachoeira. Cometa é o insumo, cachoeira é o produto — e como cada dourada conta uma das duas coisas, investir em cometa carrega os dois contadores enquanto investir em cachoeira carrega um. É a mesma assimetria da Red Queen, na outra maga do elenco.",
+    loops: [
+      {
+        name: "Cometa gera cometa",
+        text: "Comet · Continuous Hair soma 3 por lançamento, Comet · Automatic entrega 1 a cada 3 segundos sem gastar habilidade e Comet · Echo dá chance de um acerto gerar mais um. As três aumentam a mesma variável, que é quantos cometas existem — e cada cometa é uma chance a mais de a cachoeira sair.",
+      },
+      {
+        name: "A cachoeira acelera a própria fonte",
+        text: "Star Waterfall · Singing acelera a conjuração da Starfall toda vez que a cachoeira é liberada. Conjurar mais rápido produz mais cometas, que produzem mais cachoeiras, que aceleram de novo. É o único ciclo fechado de aceleração documentado no elenco dourado, e a wiki já o listava como hipótese antes do Bestiary ser transcrito.",
+      },
+      {
+        name: "Affinity é a chave do ciclo",
+        text: "Todo o motor depende de um proc — a chance de a cachoeira sair depois da invocação. Star Falls · Affinity aumenta muito essa probabilidade, o que a torna a peça de maior alavancagem da ficha: não soma dano, aumenta a frequência com que o ciclo inteiro gira.",
+      },
+      {
+        name: "Duas douradas, dois contadores",
+        text: "super comet conta cometas — a cada 5, cometas gigantes com 250% do ataque em área. Milky Way Fall conta cachoeiras — depois de 3, um campo de mana galáctico com 75% do ataque por segundo em todos os inimigos dentro dele. Como cometa produz cachoeira, a rota do cometa alimenta os dois contadores ao mesmo tempo.",
+      },
+    ],
+  },
+  combos: [
+    {
+      name: "Ciclo Affinity e Singing",
+      status: "hipótese",
+      needs: ["Star Falls · Affinity", "Star Waterfall · Singing", "Comet · Continuous Hair"],
+      text: "Affinity aumenta a chance de a cachoeira sair, Singing faz cada cachoeira acelerar a próxima conjuração e Continuous Hair engorda cada conjuração em 3 cometas. As três fecham o laço: mais chance, mais rápido, com mais insumo. É o eixo central da ficha.",
+    },
+    {
+      name: "Encher o contador do cometa",
+      status: "hipótese",
+      needs: ["Comet · Continuous Hair", "Comet · Automatic", "Comet · Echo", "super comet (dourada)"],
+      text: "A dourada dispara a cada 5 cometas invocados. Com +3 por lançamento, 1 automático a cada 3 segundos e chance de gerar mais um no acerto, o limiar de 5 deixa de ser um marco ocasional e vira cadência. E cada cometa ainda é uma chance a mais de girar a cachoeira.",
+    },
+    {
+      name: "Transformar três alvos em todos",
+      status: "hipótese",
+      needs: ["Star Falls · Diffusion", "Star waterfall · continuous hair", "Milky Way Fall (dourada)"],
+      text: "A cachoeira base pega 3 inimigos; Diffusion faz pegar todos e continuous hair dá probabilidade de acertar 3 vezes. Com o campo de mana da Milky Way Fall por cima, a rota da cachoeira vira dano de área persistente em vez de picos em alvos escolhidos.",
+    },
+  ],
+  strengths: [
+    "Ciclo de aceleração fechado — cada cachoeira encurta o tempo da próxima conjuração, coisa que nenhum outro dourado documentado tem",
+    "Duas douradas com contadores independentes, e a rota do cometa alimenta as duas de uma vez",
+    "Dano em área puro e escalável: Diffusion sozinha transforma um efeito de 3 alvos em efeito de campo",
+    "Comet · Automatic entrega insumo sem gastar lançamento, o que mantém o motor girando mesmo com mana curta",
+  ],
+  weaknesses: [
+    "O motor inteiro pende de um proc: se a cachoeira não sai, nada acelera e a ficha vira dois cometas fracos por lançamento",
+    "Nenhuma peça defensiva, nenhuma mobilidade e nenhum controle no Bestiary inteiro",
+    "A nomenclatura é a mais confusa da wiki: Starfall é ao mesmo tempo a habilidade, o efeito disparado e o prefixo de uma família de blessings, e Star Falls e Star Waterfall alternam para a mesma coisa",
+    "O valor da Star Falls · Penetration está cortado no próprio jogo, então não dá para saber se ela compete com as peças de frequência",
+    "Nenhuma run com a Star Mage foi observada; toda a leitura vem do Bestiary e da ficha no nível 9",
+  ],
   builds: [
     {
       name: "Enxame de cometas",
@@ -160,6 +227,7 @@ export const starMage: HeroRecord = {
     { src: "/screenshots/star-mage/hero-exchange.jpg", alt: "Hero Exchange com Star Mage por 500 Hero Coins (50% off)" },
   ],
   pending: [
+    "Confirmar se \"Starfall\", \"Star Falls\" e \"Star Waterfall\" são de fato a mesma coisa — o jogo usa os três para a habilidade, para o efeito disparado e para a família de blessings",
     "Obter o valor de penetração de defesa de Star Falls · Penetration — o número está cortado no próprio texto do jogo.",
     "Ler o texto completo do marco de nível 10 Super Comet (\"has a cha[nce] to release 1 extra …\" está cortado no print).",
     "Confirmar se Starfall, Star Waterfall, Star Falls e \"Star waterfall\" designam a mesma mecânica ou mecânicas distintas (cometas vs. cachoeira) — as grafias variam entre ficha, tooltip e Bestiary.",

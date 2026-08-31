@@ -115,6 +115,61 @@ export const miaMorningDew: HeroRecord = {
       source: "Os seis breakpoints foram confirmados nas telas de progressão.",
     },
   ],
+  kit: {
+    engine:
+      "O Elemental de Fogo dura 8 segundos e vale mais morto que vivo. A morte dele causa dano por conta própria e, a partir do nível 15, aumenta o dano de todos os aliados. Isso reposiciona a heroína: ela não é invocadora de corpos, é uma fábrica de mortes programadas, e o produto final é buff de time.",
+    loops: [
+      {
+        name: "O elemental é um pavio",
+        text: "Deathrattle · Self-destruction faz o elemental causar dano a inimigos aleatórios ao morrer, e os 8 segundos de vida garantem que ele vai morrer. O ciclo é invocar, esperar, colher — e a espera é fixa, o que torna a frequência de invocação a única variável sob controle dela.",
+      },
+      {
+        name: "Dividir dobra as mortes futuras",
+        text: "Wildfire Rebirth aumenta a chance de divisão no nível 10 e, no 20, faz o elemental se dividir em dois. Cada divisão não dobra o dano presente: dobra a quantidade de mortes que vão acontecer, e é a morte que paga.",
+      },
+      {
+        name: "O nível 15 transforma dano em suporte",
+        text: "Para cada Elemental de Fogo que morre, o dano de todos os aliados aumenta. Combinado com a divisão, a rota Wildfire Rebirth deixa de ser a rota de dano dela e passa a ser a rota de amplificação do time — mais corpos, mais mortes, mais camadas de buff coletivo.",
+      },
+      {
+        name: "Duas estradas no 10 e no 20",
+        text: "Death is Only the Beginning empurra para dano direto: a ultimate começa com 3 bolas de fogo e no 20 elas ricocheteiam uma vez a mais. Wildfire Rebirth empurra para população: mais divisão, mais mortes, mais buff coletivo. São funções diferentes saindo da mesma ficha, e a escolha deveria seguir o time, não o gosto.",
+      },
+    ],
+  },
+  combos: [
+    {
+      name: "Fábrica de mortes",
+      status: "em teste",
+      needs: ["Wildfire Rebirth (nível 10)", "Wildfire Rebirth (nível 20)", "buff por morte (nível 15)"],
+      text: "Divisão em dois eleva o número de elementais que vão morrer, e cada morte sobe o dano de todos os aliados. Escolher esta rota é escolher ser suporte de dano — o ganho aparece no ranking dos outros heróis, não no dela.",
+    },
+    {
+      name: "Rota das bolas de fogo",
+      status: "confirmado",
+      needs: ["Fireballs (nível 5)", "Death is Only the Beginning (nível 10)", "Death is Only the Beginning (nível 20)"],
+      text: "Bolas ao invocar, mais 3 no início da ultimate e ricochete extra no 20. É a rota registrada como confirmada na wiki e a que concentra o dano nela mesma, em vez de distribuí-lo pelo time.",
+    },
+    {
+      name: "Acelerada por fora",
+      status: "hipótese",
+      needs: ["Yang · Rapid (Onmyoji)", "qualquer rota da Mia"],
+      text: "Como o único parâmetro sob controle dela é a frequência de invocação, reduzir a recarga das habilidades dela multiplica tudo: mais elementais, mais mortes, mais bolas de fogo e mais camadas do buff de nível 15. É a heroína do elenco que mais ganha com uma Onmyoji no time.",
+    },
+  ],
+  strengths: [
+    "Converte invocação em buff de time — poucos heróis do elenco documentado aumentam o dano de todos os aliados",
+    "A divisão se realimenta: mais corpos hoje significam mais mortes e mais buff em oito segundos",
+    "Duas rotas com funções realmente distintas, uma egoísta e uma coletiva, escolhidas nos mesmos degraus",
+    "O ciclo é curto e previsível — oito segundos —, o que torna o desempenho dela estável em vez de depender de sorte de draft",
+  ],
+  weaknesses: [
+    "O buff de time vem de mortes, então precisa de reinvestimento constante: parar de invocar apaga o efeito em oito segundos",
+    "É a ficha mais rasa entre as douradas com print — doze entradas e nenhum Blessing Bestiary capturado",
+    "Sem controle sobre o alvo: as bolas de fogo e a explosão de morte vão para inimigos aleatórios",
+    "Nenhuma peça defensiva no kit documentado, e os elementais não seguram aggro de forma confiável",
+    "A divergência Enhance • Burn contra Strengthen • Incinerate no nível 8 continua sem resolução, e não se sabe qual é o nome da blessing real",
+  ],
   builds: [
     {
       name: "Rota Death is the Beginning",

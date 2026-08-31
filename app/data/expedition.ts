@@ -221,7 +221,7 @@ export const upgradeInputs = {
     },
   ],
   observed:
-    "Leituras do rodapé, na ordem ALL · EXP da classe · fragmentos: Sword Demon SP em 26 ago. com 8 · 1.163/1.680 · 10/60, e o mesmo herói em 30 ago. com 1.549 · 2.439/1.680 · 10/60 — a barra de EXP já transbordava e o gargalo era o fragmento. A Mia SSR no nível 16 pedia 1.536 de EXP e 60 fragmentos. O requisito de EXP muda por herói e por nível; três pontos não desenham a curva.",
+    "Leituras do rodapé, na ordem ALL · EXP da classe · fragmentos: Sword Demon SP em 26 ago. com 8 · 1.163/1.680 · 10/60, e o mesmo herói em 30 ago. com 1.549 · 2.439/1.680 · 10/60 — a barra de EXP já transbordava e o gargalo era o fragmento. A Mia SSR no nível 16 pedia 1.536 de EXP e 60 fragmentos. As fichas da Succubus deram os dois degraus baixos: 120 de EXP com 5 fragmentos por nível, e 420 de EXP com 10 fragmentos por nível. Os quatro pontos — 120, 420, 1.536 e 1.680 — sobem junto com a faixa de fragmento, o que sugere uma segunda curva paralela; quatro pontos não a desenham.",
   consequence:
     "Isso mexe com a conta de espalhar contra concentrar. Os oito SP estão em oito classes diferentes, então subir todos em paralelo saca de oito reservas separadas ao mesmo tempo, e só o All Class Exp atravessa a fronteira. Enquanto os heróis estão em nível baixo o EXP pedido é pequeno e a conta do fragmento manda; se as reservas de classe acompanham quatro times subindo juntos é coisa que ainda não foi medida.",
   gallery: [

@@ -278,6 +278,78 @@ export const lilith: HeroRecord = {
       source: "Blessing Bestiary (pág. 3, lendária).",
     },
   ],
+  kit: {
+    engine:
+      "Nightmare não é dano: é um crachá. Quase toda blessing da Lilith começa com \"inimigos carregando Nightmare\" — recebem mais dano, curam menos, batem menos, não atacam, tomam dreno, explodem em área. O dano dela é uma consequência de quantos inimigos estão marcados, não de quanto ela ataca. Por isso espalhar vale mais que somar, e por isso ela é a heroína do elenco em que a ordem das escolhas mais muda o resultado.",
+    loops: [
+      {
+        name: "Lançar paga o próximo lançamento",
+        text: "O talento de nível 5 devolve vida a cada Nightmare aplicado e o de nível 15 devolve mana. A partir daí ela financia a própria habilidade: aplicar gera o recurso de aplicar de novo. É o único motor do elenco documentado que fecha em HP e mana ao mesmo tempo, e é o que permite a ela jogar sem apoio.",
+      },
+      {
+        name: "O crachá carrega passageiros",
+        text: "Septic Curse corta cura, weaken curse corta o dano do inimigo, paralyzing curse tira o ataque dele, Crazy Nightmare o transforma em bomba de área, Soul-Draining Curse drena a cada 8 segundos e Dream Erosion faz ele receber muito mais dano. Nenhuma dessas peças tem valor sozinha — todas leem a mesma marca. Quantos inimigos estão marcados é a variável que multiplica o kit inteiro.",
+      },
+      {
+        name: "Espalhar é a estatística de dano dela",
+        text: "twin nightmare joga o Nightmare em mais um inimigo, a dourada eternal reincarnation transfere a marca para outro alvo quando ela termina e o talento de nível 10 aumenta essa chance. Overtime nightmare estende a duração. Juntas, transformam cobertura pontual em cobertura permanente do campo — e cada passageiro escolhido antes passa a valer para todo mundo.",
+      },
+      {
+        name: "O término também é um evento",
+        text: "Nightmare Reincarnation, no nível 20, faz o Nightmare causar dano ao acabar, e a dourada transfere a marca justamente nesse instante. Ou seja, o fim da marca paga duas vezes. Isso cria uma tensão real com Overtime nightmare, que adia esse pagamento ao esticar a duração — as duas peças são boas e puxam para lados opostos.",
+      },
+      {
+        name: "Debuff é a defesa dela",
+        text: "Possession Nightmare reduz o dano que ela recebe ao aplicar a marca, weaken curse baixa o dano do inimigo e paralyzing curse o impede de atacar. Ela não tem escudo nem redução direta: sobrevive porque o campo marcado bate menos. Some-se a isso a vida do nível 5 e a bloodthirsty curse, e ela sustenta a própria frontline.",
+      },
+    ],
+  },
+  combos: [
+    {
+      name: "Cobertura antes de passageiro",
+      status: "em teste",
+      needs: ["twin nightmare", "Overtime nightmare", "eternal reincarnation (dourada)"],
+      text: "Como cada passageiro lê \"inimigos carregando Nightmare\", ampliar a cobertura primeiro faz toda escolha seguinte nascer valendo para o campo inteiro. Pegar três passageiros com a marca em um inimigo só é o erro clássico da ficha dela.",
+    },
+    {
+      name: "O motor que não seca",
+      status: "confirmado",
+      needs: ["nível 5", "nível 15", "bloodthirsty curse"],
+      text: "Vida por aplicação no 5, mana por aplicação no 15 e vida por ataque em alvo marcado com a bloodthirsty curse. Os três fecham o ciclo: ela lança para se curar, se cura para poder lançar. É o que a torna autossuficiente sem ocupar vaga de suporte no time.",
+    },
+    {
+      name: "O multiplicador no meio",
+      status: "em teste",
+      needs: ["Dream Erosion (nível 10)", "cobertura já estabelecida"],
+      text: "Dream Erosion faz inimigos marcados receberem dano muito aumentado — não soma dano, multiplica todo o resto. Faz pouco antes de haver cobertura e faz muito depois dela, o que a coloca no meio da ordem de prioridade, não no começo.",
+    },
+    {
+      name: "Duração contra término",
+      status: "hipótese",
+      needs: ["Overtime nightmare", "Nightmare Reincarnation (nível 20)", "eternal reincarnation (dourada)"],
+      text: "Esticar a marca mantém os passageiros ativos por mais tempo; encurtá-la faz o dano de término e a transferência dispararem com mais frequência. As duas rotas são legítimas e mutuamente contrárias — e nenhuma run registrada isolou qual rende mais.",
+    },
+    {
+      name: "Trancar quem se cura",
+      status: "em teste",
+      needs: ["Septic Curse", "Eternal Reincarnation (nível 10)"],
+      text: "Septic Curse já corta a cura de quem carrega a marca e o talento de nível 10 fortalece essa redução além de espalhar mais. Contra boss que se recupera, a dupla vale mais que qualquer aumento de dano bruto — e faz o mesmo trabalho da Fear into the Soul do Kazres, o que os torna redundantes num mesmo time.",
+    },
+  ],
+  strengths: [
+    "Motor fechado em HP e mana a partir do nível 15: ela paga a própria habilidade e não precisa de suporte dedicado",
+    "O Nightmare é uma plataforma — cada blessing nova entra como passageiro e passa a valer para todo inimigo marcado",
+    "Sobrevive por negação: quem carrega a marca bate menos, cura menos e às vezes nem ataca, o que faz o debuff funcionar como armadura",
+    "Espalhamento e transferência convertem uma habilidade de alvo único em pressão de campo inteiro",
+    "É a ficha mais completa do elenco dourado: Bestiary inteiro transcrito, gemas exclusivas registradas e trinta imagens de evidência",
+  ],
+  weaknesses: [
+    "A habilidade base escolhe um inimigo aleatório — ela não decide quem recebe a marca, o que atrapalha focar um alvo específico",
+    "Rampa: sem cobertura, os passageiros valem quase nada, e a cobertura leva tempo para se estabelecer",
+    "Duas peças com nomes idênticos e efeitos diferentes (Dream Erosion aparece como dourada e como talento de níveis 10 e 20) tornam o draft dela confuso na tela",
+    "Sem escudo, sem redução direta e sem mobilidade: se o campo não ficar marcado, ela não tem defesa nenhuma",
+    "A tensão entre esticar e encerrar o Nightmare nunca foi medida, então metade das prioridades da build continua sendo escolha por gosto",
+  ],
   builds: [
     {
       name: "Nightmare ofensivo",

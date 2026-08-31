@@ -115,6 +115,67 @@ export const holyKnight: HeroRecord = {
       source: "Blessing Bestiary",
     },
   ],
+  kit: {
+    engine:
+      "Dois sistemas encaixados: a marca, que acumula e vira defesa, e o estado Holy Wings of Protection, que é a janela em que quase tudo acontece. A marca sobe a redução de dano até 5 camadas; o estado gera marcas, escudos e cura enquanto dura. Ler esta ficha é decidir quanto tempo o estado fica de pé e até que teto a marca pode subir.",
+    loops: [
+      {
+        name: "O estado fabrica marca, a marca fabrica defesa",
+        text: "Mark · Haste entrega 1 camada a cada 3 segundos dentro do estado e Imprint · Resonance dá chance de marca no ataque normal. Cada camada sobe a redução de dano. Manter o estado de pé é, literalmente, gerar armadura ao longo do tempo.",
+      },
+      {
+        name: "Marca também vira escudo",
+        text: "Mark · Shield concede um escudo a cada camada ganha. Combinada com Mark · Haste, a taxa de geração de marca deixa de ser progresso rumo a um teto e passa a ser vazão contínua de escudo — o teto de 5 camadas para de ser um limite e vira uma esteira.",
+      },
+      {
+        name: "O teto de 5 é uma trava",
+        text: "Imprint · Free of Control exige 10 camadas para dar imunidade a controle, mas o teto base é 5. Sem Imprint · Sublimation, que soma +5 ao limite, a imunidade é inalcançável. É a única dependência dura entre duas blessings encontrada em toda a wiki de personagens — supondo que Sacred Crest Mark, Holy Emblem Mark e holy symbol mark sejam a mesma marca, o que os textos sugerem mas nunca afirmam.",
+      },
+      {
+        name: "Defesa vira ataque nas 5 camadas",
+        text: "Spear of Judgment torna os ataques normais em dano de área ao atingir 5 níveis de marca, e a dourada Holy Light Burst converte a entrada no estado em escudo mais dano alto em volta. A partir do meio da run ela para de só absorver e começa a limpar.",
+      },
+    ],
+  },
+  combos: [
+    {
+      name: "Sublimation antes de Free of Control",
+      status: "hipótese",
+      needs: ["Imprint · Sublimation", "Imprint · Free of Control"],
+      text: "A imunidade a controle pede 10 camadas e o teto base é 5. Pegar Free of Control sem antes somar +5 ao limite é comprar uma peça que nunca liga. É a checagem mais concreta que a wiki de personagens tem para oferecer no meio de um draft.",
+    },
+    {
+      name: "Estado longo, marca contínua",
+      status: "hipótese",
+      needs: ["Shelter · Continuation", "Mark · Haste", "Shelter · Cure"],
+      text: "Mais 3 segundos de estado significam mais uma camada pela Mark · Haste e mais segundos de chance de cura pela Shelter · Cure. As três leem o mesmo relógio, então esticar o estado melhora as outras duas sem custar escolha.",
+    },
+    {
+      name: "Esteira de escudo",
+      status: "hipótese",
+      needs: ["Mark · Shield", "Mark · Haste", "Imprint · Resonance"],
+      text: "Com escudo por camada ganha e duas fontes gerando camada — o relógio de 3 segundos e o ataque normal —, a defesa dela deixa de depender do teto e passa a depender de vazão. É a rota que sustenta frontline em luta longa.",
+    },
+    {
+      name: "Cobrir o aliado mais fraco",
+      status: "hipótese",
+      needs: ["Shelter · Guard", "Holy Light Burst (nível 10)"],
+      text: "Shelter · Guard escuda ela e o aliado com menos vida ao entrar no estado, e o nível 10 aumenta o HP máximo e soma uma provocação. Juntos formam o único pacote do elenco documentado que protege um aliado específico enquanto puxa o aggro do resto.",
+    },
+  ],
+  strengths: [
+    "Defesa em camadas de tipos diferentes — redução de dano, escudo, cura e imunidade a controle — o que a torna difícil de derrubar por uma única via",
+    "Protege um aliado nomeado, não só a si mesma: Shelter · Guard cobre quem estiver com menos vida",
+    "Converte defesa em ofensa ao chegar a 5 camadas, com ataques normais virando dano em área",
+    "O acúmulo de marca é contínuo e previsível, sem depender de sorte de proc para a função principal",
+  ],
+  weaknesses: [
+    "A peça mais forte do kit — imunidade a controle — está travada atrás de um teto que exige outra blessing específica para ser alcançado",
+    "Tudo de bom mora dentro do estado; fora dele o kit inteiro fica ocioso",
+    "A pior confusão de nomes da wiki: Sacred Crest Mark, Holy Emblem Mark, holy symbol mark e Sacred Insignia parecem ser a mesma coisa, Shelter e Asylum também, e Holy Light Burst existe como dourada e como talento de nível 10 com textos diferentes",
+    "Dano próprio baixo até as 5 camadas, então a primeira metade da run ela contribui pouco além de absorver",
+    "Vários valores não aparecem: a cura da Shelter · Cure, o tamanho dos escudos e a redução por camada",
+  ],
   builds: [
     {
       name: "Muralha de marcas e escudos",

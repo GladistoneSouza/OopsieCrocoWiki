@@ -52,6 +52,67 @@ export const onmyoji: HeroRecord = {
     { name: "The World Is Infinite (dourada)", description: "Expande o alcance do círculo mágico de Yin e Yang.", source: "Painel de blessings em run." },
     { name: "Yin and Yang Twins (dourada)", description: "Ao liberar o círculo, aplica buffs a 2 aliados adicionais e debuffs a 2 inimigos adicionais.", source: "Painel de blessings em run (custo 5)." },
   ],
+  kit: {
+    engine:
+      "O círculo Yin-Yang é um lugar, não um efeito. Toda blessing dela começa com \"dentro do círculo\": os Yang melhoram quem está dentro, os Yin pioram quem está dentro. Por isso a estatística que mais importa nesta ficha não é cura nem dano — é área, porque área decide quantos alvos as outras dezesseis peças alcançam.",
+    loops: [
+      {
+        name: "Alcance multiplica o kit inteiro",
+        text: "A dourada The World Is Infinite expande o círculo. Como cada Yang e cada Yin é condicionado a estar dentro, ampliar o raio aumenta simultaneamente todos os buffs e todos os debuffs já escolhidos. É a única peça do elenco documentado que multiplica os dois lados da própria ficha de uma vez.",
+      },
+      {
+        name: "Ficar parado paga",
+        text: "Yang · Healing aumenta a cura conforme os aliados permanecem dentro do círculo. Isso premia formação estática e pune o time que se espalha — o que faz do círculo tanto uma ferramenta quanto uma amarra posicional.",
+      },
+      {
+        name: "Yang · Rapid é um multiplicador de time",
+        text: "Acelerar a recarga das habilidades dos aliados dentro do círculo não é um bônus a mais: é o motor de todo mundo girando mais rápido. Numa equipe em que a Lilith se cura e recupera mana lançando, a Tidecaller invoca a cada skill, a Mia produz elementais e a Flower Spirit dispara Abundance a cada três lançamentos, Yang · Rapid multiplica quatro ciclos ao mesmo tempo.",
+      },
+      {
+        name: "O lado Yin fecha a sala",
+        text: "Yin · Easily Damaged e Yin · Weakness aumentam o dano que os inimigos dentro recebem, Yin · Blinding derruba a precisão deles, Yin · Revenge devolve dano quando atacam e Yin · Evil Retribution transforma cada morte dentro do círculo numa explosão. O ramo escuro é dano e defesa de área ao mesmo tempo, sem ela precisar atacar.",
+      },
+    ],
+  },
+  combos: [
+    {
+      name: "Área antes de tudo",
+      status: "confirmado",
+      needs: ["The World Is Infinite (dourada)", "qualquer Yang ou Yin já escolhido"],
+      text: "Como todo o resto é condicionado a estar dentro, expandir o círculo faz cada peça anterior valer mais e cada peça futura nascer alcançando mais alvos. É a prioridade mais defensável de toda a wiki de personagens.",
+    },
+    {
+      name: "Acelerar quem já ganha",
+      status: "confirmado",
+      needs: ["Yang · Rapid", "aliado com motor por lançamento"],
+      text: "Rapid é o núcleo mais universal da build observada porque não escala com ela: escala com o time. Ao lado de heróis cujo ciclo é pago por lançamento — Lilith, Tidecaller, Mia, Flower Spirit —, ele encurta o intervalo do motor alheio em vez de somar dano ao próprio.",
+    },
+    {
+      name: "Sala que se limpa sozinha",
+      status: "hipótese",
+      needs: ["Yin · Evil Retribution", "Yin · Easily Damaged", "The World Is Infinite (dourada)"],
+      text: "Com o círculo grande, inimigos dentro recebem mais dano e explodem ao morrer atingindo os vizinhos — que também estão dentro, e também recebem mais dano. Em sala cheia isso vira reação em cadeia; contra alvo único não vale nada.",
+    },
+    {
+      name: "Formação que não quebra",
+      status: "hipótese",
+      needs: ["Yin · Yang Twins (nível 10)", "Heaven and Earth Infinite (nível 10)", "Yang · Block"],
+      text: "Imunidade a controle no nível 10, limpeza de debuffs ao ativar e redução de dano para quem está dentro. É o pacote que permite ao time ignorar controle inimigo — e o único caminho do elenco documentado que resolve controle em vez de sobreviver a ele.",
+    },
+  ],
+  strengths: [
+    "Multiplica o time em vez de somar a si mesma: Yang · Rapid acelera o motor de todos os heróis que pagam por lançamento",
+    "Cobre buff e debuff na mesma peça — um único círculo cura, escuda, acelera, cega, amplifica dano recebido e devolve contra-ataque",
+    "Imunidade a controle e limpeza de debuff, funções que quase ninguém mais no elenco documentado oferece",
+    "A dourada de alcance é o multiplicador mais limpo da wiki: melhora tudo que já foi escolhido e tudo que vier",
+  ],
+  weaknesses: [
+    "Tudo é posicional — aliado ou inimigo fora do círculo simplesmente não recebe nada, e ela não controla onde ninguém fica",
+    "Yang · Healing premia formação parada, o que briga com qualquer herói que precise perseguir alvo",
+    "Dano próprio praticamente nulo: ela não fecha sala, só faz o time fechar mais rápido",
+    "Os textos dos níveis 10 e 20 divergem entre si nas duas capturas, e não está claro se é evolução por nível ou tradução inconsistente",
+    "Contra alvo único, metade do ramo Yin — explosão em cadeia, dano em vizinhos — não tem em que pegar",
+  ],
   builds: [
     {
       name: "Aceleração ofensiva",

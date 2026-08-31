@@ -48,6 +48,61 @@ export const bountyHunter: HeroRecord = {
     { name: "Barrage Time (dourada)", description: "Let the Bullets Fly tem chance de ser liberada 2 vezes consecutivas.", source: "Painel de blessings em run." },
     { name: "Call for Support (dourada)", description: "O ataque tem probabilidade de travar no inimigo e chamar suporte para lançar uma bomba de perseguição.", source: "Painel de blessings em run." },
   ],
+  kit: {
+    engine:
+      "Três coisas se multiplicam: quantos tipos de munição especial ela já disparou, quão rápido ela atira e quantas balas a rajada leva. A peça que amarra tudo é a Ammunition Expert, que sobe o ATK por tipo de Special Bullet disparado até 50 acúmulos — o que faz a variedade valer mais que a profundidade, ao contrário de quase todo o resto do elenco.",
+    loops: [
+      {
+        name: "Variedade vale mais que repetição",
+        text: "Ammunition Expert conta tipos de bala especial, não disparos. Steel Core, Mercury, Tear e Explosion são quatro fontes distintas, e pegar as quatro sobe o acúmulo mais rápido do que aprofundar uma. É a regra de draft mais contraintuitiva da wiki de personagens.",
+      },
+      {
+        name: "Velocidade é o denominador comum",
+        text: "Spearmanship · Kinetic Energy sobe a velocidade a cada ataque, Gunsling · Loading dá +200% antes do Wild Burst e Gunsling · Frenzy sobe de novo ao liberá-lo. Como as munições especiais saem por chance no ataque normal, velocidade aumenta ao mesmo tempo as chances de proc, os acúmulos da Ammunition Expert e a frequência da ultimate.",
+      },
+      {
+        name: "A ultimate conta ataques, não segundos",
+        text: "Let the Bullets Fly dispara depois de 8 ataques. Isso liga a rajada diretamente à velocidade de ataque, e é por isso que as peças de velocidade rendem duas vezes: encurtam o caminho até a ultimate e aumentam o dano no meio do caminho.",
+      },
+      {
+        name: "A rajada cresce sozinha",
+        text: "Gunsling · Improvement soma +1 bala ao próximo uso a cada uso, o talento de nível 15 soma +5 de uma vez e o nível 20 faz as balas ricochetearem. A dourada Barrage Time ainda dá chance de a ultimate sair duas vezes seguidas. A rajada é a única parte do kit que acumula entre ativações.",
+      },
+    ],
+  },
+  combos: [
+    {
+      name: "Colecionar munição",
+      status: "confirmado",
+      needs: ["Ammunition · Steel Core", "Ammunition · Mercury", "Ammunition · Tear", "Ammunition · Explosion", "Ammunition Expert"],
+      text: "Quatro tipos diferentes alimentam o mesmo contador de 50 acúmulos de ATK. Recusar uma munição nova para reforçar uma já pega é o erro típico da ficha dela — e a Ammunition · Tear ainda soma um acerto massivo a cada 2 acertos de bala especial, o que premia justamente ter muitas fontes.",
+    },
+    {
+      name: "Ciclo de velocidade",
+      status: "confirmado",
+      needs: ["Spearmanship · Kinetic Energy", "Gunsling · Loading", "Gunsling · Frenzy"],
+      text: "Cada peça de velocidade encurta o caminho até os 8 ataques da ultimate e aumenta a frequência de proc das munições no trajeto. Em batalha os acúmulos de Sharpness foram observados subindo de 10 para 20 e levando o ATK de 20,8K para 22,69K — um dos poucos ganhos medidos com número da wiki inteira.",
+    },
+    {
+      name: "Rajada dupla",
+      status: "hipótese",
+      needs: ["Barrage Time (dourada)", "Gunsling · Improvement", "Wild Rapid Fire (nível 15)", "Barrage Time (nível 20)"],
+      text: "A dourada dobra a ultimate, o Improvement soma uma bala por uso acumulando ao longo da luta, o nível 15 soma cinco de uma vez e o 20 faz cada bala ricochetear. Como o acúmulo do Improvement não zera, essa rota fica desproporcionalmente forte em luta longa.",
+    },
+  ],
+  strengths: [
+    "Escala em três eixos independentes ao mesmo tempo: tipos de munição, velocidade de ataque e tamanho da rajada",
+    "A velocidade rende duas vezes — encurta o caminho até a ultimate e aumenta os procs no trajeto",
+    "É uma das raras fichas com ganho medido em batalha: Sharpness de 10 para 20 acúmulos, ATK de 20,8K para 22,69K",
+    "A Ammunition · Explosion dá dano em área a uma classe que normalmente só bate em alvo único",
+  ],
+  weaknesses: [
+    "Os 50 acúmulos da Ammunition Expert demoram, o que a deixa fraca justamente no começo da run",
+    "Nenhuma peça defensiva no kit documentado, e a classe Archer já é frágil por posição",
+    "Dois textos continuam truncados pelo próprio jogo — Ammunition · Mercury e Gunsling · Frenzy —, o que deixa buracos na leitura do motor",
+    "A ultimate conta ataques, então qualquer coisa que interrompa a cadência empurra a rajada para depois",
+    "O ramo Bounty (Call for Backup, alvos de Bounty) aparece nos talentos sem que nenhuma tela explique como um alvo vira Bounty",
+  ],
   builds: [
     {
       name: "Barrage de munições",

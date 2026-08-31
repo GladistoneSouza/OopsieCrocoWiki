@@ -112,6 +112,67 @@ export const phantom: HeroRecord = {
       source: "Blessing Bestiary",
     },
   ],
+  kit: {
+    engine:
+      "A ultimate dispara três lâminas em ordem — White, Pink e Red — com dano crescente, e o Bestiary repete a mesma dupla para cada cor: uma peça que engorda a lâmina e uma que faz o ataque básico disparar aquela lâmina sozinho. Os multiplicadores das segundas sobem com a cor: 3x no branco, 4x no rosa, 5x no vermelho. Escolher a Phantom é escolher em qual cor investir, e o vermelho é objetivamente o maior número.",
+    loops: [
+      {
+        name: "O básico vira ultimate",
+        text: "Extremely white, Jiyi · Powder e Extremely Red dão ao ataque comum a chance de soltar uma instância da lâmina correspondente. A partir daí velocidade de ataque deixa de ser dano somado e vira frequência de ultimate — motivo pelo qual Extremely colorful, com +240% de velocidade nos primeiros 10 segundos, é um abre-alas e não um bônus pequeno.",
+      },
+      {
+        name: "Abater devolve o recurso",
+        text: "O talento de nível 5 restaura muita mana ao matar e Phantom Flourish Slash, no 10, conjura de novo imediatamente após um abate. Em sala com vários alvos isso vira corrente: matar paga o próximo lançamento, que mata de novo. Contra alvo único a corrente não existe.",
+      },
+      {
+        name: "Tudo aponta para quem está fraco",
+        text: "Phantom · Combo aumenta o dano da Prismatic Slash conforme o HP do alvo cai e a dourada Ultimate instant strike teleporta a cada 8 segundos até o inimigo com menos vida, com velocidade e dano muito aumentados mais 5 segundos de invisibilidade. O kit não abre luta: fecha.",
+      },
+      {
+        name: "A dourada conta lançamentos",
+        text: "Phantom Huazhan causa dano massivo a cada 8 segundos e soma 1 acerto para cada vez que a Prismatic Slash já foi conjurada na luta. Ela transforma o ciclo de recast em catraca — quanto mais cedo a corrente de abates começa, maior o pico no fim.",
+      },
+    ],
+  },
+  combos: [
+    {
+      name: "Vermelho puro",
+      status: "hipótese",
+      needs: ["Phantom Red · Deadly", "Extremely Red", "Phantom · Combo"],
+      text: "+200% no Red Blade, instâncias de 5x saindo do ataque básico e dano crescente conforme o alvo enfraquece. É a maior concentração de multiplicador de alvo único do elenco documentado, e a rota que a wiki já registrava como direção principal.",
+    },
+    {
+      name: "Corrente de abates",
+      status: "hipótese",
+      needs: ["mana ao abater (nível 5)", "Phantom Flourish Slash (nível 10)", "Ultimate instant strike (dourada)", "Phantom Huazhan (dourada)"],
+      text: "Matar devolve mana, o abate reconjura na hora e a dourada teleporta para o próximo mais fraco. Cada elo alimenta o contador da Phantom Huazhan, que paga tudo de volta a cada 8 segundos. É a rota que transforma sala cheia em execução em cadeia.",
+    },
+    {
+      name: "Abrir a luta a 240%",
+      status: "hipótese",
+      needs: ["Extremely colorful", "qualquer peça da linha Extremely"],
+      text: "Os primeiros 10 segundos com +240% de velocidade de ataque, num kit em que o básico dispara lâminas de 3x, 4x e 5x, concentram uma quantidade desproporcional de dano na abertura. Vale em sala que precisa acabar rápido e é desperdício em luta longa.",
+    },
+    {
+      name: "O branco é a peça defensiva",
+      status: "hipótese",
+      needs: ["Phantom White · Fragile", "Extremely white"],
+      text: "White Blade corta 30% do dano do inimigo por 3 segundos, e Extremely white faz o básico aplicar isso sozinho. É a única mitigação do kit inteiro — quem joga a Phantom sem frontline precisa desta dupla, mesmo ela sendo a de menor multiplicador.",
+    },
+  ],
+  strengths: [
+    "Os maiores multiplicadores de alvo único registrados na wiki: +200% no Red Blade e instâncias de 5x saindo de ataque básico",
+    "Ciclo de abate que se retroalimenta — mana, reconjuração imediata e teleporte para o alvo mais fraco",
+    "Execução embutida: dois efeitos separados leem o HP baixo do alvo, então ela fecha lutas que outros arrastam",
+    "Tem uma opção defensiva real dentro do próprio kit, coisa rara entre as assassinas: o corte de 30% do White Blade",
+  ],
+  weaknesses: [
+    "Nenhum dano em área em lugar nenhum do kit documentado — sala cheia só é boa por causa da corrente de abates, não do alcance",
+    "Contra boss sozinho a corrente inteira morre: sem abates não há mana, nem recast, nem teleporte",
+    "O abre-alas de 240% dura 10 segundos e não volta, o que torna a heroína pior exatamente nas lutas longas",
+    "Corpo a corpo sem fuga documentada além da invisibilidade da dourada, e nenhuma run com a Phantom foi observada",
+    "Nomes divergentes na linha de nível 8 (Ultimate Intent · White contra Supreme Technique · White) e no par Ultimate Flash Strike / Ultimate instant strike",
+  ],
   builds: [
     {
       name: "Execução Red Blade",
