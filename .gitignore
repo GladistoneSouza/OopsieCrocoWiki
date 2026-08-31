@@ -43,3 +43,5 @@ next-env.d.ts
 
 # Prints brutos do jogo (material de trabalho, nao publicar)
 /img_game/
+
+__pycache__/
