@@ -172,6 +172,29 @@ Antes de deduzir taxa, custo ou teto a partir de observação:
 - Quem joga tem contagem real. Antes de projetar renda a partir de um ciclo
   fotografado, pergunte o acumulado.
 
+## Qualidade não é prioridade
+
+Duas perguntas que a wiki misturou por muito tempo:
+
+- **Vale desenvolver este herói?** — responde-se lendo o kit.
+- **Vale desenvolvê-lo agora?** — responde-se lendo o custo do próximo degrau.
+
+São independentes, e a segunda muda toda vez que o herói sobe de nível. Um
+herói excelente pode ser exatamente aquele em que não se deve gastar o
+próximo fragmento, porque a maior parte da função dele já chegou.
+
+A curva de fragmento sextuplica de faixa em faixa, então a diferença é
+grande o bastante para dispensar opinião: em 31 ago. 2026, levar quatro
+heroínas até o degrau que transforma cada uma custava 200 fragmentos, contra
+800 para levar uma só do nível 15 ao 25. Ao escrever sobre um herói, separe
+**kit**, **valor para a composição** e **custo do próximo degrau** — e nunca
+trate cinco estrelas de kit como recomendação de continuar gastando.
+
+Vale também registrar o formato da curva de cada um, porque muda a decisão:
+adiantada (o essencial abre cedo e o resto é luxo), progressiva (cada degrau
+faz os anteriores renderem mais) ou escada (degraus independentes, que
+permitem comprar um, parar e voltar depois).
+
 ## Regra de confiabilidade
 
 Classifique mentalmente cada afirmação antes de escrever:

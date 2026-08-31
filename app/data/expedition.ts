@@ -246,6 +246,35 @@ export const upgradeInputs = {
 // faixa, o nivel atual de cada heroi lido nas telas de 30-31 ago. e o degrau que
 // a ficha dele aponta como o proximo que muda alguma coisa. O resultado e o
 // custo real de atravessar cada breakpoint.
+// A conta que decide entre espalhar e aprofundar, com numeros reais.
+export const breadthVsDepth = {
+  kicker: "LARGURA CONTRA PROFUNDIDADE",
+  title: "Quatro heróis até o degrau que transforma custam menos que um sozinho subindo cinco níveis",
+  intro:
+    "A escada de fragmento é tão íngreme que a comparação deixa de ser opinião. Levar quatro heróis do nível em que estão até o degrau que muda o funcionamento deles custa menos do que qualquer um dos dois avanços de topo disponíveis hoje.",
+  bundle: [
+    { step: "Tidecaller do 1 ao 5", frags: "20", opens: "Mana a cada unidade que morre" },
+    { step: "Mitia do 5 ao 10", frags: "50", opens: "Hunt que pode se relançar" },
+    { step: "Veliana do 1 ao 10", frags: "70", opens: "Motor de velocidade fechado e a bifurcação" },
+    { step: "Lia do 3 ao 10", frags: "60", opens: "Segunda camada da Ultimate" },
+  ],
+  bundleTotal: "200 fragmentos",
+  alternatives: [
+    { step: "Lia sozinha, do 15 ao 25", frags: "800", note: "quatro vezes o pacote inteiro" },
+    { step: "Kazres sozinho, do 15 ao 20", frags: "300", note: "uma vez e meia o pacote inteiro" },
+  ],
+  reading:
+    "Não é que o nível 25 da Lia seja fraco — ele faz a Petal Leaf aumentar permanentemente o ATK de quem a recebe, o que é enorme. É que ele custa quatro vezes o preço de ligar o motor de quatro heroínas diferentes. Enquanto a curva de fragmento sextuplicar de faixa em faixa, largura vence profundidade por uma margem que nenhuma diferença de qualidade de kit cobre.",
+  shapes:
+    "As curvas de investimento não têm todas o mesmo formato, e isso importa mais que a nota do kit. A Tidecaller é adiantada: o essencial dela abre no nível 5 e o resto é luxo. A Mitia e a Veliana são progressivas: cada degrau faz as peças anteriores conversarem melhor, então aprofundar rende. A Lia é escada: degraus independentes e fortes no 10, no 12, no 15 e no 25, o que permite comprar um, parar, e voltar depois — coisa que não faz sentido nas outras duas.",
+  rule:
+    "A qualidade do herói decide se vale desenvolvê-lo. O custo do próximo degrau decide se vale desenvolvê-lo agora. São perguntas separadas, e um herói excelente pode ser exatamente aquele em que não se deve gastar o próximo fragmento.",
+  pending: [
+    "Testar em run se o pacote largo rende mais que o avanço profundo, jogando a mesma faixa de estágio com as duas configurações",
+    "Confirmar se \"permanentemente\" na Petal Leaf dura a run inteira ou só a batalha",
+  ],
+};
+
 export const breakpointMap = {
   kicker: "ONDE O FRAGMENTO RENDE MAIS",
   title: "O mesmo avanço custa doze vezes mais em um herói que em outro",
@@ -253,7 +282,10 @@ export const breakpointMap = {
     "Qualidade de kit e prioridade de investimento são perguntas diferentes, e a wiki vinha respondendo só a primeira. Esta tabela responde a segunda: quanto custa, em fragmentos, levar cada herói do nível em que ele está até o próximo degrau que muda alguma coisa nele — e quanto de crítico de conta esse mesmo gasto compra de quebra.",
   columns: ["Herói", "Nível hoje", "Próximo degrau", "Fragmentos", "Crítico global", "Crítico por fragmento", "O que liga"],
   rows: [
-    { hero: "Lia — Flower Spirit", now: "3", target: "5", frags: "10", crit: "+3,2%", eff: "0,320%", opens: "Cura extra e o começo da folha; degrau barato" },
+    { hero: "Lia — Flower Spirit", now: "3", target: "5", frags: "10", crit: "+3,2%", eff: "0,320%", opens: "Floresce sozinha e ganha chance de lançamento extra" },
+    { hero: "Lia — Flower Spirit", now: "3", target: "10", frags: "60", crit: "+11,2%", eff: "0,187%", opens: "A Ultimate escolhida ganha a segunda camada — cura +50% ou folha com redução de dano" },
+    { hero: "Lia — Flower Spirit", now: "3", target: "12", frags: "120", crit: "+14,4%", eff: "0,120%", opens: "Blessing adicional depois da Ultimate — muda a economia de escolhas dela" },
+    { hero: "Lia — Flower Spirit", now: "3", target: "15", frags: "210", crit: "+19,2%", eff: "0,091%", opens: "Petal Leaf passa a dar HP máximo permanente ao alvo" },
     { hero: "Veliana — Light Archer", now: "1", target: "3", frags: "10", crit: "+3,2%", eff: "0,320%", opens: "Começa a run com +105% de velocidade dentro do estado" },
     { hero: "Ice Blue Snowbud — Tidecaller", now: "1", target: "5", frags: "20", crit: "+6,4%", eff: "0,320%", opens: "Mana a cada unidade que morre — liga o ciclo econômico dela" },
     { hero: "Livia — Red Queen", now: "1", target: "5", frags: "20", crit: "+6,4%", eff: "0,320%", opens: "Chance de Firestorm consecutivo" },

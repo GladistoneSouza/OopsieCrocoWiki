@@ -22,6 +22,7 @@ import {
   globalCritReward,
   rarityCostCompare,
   breakpointMap,
+  breadthVsDepth,
   levelMilestones,
   spreadVsFocus,
   fragmentSource,
@@ -210,6 +211,38 @@ export default function ExpedicaoPage() {
             <ShotFigure key={shot.src} src={shot.src} alt={shot.alt} caption={shot.caption} linked />
           ))}
         </div>
+        <SectionHead
+          eyebrow={breadthVsDepth.kicker}
+          title={breadthVsDepth.title}
+          description={breadthVsDepth.intro}
+        />
+        <div className="character-columns">
+          <section className="sticker-card">
+            <p className="eyebrow">O PACOTE LARGO — {breadthVsDepth.bundleTotal}</p>
+            <ul className="plain-list">
+              {breadthVsDepth.bundle.map((b) => (
+                <li key={b.step}>
+                  <b>{b.step}</b> — {b.frags} fragmentos · {b.opens}
+                </li>
+              ))}
+            </ul>
+          </section>
+          <section className="sticker-card">
+            <p className="eyebrow">O AVANÇO PROFUNDO</p>
+            <ul className="plain-list pending">
+              {breadthVsDepth.alternatives.map((a) => (
+                <li key={a.step}>
+                  <b>{a.step}</b> — {a.frags} fragmentos · {a.note}
+                </li>
+              ))}
+            </ul>
+          </section>
+        </div>
+        <div className="coop-grid">
+          <CalloutNote tone="warning" title="Por que largura vence" text={breadthVsDepth.reading} />
+          <CalloutNote tone="info" title="Três formatos de curva" text={breadthVsDepth.shapes} />
+        </div>
+        <CalloutNote tone="dark" title="A regra que sai disso" text={breadthVsDepth.rule} />
         <SectionHead
           eyebrow={breakpointMap.kicker}
           title={breakpointMap.title}
