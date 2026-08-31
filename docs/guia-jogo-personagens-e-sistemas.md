@@ -135,15 +135,17 @@ flowchart TD
     F --> E
 ```
 
-Faixas observadas de fragmentos:
+Faixas observadas de fragmentos, agora com prova nas grades de elenco de 31 ago. 2026:
 
 | Faixa aproximada | Fragmentos necessários |
 |---|---:|
-| níveis iniciais | 5 |
-| progressão intermediária | 10 |
-| aproximadamente 10–15 | 30 |
-| aproximadamente 15–20 | 60 |
-| níveis superiores | **a confirmar** |
+| 1–5 | 5 por nível |
+| 5–10 | 10 por nível |
+| 10–15 | 30 por nível |
+| 15–20 | 60 por nível |
+| acima de 20 | 100 no nível 22 — ponto único |
+
+As telas misturam SR e SSR com os mesmos custos de próximo upgrade, então a curva parece ser por nível, não por raridade. Da faixa 1–20 há vários heróis medidos; acima do 20 existe um só no elenco, no nível 22, e ele pede 100. Isso mostra que o degrau sobe depois do 20, mas não fecha o total da faixa.
 
 A quantidade de esferas da classe também cresce bastante com o nível.
 
@@ -738,7 +740,7 @@ Em vez de manter sete classes igualmente evoluídas, faz mais sentido:
 
 # 12. Informações ainda a confirmar
 
-- custo exato de fragmentos acima do Lv.20;
+- confirmar se todo o trecho 20–25 permanece em 100 fragmentos por nível;
 - quantidade total de mana necessária para cada cast;
 - se todas as classes ganham +5 mana por auto-ataque ou se é específico por personagem;
 - valores exatos de mana restaurada por determinadas skills;

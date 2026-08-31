@@ -180,18 +180,19 @@ export const acquisitionPlan = {
 // documentado aqui porque é o que decide entre abrir uma vaga nova e subir um herói.
 export const levelCostCurve = {
   kicker: "O QUE CUSTA SUBIR",
-  title: "Faixas de cinco, e o preço sextuplica",
+  title: "Faixas de cinco, e o preço passa de 5 para 100",
   intro:
-    "Custos em fragmentos, relatados pelo jogador. As faixas fecham certinho: a de 10 a 15 sai a 30 por nível, o que confirma o \"10 → 11 = 30\" medido antes por outro caminho.",
+    "Custos em fragmentos confirmados nas grades de elenco fotografadas em 31 ago. 2026. O custo aparece ao lado de cada herói e bate entre SSR e SR: a curva é por nível, não por raridade.",
   columns: ["Faixa", "Por nível", "Total da faixa", "Acumulado desde o 1"],
   rows: [
     { band: "1 – 5", per: "5", total: "20", acc: "20" },
     { band: "5 – 10", per: "10", total: "50", acc: "70" },
     { band: "10 – 15", per: "30", total: "150", acc: "220" },
     { band: "15 – 20", per: "60", total: "300", acc: "520" },
+    { band: "Acima do 20", per: "100 no nível 22", total: "a confirmar", acc: "a confirmar" },
   ],
   note:
-    "Correção: a primeira versão desta tabela vinha de uma lembrança nível a nível que dava 60 acumulados no 10. As faixas dão 70, e a diferença é a faixa 5–10, que sai a 10 por nível e não a 5. As faixas são autoconsistentes e batem com o degrau de 30 medido no 10 → 11.",
+    "Evidências lidas em 31 ago. 2026: nível 3 com 0/5; níveis 5 e 8 com x/10; níveis 13-14 com x/30; níveis 15-18 com x/60. As quatro primeiras faixas aparecem em vários heróis e em duas raridades, então estão fechadas. A última linha vale menos: há um único herói acima do 20 no elenco, no nível 22, e ele pede 100. Isso prova que o degrau sobe depois do 20, não que a faixa inteira custe 100 — o total e o acumulado ficam em branco até aparecer um segundo ponto.",
 };
 
 export const levelMilestones = {
@@ -216,7 +217,7 @@ export const levelMilestones = {
       what: "O próximo pico de poder. Os níveis 16 a 19 entregam só atributos, então a faixa inteira de 300 fragmentos existe para chegar aqui.",
     },
   ],
-  note: "Efeitos relatados pelo jogador a partir de uso; o nível 15 tem confirmação parcial nas fichas de Lilith, Onmyoji e Catwoman.",
+  note: "Efeitos relatados pelo jogador a partir de uso; o nível 15 tem confirmação parcial nas fichas de Lilith, Onmyoji e Catwoman. O custo de fragmentos agora tem prova de tela nas grades de roster.",
 };
 
 export const fragmentSource = {
@@ -232,6 +233,7 @@ export const fragmentSource = {
       { band: "5 – 10", cost: "10", buys: "1 nível" },
       { band: "10 – 15", cost: "30", buys: "um terço de nível" },
       { band: "15 – 20", cost: "60", buys: "um sexto de nível" },
+      { band: "Acima do 20", cost: "100 no nível 22", buys: "um décimo de nível" },
     ],
     note:
       "É a prova aritmética do que a expedição já sugeria: enquanto houver herói SP em nível baixo, cada repetido gasto ali rende doze vezes o que renderia no vermelho que você está empurrando para o 20.",
@@ -271,6 +273,11 @@ export const spreadVsFocus = {
     "O contrário também é verdade e não se anula: oito heróis no nível 7 não passam de figurantes numa run, enquanto um no 12 já traz o kit completo de skills. A escolha é entre destravar renda e destravar poder, e a conta acima só mede o lado da renda.",
 };
 
+export const fragmentCurveGallery = [
+  { src: "/screenshots/progression/fragment-curve-roster-1.jpg", alt: "Grade de roster mostrando custos 5, 10, 60 e 100 fragmentos", caption: "Roster: nível 22 já pede 100 fragmentos; níveis 15-18 pedem 60." },
+  { src: "/screenshots/progression/fragment-curve-roster-2.jpg", alt: "Grade de roster mostrando níveis 13 a 15 e custos 30/60", caption: "Roster: níveis 13-14 pedem 30 e nível 15 passa para 60." },
+];
+
 
 export const fragmentTradeoff = {
   kicker: "ONDE GASTAR FRAGMENTO SP",
@@ -280,7 +287,7 @@ export const fragmentTradeoff = {
   rule:
     "A troca só vale até o oitavo SP, porque são quatro times de dois e depois disso não existe vaga nova para abrir. Passado esse ponto a lógica se inverte de volta: um herói vermelho muito forte vale mais que vários meia-boca, e o fragmento volta a ser nível. E isso muda a prioridade de início de jogo — pegar SP cedo rende mais do que parecia, mesmo os que você não pretende levar para runs.",
   note:
-    "Os 80 fragmentos e a curva de nível vêm da experiência do jogador, não de print. O ganho de Grail é projeção sobre a taxa ajustada de 29% por time SP.",
+    "Os 80 fragmentos de desbloqueio ainda vêm da experiência do jogador. A curva de nível tem prova de tela até o 20; acima disso há um único ponto medido. O ganho de Grail é projeção sobre a taxa ajustada de 29% por time SP.",
 };
 
 export const fourthSlot = {
@@ -348,7 +355,8 @@ export const expeditionPending = [
   "Medir a renda de Grail por faixa de Total Level — a regra 4 promete ganho, falta dimensionar",
   "Confirmar em campo que um quarto time SP também recebe o Grail no Chance to Obtain",
   "Fotografar a tela de desbloqueio de um SP para registrar o custo em fragmentos",
-  "Confirmar em print os totais das faixas de fragmento e os efeitos dos níveis 12, 15 e 20",
+  "Confirmar com mais prints se a faixa 20-25 permanece inteira em 100 fragmentos por nível",
+  "Confirmar em print os efeitos dos níveis 12, 15 e 20",
   "Medir a curva de fragmento dos heróis UR, que segue escala própria e não foi observada",
   "Confirmar se todo herói SP abre passiva exclusiva no nível 15, como a Lilith",
   "Catalogar as demais fontes de seleção mítica em eventos e pacotes",

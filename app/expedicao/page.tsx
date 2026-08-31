@@ -17,6 +17,7 @@ import {
   levelLever,
   unlockFirst,
   levelCostCurve,
+  fragmentCurveGallery,
   levelMilestones,
   spreadVsFocus,
   fragmentSource,
@@ -199,6 +200,11 @@ export default function ExpedicaoPage() {
             <p>{fourthSlot.text}</p>
             <small>{fourthSlot.note}</small>
           </aside>
+        </div>
+        <div className="shot-grid wide">
+          {fragmentCurveGallery.map((shot) => (
+            <ShotFigure key={shot.src} src={shot.src} alt={shot.alt} caption={shot.caption} linked />
+          ))}
         </div>
         <div className="detail-grid">
           <article className="boss-card sticker-card">
