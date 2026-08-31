@@ -270,12 +270,12 @@ export const globalCritReward = {
   kicker: "O QUE TODO NÍVEL PAGA",
   title: "Subir qualquer herói aumenta o crítico da conta",
   intro:
-    "Cada ficha exibe uma linha de recompensa global em Dano Crítico, e ela não é um marco solto: é o nível do herói multiplicado por uma taxa que só depende da raridade. Dezenove leituras espalhadas por dez fichas fecham na conta exata, sem sobra.",
+    "Cada ficha exibe uma linha de recompensa global em Dano Crítico, e ela não é um marco solto: é o nível do herói multiplicado por uma taxa que só depende da raridade. Vinte pares de herói e nível, espalhados por onze fichas, fecham na conta exata, sem sobra.",
   columns: ["Raridade", "Por nível", "Leituras que fecham", "No nível 15"],
   rows: [
     { tier: "SR", rate: "1,2%", points: "1 leitura — Karl no 15", at15: "18,0%" },
     { tier: "SSR", rate: "1,4%", points: "9 leituras, 5 heroínas, dos níveis 9 ao 15", at15: "21,0%" },
-    { tier: "SP", rate: "1,6%", points: "8 leituras, 5 heróis, dos níveis 1 ao 15", at15: "24,0%" },
+    { tier: "SP", rate: "1,6%", points: "9 leituras, 6 heróis, dos níveis 1 ao 15", at15: "24,0%" },
     { tier: "UR", rate: "3,0%", points: "1 leitura — Artemis no 2", at15: "45,0% (projeção)" },
   ],
   proof:

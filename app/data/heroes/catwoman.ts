@@ -232,6 +232,7 @@ export const catwoman: HeroRecord = {
     },
   ],
   synergies: [
+    "Comparação a medir — a leitura corrente é que a Mitia domina sala com muitos abates, pelo efeito da catraca, e a Light Archer domina alvo único prolongado, por acumular crítico no mesmo alvo. As duas disputam a mesma vaga de dano e nenhuma tem run medida",
     "Hipótese de composição — se o aumento de dano recebido do Prey valer para o time, ela vira preparadora de alvo: espalha 3 marcas com search for prey e os heróis de pico entram no alvo amplificado. Depende inteiramente da pendência sobre a quem o aumento se aplica",
     "Hipótese — fases com muitas ondas de inimigos fracos alimentam o acúmulo permanente de dano",
     "Hipótese — hunting habits + nibbling prey invertem a curva usual: Mitia fica mais forte quanto menos inimigos restam, apontando para dueto com um limpador de ondas que deixe o boss para ela",

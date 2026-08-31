@@ -133,7 +133,7 @@ export const lightArcher: HeroRecord = {
     {
       name: "Bestiary — Advanced level of demon slaying (dourada)",
       description:
-        "O demon-killing state passa a durar permanentemente. O texto transcrito segue com tradução truncada: 'Every time 3 is attacked, a 6 starlight arrow will be designed continuously, causing damage based on the enemy's health value' — aparentemente, a cada 3 ataques dispara 6 Starlight Arrows em sequência, com dano baseado na vida do inimigo (leitura aproximada; o texto original está mal traduzido).",
+        "O demon-killing state passa a durar permanentemente. O texto transcrito segue com tradução truncada: 'Every time 3 is attacked, a 6 starlight arrow will be designed continuously, causing damage based on the enemy's health value' — aparentemente, a cada 3 ataques dispara 6 Starlight Arrows em sequência, com dano baseado na vida do inimigo. O texto original está mal traduzido, mas duas leituras independentes do mesmo print chegaram a essa mesma interpretação — segue como leitura provável, não confirmada, até alguém ver o efeito em run.",
       source: "Blessing Bestiary",
     },
     {
@@ -195,6 +195,8 @@ export const lightArcher: HeroRecord = {
       text: "O nível 20 tira um gatilho da conta da Starlight Arrow e o 25 faz ela subir a velocidade de ataque, realimentando o ciclo. A dourada, na leitura possível do texto truncado, dispara 6 Starlight Arrows a cada 3 ataques com dano baseado na vida do inimigo. A tradução do jogo está quebrada nesse ponto e o combo é hipótese até alguém abrir o tooltip inteiro.",
     },
   ],
+  breakpoints:
+    "Ela quase não tem nível morto — cada degrau aumenta a frequência com que a própria mecânica gera mais mecânica. Mas o nível 10 não é um degrau: é a bifurcação. Demon-Banishing Upgrade entrega 60% de penetração de defesa e serve ao eixo do estado; Holy Light Upgrade reduz os gatilhos para o Overclock e serve ao eixo das flechas. Os níveis 20 e 25 repetem exatamente a mesma escolha, então o que for decidido no 10 define a heroína até o 25. Antes disso, o 3 e o 8 são baratos e já entregam as duas peças que ligam o motor: a velocidade dentro do estado e a chance alta de Light Arrow.",
   strengths: [
     "Dois eixos de escala independentes, então o draft raramente fica sem caminho — se o estado não vier, as flechas vêm",
     "Os dois eixos pagam na mesma moeda (velocidade de ataque), o que faz escolhas \"híbridas\" continuarem somando em vez de dividir",
@@ -259,6 +261,9 @@ export const lightArcher: HeroRecord = {
     { src: "/screenshots/light-archer/bestiary-legendary.jpg", caption: "Bestiary — página 3 com as douradas Advanced level of demon slaying e Overclocking mode" },
   ],
   pending: [
+    "Resolver a tensão do nível 5: a velocidade dele começa alta e decai, o que trabalha contra a leitura de que ela é a melhor escolha para luta longa de boss — medir se as outras fontes de velocidade (Fashion, nível 15, Starlight do 25) compensam a queda",
+    "Medir a mesma sala com a Light Archer e com a Catwoman: a hipótese é que a arqueira leva vantagem em alvo único prolongado e a assassina em onda com muitos abates, e nenhuma das duas tem run medida",
+    "Confirmar em run a leitura das 6 Starlight Arrows a cada 3 ataques e o dano proporcional à vida do inimigo",
     "Capturar a progressão do nível 30 em diante (a rolagem parou no nível 25)",
     "Confirmar se Demon-Slaying Arrow · Speed, · Swift e Demon-killing Arrow · Speed são de fato a mesma blessing (traduções divergentes)",
     "Esclarecer o texto truncado de Advanced level of demon slaying (relação exata entre 3 ataques e 6 Starlight Arrows)",
