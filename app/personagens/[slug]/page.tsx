@@ -78,7 +78,7 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
     <main>
       <SiteHeader active="/personagens" />
       <article className="character-page">
-        <header className={`character-header${hero.image ? " with-portrait" : ""}`}>
+        <header className={`character-header${hero.image || hero.artImage ? " with-portrait" : ""}`}>
           <div className="character-intro">
             <p className="eyebrow">
               {hero.className}
