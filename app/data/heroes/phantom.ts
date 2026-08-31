@@ -12,6 +12,7 @@ export const phantom: HeroRecord = {
   fieldNote:
     "Ficha confirmada no nível 10 (30 jul.). Atenção à colisão de prenomes: esta é Selina Shadowblade (SSR Phantom, Assassin) — personagem diferente da Succubus Selina · Frostcharm; as duas compartilham apenas o prenome Selina.",
   image: "/screenshots/phantom/profile-level-10.jpg",
+  artImage: "/screenshots/art/phantom.jpg",
   identity: [
     "Título exibido: SSR Phantom",
     "Disponível no Hero Exchange por 1.000 Hero Coins, limite semanal 8/8 — sai por 500 quando o cartão está com o selo de 50% off. A base de 1.000 deixou de ser hipótese em 31 ago. 2026: na mesma grade, Pharaoh aparece a 1.000 sem selo enquanto os vizinhos SSR aparecem a 500 com ele.",

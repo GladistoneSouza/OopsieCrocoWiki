@@ -12,6 +12,7 @@ export const dragonWarrior: HeroRecord = {
   fieldNote:
     "Ficha documentada entre 21 e 23 ago. 2026: progressão agora mapeada até o nível 30, Blessing Bestiary completo e primeiros registros do herói em batalha (painel de skill, escolhas de blessing e ranking de dano em 21 ago.). Ainda não há run dedicada em que o Dragon Warrior seja o foco do time.",
   image: "/screenshots/dragon-warrior/profile-level-1.jpg",
+  artImage: "/screenshots/art/dragon-warrior.jpg",
   identity: [
     "Título exibido: SP Dragon Warrior",
     "Nome exibido na ficha: Rain Flame Soul",

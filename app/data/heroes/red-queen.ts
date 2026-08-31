@@ -12,6 +12,7 @@ export const redQueen: HeroRecord = {
   fieldNote:
     "Ficha documentada no nível 1 em duas datas (21 e 22 ago., com poder divergente — ver Stats). Progressão de talentos lida na tela até o nível 30 (nível 35 aparece cortado) e Blessing Bestiary de Flame Storm transcrito por completo. As telas do jogo alternam as grafias Flame Storm / Fire Storm / Firestorm e Lava Tiles / lava block / plots / Lava Terrace / lava fields para os mesmos elementos — inconsistência de tradução registrada como está.",
   image: "/screenshots/sp-heroes/red-queen-profile.jpg",
+  artImage: "/screenshots/art/red-queen.jpg",
   identity: [
     "Título exibido: SP Red Queen",
     "Nome exibido na ficha: Livia · Flameveil",

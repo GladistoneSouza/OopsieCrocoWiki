@@ -12,6 +12,7 @@ export const holyKnight: HeroRecord = {
   fieldNote:
     "Confirmada no nível 10 em 30 de julho; no snapshot do roster de 16 de agosto já aparecia no nível 12. A descrição de seleção co-op resume o kit como redução de dano + buff permanente. Boa parte dos textos do Bestiary usa nomes traduzidos de forma inconsistente para a mesma mecânica (ver identidade/pendências).",
   image: "/screenshots/holy-knight/profile-level-10.jpg",
+  artImage: "/screenshots/art/holy-knight.jpg",
   identity: [
     "Título exibido: SSR Holy Knight",
     "Nome exibido na ficha: Serena · Dawn",

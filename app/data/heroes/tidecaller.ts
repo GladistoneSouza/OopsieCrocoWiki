@@ -12,6 +12,7 @@ export const tidecaller: HeroRecord = {
   fieldNote:
     "Ficha do nível 1 documentada com tooltips, progressão de talentos completa dos níveis 3 a 45 e Blessing Bestiary do kit Tidal Summon fechado (12 blessings, sendo 2 douradas). Gameplay observado em runs de co-op em 21 ago.: Tidal Elemental gigante com contador de acúmulos chegando a 20 (coerente com o teto da Recycle) acompanhado de um exército de Water Elementals.",
   image: "/screenshots/sp-heroes/tidecaller-profile.jpg",
+  artImage: "/screenshots/art/tidecaller.jpg",
   identity: [
     "Título exibido: SP Tidecaller",
     "Nome exibido na ficha: Ice Blue Snowbud",

@@ -674,5 +674,161 @@
       "shadow": true
     },
     "note": "Escada do Sword Demon: niveis 12 e 15 legiveis, e o rodape com as duas moedas"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_23-47-01.jpg",
+    "out": "art/dragon-warrior.jpg",
+    "crop": [
+      183,
+      428,
+      988,
+      1084
+    ],
+    "max_width": 760,
+    "note": "Arte de dragon-warrior, recortada da tela de exibicao do heroi"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_23-43-28.jpg",
+    "out": "art/succubus.jpg",
+    "crop": [
+      183,
+      428,
+      988,
+      1084
+    ],
+    "max_width": 760,
+    "note": "Arte de succubus, recortada da tela de exibicao do heroi"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_23-50-05.jpg",
+    "out": "art/red-queen.jpg",
+    "crop": [
+      183,
+      428,
+      988,
+      1084
+    ],
+    "max_width": 760,
+    "note": "Arte de red-queen, recortada da tela de exibicao do heroi"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_23-52-16.jpg",
+    "out": "art/tidecaller.jpg",
+    "crop": [
+      183,
+      428,
+      988,
+      1084
+    ],
+    "max_width": 760,
+    "note": "Arte de tidecaller, recortada da tela de exibicao do heroi"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_23-55-10.jpg",
+    "out": "art/light-archer.jpg",
+    "crop": [
+      183,
+      428,
+      988,
+      1084
+    ],
+    "max_width": 760,
+    "note": "Arte de light-archer, recortada da tela de exibicao do heroi"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_23-57-05.jpg",
+    "out": "art/flower-spirit.jpg",
+    "crop": [
+      183,
+      428,
+      988,
+      1084
+    ],
+    "max_width": 760,
+    "note": "Arte de flower-spirit, recortada da tela de exibicao do heroi"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_23-58-48.jpg",
+    "out": "art/catwoman.jpg",
+    "crop": [
+      183,
+      428,
+      988,
+      1084
+    ],
+    "max_width": 760,
+    "note": "Arte de catwoman, recortada da tela de exibicao do heroi"
+  },
+  {
+    "src": "img_game/herois-ficha/2026-08-25_23-36-01.jpg",
+    "out": "art/kazers-darkblade.jpg",
+    "crop": [
+      183,
+      428,
+      988,
+      1084
+    ],
+    "max_width": 760,
+    "note": "Arte de kazers-darkblade, recortada da tela de exibicao do heroi"
+  },
+  {
+    "src": "img_game/herois-ficha/2026-08-30_09-10-28.jpg",
+    "out": "art/mia-morning-dew.jpg",
+    "crop": [
+      183,
+      461,
+      988,
+      1139
+    ],
+    "max_width": 760,
+    "note": "Arte de mia-morning-dew, recortada da tela de exibicao do heroi"
+  },
+  {
+    "src": "img_game/herois-ficha/2026-08-30_09-10-43.jpg",
+    "out": "art/holy-knight.jpg",
+    "crop": [
+      183,
+      461,
+      988,
+      1139
+    ],
+    "max_width": 760,
+    "note": "Arte de holy-knight, recortada da tela de exibicao do heroi"
+  },
+  {
+    "src": "img_game/herois-ficha/2026-08-30_09-11-05.jpg",
+    "out": "art/phantom.jpg",
+    "crop": [
+      183,
+      461,
+      988,
+      1139
+    ],
+    "max_width": 760,
+    "note": "Arte de phantom, recortada da tela de exibicao do heroi"
+  },
+  {
+    "src": "img_game/herois-ficha/2026-08-30_09-11-30.jpg",
+    "out": "art/star-mage.jpg",
+    "crop": [
+      183,
+      461,
+      988,
+      1139
+    ],
+    "max_width": 760,
+    "note": "Arte de star-mage, recortada da tela de exibicao do heroi"
+  },
+  {
+    "src": "img_game/herois-ficha/2026-08-30_09-32-37.jpg",
+    "out": "art/onmyoji.jpg",
+    "crop": [
+      183,
+      461,
+      988,
+      1139
+    ],
+    "max_width": 760,
+    "note": "Arte de onmyoji, recortada da tela de exibicao do heroi"
   }
 ]

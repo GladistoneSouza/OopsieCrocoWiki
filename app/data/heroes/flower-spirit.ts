@@ -12,6 +12,7 @@ export const flowerSpirit: HeroRecord = {
   fieldNote:
     "Ficha documentada no nível 3 (progressão visível até o nível 30; nível 35 cortado). Inconsistência de tradução: a ficha chama a heroína de Lia, mas os textos de batalha (blessing Abundance e painéis in-run) a chamam de Hua Ling — mesmo personagem. O talento do nível 5, antes cortado na tela, foi resolvido por tooltip: 'The flowers are blooming exuberantly'.",
   image: "/screenshots/sp-heroes/flower-spirit-profile.jpg",
+  artImage: "/screenshots/art/flower-spirit.jpg",
   identity: [
     "Título exibido: SP Flower Spirit",
     "Nome exibido na ficha: Lia",

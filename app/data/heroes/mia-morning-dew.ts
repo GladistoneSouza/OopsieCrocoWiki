@@ -10,6 +10,7 @@ export const miaMorningDew: HeroRecord = {
   summary: "Invocadora SSR que cria Elementais de Fogo por 8 segundos e converte a presença e a morte deles em dano, mana e fortalecimento do grupo.",
   fieldNote: "Ficha baseada somente nas descrições exibidas pelo jogo. Diversos efeitos informam que o dano ou a chance aumenta, mas omitem o multiplicador, a duração, a porcentagem e o limite de acúmulos. Esses valores permanecem como não informados, sem estimativa pela tradução.",
   image: "/screenshots/mia/mia-profession-bonuses.jpg",
+  artImage: "/screenshots/art/mia-morning-dew.jpg",
   identity: [
     "Nome exibido na ficha: Mia Morning Dew",
     "Gênero: feminino",

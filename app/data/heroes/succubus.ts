@@ -12,6 +12,7 @@ export const succubus: HeroRecord = {
   fieldNote:
     "Personagem ainda bloqueada na conta observada — a ficha lista os talentos, mas nenhum valor prático foi testado. Os prints de 30 ago. 2026 acrescentaram o degrau de nível 10 com dois números raros nesta wiki (30% de chance de stun por 2 segundos; 20% de corte na cura inimiga) e mostraram a passiva exclusiva mudando de Charm · Continuation para Heartbreak · Echo conforme o nível sobe.",
   image: "/screenshots/sp-heroes/succubus-profile.jpg",
+  artImage: "/screenshots/art/succubus.jpg",
   identity: [
     "Título exibido: SP Succubus",
     "Nome exibido na ficha: Selina · Frostcharm",
