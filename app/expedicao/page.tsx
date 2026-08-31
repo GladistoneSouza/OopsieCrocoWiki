@@ -18,6 +18,7 @@ import {
   unlockFirst,
   levelCostCurve,
   fragmentCurveGallery,
+  upgradeInputs,
   levelMilestones,
   spreadVsFocus,
   fragmentSource,
@@ -203,6 +204,42 @@ export default function ExpedicaoPage() {
         </div>
         <div className="shot-grid wide">
           {fragmentCurveGallery.map((shot) => (
+            <ShotFigure key={shot.src} src={shot.src} alt={shot.alt} caption={shot.caption} linked />
+          ))}
+        </div>
+        <SectionHead
+          eyebrow={upgradeInputs.kicker}
+          title={upgradeInputs.title}
+          description={upgradeInputs.intro}
+        />
+        <div className="table-wrap sticker-card">
+          <table className="game-table">
+            <thead>
+              <tr>
+                {upgradeInputs.columns.map((c) => (
+                  <th key={c}>{c}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {upgradeInputs.rows.map((row) => (
+                <tr key={row.item}>
+                  <td>{row.item}</td>
+                  <td>{row.what}</td>
+                  <td>{row.from}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <small>{upgradeInputs.observed}</small>
+        </div>
+        <CalloutNote
+          tone="warning"
+          title="O que isso faz com a conta de espalhar"
+          text={upgradeInputs.consequence}
+        />
+        <div className="shot-grid wide">
+          {upgradeInputs.gallery.map((shot) => (
             <ShotFigure key={shot.src} src={shot.src} alt={shot.alt} caption={shot.caption} linked />
           ))}
         </div>

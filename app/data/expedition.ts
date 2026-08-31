@@ -195,6 +195,47 @@ export const levelCostCurve = {
     "Evidências lidas em 31 ago. 2026: nível 3 com 0/5; níveis 5 e 8 com x/10; níveis 13-14 com x/30; níveis 15-18 com x/60. As quatro primeiras faixas aparecem em vários heróis e em duas raridades, então estão fechadas. A última linha vale menos: há um único herói acima do 20 no elenco, no nível 22, e ele pede 100. Isso prova que o degrau sobe depois do 20, não que a faixa inteira custe 100 — o total e o acumulado ficam em branco até aparecer um segundo ponto.",
 };
 
+// Fragmento nao e a unica moeda de upgrade. O rodape da ficha mostra duas barras,
+// e a wiki so vinha contando uma — o que subestimava o custo de subir um heroi.
+export const upgradeInputs = {
+  kicker: "A SEGUNDA MOEDA",
+  title: "Fragmento não sobe herói sozinho",
+  intro:
+    "O botão Upgrade fica ao lado de três fichas, e as duas primeiras nunca tinham entrado na conta da wiki. Subir um nível consome fragmentos do herói **e** EXP da classe dele. Ter fragmento sobrando não adianta se a classe está zerada, e o contrário também vale.",
+  columns: ["Ficha", "O que é", "De onde vem"],
+  rows: [
+    {
+      item: "EXP de classe",
+      what: "Um item por classe — Warrior Class Exp, Archer Class Exp, Summoner Class Exp e assim por diante. O texto do jogo diz \"item required for hero upgrade of the <classe>\".",
+      from: "Level Challenge, AFK e Black Market",
+    },
+    {
+      item: "All Class Exp",
+      what: "Curinga: \"can be used for hero upgrade of any class\".",
+      from: "Black Market",
+    },
+    {
+      item: "Random Class Exp",
+      what: "A esfera azul com \"?\" que aparecia sem identificação no loot, nos Diamond Packs e na tabela de taxas. É EXP de classe sorteada — você não escolhe qual classe recebe.",
+      from: "Hero Summon: 1,49% para ×40, 2,23% para ×20 e 4,46% para ×10 na aba Lv.4",
+    },
+  ],
+  observed:
+    "Leituras do rodapé, na ordem ALL · EXP da classe · fragmentos: Sword Demon SP em 26 ago. com 8 · 1.163/1.680 · 10/60, e o mesmo herói em 30 ago. com 1.549 · 2.439/1.680 · 10/60 — a barra de EXP já transbordava e o gargalo era o fragmento. A Mia SSR no nível 16 pedia 1.536 de EXP e 60 fragmentos. O requisito de EXP muda por herói e por nível; três pontos não desenham a curva.",
+  consequence:
+    "Isso mexe com a conta de espalhar contra concentrar. Os oito SP estão em oito classes diferentes, então subir todos em paralelo saca de oito reservas separadas ao mesmo tempo, e só o All Class Exp atravessa a fronteira. Enquanto os heróis estão em nível baixo o EXP pedido é pequeno e a conta do fragmento manda; se as reservas de classe acompanham quatro times subindo juntos é coisa que ainda não foi medida.",
+  gallery: [
+    { src: "/screenshots/progression/warrior-class-exp.jpg", alt: "Popup do Warrior Class Exp com as três fontes", caption: "Warrior Class Exp, 953 em estoque, vindo de Level Challenge, AFK e Black Market." },
+    { src: "/screenshots/progression/sword-demon-lv12-15.jpg", alt: "Rodapé da ficha do Sword Demon com as duas barras e os fragmentos", caption: "O rodapé que a wiki ignorava: ALL 8, EXP de classe 1.163/1.680 e fragmentos 10/60." },
+  ],
+  pending: [
+    "Levantar a curva de EXP de classe por nível, como já existe para fragmento",
+    "Confirmar se existe um item de EXP para cada uma das classes catalogadas",
+    "Medir quanto EXP de classe rendem Level Challenge, AFK e Black Market por dia",
+    "Verificar se o Black Market cobra ouro, diamante ou outra moeda pelo EXP",
+  ],
+};
+
 export const levelMilestones = {
   kicker: "OS NÍVEIS QUE IMPORTAM",
   title: "12, 15 e 20",

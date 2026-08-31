@@ -45,3 +45,4 @@ next-env.d.ts
 /img_game/
 
 __pycache__/
+*.tsbuildinfo
