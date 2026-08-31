@@ -35,7 +35,7 @@
 /* ---- Página do personagem ---- */
 
 .character-page {
-  max-width: min(1760px, 96vw);
+  max-width: min(2100px, 97vw);
   margin: 0 auto;
   padding: 48px 24px 60px;
 }
@@ -44,8 +44,8 @@
 
 .character-layout {
   display: grid;
-  grid-template-columns: 220px minmax(0, 1fr) 360px;
-  gap: 24px;
+  grid-template-columns: 250px minmax(0, 1fr) 400px;
+  gap: 26px;
   align-items: start;
   margin-top: 22px;
 }
@@ -57,11 +57,25 @@
 /* O miolo pode crescer com a tela, mas texto corrido nao: linha longa demais
    cansa. Grades de duas colunas e galerias continuam usando a largura toda. */
 .character-main > section > p,
-.character-story p,
 .character-note p,
 .character-main .info-card p,
 .character-main .build-detail p {
-  max-width: 88ch;
+  max-width: 92ch;
+}
+
+.character-story p {
+  max-width: 92ch;
+}
+
+@media (min-width: 1700px) {
+  .character-story .story-body {
+    columns: 2;
+    column-gap: 40px;
+  }
+  .character-story .story-body p {
+    max-width: none;
+    break-inside: avoid;
+  }
 }
 
 /* a barra superior tem 74px e e sticky; as ancoras param abaixo dela */

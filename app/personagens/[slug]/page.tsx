@@ -151,7 +151,11 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
                 />
               </div>
             ) : null}
-            {!hero.storySlides?.length ? hero.story.map((paragraph) => <p key={paragraph}>{paragraph}</p>) : null}
+            {!hero.storySlides?.length ? (
+              <div className="story-body">
+                {hero.story.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+              </div>
+            ) : null}
           </section>
         ) : null}
 
