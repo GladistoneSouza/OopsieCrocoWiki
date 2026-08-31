@@ -236,6 +236,35 @@ export const upgradeInputs = {
   ],
 };
 
+// Toda ficha mostra uma linha "Global reward: Critical DMG +X%". Cruzando os
+// numeros espalhados pelas fichas, o valor e simplesmente nivel x uma taxa fixa
+// da raridade — o que muda a conta de "vale subir um heroi que nao jogo?".
+export const globalCritReward = {
+  kicker: "O QUE TODO NÍVEL PAGA",
+  title: "Subir qualquer herói aumenta o crítico da conta",
+  intro:
+    "Cada ficha exibe uma linha de recompensa global em Dano Crítico, e ela não é um marco solto: é o nível do herói multiplicado por uma taxa que só depende da raridade. Dezenove leituras espalhadas por dez fichas fecham na conta exata, sem sobra.",
+  columns: ["Raridade", "Por nível", "Leituras que fecham", "No nível 15"],
+  rows: [
+    { tier: "SR", rate: "1,2%", points: "1 leitura — Karl no 15", at15: "18,0%" },
+    { tier: "SSR", rate: "1,4%", points: "9 leituras, 5 heroínas, dos níveis 9 ao 15", at15: "21,0%" },
+    { tier: "SP", rate: "1,6%", points: "8 leituras, 5 heróis, dos níveis 1 ao 15", at15: "24,0%" },
+    { tier: "UR", rate: "3,0%", points: "1 leitura — Artemis no 2", at15: "45,0% (projeção)" },
+  ],
+  proof:
+    "O Dragon Warrior sozinho fecha a escada do SP em quatro degraus seguidos: 1,6% no nível 1, 4,8% no 3, 6,4% no 4 e 8,0% no 5. A Lilith faz o mesmo do lado SSR: 12,6% no 9, 16,8% no 12, 18,2% no 13 e 21,0% no 15. E no mesmo nível 15 as três raridades se separam limpo — Karl a 18,0%, Bounty Hunter a 21,0% e Kazres a 24,0%.",
+  consequence:
+    "Isso muda a pergunta \"vale subir um herói que eu nem escalo?\". Vale em parte, porque o crítico entra na conta inteira e não naquele herói. Mas a taxa é linear e o custo em fragmento não é: da faixa 1-5 para a 15-20 o fragmento por nível salta de 5 para 60, então o mesmo 1,6% custa doze vezes mais no topo. Subir vários heróis pelos primeiros níveis compra crítico global muito mais barato que empurrar um só para cima.",
+  urCaveat:
+    "A linha UR vem de um ponto só — Artemis no nível 2 com 6,0%. A taxa de 3,0% por nível é quase o dobro da SP e faria de cada nível UR a compra mais eficiente do jogo, mas um ponto não fecha uma escada. Falta uma segunda leitura em outro nível.",
+  pending: [
+    "Confirmar a taxa UR com uma segunda leitura da Artemis em outro nível",
+    "Confirmar a taxa SR com um segundo herói roxo, já que Karl é a única leitura",
+    "Verificar se a recompensa global existe para outros atributos além de Dano Crítico",
+    "Descobrir se o bônus de profissão do nível 30 (+8% de dano da classe) também é de conta ou só do herói",
+  ],
+};
+
 export const levelMilestones = {
   kicker: "OS NÍVEIS QUE IMPORTAM",
   title: "12, 15 e 20",

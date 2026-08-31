@@ -153,6 +153,10 @@ export const catwoman: HeroRecord = {
       "O kit inteiro tem um verbo só: Hunt. Toda blessing da Mitia ou dispara Hunt, ou marca Prey para o Hunt render mais, ou converte abate em atributo permanente. Não existe uma segunda linha de dano competindo por espaço — o que faz dela a heroína mais fácil de montar do elenco vermelho e a mais fácil de estragar, porque uma run que não ofereça gatilho de Hunt não oferece nada.",
     loops: [
       {
+        name: "Prey amplifica, não só conta",
+        text: "A descrição da Hunt diz que cada marca aumenta o dano recebido pelo alvo — Prey não é apenas o contador que a execução lê, é multiplicador de dano em cima do inimigo. Se esse aumento valer para qualquer fonte de dano e não só para a Mitia, ela deixa de ser uma carry egoísta e vira amplificadora do time inteiro: espalha 3 marcas e todo mundo bate mais forte no mesmo alvo. O texto do jogo não diz de quem é o dano amplificado, e essa é a pergunta mais cara em aberto da ficha dela.",
+      },
+      {
         name: "O gatilho se realimenta",
         text: "murderous habit faz ataque básico disparar Hunt. Cada Hunt lançado soma dano em Claw Habits e, se o alvo tinha Prey, soma velocidade de ataque em Play with prey. Mais velocidade de ataque significa mais ataques básicos, que significam mais Hunt. O ciclo fecha sozinho e não depende de aliado nenhum.",
       },
@@ -193,7 +197,7 @@ export const catwoman: HeroRecord = {
       name: "Dobrar tudo no nível 10",
       status: "hipótese",
       needs: ["Cat Claw Divine Art (nível 10)"],
-      text: "Cada Hunt ganha chance de ser lançado outra vez em alvo aleatório. Como praticamente todo ganho da Mitia é contado por lançamento, esse talento não soma dano: multiplica a taxa de acúmulo do kit inteiro.",
+      text: "Cada Hunt ganha chance de ser lançado outra vez em alvo aleatório. Como praticamente todo ganho da Mitia é contado por lançamento, esse talento não soma dano: multiplica a taxa de acúmulo do kit inteiro. Falta saber se o Hunt gerado pelo próprio talento pode disparar o talento de novo — se puder, a dourada Cat Claw Magic deixa de ser 5 lançamentos e vira a raiz de uma árvore de disparos. É a diferença entre um multiplicador fixo e uma cascata.",
     },
     {
       name: "O que sobra contra um alvo só",
@@ -250,6 +254,9 @@ export const catwoman: HeroRecord = {
     { src: "/screenshots/catwoman/bestiary-hunt-ultimates.jpg", caption: "Bestiary de Hunt — cruel habits, Play with prey e as douradas Cat Claw Magic e wild hunt" },
   ],
   pending: [
+    "Testar se o aumento de dano recebido do Prey vale para o time todo ou só para a Mitia — decide se ela é carry egoísta ou amplificadora de composição",
+    "Testar se um Hunt disparado pela Cat Claw Divine Art pode disparar a Cat Claw Divine Art de novo, abrindo cascata em vez de um multiplicador fixo",
+    "Medir a diferença de dano dela entre sala com ondas antes do boss e sala de boss isolado — o kit inteiro prevê uma diferença grande e nenhuma run mediu",
     "Confirmar o valor do aumento permanente de dano por abate (nível 5) — o texto está completo, mas o número não é exibido",
     "Obter o percentual de esquiva de Wild Pursuit (nível 10), mostrado literalmente como \"x%\" na tela",
     "Esclarecer o que \"Killing Time\" significa no talento de nível 20 (provável erro de tradução de Hunt/Claw Strike)",

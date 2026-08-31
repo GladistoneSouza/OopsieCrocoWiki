@@ -19,6 +19,7 @@ import {
   levelCostCurve,
   fragmentCurveGallery,
   upgradeInputs,
+  globalCritReward,
   levelMilestones,
   spreadVsFocus,
   fragmentSource,
@@ -206,6 +207,45 @@ export default function ExpedicaoPage() {
           {fragmentCurveGallery.map((shot) => (
             <ShotFigure key={shot.src} src={shot.src} alt={shot.alt} caption={shot.caption} linked />
           ))}
+        </div>
+        <SectionHead
+          eyebrow={globalCritReward.kicker}
+          title={globalCritReward.title}
+          description={globalCritReward.intro}
+        />
+        <div className="table-wrap sticker-card">
+          <table className="game-table">
+            <thead>
+              <tr>
+                {globalCritReward.columns.map((c) => (
+                  <th key={c}>{c}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {globalCritReward.rows.map((row) => (
+                <tr key={row.tier}>
+                  <td>{row.tier}</td>
+                  <td>{row.rate}</td>
+                  <td>{row.points}</td>
+                  <td>{row.at15}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <small>{globalCritReward.proof}</small>
+        </div>
+        <div className="coop-grid">
+          <CalloutNote
+            tone="warning"
+            title="O que isso faz com a decisão de investir"
+            text={globalCritReward.consequence}
+          />
+          <CalloutNote
+            tone="info"
+            title="A linha UR ainda é um ponto só"
+            text={globalCritReward.urCaveat}
+          />
         </div>
         <SectionHead
           eyebrow={upgradeInputs.kicker}
