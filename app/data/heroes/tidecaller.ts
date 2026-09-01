@@ -99,66 +99,54 @@ export const tidecaller: HeroRecord = {
     {
       name: "Bestiary — Water Arrow Mastery",
       description: "O water element vira uma flecha d'água ao morrer, atacando inimigos aleatórios. Mesma blessing listada como Hydro Arrow Mastery no talento de nível 3 (inconsistência de tradução).",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/tidecaller/p1-1.jpg" },
     {
       name: "Bestiary — tidal blowback",
       description: "Ataques do Tidal element causam dano em área.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/tidecaller/p1-2.jpg" },
     {
       name: "Bestiary — Summon Mastery",
       description: "Quantidade de water elements invocados +2.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/tidecaller/p1-3.jpg" },
     {
       name: "Bestiary — tidal growth",
       description: "O Tidal Elemental aumenta dano e tamanho a cada 3 segundos vivo.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/tidecaller/p1-4.jpg" },
     {
       name: "Bestiary — Basic attack mastery",
       description: "Há chance de invocar um water element durante o ataque básico.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/tidecaller/p2-1.jpg" },
     {
       name: "Bestiary — Tidal energy storage",
       description: "Cada skill lançada aumenta o ATK do Tidal Elemental por 3 segundos.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/tidecaller/p2-2.jpg" },
     {
       name: "Bestiary — Healing Mastery",
       description: "O Water Elemental cura o aliado com menos vida ao morrer.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/tidecaller/p2-3.jpg" },
     {
       name: "Bestiary — Tidal rebirth",
       description: "O Tidal Element pode ser ressuscitado 1 vez após a morte.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/tidecaller/p2-4.jpg" },
     {
       name: "Bestiary — Damage Mastery",
       description: "O water element tem a vida reduzida e o poder de ataque muito aumentado.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/tidecaller/p3-1.jpg" },
     {
       name: "Bestiary — tidal regeneration",
       description:
         "Cada vez que uma skill é liberada, restaura vida (\"blood volume\") aos tidal elements. No Bestiary aparece como \"Locked / Unlock display after trigger\" (texto parcialmente visível); o texto completo foi confirmado no seletor de blessing em batalha e numa carta de escolha do co-op.",
-      source: "Blessing Bestiary (bloqueada) + seletor em batalha + carta de co-op",
-    },
+      source: "Blessing Bestiary (bloqueada) + seletor em batalha + carta de co-op", image: "/screenshots/bencaos/tidecaller/p3-2.jpg" },
     {
       name: "Bestiary — tsunami (dourada)",
       description:
         "Sempre que um certo número de unidades morre no campo de batalha, ondas gigantes são liberadas, causando dano a todos os inimigos. Hipótese: corresponde à skill chamada \"Tidal Wave\" nas melhorias de progressão (nomes divergentes).",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/tidecaller/p3-3.jpg" },
     {
       name: "Bestiary — Recycle (dourada)",
       description:
         "A morte de cada unidade no campo de batalha aumenta o dano e o tamanho do tidal element, até 20 vezes. Hipótese: corresponde ao ramo \"Reclaim\" das melhorias de progressão (nomes divergentes). Em run de co-op o Tidal Elemental gigante foi observado com contador de acúmulos em 20.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/tidecaller/p3-4.jpg" },
   ],
   kit: {
     engine:
