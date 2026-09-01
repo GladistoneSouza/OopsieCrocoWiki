@@ -218,6 +218,7 @@ export const tidecaller: HeroRecord = {
     "Um corpo grande e resistente que, no topo do Reclaim, ganha imunidade a controle",
   ],
   weaknesses: [
+    "Existe counter direto catalogado: o Bigmouth Man-eating Flower devora uma invocação a cada 5 segundos, silenciando e matando na hora, e o estágio 83 já apareceu com Restrain contra Summon. Numa heroína cujo kit inteiro é fabricar corpos, isso não é um inimigo difícil — é a negação da mecânica",
     "Rampa longa: 20 acúmulos não chegam cedo, e antes disso o colosso é um invocado comum",
     "Boss sem acompanhantes é o pior cenário — sem mortes no campo não há Recycle nem tsunami, e sobra o dano base",
     "Perder o Tidal Elemental apaga o acúmulo da run; Tidal rebirth cobre uma vez e mais nada",
