@@ -1538,5 +1538,101 @@
     ],
     "max_width": 860,
     "note": "Selina Shadowblade: degraus acima do 10"
+  },
+  {
+    "src": "img_game/herois-ficha/2026-08-30_09-10-34.jpg",
+    "out": "niveis/holy-knight-12-15.jpg",
+    "crop": [
+      30,
+      1206,
+      1190,
+      2156
+    ],
+    "max_width": 860,
+    "note": "Serena · Dawn: degraus 12 e 15, com o texto do 12 inteiro"
+  },
+  {
+    "src": "img_game/herois-ficha/2026-08-30_09-10-40.jpg",
+    "out": "niveis/holy-knight-15-20.jpg",
+    "crop": [
+      30,
+      1206,
+      1190,
+      2156
+    ],
+    "max_width": 860,
+    "note": "Serena · Dawn: a passiva exclusiva mostrando o 15, e o degrau 20 abaixo"
+  },
+  {
+    "src": "img_game/herois-ficha/2026-08-30_09-10-43.jpg",
+    "out": "niveis/holy-knight-20.jpg",
+    "crop": [
+      30,
+      1206,
+      1190,
+      2156
+    ],
+    "max_width": 860,
+    "note": "Serena · Dawn: degrau 20 com Holy Light Burst e Spear of Judgment"
+  },
+  {
+    "src": "img_game/herois-ficha/2026-08-30_09-11-13.jpg",
+    "out": "niveis/star-mage-12-15.jpg",
+    "crop": [
+      30,
+      1206,
+      1190,
+      2156
+    ],
+    "max_width": 860,
+    "note": "Liana · Nightrose: degraus 12 e 15"
+  },
+  {
+    "src": "img_game/herois-ficha/2026-08-30_09-11-30.jpg",
+    "out": "niveis/star-mage-15-20.jpg",
+    "crop": [
+      30,
+      1206,
+      1190,
+      2156
+    ],
+    "max_width": 860,
+    "note": "Liana · Nightrose: o 15 e o que vem depois"
+  },
+  {
+    "src": "img_game/herois-ficha/2026-08-30_09-10-17.jpg",
+    "out": "niveis/mia-15-20.jpg",
+    "crop": [
+      30,
+      1206,
+      1190,
+      2156
+    ],
+    "max_width": 860,
+    "note": "Mia Morning Dew: degraus 15 e 20"
+  },
+  {
+    "src": "img_game/herois-ficha/2026-08-30_09-10-28.jpg",
+    "out": "niveis/mia-18.jpg",
+    "crop": [
+      30,
+      1206,
+      1190,
+      2156
+    ],
+    "max_width": 860,
+    "note": "Mia Morning Dew: a mesma escada já no nível 18"
+  },
+  {
+    "src": "img_game/herois-ficha/2026-08-26_23-35-26.jpg",
+    "out": "niveis/lilith-15-20.jpg",
+    "crop": [
+      30,
+      1206,
+      1190,
+      2156
+    ],
+    "max_width": 860,
+    "note": "Lilith: degraus 15 e 20 lidos em português"
   }
 ]

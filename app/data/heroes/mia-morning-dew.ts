@@ -158,6 +158,10 @@ export const miaMorningDew: HeroRecord = {
       text: "Como o único parâmetro sob controle dela é a frequência de invocação, reduzir a recarga das habilidades dela multiplica tudo: mais elementais, mais mortes, mais bolas de fogo e mais camadas do buff de nível 15. É a heroína do elenco que mais ganha com uma Onmyoji no time.",
     },
   ],
+  levelShots: [
+    { label: "Níveis 15 e 20", src: "/screenshots/niveis/mia-15-20.jpg", caption: "No 15 cada Elemental de Fogo que morre aumenta o dano de todos os aliados; no 20 as bolas ricocheteiam mais uma vez ou os elementais se dividem em dois." },
+    { label: "A mesma escada no 18", src: "/screenshots/niveis/mia-18.jpg", caption: "Duas leituras de poder no mesmo par de degraus: 25.004 no nível 17 e 25.725 no 18." },
+  ],
   strengths: [
     "Converte invocação em buff de time — poucos heróis do elenco documentado aumentam o dano de todos os aliados",
     "A divisão se realimenta: mais corpos hoje significam mais mortes e mais buff em oito segundos",

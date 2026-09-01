@@ -26,6 +26,7 @@ export const starMage: HeroRecord = {
     "No primeiro print da ficha o poder aparecia parcialmente coberto (~8362) e o HP cortado (\"…24K\"); o segundo print confirmou poder 8.362, ATK 7697 e HP 93,24K.",
   ],
   levelSkills: [
+    { name: "Nível 15 — limiar da Starfall", description: "Depois de liberar 5 vezes a Starfall Technique, ela dispara mais 1 imediatamente. É o mesmo padrão de encurtar contador que aparece nas outras fichas — e conversa direto com o ciclo de aceleração dela.", source: "Tela de upgrade de 30 ago. 2026." },
     { name: "Bestiary — Comet · Continuous Hair", description: "A quantidade de cometas invocados pela habilidade Starfall aumenta em 3.", source: "Blessing Bestiary, página 1 (30 jul. 2026)." },
     { name: "Bestiary — Star Falls · Diffusion", description: "A Star Waterfall passa a causar dano a todos os inimigos, em vez de apenas aos 3 alvos da habilidade base.", source: "Blessing Bestiary, página 1 (30 jul. 2026)." },
     { name: "Bestiary — Comet · Automatic", description: "A cada 3 segundos, invoca 1 cometa automaticamente, sem gastar lançamento.", source: "Blessing Bestiary, página 1 (30 jul. 2026)." },
@@ -163,6 +164,10 @@ export const starMage: HeroRecord = {
       needs: ["Star Falls · Diffusion", "Star waterfall · continuous hair", "Milky Way Fall (dourada)"],
       text: "A cachoeira base pega 3 inimigos; Diffusion faz pegar todos e continuous hair dá probabilidade de acertar 3 vezes. Com o campo de mana da Milky Way Fall por cima, a rota da cachoeira vira dano de área persistente em vez de picos em alvos escolhidos.",
     },
+  ],
+  levelShots: [
+    { label: "Níveis 12 e 15", src: "/screenshots/niveis/star-mage-12-15.jpg", caption: "Degrau novo: depois de liberar 5 vezes a Starfall Technique, ela dispara mais 1 imediatamente. É redução de limiar, o mesmo padrão que aparece nas outras fichas." },
+    { label: "O 15 e o que vem depois", src: "/screenshots/niveis/star-mage-15-20.jpg", caption: "A mesma escada lida com a heroína já um nível acima." },
   ],
   strengths: [
     "Ciclo de aceleração fechado — cada cachoeira encurta o tempo da próxima conjuração, coisa que nenhum outro dourado documentado tem",

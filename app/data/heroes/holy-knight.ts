@@ -30,6 +30,8 @@ export const holyKnight: HeroRecord = {
     "ATK no nível 10: não exibido nos prints disponíveis.",
   ],
   levelSkills: [
+    { name: "Nível 15 — escudo de emergência", description: "Com a vida abaixo de 30%, ela ganha um escudo e reduz o dano recebido por 5 segundos. A partir do nível 15 esse é o talento exibido no campo Exclusive Passive.", source: "Telas de upgrade de 30 ago. 2026, nos níveis 14 e 15." },
+    { name: "Nível 20 — Holy Light Burst / Spear of Judgment", description: "Holy Light Burst restaura HP por segundo durante o Holy Wings of Protection; Spear of Judgment escala com cada camada de marca.", source: "Tela de upgrade de 30 ago. 2026." },
     {
       name: "Sacred Wing Shelter",
       description:
@@ -164,6 +166,11 @@ export const holyKnight: HeroRecord = {
       text: "Shelter · Guard escuda ela e o aliado com menos vida ao entrar no estado, e o nível 10 aumenta o HP máximo e soma uma provocação. Juntos formam o único pacote do elenco documentado que protege um aliado específico enquanto puxa o aggro do resto.",
     },
   ],
+  levelShots: [
+    { label: "Níveis 12 e 15", src: "/screenshots/niveis/holy-knight-12-15.jpg", caption: "O texto do 12 aparece inteiro pela primeira vez — Blessing adicional após a Ultimate. E o 15, que a ficha listava como não capturado: com a vida abaixo de 30%, ela ganha escudo e reduz o dano recebido por 5 segundos." },
+    { label: "O 15 como passiva exclusiva", src: "/screenshots/niveis/holy-knight-15-20.jpg", caption: "Ao chegar no 15 o campo Exclusive Passive passa a exibir esse mesmo talento, seguindo a regra da tela." },
+    { label: "Nível 20", src: "/screenshots/niveis/holy-knight-20.jpg", caption: "Holy Light Burst restaura HP por segundo durante o Holy Wings of Protection; Spear of Judgment escala por camada de marca." },
+  ],
   strengths: [
     "Defesa em camadas de tipos diferentes — redução de dano, escudo, cura e imunidade a controle — o que a torna difícil de derrubar por uma única via",
     "Protege um aliado nomeado, não só a si mesma: Shelter · Guard cobre quem estiver com menos vida",
@@ -216,8 +223,8 @@ export const holyKnight: HeroRecord = {
   ],
   pending: [
     "Reabrir a ficha sem tooltip/popup para ler poder, ATK e HP completos no nível atual (poder e HP saíram cobertos/cortados nos prints).",
-    "Ler o final do texto do marco de nível 12 (cortado em \"Gain an additional Blessing after selecting...\").",
-    "Capturar os marcos de nível 15+ (não exibidos nos prints).",
+    
+    
     "Abrir a Story (badge \"!\" na ficha) e o Hero Background para registrar identidade e história.",
     "Verificar se a heroína possui Exclusive Gems e capturar a tela correspondente.",
     "Confirmar em jogo se Sacred Crest Mark, Holy Emblem Mark, holy symbol mark e Sacred Insignia são de fato a mesma mecânica, e se Divine Wing Blessing = Holy Wings of Protection.",

@@ -336,6 +336,9 @@ export const lilith: HeroRecord = {
       text: "Septic Curse já corta a cura de quem carrega a marca e o talento de nível 10 fortalece essa redução além de espalhar mais. Contra boss que se recupera, a dupla vale mais que qualquer aumento de dano bruto — e faz o mesmo trabalho da Fear into the Soul do Kazres, o que os torna redundantes num mesmo time.",
     },
   ],
+  levelShots: [
+    { label: "Níveis 15 e 20 em português", src: "/screenshots/niveis/lilith-15-20.jpg", caption: "Cada pesadelo lançado restaura mana para ela; no 20, Erosão dos Sonhos faz o Pesadelo causar mais dano por segundo e Reencarnação do Pesadelo faz ele causar dano ao terminar." },
+  ],
   strengths: [
     "Motor fechado em HP e mana a partir do nível 15: ela paga a própria habilidade e não precisa de suporte dedicado",
     "O Nightmare é uma plataforma — cada blessing nova entra como passageiro e passa a valer para todo inimigo marcado",
