@@ -12,6 +12,7 @@ export const kazersDarkblade: HeroRecord = {
   image: "/screenshots/sword-demon/profile-level-15.jpg",
   artImage: "/screenshots/art/kazers-darkblade-card.jpg",
   stats: [
+    "Nível 15 em 31 ago. 2026: poder 30.901 · ataque 23,11K · HP 420,68K · defesa 14,37K. Contra os 25.977 lidos em 23 ago. no mesmo nível 15, a diferença é de bônus de conta que cresceram por fora — o herói não subiu.",
     "Nível 15 (23 ago.): poder 25.977 · ataque 19,43K · HP 354,22K · defesa 12,06K · Dano Crítico global +24,0% · fragmentos 10/60",
     "Nível observado: 15",
     "Poder observado: 24.654",
@@ -125,6 +126,15 @@ export const kazersDarkblade: HeroRecord = {
       needs: ["Bloody Swordsmanship", "Blade Storm permanente"],
       text: "Bloody Swordsmanship cura no mesmo evento em que o Blade Storm causa dano. Como o giro é a peça que ele já quer manter ligada o tempo todo, o sustain escala junto com o dano sem custar prioridade — e é o que permite ao Kazres ficar na frente sem peça defensiva dedicada.",
     },
+  ],
+  levelShots: [
+    { label: "Níveis 3, 5 e 8", src: "/screenshots/niveis/kazers-3-8.jpg", caption: "O nível 5 aumenta o dano contra inimigos em Fear — o kit já lê a marca como multiplicador desde cedo." },
+    { label: "O nome do nível 3", src: "/screenshots/niveis/kazers-3-tooltip.jpg", caption: "Blade of Fear abre como Dreadblade: Bladestorm aplica 2 camadas de Fear. A troca de nome entre linha e tooltip está aqui, na tela." },
+    { label: "O nome do nível 8", src: "/screenshots/niveis/kazers-8-tooltip.jpg", caption: "Gale Swordsmanship abre como Swift Wind Swordsmanship: o intervalo de dano do Blade Storm encurta." },
+    { label: "Níveis 10 e 12", src: "/screenshots/niveis/kazers-10-12.jpg", caption: "Fear Settlement faz o Demon King Slash aumentar o Finishing Strike; Shadowy Demon mantém os clones lutando." },
+    { label: "Níveis 12 e 15", src: "/screenshots/niveis/kazers-12-15.jpg", caption: "Blessing adicional após a Ultimate, e a cada 12 segundos inimigos em Fear ficam sem poder atacar." },
+    { label: "Nível 20", src: "/screenshots/niveis/kazers-20.jpg", caption: "Cada corte pode aplicar Fear; quando o clone some, há chance de reinvocá-lo." },
+    { label: "Níveis 25 e 30", src: "/screenshots/niveis/kazers-25-30.jpg", caption: "No 25 cada corte pode aumentar o dano de Fear recebido e a quantidade de clones pode subir em 1." },
   ],
   strengths: [
     "Uma habilidade só entrega dano em área, sustain e imunidade a controle ao mesmo tempo, o que libera as escolhas para escalar em vez de tapar buraco",

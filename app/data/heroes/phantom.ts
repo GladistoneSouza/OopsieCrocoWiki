@@ -39,7 +39,7 @@ export const phantom: HeroRecord = {
     },
     {
       name: "Nível 5 — mana ao abater",
-      description: "Após matar um inimigo, restaura uma grande quantidade de mana. O final do texto está cortado por um popup de Coop no print (\"larg...\").",
+      description: "Após matar um inimigo, restaura uma grande quantidade de mana. O print de 31 ago. 2026 mostra a linha inteira, sem o popup de co-op que cortava a captura antiga.",
       source: "Texto confirmado parcialmente na ficha.",
     },
     {
@@ -161,6 +161,12 @@ export const phantom: HeroRecord = {
       text: "White Blade corta 30% do dano do inimigo por 3 segundos, e Extremely white faz o básico aplicar isso sozinho. É a única mitigação do kit inteiro — quem joga a Phantom sem frontline precisa desta dupla, mesmo ela sendo a de menor multiplicador.",
     },
   ],
+  levelShots: [
+    { label: "Níveis 3, 5 e 8", src: "/screenshots/niveis/phantom-3-8.jpg", caption: "No 3 ela começa com Phantom White · Fragile e no 5 matar devolve muita mana — o texto completo, sem o popup de co-op que cortava o print antigo." },
+    { label: "O nome do nível 8", src: "/screenshots/niveis/phantom-8-tooltip.jpg", caption: "Ultimate Intent · White abre como Supreme Technique · White: o ataque básico tem chance de disparar 1 instância de White Blade com 3x de dano. Fecha a divergência de nome registrada na ficha." },
+    { label: "Nível 10", src: "/screenshots/niveis/phantom-10.jpg", caption: "Phantom Flourish Slash reconjura imediatamente ao matar; Ultimate Flash Strike soma esquiva por abate dentro do estado." },
+    { label: "Acima do 10", src: "/screenshots/niveis/phantom-12-15.jpg", caption: "Os degraus que a ficha listava como não vistos em nenhum print." },
+  ],
   strengths: [
     "Os maiores multiplicadores de alvo único registrados na wiki: +200% no Red Blade e instâncias de 5x saindo de ataque básico",
     "Ciclo de abate que se retroalimenta — mana, reconjuração imediata e teleporte para o alvo mais fraco",
@@ -211,8 +217,8 @@ export const phantom: HeroRecord = {
     { src: "/screenshots/phantom/hero-exchange.jpg", alt: "Hero Exchange com Phantom por 500 Hero Coins (50% off), limite semanal 8/8" },
   ],
   pending: [
-    "Recuperar o texto completo do talento de nível 5 (final cortado por popup de Coop).",
-    "Abrir os talentos acima do nível 10 (12, 15 etc.) — não vistos em nenhum print.",
+    
+    
     "Verificar se Phantom possui gemas exclusivas (nenhuma tela de gemas capturada).",
     "Abrir Hero Background e Stories (nenhum print de história).",
     "Confirmar a relação entre o estado \"Ultimate Flash Strike\" do talento de nível 10 e a blessing lendária \"Ultimate instant strike\" — hipótese de serem o mesmo mecanismo com traduções diferentes.",

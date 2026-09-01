@@ -24,6 +24,9 @@ export const bountyHunter: HeroRecord = {
     "Snapshot no nível 10 (jul.-ago.): poder 8.664 · ataque 7.975 · HP 96,61K · defesa 3.245",
   ],
   levelSkills: [
+    { name: "Nível 3 — Ammo · Steel Core", description: "Começa a batalha com Ammunition · Steel Core: ao atacar, há probabilidade de disparar uma steel core bullet causando dano adicional.", source: "Ficha nível 16 fotografada em 31 ago. 2026, com o tooltip aberto." },
+    { name: "Nível 5 — velocidade após o Wild Barrage", description: "Depois de conjurar o Wild Barrage, a velocidade de ataque aumenta.", source: "Ficha nível 16, 31 ago. 2026." },
+    { name: "Nível 8 — Gunnery: Reload", description: "Começa a batalha com Gunnery: Reload obtido; o efeito não foi aberto.", source: "Ficha nível 16, 31 ago. 2026." },
     {
       name: "Ultimate — Let the Bullets Fly",
       description: "Depois de 8 ataques, dispara uma rajada de balas (descrição de seleção: Deal Burst Damage). Em batalha, ela acumula os buffs Sharpness (aumenta dano) e Frenzy (aumenta velocidade de ataque) — observados 10→20 acúmulos de Sharpness elevando o ATK de 20,8K para 22,69K.",
@@ -90,6 +93,12 @@ export const bountyHunter: HeroRecord = {
       needs: ["Barrage Time (dourada)", "Gunsling · Improvement", "Wild Rapid Fire (nível 15)", "Barrage Time (nível 20)"],
       text: "A dourada dobra a ultimate, o Improvement soma uma bala por uso acumulando ao longo da luta, o nível 15 soma cinco de uma vez e o 20 faz cada bala ricochetear. Como o acúmulo do Improvement não zera, essa rota fica desproporcionalmente forte em luta longa.",
     },
+  ],
+  levelShots: [
+    { label: "Níveis 3, 5 e 8", src: "/screenshots/niveis/bounty-hunter-3-8.jpg", caption: "Degraus que a wiki não tinha: no 3 ela já começa com Ammo · Steel Core, no 5 a velocidade sobe depois do Wild Barrage e no 8 entra Gunnery: Reload." },
+    { label: "O nome do nível 3", src: "/screenshots/niveis/bounty-hunter-3-tooltip.jpg", caption: "Ammunition · Steel Core: ao atacar, há probabilidade de disparar steel core bullet, causando dano adicional." },
+    { label: "Níveis 10 e 12", src: "/screenshots/niveis/bounty-hunter-10-12.jpg", caption: "O degrau 12 é o padrão da casa: Blessing adicional depois da Ultimate." },
+    { label: "Níveis 15 e 20", src: "/screenshots/niveis/bounty-hunter-15-20.jpg", caption: "No 15 a Wild Rapid Fire ganha +5 balas; no 20, redução de resistência a crítico ou ricochete na rajada." },
   ],
   strengths: [
     "Escala em três eixos independentes ao mesmo tempo: tipos de munição, velocidade de ataque e tamanho da rajada",

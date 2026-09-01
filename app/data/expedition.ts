@@ -221,7 +221,7 @@ export const upgradeInputs = {
     },
   ],
   observed:
-    "Leituras do rodapé, na ordem ALL · EXP da classe · fragmentos: Sword Demon SP em 26 ago. com 8 · 1.163/1.680 · 10/60, e o mesmo herói em 30 ago. com 1.549 · 2.439/1.680 · 10/60 — a barra de EXP já transbordava e o gargalo era o fragmento. A Mia SSR no nível 16 pedia 1.536 de EXP e 60 fragmentos. As fichas da Succubus deram os dois degraus baixos: 120 de EXP com 5 fragmentos por nível, e 420 de EXP com 10 fragmentos por nível. Os quatro pontos — 120, 420, 1.536 e 1.680 — sobem junto com a faixa de fragmento, o que sugere uma segunda curva paralela; quatro pontos não a desenham.",
+    "O requisito é por nível e raridade, não por herói: Catwoman e Succubus marcam 240 no nível 5, e Succubus e Dragon Warrior marcam 420 no 8. Escada SP lida até aqui: 60 no nível 1, 120 no 3, 240 no 5, 420 no 8 e 1.680 no 15 — de 3 a 8 sobe 60 por nível certinho, mas o 15 é o dobro do que essa reta previa, então a taxa muda em algum ponto entre os dois. Do lado SSR: 384 no 9, 520 no 10, 1.344 no 15, 1.536 no 16 e 1.728 no 17. Leituras do rodapé, na ordem ALL · EXP da classe · fragmentos: Sword Demon SP em 26 ago. com 8 · 1.163/1.680 · 10/60, e o mesmo herói em 30 ago. com 1.549 · 2.439/1.680 · 10/60 — a barra de EXP já transbordava e o gargalo era o fragmento. A Mia SSR no nível 16 pedia 1.536 de EXP e 60 fragmentos. As fichas da Succubus deram os dois degraus baixos: 120 de EXP com 5 fragmentos por nível, e 420 de EXP com 10 fragmentos por nível. Os quatro pontos — 120, 420, 1.536 e 1.680 — sobem junto com a faixa de fragmento, o que sugere uma segunda curva paralela; quatro pontos não a desenham.",
   consequence:
     "Isso mexe com a conta de espalhar contra concentrar. Os oito SP estão em oito classes diferentes, então subir todos em paralelo saca de oito reservas separadas ao mesmo tempo, e só o All Class Exp atravessa a fronteira. Enquanto os heróis estão em nível baixo o EXP pedido é pequeno e a conta do fragmento manda; se as reservas de classe acompanham quatro times subindo juntos é coisa que ainda não foi medida.",
   gallery: [
@@ -375,7 +375,7 @@ export const rarityCostCompare = {
   pending: [
     "Levantar o EXP de classe pedido em outros níveis para desenhar a curva; hoje só o nível 15 tem as três raridades juntas",
     "Confirmar se a razão 3:4:5 se mantém fora do nível 15",
-    "Conferir o ponto discrepante da Red Queen, que registra \"essência Mage 1524/60\" no nível 1 — o 60 não bate com os 120 lidos na Succubus em nível baixo",
+    
   ],
 };
 

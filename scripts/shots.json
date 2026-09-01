@@ -1310,5 +1310,233 @@
     ],
     "max_width": 860,
     "note": "Selina · Frostcharm: degrau 10 com o stun de 30% e o corte de 20% na cura"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-31_17-43-34.jpg",
+    "out": "niveis/kazers-3-8.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Kazres: degraus 3, 5 e 8"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-31_17-43-43.jpg",
+    "out": "niveis/kazers-3-tooltip.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Kazres: Blade of Fear abre como Dreadblade"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-31_17-43-47.jpg",
+    "out": "niveis/kazers-8-tooltip.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Kazres: Gale Swordsmanship abre como Swift Wind Swordsmanship"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-31_17-43-51.jpg",
+    "out": "niveis/kazers-10-12.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Kazres: degraus 10 e 12"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-31_17-43-56.jpg",
+    "out": "niveis/kazers-12-15.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Kazres: degraus 12 e 15"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-31_17-44-00.jpg",
+    "out": "niveis/kazers-20.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Kazres: degrau 20"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-31_17-44-11.jpg",
+    "out": "niveis/kazers-25-30.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Kazres: degraus 25 e 30"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-31_17-45-02.jpg",
+    "out": "niveis/bounty-hunter-3-8.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Eria: degraus 3, 5 e 8"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-31_17-45-08.jpg",
+    "out": "niveis/bounty-hunter-3-tooltip.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Eria: Ammunition · Steel Core aberto"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-31_17-45-23.jpg",
+    "out": "niveis/bounty-hunter-10-12.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Eria: degraus 10 e 12"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-31_17-45-37.jpg",
+    "out": "niveis/bounty-hunter-15-20.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Eria: degraus 15 e 20"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-31_17-45-57.jpg",
+    "out": "niveis/onmyoji-3-8.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Sakura: degraus 3, 5 e 8"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-31_17-46-05.jpg",
+    "out": "niveis/onmyoji-3-tooltip.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Sakura: Yang · Growth e o degrau 5"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-31_17-46-17.jpg",
+    "out": "niveis/onmyoji-12-20.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Sakura: degraus 12, 15 e 20"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-31_17-46-28.jpg",
+    "out": "niveis/onmyoji-25-30.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Sakura: degraus 25 e 30"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-31_17-47-22.jpg",
+    "out": "niveis/phantom-3-8.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Selina Shadowblade: degraus 3, 5 e 8"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-31_17-47-29.jpg",
+    "out": "niveis/phantom-8-tooltip.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Selina Shadowblade: Supreme Technique · White aberto"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-31_17-47-50.jpg",
+    "out": "niveis/phantom-10.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Selina Shadowblade: degrau 10"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-31_17-47-57.jpg",
+    "out": "niveis/phantom-12-15.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Selina Shadowblade: degraus acima do 10"
   }
 ]

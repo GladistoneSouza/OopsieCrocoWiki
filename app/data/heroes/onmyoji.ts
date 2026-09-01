@@ -23,6 +23,8 @@ export const onmyoji: HeroRecord = {
     "Snapshot no nível 9 (30 jul.): poder 8.359 · ataque 6.998 · HP 103,6K · defesa 3.481 · Dano Crítico global +12,6%",
   ],
   levelSkills: [
+    { name: "Nível 3 — Yang · Growth", description: "Começa a batalha com Yang · Growth obtido, a peça que melhora a cura do círculo.", source: "Ficha nível 17 fotografada em 31 ago. 2026." },
+    { name: "Nível 5 — efeito terapêutico do círculo", description: "O yin and yang aumenta o efeito terapêutico da formação.", source: "Ficha nível 17, 31 ago. 2026." },
     {
       name: "Ultimate — Yin-Yang Magic Array",
       description: "Invoca o círculo mágico Yin-Yang, que cura continuamente os aliados dentro do alcance e reduz o Attack Speed dos inimigos.",
@@ -100,6 +102,12 @@ export const onmyoji: HeroRecord = {
       needs: ["Yin · Yang Twins (nível 10)", "Heaven and Earth Infinite (nível 10)", "Yang · Block"],
       text: "Imunidade a controle no nível 10, limpeza de debuffs ao ativar e redução de dano para quem está dentro. É o pacote que permite ao time ignorar controle inimigo — e o único caminho do elenco documentado que resolve controle em vez de sobreviver a ele.",
     },
+  ],
+  levelShots: [
+    { label: "Níveis 3, 5 e 8", src: "/screenshots/niveis/onmyoji-3-8.jpg", caption: "Degraus novos: no 3 ela começa com Yang · Growth, no 5 o yin and yang melhora o efeito terapêutico do círculo e no 8 entra Shadow · Fragile." },
+    { label: "O degrau 5 aberto", src: "/screenshots/niveis/onmyoji-3-tooltip.jpg", caption: "A linha do 5 fala do efeito terapêutico da formação, o que amarra o ramo Yang desde cedo." },
+    { label: "Níveis 12, 15 e 20", src: "/screenshots/niveis/onmyoji-12-20.jpg", caption: "No 15 o Yin Yang aumenta o dano aliado; no 20 o Heaven and Earth Infinite estende a duração." },
+    { label: "Níveis 25 e 30", src: "/screenshots/niveis/onmyoji-25-30.jpg", caption: "O topo da escada dela, ainda bloqueado no nível 17 atual." },
   ],
   strengths: [
     "Multiplica o time em vez de somar a si mesma: Yang · Rapid acelera o motor de todos os heróis que pagam por lançamento",
