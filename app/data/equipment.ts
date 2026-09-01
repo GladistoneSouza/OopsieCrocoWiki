@@ -33,8 +33,14 @@ export const equipmentLayers: EquipmentLayer[] = [
   { n: "01", title: "Raridade", text: "Define o tier estrutural da peça. Um Mythic vermelho pode superar um Legendary dourado mesmo alguns níveis abaixo." },
   { n: "02", title: "Nível", text: "Eleva o atributo-base dentro do mesmo tier. É importante, mas não deve ser comparado isoladamente." },
   { n: "03", title: "Aprimoramento", text: "O valor +58, +59 e semelhantes representa o reforço aplicado à peça." },
-  { n: "04", title: "Gemas", text: "Cada peça recebe até cinco bônus. Eles podem fortalecer classe, personagem, modo, tipo de inimigo ou condição de combate." },
+  { n: "04", title: "Gemas", text: "Cada peça recebe até cinco bônus. Eles podem fortalecer classe, personagem, modo, tipo de inimigo ou condição de combate. A tela da gema, aberta em 1 set. 2026, mostra a contribuição de uma só: a Pink Diamond da Mia soma Pet Attack +192, Assassin Defense +96, Mage Defense +96, Damage to Elites and BOSS +32% e Disaster damage +12,5% — os agregados da tabela abaixo são a soma dessas contribuições entre as peças. A mesma tela traz dois botões que a wiki não registrava: Reforge e Socket." },
   { n: "05", title: "Refino", text: "Rola atributos e tem 20% de chance de gerar um efeito especial. Efeitos úteis devem ser travados antes de novas tentativas." },
+];
+
+// Operacoes de gema vistas em 1 set. 2026, ainda sem tela propria aberta.
+export const gemOperations = [
+  { name: "Reforge", note: "Botão na ficha da gema. O que reforja — o bônus base, os cinco subatributos ou os dois — não foi capturado." },
+  { name: "Socket", note: "Segundo botão da mesma ficha. Presumivelmente encaixa a gema numa peça, mas a tela não foi aberta." },
 ];
 
 export const gemBonuses: [string, string, string][] = [

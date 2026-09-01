@@ -7,7 +7,7 @@ import { CalloutNote } from "../components/CalloutNote";
 import { ShotFigure } from "../components/ShotFigure";
 import { combatRuns, coreTeam, fifthSlotRule } from "../data/combatRuns";
 import { newlyDocumentedEnemies, documentedBosses, enemyShots, fieldDebuffs } from "../data/enemies";
-import { otherModes, inRunMechanics, inRunMechanicShots } from "../data/modes";
+import { otherModes, guildRaidDay, inRunMechanics, inRunMechanicShots } from "../data/modes";
 import { campaignStatus, strategyNotes, levelGrowth } from "../data/strategy";
 import { accountTimeline } from "../data/timeline";
 import { screenshotChecklist } from "../data/research";
@@ -173,6 +173,32 @@ export default function RunsPage() {
           {otherModes.map((mode) => (
             <FactCard key={mode.title} kicker={mode.kicker} title={mode.title} text={mode.text} />
           ))}
+        </div>
+
+        <SectionHead
+          eyebrow={guildRaidDay.kicker}
+          title={guildRaidDay.title}
+          description={guildRaidDay.intro}
+        />
+        <div className="table-wrap sticker-card">
+          <table className="game-table">
+            <thead>
+              <tr>{guildRaidDay.columns.map((c) => <th key={c}>{c}</th>)}</tr>
+            </thead>
+            <tbody>
+              {guildRaidDay.rows.map((row) => (
+                <tr key={row.n}>
+                  <td>{row.n}</td><td>{row.dano}</td><td>{row.acc}</td>
+                  <td>{row.boost}</td><td>{row.lider}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <small>{guildRaidDay.split}</small>
+        </div>
+        <div className="coop-grid">
+          <CalloutNote tone="dark" title="O que a medição desloca" text={guildRaidDay.reading} />
+          <CalloutNote tone="info" title="O boss e o buff entre tentativas" text={guildRaidDay.boost} />
         </div>
       </section>
 

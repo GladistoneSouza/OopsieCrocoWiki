@@ -1,3 +1,30 @@
+// Um dia inteiro de Guild Raid fotografado em 31 ago. 2026, com as tres
+// tentativas e o ranking de dano de cada uma. E a primeira medicao real de
+// quem carrega o dano desta conta.
+export const guildRaidDay = {
+  kicker: "UM DIA DE IGRIS, MEDIDO",
+  title: "Três tentativas, e a arqueira dourada fez 74% do dano na melhor delas",
+  intro:
+    "As regras do modo a wiki já tinha. O que faltava era desempenho. Em 31 ago. 2026 as três tentativas do dia foram fotografadas do começo ao fim, com o ranking de dano aberto — e o resultado não é o que as análises de kit vinham supondo.",
+  columns: ["Tentativa", "Dano", "Acumulado", "Boss Damage Boost", "Quem liderou"],
+  rows: [
+    { n: "1ª", dano: "50,62M", acc: "50,62M", boost: "+215% → +220%", lider: "Eria — Bounty Hunter, 37,71M" },
+    { n: "2ª", dano: "45,16M", acc: "95,78M", boost: "+230%", lider: "Eria — Bounty Hunter" },
+    { n: "3ª", dano: "19,45M", acc: "115,23M", boost: "—", lider: "Karl — Shadow Wolf, 5,9M" },
+  ],
+  split:
+    "O ranking da melhor tentativa: Bounty Hunter 37,71M, Sword Demon 10,95M, Shadow Wolf 1,09M, Fire Spirit Master 607,85K e Rumble 68,45K. A arqueira sozinha responde por 74% do total, e o Kazres — o projeto vermelho principal da conta — por 22%.",
+  reading:
+    "Isso desloca uma suposição que atravessa toda a análise de personagem: a discussão vinha girando em torno de qual vermelho carrega, e quem carrega é uma SSR de classe Archer. Não invalida o kit de ninguém, mas mostra que kit lido e dano medido não são a mesma coisa — e que só o Kazres e a Eria têm número.",
+  boost:
+    "O Boss Damage Boost foi lido em +215%, +220% e +230% em tentativas sucessivas, o que combina com o registro anterior de que ele sobe com o tempo. A barra do Igris começou a primeira tentativa em 113,77M e a segunda em 37,12M: o HP não reseta entre tentativas do mesmo dia.",
+  pending: [
+    "Repetir o dia com a composição trocada para isolar quanto do resultado é a Eria e quanto é a ordem das blessings sorteadas",
+    "Medir o momento exato em que o Boss Damage Boost começa a subir",
+    "Registrar a recompensa recebida por tentativa, não só a fixa de 40 emblemas por vitória",
+  ],
+};
+
 export const otherModes = [
   {
     kicker: "BOSS DA GUILDA • IGRIS",
