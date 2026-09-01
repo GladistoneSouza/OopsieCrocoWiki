@@ -348,6 +348,13 @@ export default function ExpedicaoPage() {
             text={globalCritReward.urCaveat}
           />
         </div>
+        <div className="coop-grid">
+          <CalloutNote
+            tone="dark"
+            title="E o total aparece na tela"
+            text={globalCritReward.accountTotal}
+          />
+        </div>
         <SectionHead
           eyebrow={upgradeInputs.kicker}
           title={upgradeInputs.title}

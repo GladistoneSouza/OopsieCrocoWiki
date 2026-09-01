@@ -350,6 +350,8 @@ export const globalCritReward = {
     "O Dragon Warrior sozinho fecha a escada do SP em quatro degraus seguidos: 1,6% no nível 1, 4,8% no 3, 6,4% no 4 e 8,0% no 5. A Lilith faz o mesmo do lado SSR: 12,6% no 9, 16,8% no 12, 18,2% no 13 e 21,0% no 15. E no mesmo nível 15 as três raridades se separam limpo — Karl a 18,0%, Bounty Hunter a 21,0% e Kazres a 24,0%.",
   consequence:
     "Isso muda a pergunta \"vale subir um herói que eu nem escalo?\". Vale em parte, porque o crítico entra na conta inteira e não naquele herói. Mas a taxa é linear e o custo em fragmento não é: da faixa 1-5 para a 15-20 o fragmento por nível salta de 5 para 60, então o mesmo 1,6% custa doze vezes mais no topo. Subir vários heróis pelos primeiros níveis compra crítico global muito mais barato que empurrar um só para cima.",
+  accountTotal:
+    "A soma existe na tela e a wiki a registrava sem saber de onde vinha. O painel Hero Comp exibe um \"Global Critical DMG\" que é o acumulado da conta inteira, e ele cresce à medida que os heróis sobem: 500,0% · 627,8% · 647,0% · 656,4% · 663,0% e 672,2% no snapshot pós-estágio 82. Cada linha de recompensa global que aparece numa ficha é uma parcela desse total — o que dá um jeito prático de medir qualquer decisão de investimento: anote o número antes, suba o herói, anote depois.",
   urCaveat:
     "A linha UR vem de um ponto só — Artemis no nível 2 com 6,0%. A taxa de 3,0% por nível é quase o dobro da SP e faria de cada nível UR a compra mais eficiente do jogo, mas um ponto não fecha uma escada. Falta uma segunda leitura em outro nível.",
   pending: [

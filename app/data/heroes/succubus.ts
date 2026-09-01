@@ -122,7 +122,7 @@ export const succubus: HeroRecord = {
   evidence: ["Prévia da ficha SP Succubus bloqueada (22 ago. 2026)"],
   evidenceImages: [{ src: "/screenshots/sp-heroes/succubus-profile.jpg", caption: "Prévia da ficha SP Succubus — Selina · Frostcharm (bloqueada)" }],
   pending: [
-    "Publicar os prints da árvore de Charm e Heartbreak, da ficha nível 8 e das telas de batalha com os stacks — o conteúdo está transcrito de relato e precisa da evidência em img_game/",
+    "Publicar os prints da árvore de Charm e Heartbreak, do nível 20/25 e das telas de batalha com os stacks. Conferido em 31 ago. 2026: eles não estão no lote do organizar nem nas 926 transcrições da triagem — o que veio foram a ficha e as três telas de upgrade dos níveis 3, 5 e 8. A árvore existe só fora do acervo.",
     "Testar se o Heartbreak acumulável do nível 10 acumula também o aumento de dano recebido, e qual é o teto",
     "Confirmar se o Heartbreak Bullet do nível 25 é o mesmo contador dos 7 do A Flash of Love",
     "Testar se o aumento de dano recebido pelo Heartbreak vale para o dano do time todo ou só para o dela",
