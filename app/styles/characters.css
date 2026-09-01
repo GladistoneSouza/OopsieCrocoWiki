@@ -1267,3 +1267,68 @@
   object-fit: contain;
   height: auto;
 }
+
+/* ---- Blessing Bestiary: cartas recortadas, em grade que abre e fecha ---- */
+
+.blessing-panel {
+  margin-top: 18px;
+  padding: 18px 22px;
+}
+.blessing-panel summary {
+  cursor: pointer;
+  display: grid;
+  gap: 2px;
+  list-style: none;
+}
+.blessing-panel summary::-webkit-details-marker {
+  display: none;
+}
+.blessing-panel summary::after {
+  content: "▸ abrir";
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--croco-deep);
+}
+.blessing-panel[open] summary::after {
+  content: "▾ fechar";
+}
+.blessing-panel summary b {
+  font-family: var(--font-display);
+  font-size: 22px;
+}
+.blessing-panel summary small {
+  font-size: 11px;
+  color: var(--ink-soft);
+}
+.blessing-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 16px;
+}
+.blessing-grid figure {
+  margin: 0;
+  display: grid;
+  gap: 6px;
+}
+.blessing-grid img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 2px solid rgba(43, 37, 67, 0.18);
+  border-radius: 12px;
+  background: var(--panel);
+}
+.blessing-grid figure {
+  transition: transform var(--pop);
+}
+.blessing-grid figure:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1240px) {
+  .blessing-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 760px) {
+  .blessing-grid { grid-template-columns: repeat(2, 1fr); }
+}

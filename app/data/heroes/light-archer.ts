@@ -85,65 +85,53 @@ export const lightArcher: HeroRecord = {
       name: "Bestiary — Demon-killing Arrow · Speed",
       description:
         "Velocidade de ataque +105% em demon-killing state. Mesmo efeito do tooltip 'Demon-Slaying Arrow · Swift' da ficha (traduções divergentes).",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/light-archer/p1-1.jpg" },
     {
       name: "Bestiary — Light Arrow · Mastery",
       description: "A probabilidade de disparar Light Arrow aumenta bastante.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/light-archer/p1-2.jpg" },
     {
       name: "Bestiary — Exorcist Arrow Company",
       description: "Em demon-killing state, atacar o mesmo alvo 3 vezes causa dano adicional.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/light-archer/p1-3.jpg" },
     {
       name: "Bestiary — Light Arrow · Judgment",
       description: "Light Arrows causam dano adicional.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/light-archer/p1-4.jpg" },
     {
       name: "Bestiary — Demon-killing arrow · scatter",
       description: "Em demon-killing state, os ataques causam dano em área.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/light-archer/p2-1.jpg" },
     {
       name: "Bestiary — Light Arrow · Start",
       description: "O Holy Enchantment exige 2 ataques normais a menos (entra no estado mais cedo).",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/light-archer/p2-2.jpg" },
     {
       name: "Bestiary — Demon-killing arrow · Broken",
       description: "Em demon-killing state, ao atacar o mesmo alvo, a taxa de crítico aumenta gradualmente.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/light-archer/p2-3.jpg" },
     {
       name: "Bestiary — Light Arrow · Focus",
       description: "A cada 3 ataques, o dano da Light Arrow aumenta.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/light-archer/p2-4.jpg" },
     {
       name: "Bestiary — Demon-killing arrows and bullets",
       description: "Em demon-killing state, o ataque ricocheteia 2 vezes.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/light-archer/p3-1.jpg" },
     {
       name: "Bestiary — Light Arrow · Fashion",
       description: "Disparar Light Arrow aumenta a própria velocidade de ataque.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/light-archer/p3-2.jpg" },
     {
       name: "Bestiary — Advanced level of demon slaying (dourada)",
       description:
         "O demon-killing state passa a durar permanentemente. O texto transcrito segue com tradução truncada: 'Every time 3 is attacked, a 6 starlight arrow will be designed continuously, causing damage based on the enemy's health value' — aparentemente, a cada 3 ataques dispara 6 Starlight Arrows em sequência, com dano baseado na vida do inimigo. O texto original está mal traduzido, mas duas leituras independentes do mesmo print chegaram a essa mesma interpretação — segue como leitura provável, não confirmada, até alguém ver o efeito em run.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/light-archer/p3-3.jpg" },
     {
       name: "Bestiary — Overclocking mode (dourada)",
       description:
         "Depois de disparar Light Arrow 8 vezes, entra em Overclock; cada disparo passa a soltar de 1 a 5 Light Arrows aleatoriamente.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/light-archer/p3-4.jpg" },
   ],
   kit: {
     engine:

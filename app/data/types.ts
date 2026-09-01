@@ -17,6 +17,8 @@ export type HeroSkill = {
   name: string;
   description: string;
   source?: string;
+  /** Recorte da carta no Blessing Bestiary, quando existe. */
+  image?: string;
 };
 
 export type HeroBuild = {

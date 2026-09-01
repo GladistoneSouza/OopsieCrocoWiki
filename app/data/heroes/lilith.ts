@@ -221,63 +221,51 @@ export const lilith: HeroRecord = {
     {
       name: "Bestiary — twin nightmare",
       description: "Nightmare é lançado em 1 inimigo adicional. Tooltip aberto na ficha nv13: 'Nightmare casts on additional 1 enemies.'",
-      source: "Blessing Bestiary (pág. 1) e tooltip na ficha (21 ago.).",
-    },
+      source: "Blessing Bestiary (pág. 1) e tooltip na ficha (21 ago.).", image: "/screenshots/bencaos/lilith/p1-1.jpg" },
     {
       name: "Bestiary — Septic Curse",
       description: "Inimigos carregando Nightmare recebem efeitos de cura reduzidos. O Bestiary escreve 'receive reduced healing effects'; o tooltip da ficha escreve 'have their healing effects reduced' (mesmo efeito, duas redações).",
-      source: "Blessing Bestiary (pág. 1) e tooltip na ficha.",
-    },
+      source: "Blessing Bestiary (pág. 1) e tooltip na ficha.", image: "/screenshots/bencaos/lilith/p1-2.jpg" },
     {
       name: "Bestiary — Overtime nightmare",
       description: "A duração do Nightmare é aumentada.",
-      source: "Blessing Bestiary (pág. 1).",
-    },
+      source: "Blessing Bestiary (pág. 1).", image: "/screenshots/bencaos/lilith/p1-3.jpg" },
     {
       name: "Bestiary — bloodthirsty curse",
       description: "Atacar um inimigo carregando Nightmare restaura vida para si mesma. Em uma run apareceu como carta na tela de escolha de Ultimate com custo 4 (sem a coroa de Ultimate).",
-      source: "Blessing Bestiary (pág. 1); vista em runs de 16 ago.",
-    },
+      source: "Blessing Bestiary (pág. 1); vista em runs de 16 ago.", image: "/screenshots/bencaos/lilith/p1-4.jpg" },
     {
       name: "Bestiary — Fierce Nightmare",
       description: "Nightmare causa dano extra.",
-      source: "Blessing Bestiary (pág. 2).",
-    },
+      source: "Blessing Bestiary (pág. 2).", image: "/screenshots/bencaos/lilith/p2-1.jpg" },
     {
       name: "Bestiary — weaken curse",
       description: "Inimigos carregando Nightmare têm o dano reduzido.",
-      source: "Blessing Bestiary (pág. 2).",
-    },
+      source: "Blessing Bestiary (pág. 2).", image: "/screenshots/bencaos/lilith/p2-2.jpg" },
     {
       name: "Bestiary — Possession Nightmare",
       description: "Ao aplicar Nightmare em um inimigo, reduz o dano que você recebe.",
-      source: "Blessing Bestiary (pág. 2); vista também em run de 16 ago. (nv2).",
-    },
+      source: "Blessing Bestiary (pág. 2); vista também em run de 16 ago. (nv2).", image: "/screenshots/bencaos/lilith/p2-3.jpg" },
     {
       name: "Bestiary — paralyzing curse",
       description: "Nightmare deixa o inimigo incapaz de atacar por um período de tempo.",
-      source: "Blessing Bestiary (pág. 2); vista também em run de 16 ago. (nv3).",
-    },
+      source: "Blessing Bestiary (pág. 2); vista também em run de 16 ago. (nv3).", image: "/screenshots/bencaos/lilith/p2-4.jpg" },
     {
       name: "Bestiary — Crazy Nightmare",
       description: "Inimigos carregando Nightmare causam dano em área a cada 3 segundos.",
-      source: "Blessing Bestiary (pág. 3); vista também em drafts de dungeon (nv2, 16 ago.).",
-    },
+      source: "Blessing Bestiary (pág. 3); vista também em drafts de dungeon (nv2, 16 ago.).", image: "/screenshots/bencaos/lilith/p3-1.jpg" },
     {
       name: "Bestiary — Soul-Draining Curse",
       description: "A cada 8 segundos, drena a vida dos inimigos em Nightmare.",
-      source: "Blessing Bestiary (pág. 3).",
-    },
+      source: "Blessing Bestiary (pág. 3).", image: "/screenshots/bencaos/lilith/p3-2.jpg" },
     {
       name: "Bestiary — Dream erosion (dourada)",
       description: "O dano contínuo do Nightmare é aumentado. O nome coincide com os talentos de nível 10 e 20 (Dream Erosion), que têm textos diferentes — inconsistência registrada.",
-      source: "Blessing Bestiary (pág. 3, lendária).",
-    },
+      source: "Blessing Bestiary (pág. 3, lendária).", image: "/screenshots/bencaos/lilith/p3-3.jpg" },
     {
       name: "Bestiary — eternal reincarnation (dourada)",
       description: "Quando o Nightmare termina, há probabilidade de ele ser transferido para 1 outro inimigo ('the probability will be transferred to another 1 enemy'). Relaciona-se ao talento Eternal Reincarnation do nível 10 (chance de transferência maior).",
-      source: "Blessing Bestiary (pág. 3, lendária).",
-    },
+      source: "Blessing Bestiary (pág. 3, lendária).", image: "/screenshots/bencaos/lilith/p3-4.jpg" },
   ],
   kit: {
     engine:

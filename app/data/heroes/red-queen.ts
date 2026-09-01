@@ -39,64 +39,52 @@ export const redQueen: HeroRecord = {
     {
       name: "Bestiary — Wind Flame · Hell",
       description: "\"Firestorm Damage greatly increased\" — dano da Firestorm muito aumentado; o valor não é exibido.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/red-queen/p1-1.jpg" },
     {
       name: "Bestiary — Earth Fire · Penetration",
       description:
         "\"Every time 6 plots are summoned, the defense penetration effect is increased.\" — a cada 6 blocos invocados, aumenta a penetração de defesa. Atenção: o tooltip da mesma blessing na ficha diz \"lava block DMG slightly increased\" (dano do bloco de lava levemente aumentado) — os dois textos divergem e ambos ficam registrados.",
-      source: "Blessing Bestiary + tooltip na ficha de progressão.",
-    },
+      source: "Blessing Bestiary + tooltip na ficha de progressão.", image: "/screenshots/bencaos/red-queen/p1-2.jpg" },
     {
       name: "Bestiary — Wind Flame · Singing",
       description: "Depois de invocar uma Fire Storm, acelera a velocidade de conjuração da Fire Storm.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/red-queen/p1-3.jpg" },
     {
       name: "Bestiary — Earth fire · Frequent occurrence",
       description: "Quantidade de blocos de lava gerados +3.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/red-queen/p1-4.jpg" },
     {
       name: "Bestiary — Wind Flame · Twins",
       description: "Quantidade de Firestorm +1.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/red-queen/p2-1.jpg" },
     {
       name: "Bestiary — Earth fire · boiling",
       description: "Intervalo de dano do bloco de lava encurtado.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/red-queen/p2-2.jpg" },
     {
       name: "Bestiary — The wind and flames never cease",
       description: "Duração da Fire Storm +2 segundos.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/red-queen/p2-3.jpg" },
     {
       name: "Bestiary — Ground fire · spread",
       description: "O bloco de lava tem probabilidade de se espalhar quando termina.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/red-queen/p2-4.jpg" },
     {
       name: "Bestiary — Wind Flame · Rage",
       description: "A Fire Storm causa dano adicional toda vez que causa dano.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/red-queen/p3-1.jpg" },
     {
       name: "Bestiary — Earth Fire · Melt",
       description: "O bloco de lava tem chance de causar dano adicional igual a 1% da vida atual do inimigo.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/red-queen/p3-2.jpg" },
     {
       name: "Bestiary — Hell of Fire is Coming (dourada)",
       description: "Depois de cada 2 Fire Storms invocadas, causa dano igual a 285% do poder de ataque a todos os inimigos.",
-      source: "Blessing Bestiary — blessing dourada (ultimate).",
-    },
+      source: "Blessing Bestiary — blessing dourada (ultimate).", image: "/screenshots/bencaos/red-queen/p3-3.jpg" },
     {
       name: "Bestiary — Molten Core (dourada)",
       description: "Depois de liberar uma certa quantidade de campos de lava, causa dano igual a 120% do poder de ataque a todos os inimigos em campo a cada segundo.",
-      source: "Blessing Bestiary — blessing dourada (ultimate).",
-    },
+      source: "Blessing Bestiary — blessing dourada (ultimate).", image: "/screenshots/bencaos/red-queen/p3-4.jpg" },
     {
       name: "Nível 3 — Wind Flame · Hell",
       description: "Começa a batalha com Wind Flame · Hell obtido. Tooltip aberto na ficha: \"Firestorm damage greatly increased\".",

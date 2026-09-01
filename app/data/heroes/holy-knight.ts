@@ -54,69 +54,57 @@ export const holyKnight: HeroRecord = {
       name: "Bestiary — Shelter · Shield",
       description:
         "Durante Holy Wings of Protection, há chance de ganhar um escudo ao ser atacada.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/holy-knight/p1-1.jpg" },
     {
       name: "Bestiary — Mark · Haste",
       description:
         "Durante Holy Wings of Protection, a cada 3 segundos você ganha 1 nível de Holy Emblem Mark.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/holy-knight/p1-2.jpg" },
     {
       name: "Bestiary — Shelter · Continuation",
       description: "Duração de Holy Wings of Protection +3 segundos.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/holy-knight/p1-3.jpg" },
     {
       name: "Bestiary — Mark · Shield",
       description: "Cada vez que ganha 1 camada de Holy Emblem Mark, ganha um escudo.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/holy-knight/p1-4.jpg" },
     {
       name: "Bestiary — Shelter · Cure",
       description:
         "Durante Holy Wings of Protection, há chance de recuperar o valor máximo de vida a cada segundo (texto do jogo; a porcentagem/valor exato não é exibida).",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/holy-knight/p2-1.jpg" },
     {
       name: "Bestiary — Imprint · Resonance",
       description: "Ataques normais têm chance de obter Holy Emblem Mark.",
-      source: "Blessing Bestiary (grafada \"imprint · resonance\" em minúsculas no jogo)",
-    },
+      source: "Blessing Bestiary (grafada \"imprint · resonance\" em minúsculas no jogo)", image: "/screenshots/bencaos/holy-knight/p2-2.jpg" },
     {
       name: "Bestiary — Asylum · Suppression",
       description:
         "Ao usar Holy Wings of Protection, reduz a velocidade de ataque dos inimigos próximos. (\"Asylum\" aparenta ser tradução alternativa de \"Shelter\".)",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/holy-knight/p2-3.jpg" },
     {
       name: "Bestiary — Imprint · Free of Control",
       description: "Ao possuir 10 camadas de holy symbol mark, fica imune a controle.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/holy-knight/p2-4.jpg" },
     {
       name: "Bestiary — Shelter · Guard",
       description:
         "Ao entrar em Holy Wings of Protection, fornece escudo baseado na vida máxima para si mesma e para o aliado com menor vida.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/holy-knight/p3-1.jpg" },
     {
       name: "Bestiary — Imprint · Sublimation",
       description: "Limite máximo de Holy Emblem Mark +5.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/holy-knight/p3-2.jpg" },
     {
       name: "Bestiary — Holy Light Burst (dourada)",
       description:
         "Ao obter Holy Wings of Protection, ganha escudo de vida máxima e causa dano alto aos inimigos ao redor. (Mesmo nome do marco de nível 10; a relação entre os dois não é explicada nos prints.)",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/holy-knight/p3-3.jpg" },
     {
       name: "Bestiary — Spear of Judgment (dourada)",
       description:
         "Com 5 níveis de holy symbol mark, os ataques normais se tornam dano em área. (O marco nv10 chama a opção correspondente de \"Judgment Spear\" — aparente inconsistência de tradução.)",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/holy-knight/p3-4.jpg" },
   ],
   kit: {
     engine:

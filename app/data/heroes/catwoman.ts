@@ -37,66 +37,54 @@ export const catwoman: HeroRecord = {
       name: "Bestiary — hunting habits",
       description:
         "A morte de uma unidade inimiga aumenta o próprio dano. Quando resta apenas 1 inimigo, ganha alta velocidade de ataque e roubo de vida. Texto idêntico ao tooltip do talento Prey Collection — aparentemente a mesma blessing com dois nomes (inconsistência de tradução).",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/catwoman/p1-1.jpg" },
     {
       name: "Bestiary — nibbling prey",
       description:
         "Quanto menos inimigos houver, maior o próprio índice de crítico. Texto quase idêntico ao tooltip de Devour prey/Devouring Prey — aparentemente a mesma blessing com nomes distintos (inconsistência de tradução).",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/catwoman/p1-2.jpg" },
     {
       name: "Bestiary — murderous habit",
       description: "Ataques têm chance de disparar Hunt.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/catwoman/p1-3.jpg" },
     {
       name: "Bestiary — execute prey",
       description:
         "Texto na tela: \"If the enemy stacks up 3 and the prey triggers to execute, low health enemies can be killed directly.\" — com 3 acúmulos de Prey, inimigos com pouca vida podem ser executados diretamente (tradução da tela é confusa; interpretação como hipótese).",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/catwoman/p1-4.jpg" },
     {
       name: "Bestiary — bloodthirsty habits",
       description: "Lança Hunt automaticamente no inimigo com menor HP; recarga de 5 segundos.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/catwoman/p2-1.jpg" },
     {
       name: "Bestiary — search for prey",
       description: "A cada 7 segundos, causa dano a todos os inimigos e aplica 3 acúmulos de Prey.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/catwoman/p2-2.jpg" },
     {
       name: "Bestiary — Claw Habits",
       description: "Cada lançamento de Hunt aumenta o próprio dano; acumulável.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/catwoman/p2-3.jpg" },
     {
       name: "Bestiary — mark prey",
       description: "Ataques básicos também marcam o inimigo com Prey.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/catwoman/p2-4.jpg" },
     {
       name: "Bestiary — cruel habits",
       description: "Hunt causa dano adicional baseado em parte do HP perdido do alvo.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/catwoman/p3-1.jpg" },
     {
       name: "Bestiary — Play with prey",
       description: "Após lançar Hunt em um alvo com Prey, aumenta a velocidade de ataque; acumulável.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/catwoman/p3-2.jpg" },
     {
       name: "Bestiary — Cat Claw Magic (dourada)",
       description: "A cada 8 segundos, lança 5 ataques consecutivos de Hunt em inimigos aleatórios.",
-      source: "Blessing Bestiary — blessing dourada (ultimate).",
-    },
+      source: "Blessing Bestiary — blessing dourada (ultimate).", image: "/screenshots/bencaos/catwoman/p3-3.jpg" },
     {
       name: "Bestiary — wild hunt (dourada)",
       description:
         "A cada 7 segundos, lança Hunt em todos os inimigos marcados com Prey, causando dano extra conforme a quantidade de acúmulos de Prey. Nome exibido em minúsculas na tela; não confundir com o ramo de talento Wild Hunt dos níveis 20/25.",
-      source: "Blessing Bestiary — blessing dourada (ultimate).",
-    },
+      source: "Blessing Bestiary — blessing dourada (ultimate).", image: "/screenshots/bencaos/catwoman/p3-4.jpg" },
     {
       name: "Nível 3 — Prey Collection",
       description:

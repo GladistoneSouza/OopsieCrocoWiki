@@ -55,63 +55,51 @@ export const phantom: HeroRecord = {
     {
       name: "Bestiary — Phantom White · Fragile",
       description: "White Blade reduz o dano do inimigo em 30% por 3 segundos.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/phantom/p1-1.jpg" },
     {
       name: "Bestiary — Extremely white",
       description: "Ataques básicos têm chance de disparar 1 instância de White Blade com 3x de dano.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/phantom/p1-2.jpg" },
     {
       name: "Bestiary — Phantom Powder · Blade",
       description: "Pink Blade aumenta o próprio dano em +30%, acumulável até 3 vezes.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/phantom/p1-3.jpg" },
     {
       name: "Bestiary — Jiyi · Powder",
       description: "Ataques básicos têm chance de disparar 1 instância de Pink Blade com 4x de dano.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/phantom/p1-4.jpg" },
     {
       name: "Bestiary — Phantom Red · Deadly",
       description: "Red Blade causa +200% de dano.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/phantom/p2-1.jpg" },
     {
       name: "Bestiary — Extremely Red",
       description: "Ataques básicos têm chance de disparar 1 instância de Red Blade com 5x de dano.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/phantom/p2-2.jpg" },
     {
       name: "Bestiary — Phantom · Almighty",
       description: "Todos os efeitos de aura de lâmina +60%.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/phantom/p2-3.jpg" },
     {
       name: "Bestiary — Extremely colorful",
       description: "Nos primeiros 10 segundos de batalha, a velocidade de ataque aumenta em 240%.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/phantom/p2-4.jpg" },
     {
       name: "Bestiary — Phantom · Combo",
       description: "Quanto menor o HP do alvo, maior o dano de Prismatic Slash.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/phantom/p3-1.jpg" },
     {
       name: "Bestiary — Extreme intention · kill",
       description: "Ataques básicos têm chance de conjurar Phantasmal Prism Slash.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/phantom/p3-2.jpg" },
     {
       name: "Bestiary — Phantom Huazhan (dourada)",
       description: "A cada 8 segundos, causa dano massivo; para cada vez que Prismatic Slash foi conjurado, causa 1 acerto adicional.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/phantom/p3-3.jpg" },
     {
       name: "Bestiary — Ultimate instant strike (dourada)",
       description: "A cada 8 segundos, teleporta até o inimigo com o menor HP para atacar; velocidade de ataque e dano aumentam muito e ganha invisibilidade por 5 segundos.",
-      source: "Blessing Bestiary",
-    },
+      source: "Blessing Bestiary", image: "/screenshots/bencaos/phantom/p3-4.jpg" },
   ],
   kit: {
     engine:

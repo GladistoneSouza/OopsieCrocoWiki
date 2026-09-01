@@ -28,18 +28,18 @@ export const starMage: HeroRecord = {
   ],
   levelSkills: [
     { name: "Nível 15 — limiar da Starfall", description: "Depois de liberar 5 vezes a Starfall Technique, ela dispara mais 1 imediatamente. É o mesmo padrão de encurtar contador que aparece nas outras fichas — e conversa direto com o ciclo de aceleração dela.", source: "Tela de upgrade de 30 ago. 2026." },
-    { name: "Bestiary — Comet · Continuous Hair", description: "A quantidade de cometas invocados pela habilidade Starfall aumenta em 3.", source: "Blessing Bestiary, página 1 (30 jul. 2026)." },
-    { name: "Bestiary — Star Falls · Diffusion", description: "A Star Waterfall passa a causar dano a todos os inimigos, em vez de apenas aos 3 alvos da habilidade base.", source: "Blessing Bestiary, página 1 (30 jul. 2026)." },
-    { name: "Bestiary — Comet · Automatic", description: "A cada 3 segundos, invoca 1 cometa automaticamente, sem gastar lançamento.", source: "Blessing Bestiary, página 1 (30 jul. 2026)." },
-    { name: "Bestiary — Star Falls · Penetration", description: "Cada vez que a Star Waterfall é disparada, aumenta a penetração de defesa dela; o valor está cortado no próprio texto do jogo.", source: "Blessing Bestiary, página 1 (30 jul. 2026)." },
-    { name: "Bestiary — Comet · Power", description: "Aumenta significativamente o dano do cometa.", source: "Blessing Bestiary, página 2 (30 jul. 2026)." },
-    { name: "Bestiary — Star Waterfall · Singing", description: "Quando a Star Waterfall é liberada, a velocidade de conjuração da Starfall é acelerada.", source: "Blessing Bestiary, página 2 (30 jul. 2026)." },
-    { name: "Bestiary — Comet · Charge", description: "Quando o cometa acerta, há chance de aumentar levemente o próprio dano.", source: "Blessing Bestiary, página 2 (30 jul. 2026)." },
-    { name: "Bestiary — Star waterfall · continuous hair", description: "A Star Waterfall tem probabilidade de acertar 3 vezes.", source: "Blessing Bestiary, página 2 (30 jul. 2026)." },
-    { name: "Bestiary — Comet · Echo", description: "Quando o cometa acerta, há chance de gerar 1 cometa adicional.", source: "Blessing Bestiary, página 3 (30 jul. 2026)." },
-    { name: "Bestiary — Star Falls · Affinity", description: "A probabilidade de geração da Star Waterfall aumenta muito.", source: "Blessing Bestiary, página 3 (30 jul. 2026)." },
-    { name: "Bestiary — super comet (dourada)", description: "A cada 5 cometas invocados, cometas gigantes caem causando dano em área igual a 250% do poder de ataque.", source: "Blessing Bestiary, página 3 (30 jul. 2026)." },
-    { name: "Bestiary — Milky Way Fall (dourada)", description: "Depois de invocar 3 vezes a Star Waterfall, invoca um campo de mana galáctico que causa dano igual a 75% do poder de ataque a todos os inimigos dentro do campo, a cada segundo.", source: "Blessing Bestiary, página 3 (30 jul. 2026)." },
+    { name: "Bestiary — Comet · Continuous Hair", description: "A quantidade de cometas invocados pela habilidade Starfall aumenta em 3.", source: "Blessing Bestiary, página 1 (30 jul. 2026)." , image: "/screenshots/bencaos/star-mage/p1-1.jpg" },
+    { name: "Bestiary — Star Falls · Diffusion", description: "A Star Waterfall passa a causar dano a todos os inimigos, em vez de apenas aos 3 alvos da habilidade base.", source: "Blessing Bestiary, página 1 (30 jul. 2026)." , image: "/screenshots/bencaos/star-mage/p1-2.jpg" },
+    { name: "Bestiary — Comet · Automatic", description: "A cada 3 segundos, invoca 1 cometa automaticamente, sem gastar lançamento.", source: "Blessing Bestiary, página 1 (30 jul. 2026)." , image: "/screenshots/bencaos/star-mage/p1-3.jpg" },
+    { name: "Bestiary — Star Falls · Penetration", description: "Cada vez que a Star Waterfall é disparada, aumenta a penetração de defesa dela; o valor está cortado no próprio texto do jogo.", source: "Blessing Bestiary, página 1 (30 jul. 2026)." , image: "/screenshots/bencaos/star-mage/p1-4.jpg" },
+    { name: "Bestiary — Comet · Power", description: "Aumenta significativamente o dano do cometa.", source: "Blessing Bestiary, página 2 (30 jul. 2026)." , image: "/screenshots/bencaos/star-mage/p2-1.jpg" },
+    { name: "Bestiary — Star Waterfall · Singing", description: "Quando a Star Waterfall é liberada, a velocidade de conjuração da Starfall é acelerada.", source: "Blessing Bestiary, página 2 (30 jul. 2026)." , image: "/screenshots/bencaos/star-mage/p2-2.jpg" },
+    { name: "Bestiary — Comet · Charge", description: "Quando o cometa acerta, há chance de aumentar levemente o próprio dano.", source: "Blessing Bestiary, página 2 (30 jul. 2026)." , image: "/screenshots/bencaos/star-mage/p2-3.jpg" },
+    { name: "Bestiary — Star waterfall · continuous hair", description: "A Star Waterfall tem probabilidade de acertar 3 vezes.", source: "Blessing Bestiary, página 2 (30 jul. 2026)." , image: "/screenshots/bencaos/star-mage/p2-4.jpg" },
+    { name: "Bestiary — Comet · Echo", description: "Quando o cometa acerta, há chance de gerar 1 cometa adicional.", source: "Blessing Bestiary, página 3 (30 jul. 2026)." , image: "/screenshots/bencaos/star-mage/p3-1.jpg" },
+    { name: "Bestiary — Star Falls · Affinity", description: "A probabilidade de geração da Star Waterfall aumenta muito.", source: "Blessing Bestiary, página 3 (30 jul. 2026)." , image: "/screenshots/bencaos/star-mage/p3-2.jpg" },
+    { name: "Bestiary — super comet (dourada)", description: "A cada 5 cometas invocados, cometas gigantes caem causando dano em área igual a 250% do poder de ataque.", source: "Blessing Bestiary, página 3 (30 jul. 2026)." , image: "/screenshots/bencaos/star-mage/p3-3.jpg" },
+    { name: "Bestiary — Milky Way Fall (dourada)", description: "Depois de invocar 3 vezes a Star Waterfall, invoca um campo de mana galáctico que causa dano igual a 75% do poder de ataque a todos os inimigos dentro do campo, a cada segundo.", source: "Blessing Bestiary, página 3 (30 jul. 2026)." , image: "/screenshots/bencaos/star-mage/p3-4.jpg" },
     {
       name: "Starfall (habilidade base)",
       description:
@@ -57,71 +57,6 @@ export const starMage: HeroRecord = {
       description:
         "Marco bloqueado na ficha nível 9. Super Comet: \"Super Comet has a cha[nce] to release 1 extra\" — o restante do texto está cortado no print. Galaxy Descent: após invocar o Stellar Mana Field, aumenta a própria penetração de defesa (valor não exibido).",
       source: "Texto confirmado na tela de progressão (marco bloqueado).",
-    },
-    {
-      name: "Bestiary — Comet · Continuous Hair",
-      description: "O número de cometas invocados pela spell Starfall aumenta em 3.",
-      source: "Blessing Bestiary",
-    },
-    {
-      name: "Bestiary — Star Falls · Diffusion",
-      description:
-        "Star Waterfall causa dano a todos os inimigos. Mesma blessing do marco de nível 8, onde é grafada \"Starfall · Diffusion\".",
-      source: "Blessing Bestiary",
-    },
-    {
-      name: "Bestiary — Comet · Automatic",
-      description: "A cada 3 segundos, invoca automaticamente 1 cometa.",
-      source: "Blessing Bestiary",
-    },
-    {
-      name: "Bestiary — Star Falls · Penetration",
-      description:
-        "Cada vez que Star Waterfall é disparada, aumenta a própria penetração de defesa; o valor está cortado no próprio texto do jogo (a frase termina em \"by .\").",
-      source: "Blessing Bestiary",
-    },
-    {
-      name: "Bestiary — Comet · Power",
-      description: "O dano dos cometas aumenta significativamente.",
-      source: "Blessing Bestiary",
-    },
-    {
-      name: "Bestiary — Star Waterfall · Singing",
-      description: "Quando Star Waterfall é liberada, a velocidade de conjuração de Starfall é acelerada.",
-      source: "Blessing Bestiary",
-    },
-    {
-      name: "Bestiary — Comet · Charge",
-      description: "Quando um cometa acerta, há chance de aumentar levemente o próprio dano.",
-      source: "Blessing Bestiary",
-    },
-    {
-      name: "Bestiary — Star waterfall · continuous hair",
-      description:
-        "Star Waterfall possui probabilidade de atingir 3 vezes. Grafada com iniciais minúsculas no jogo, diferente de \"Comet · Continuous Hair\".",
-      source: "Blessing Bestiary",
-    },
-    {
-      name: "Bestiary — Comet · Echo",
-      description: "Quando um cometa acerta, há chance de gerar 1 cometa adicional.",
-      source: "Blessing Bestiary",
-    },
-    {
-      name: "Bestiary — Star Falls · Affinity",
-      description: "A probabilidade de geração de Star Waterfall aumenta bastante.",
-      source: "Blessing Bestiary",
-    },
-    {
-      name: "Bestiary — super comet (dourada)",
-      description:
-        "A cada 5 cometas invocados, cometas gigantes caem, causando dano em área igual a 250% do poder de ataque. Grafada em minúsculas no Bestiary.",
-      source: "Blessing Bestiary",
-    },
-    {
-      name: "Bestiary — Milky Way Fall (dourada)",
-      description:
-        "Após invocar Star Waterfall 3 vezes, invoca um campo de mana galáctico que causa dano igual a 75% do poder de ataque a todos os inimigos dentro do campo a cada segundo. O marco de nível 10 (Galaxy Descent) menciona um \"Stellar Mana Field\" — provavelmente o mesmo campo, com tradução divergente.",
-      source: "Blessing Bestiary",
     },
   ],
   kit: {
