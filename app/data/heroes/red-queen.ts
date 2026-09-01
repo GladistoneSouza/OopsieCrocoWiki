@@ -22,6 +22,7 @@ export const redQueen: HeroRecord = {
     "Aparece como opção selecionável de 'Probability UP' no Mythical Summon",
   ],
   stats: [
+    "Confirmado em 30 ago. 2026: no nível 1 ela, a Tidecaller e a Light Archer exibem os mesmos 17.501 de poder, 16,01K de ataque, 195,04K de vida e 6.661 de defesa. Atributo de SP é do nível e da classe, não do herói — a hipótese de stats base compartilhados deixou de ser hipótese.",
     "Snapshot no nível 1 (22 ago.): poder 14.279 · ataque 13,04K · HP 159,27K · defesa 5.450 · Dano Crítico global +1,6% · fragmentos 2/5 · essência Mage 1524/60 · ALL 396",
     "Snapshot no nível 1 (21 ago.): poder 14.026 · ataque 12,81K · HP 156,44K · defesa 5.354 · Dano Crítico global +1,6% · fragmentos 2/5 · essência Mage 1427/60 · ALL 256",
     "Observação: os dois snapshots são do mesmo nível 1 em datas diferentes e divergem em poder/ataque/HP/defesa (14.026 → 14.279); a causa não aparece na tela — ambos os valores ficam registrados.",
@@ -253,7 +254,7 @@ export const redQueen: HeroRecord = {
     "Registrar a chance do Firestorm consecutivo do nível 5",
     "Confirmar a progressão do nível 35 em diante (texto cortado no print)",
     "Explicar a divergência de poder no nível 1 entre 21 ago. (14.026) e 22 ago. (14.279)",
-    "Hipótese a verificar: os stats do nível 1 de 21 ago. são idênticos aos da Light Archer nível 1 (14.026 · 12,81K · 156,44K · 5.354), sugerindo stats base compartilhados entre SPs",
+    
     "Confirmar as identificações incertas da Red Queen nos prints de batalha (Igris 219.514 e Abyss Realm), marcadas com \"?\" na triagem",
     "Documentar o Hero Background e as Stories da Red Queen (ainda não capturados)",
   ],

@@ -23,6 +23,7 @@ import {
   rarityCostCompare,
   breakpointMap,
   breadthVsDepth,
+  statProfile,
   levelMilestones,
   spreadVsFocus,
   fragmentSource,
@@ -210,6 +211,48 @@ export default function ExpedicaoPage() {
           {fragmentCurveGallery.map((shot) => (
             <ShotFigure key={shot.src} src={shot.src} alt={shot.alt} caption={shot.caption} linked />
           ))}
+        </div>
+        <SectionHead
+          eyebrow={statProfile.kicker}
+          title={statProfile.title}
+          description={statProfile.intro}
+        />
+        <div className="table-wrap sticker-card">
+          <table className="game-table">
+            <thead>
+              <tr>{statProfile.columns.map((c) => <th key={c}>{c}</th>)}</tr>
+            </thead>
+            <tbody>
+              {statProfile.rows.map((row) => (
+                <tr key={row.hero}>
+                  <td>{row.hero}</td><td>{row.cls}</td><td>{row.lv}</td>
+                  <td>{row.power}</td><td>{row.atk}</td><td>{row.hp}</td><td>{row.def}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <small>{statProfile.reading}</small>
+        </div>
+        <div className="coop-grid">
+          <CalloutNote tone="dark" title="O que isso encerra" text={statProfile.consequence} />
+          <CalloutNote tone="warning" title="E os números andam sozinhos" text={statProfile.drift} />
+        </div>
+        <div className="table-wrap sticker-card">
+          <p className="eyebrow">{statProfile.succubusLadder.title.toUpperCase()}</p>
+          <p>{statProfile.succubusLadder.intro}</p>
+          <table className="game-table">
+            <thead>
+              <tr>{statProfile.succubusLadder.columns.map((c) => <th key={c}>{c}</th>)}</tr>
+            </thead>
+            <tbody>
+              {statProfile.succubusLadder.rows.map((row) => (
+                <tr key={row.lv}>
+                  <td>{row.lv}</td><td>{row.power}</td><td>{row.atk}</td><td>{row.hp}</td><td>{row.def}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <small>{statProfile.succubusLadder.note}</small>
         </div>
         <SectionHead
           eyebrow={breadthVsDepth.kicker}

@@ -247,6 +247,51 @@ export const upgradeInputs = {
 // a ficha dele aponta como o proximo que muda alguma coisa. O resultado e o
 // custo real de atravessar cada breakpoint.
 // A conta que decide entre espalhar e aprofundar, com numeros reais.
+// Sete fichas de exibicao capturadas na mesma noite de 30 ago. 2026 respondem
+// uma pergunta que atravessava todas as comparacoes de heroi: os atributos sao
+// do heroi ou do nivel?
+export const statProfile = {
+  kicker: "ATRIBUTO NÃO É DO HERÓI",
+  title: "Três vermelhas de classes diferentes, no nível 1, com os números idênticos",
+  intro:
+    "As telas de exibição de 30 ago. 2026 põem sete SP lado a lado na mesma noite. Red Queen, Tidecaller e Light Archer — Mage, Summon e Archer — estão no nível 1 e exibem exatamente o mesmo poder, o mesmo ataque, a mesma vida e a mesma defesa. Não é aproximado: é o mesmo número.",
+  columns: ["Herói", "Classe", "Nível", "Poder", "ATK", "HP", "DEF"],
+  rows: [
+    { hero: "Livia — Red Queen", cls: "Mage", lv: "1", power: "17.501", atk: "16,01K", hp: "195,04K", def: "6.661" },
+    { hero: "Ice Blue Snowbud — Tidecaller", cls: "Summon", lv: "1", power: "17.501", atk: "16,01K", hp: "195,04K", def: "6.661" },
+    { hero: "Veliana — Light Archer", cls: "Archer", lv: "1", power: "17.501", atk: "16,01K", hp: "195,04K", def: "6.661" },
+    { hero: "Lia — Flower Spirit", cls: "Support", lv: "3", power: "20.081", atk: "16,69K", hp: "248,59K", def: "8.491" },
+    { hero: "Mitia — Catwoman", cls: "Assassin", lv: "5", power: "21.871", atk: "21,83K", hp: "216,72K", def: "7.401" },
+    { hero: "Selina · Frostcharm — Succubus", cls: "Control", lv: "8", power: "24.586", atk: "20,44K", hp: "304,36K", def: "10,4K" },
+    { hero: "Rain Flame Soul — Dragon Warrior", cls: "Warrior", lv: "8", power: "24.604", atk: "14,31K", hp: "395,67K", def: "13,51K" },
+  ],
+  reading:
+    "Duas leituras saem daí. O poder acompanha o nível, não o herói: Succubus e Dragon Warrior, ambos no 8, ficam a 18 pontos um do outro — 24.586 contra 24.604, sete centésimos de por cento. E a repartição desse poder acompanha a classe: no mesmo nível 8, a Control tem 20,44K de ataque com 304K de vida, enquanto o Warrior tem 14,31K de ataque com 395K. A Assassin no nível 5 bate mais forte (21,83K) que a Control no 8.",
+  consequence:
+    "Isso encerra uma pergunta que aparece em toda comparação de herói: \"qual deles tem os melhores atributos?\" Nenhum. Os atributos são do nível e da classe, e o herói entra com o kit. Citar \"os 16K de ataque dela\" como característica de uma heroína é citar uma propriedade do nível 1 de qualquer SP. O que separa um vermelho do outro é exclusivamente o que o kit faz — que é justamente onde a wiki gasta o esforço.",
+  drift:
+    "Os números também se mexem sem o herói subir. A Succubus no nível 1 aparece com 16.826 às 10h20 e 16.920 às 10h41 do mesmo dia, e o Dragon Warrior no nível 5 sai de 19.671 em 25 ago. para 20.899 em 30 ago. O poder exibido embute bônus de conta que crescem por fora, então comparar fichas de dias diferentes não vale — só serve o mesmo instante.",
+  succubusLadder: {
+    title: "A escada completa de uma SP, do 1 ao 8",
+    intro: "A Succubus foi fotografada em cada nível na mesma janela, o que dá a primeira progressão nível a nível da wiki.",
+    columns: ["Nível", "Poder", "ATK", "HP", "DEF"],
+    rows: [
+      { lv: "1", power: "16.920", atk: "14,06K", hp: "207,64K", def: "7.218" },
+      { lv: "2", power: "18.412", atk: "15,3K", hp: "225,97K", def: "7.855" },
+      { lv: "3", power: "19.408", atk: "16,13K", hp: "238,18K", def: "8.280" },
+      { lv: "4", power: "20.279", atk: "16,85K", hp: "248,87K", def: "8.652" },
+      { lv: "5", power: "21.150", atk: "17,58K", hp: "259,56K", def: "9.023" },
+      { lv: "8", power: "24.586", atk: "20,44K", hp: "304,36K", def: "10,4K" },
+    ],
+    note: "Do 2 ao 5 o ganho é quase constante — cerca de 0,73K de ataque, 10,7K de vida e 371 de defesa por nível. Do 5 ao 8 a média sobe para 0,95K de ataque por nível, o que levanta a hipótese de o ganho também mudar nas faixas de cinco, como o custo em fragmento. Três pontos não fecham isso.",
+  },
+  pending: [
+    "Fotografar duas raridades diferentes no mesmo nível e no mesmo instante para ver se o poder também é igual entre SR, SSR e SP",
+    "Confirmar se o ganho de atributo por nível muda nas faixas de cinco, como o custo em fragmento",
+    "Descobrir que bônus de conta são somados ao poder exibido, já que ele muda sem o herói subir",
+  ],
+};
+
 export const breadthVsDepth = {
   kicker: "LARGURA CONTRA PROFUNDIDADE",
   title: "Quatro heróis até o degrau que transforma custam menos que um sozinho subindo cinco níveis",

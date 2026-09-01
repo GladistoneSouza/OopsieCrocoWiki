@@ -75,6 +75,16 @@ manifesto ainda resolve antes de commitar a mudança de pastas.
 
 ## Antes de pedir print novo, minere o que já existe
 
+Em 31 ago. 2026 a pasta `img_game/herois-arte` estava rotulada como "arte" e
+foi usada só para recortar retratos. Eram, na verdade, sessenta e sete telas
+de exibição com nome, nível e o rodapé de poder, ATK, HP e DEF — incluindo a
+Succubus fotografada em cada nível do 1 ao 8. A descoberta de que atributo de
+SP é do nível e da classe, e não do herói, estava parada ali o tempo todo.
+
+A lição é sobre o rótulo: ao classificar um lote, o nome da pasta descreve o
+assunto da tela, não o que dá para extrair dela. Antes de dizer que um dado
+não existe, abra alguns arquivos de cada pasta e olhe o rodapé.
+
 Duas descobertas de 31 ago. 2026 não precisaram de captura nenhuma:
 
 - As três páginas do Blessing Bestiary da Star Mage estavam publicadas em
