@@ -4,6 +4,7 @@ import { SiteHeader } from "../../components/SiteHeader";
 import { SiteFooter } from "../../components/SiteFooter";
 import { EvidenceCarousel } from "../../components/EvidenceCarousel";
 import { StoryCarousel } from "../../components/StoryCarousel";
+import { ShotFigure } from "../../components/ShotFigure";
 import { getHero, heroes } from "../../data/heroes";
 
 const confidenceLegend = [
