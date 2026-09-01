@@ -278,22 +278,29 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
           </section>
         ) : null}
 
-        <div className="character-columns" id="habilidades">
-          <section className="sticker-card">
-            <p className="eyebrow">POR NÍVEL</p>
-            <h2>Habilidades gratuitas</h2>
-            {hero.levelSkills.length ? (
-              hero.levelSkills.map((skill) => (
+        <details className="skill-panel sticker-card" id="habilidades">
+          <summary>
+            <span className="eyebrow">POR NÍVEL</span>
+            <b>Habilidades gratuitas</b>
+            <small>{hero.levelSkills.length} entradas — a habilidade base, as bênçãos do Bestiary e os degraus de nível</small>
+          </summary>
+          {hero.levelSkills.length ? (
+            <div className="skill-grid">
+              {hero.levelSkills.map((skill) => (
                 <article className="info-card" key={skill.name}>
-                  <h3>{skill.name}</h3>
+                  {skill.image ? <img src={skill.image} alt="" loading="lazy" /> : null}
+                  <h3>{skill.name.replace("Bestiary — ", "")}</h3>
                   <p>{skill.description}</p>
                   {skill.source ? <small>Fonte: {skill.source}</small> : null}
                 </article>
-              ))
-            ) : (
-              <p className="empty-state">Ainda precisamos registrar os níveis e os nomes oficiais.</p>
-            )}
-          </section>
+              ))}
+            </div>
+          ) : (
+            <p className="empty-state">Ainda precisamos registrar os níveis e os nomes oficiais.</p>
+          )}
+        </details>
+
+        <div className="character-columns">
           <section className="sticker-card">
             <p className="eyebrow">DENTRO DA RUN</p>
             <h2>Árvores e builds</h2>

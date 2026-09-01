@@ -17,9 +17,11 @@ from PIL import Image
 # Fracoes medidas no painel de 720x1600 publicado (catwoman/bestiary-hunt-1).
 COL_X = (0.139, 0.517)     # inicio das duas colunas
 CARD_W = 0.347             # largura da carta
-ROW_Y0 = 0.395             # topo da primeira linha
+ROW_Y0 = 0.3950            # topo da primeira linha, 2px acima da borda
 ROW_PITCH = 0.1538         # distancia entre linhas
-CARD_H = 0.130             # altura da carta
+# A carta tem um losango que pende abaixo do corpo. Cortar na borda do corpo
+# decepa esse losango e, nas cartas de texto longo, a ultima linha.
+CARD_H = 0.1425            # corpo + losango
 
 
 def complete(card: Image.Image) -> bool:

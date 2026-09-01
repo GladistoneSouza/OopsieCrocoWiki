@@ -1332,3 +1332,73 @@
 @media (max-width: 760px) {
   .blessing-grid { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* ---- Habilidades por nivel: mesma gaveta das bencaos, em grade ---- */
+
+.skill-panel {
+  margin-top: 18px;
+  padding: 18px 22px;
+}
+.skill-panel summary {
+  cursor: pointer;
+  display: grid;
+  gap: 2px;
+  list-style: none;
+}
+.skill-panel summary::-webkit-details-marker {
+  display: none;
+}
+.skill-panel summary::after {
+  content: "▸ abrir";
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--croco-deep);
+}
+.skill-panel[open] summary::after {
+  content: "▾ fechar";
+}
+.skill-panel summary b {
+  font-family: var(--font-display);
+  font-size: 22px;
+}
+.skill-panel summary small {
+  font-size: 11px;
+  color: var(--ink-soft);
+}
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 16px;
+  align-items: start;
+}
+.skill-grid .info-card {
+  margin: 0;
+}
+.skill-grid .info-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  border: 2px solid rgba(43, 37, 67, 0.14);
+}
+.skill-grid .info-card h3 {
+  font-size: 15px;
+  line-height: 1.2;
+}
+.skill-grid .info-card p {
+  font-size: 12px;
+  line-height: 1.5;
+}
+.skill-grid .info-card small {
+  font-size: 10.5px;
+  line-height: 1.4;
+}
+
+@media (max-width: 1240px) {
+  .skill-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 760px) {
+  .skill-grid { grid-template-columns: repeat(2, 1fr); }
+}
