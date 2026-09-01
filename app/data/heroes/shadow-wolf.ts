@@ -12,6 +12,7 @@ export const shadowWolf: HeroRecord = {
   artImage: "/screenshots/art/shadow-wolf-card.jpg",
   identity: ["Nome exibido na ficha: Karl", "Título: SR Shadow Wolf", "Profissão: Assassin", "Alcance exibido: 1"],
   stats: [
+    "Leitura de 31 ago. 2026, nível 22: poder 27.745 · DEF 9.311.",
     "Snapshot em batalha contra Igris (21 ago., boss com 2,69B de HP): HP máx. 254.079 · DEF 7.410 · ATK crescendo com Bloodlust: 91,13K com 27 stacks → 118,47K com 54 → 172,47K com 84 → 199,47K com 99.",
     "Snapshot no nível 20 (21 ago.): fragmentos 8/100 na ficha do Bestiary e 18/100 na tela Hero Comp capturada ~2h depois no mesmo dia (valores divergentes registrados como observados).",
     "Snapshot no nível 15 (30 jul.): poder 8.893 · ATK 8.925 · HP 88,13K · DEF 2.960 · recompensa global Critical DMG +18,0% · fragmentos 9/60 · essência 93/1008.",

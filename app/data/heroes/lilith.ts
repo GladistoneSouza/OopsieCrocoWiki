@@ -134,6 +134,7 @@ export const lilith: HeroRecord = {
     },
   ],
   stats: [
+    "Leitura de 31 ago. 2026, nível 16: poder 26.301 · ATK 19,67K · HP 358K · DEF 12,23K.",
     "Nível 15 (24 ago.): poder 21.824 · ataque 16,28K · HP 299,38K · defesa 10,11K · Dano Crítico global +21,0% · fragmentos 4/60 · material de upgrade 0/1344",
     "Snapshot no nível 13 (21 ago., ~09h): poder 18.894 · ataque 14,13K · HP 256,12K · defesa 8.825 · fragmentos 22/30 · Dano Crítico global +18,2%",
     "Snapshot no nível 13 (21 ago., ~02h): poder 18.486 · ataque 13,68K · HP 252,79K · defesa 8.705 · fragmentos 22/30 · Dano Crítico global +18,2% — os dois prints do mesmo dia divergem; a causa da diferença não é exibida nas telas",

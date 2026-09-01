@@ -22,6 +22,8 @@ export const lightArcher: HeroRecord = {
     "Disponível no Hero Exchange por 3.000 Hero Coins, limite semanal 1/1 — o preço cheio da faixa SP, resolvido na varredura da loja em 31 ago. 2026. A leitura antiga de 1.000 não se sustenta: nenhum dos oito SP apareceu abaixo de 3.000, e 1.000 é o preço cheio da faixa SSR.",
   ],
   stats: [
+    "Subida do 1 ao 5 em 31 ago. 2026, fotografada em cada degrau — a segunda progressão nível a nível da wiki, depois da Succubus. Nível 1: poder 17.710 · ATK 16,2K · HP 197,39K · DEF 6.740. Nível 2: 19.272 · 17,63K · 214,81K · 7.334. Nível 3: 20.314 · 18,58K · 226,42K · 7.731. Nível 4: 21.226 · 19,41K · 236,58K · 8.078. Nível 5: 22.224 · 20,39K · 246,74K · 8.425.",
+    "No nível 5 o campo Exclusive Passive passa a exibir o talento do 5 — a velocidade que sobe no começo da batalha —, seguindo a mesma regra vista nas outras fichas.",
     "Snapshot no nível 1 (22 ago. 2026): poder 14.279 · ataque 13,04K · HP 159,27K · defesa 5.450 · Dano Crítico global +1,6% · fragmentos 0/5",
     "Snapshot no nível 1 (21 ago. 2026): poder 14.026 · ataque 12,81K · HP 156,44K · defesa 5.354 · Dano Crítico global +1,6% · fragmentos 0/5",
     "Os dois snapshots são do mesmo nível 1 com valores diferentes em dias diferentes; nos mesmos lotes, a Red Queen nível 1 exibiu exatamente os mesmos números em cada dia. Hipótese: os atributos exibidos incluem algum bônus de conta/temporada que mudou entre os dias.",

@@ -331,11 +331,11 @@ export const breakpointMap = {
     { hero: "Lia — Flower Spirit", now: "3", target: "10", frags: "60", crit: "+11,2%", eff: "0,187%", opens: "A Ultimate escolhida ganha a segunda camada — cura +50% ou folha com redução de dano" },
     { hero: "Lia — Flower Spirit", now: "3", target: "12", frags: "120", crit: "+14,4%", eff: "0,120%", opens: "Blessing adicional depois da Ultimate — muda a economia de escolhas dela" },
     { hero: "Lia — Flower Spirit", now: "3", target: "15", frags: "210", crit: "+19,2%", eff: "0,091%", opens: "Petal Leaf passa a dar HP máximo permanente ao alvo" },
-    { hero: "Veliana — Light Archer", now: "1", target: "3", frags: "10", crit: "+3,2%", eff: "0,320%", opens: "Começa a run com +105% de velocidade dentro do estado" },
+    { hero: "Veliana — Light Archer", now: "5", target: "8", frags: "30", crit: "+4,8%", eff: "0,160%", opens: "Light Arrow · Mastery — a segunda peça do motor" },
     { hero: "Ice Blue Snowbud — Tidecaller", now: "1", target: "5", frags: "20", crit: "+6,4%", eff: "0,320%", opens: "Mana a cada unidade que morre — liga o ciclo econômico dela" },
     { hero: "Livia — Red Queen", now: "1", target: "5", frags: "20", crit: "+6,4%", eff: "0,320%", opens: "Chance de Firestorm consecutivo" },
-    { hero: "Veliana — Light Archer", now: "1", target: "8", frags: "50", crit: "+11,2%", eff: "0,224%", opens: "Light Arrow · Mastery — a segunda peça do motor" },
-    { hero: "Veliana — Light Archer", now: "1", target: "10", frags: "70", crit: "+14,4%", eff: "0,206%", opens: "A bifurcação: penetração de defesa ou Overclock mais cedo" },
+    { hero: "Veliana — Light Archer", now: "5", target: "10", frags: "50", crit: "+8,0%", eff: "0,160%", opens: "A bifurcação: penetração de defesa ou Overclock mais cedo" },
+    
     { hero: "Mitia — Catwoman", now: "5", target: "8", frags: "30", crit: "+4,8%", eff: "0,160%", opens: "Devouring Prey — crítico crescente conforme o campo esvazia" },
     { hero: "Mitia — Catwoman", now: "5", target: "10", frags: "50", crit: "+8,0%", eff: "0,160%", opens: "Cat Claw Divine Art — o Hunt que pode se relançar" },
     { hero: "Rain Flame Soul — Dragon Warrior", now: "8", target: "10", frags: "20", crit: "+3,2%", eff: "0,160%", opens: "Summon Dragon ou Dragon God's Blessing" },
@@ -347,7 +347,7 @@ export const breakpointMap = {
   twoRankings:
     "Vale separar as duas perguntas de vez. Qualidade de kit mede o herói ignorando o preço; prioridade de investimento pesa nível atual, custo do próximo degrau, função que falta no time e redundância com quem você já tem. Um herói excelente pode não ser prioridade justamente porque a maior parte da função dele chega cedo — é o caso da Tidecaller, cujo ciclo abre no nível 5 e cujos degraus seguintes custam sessenta por nível. E o contrário também existe: a Mitia melhora conforme as peças passam a conversar entre si, então ela é a que mais pede recurso continuado.",
   caveat:
-    "Quatro ressalvas. A primeira é específica: o degrau mais barato da tabela é o da Tidecaller, e a wiki já catalogou um inimigo que devora uma invocação a cada 5 segundos, além de Restrain contra Summon no estágio 83 — o herói mais barato de ligar é também o que tem counter conhecido. Os níveis vêm das telas de 30-31 ago. 2026 e envelhecem. A tabela conta só fragmento, e subir também consome EXP de classe, que é por classe e pode ser o gargalo real. E o crítico por fragmento é um critério entre outros: ele ignora completamente o que o degrau faz em combate, que é justamente o motivo de a coluna \"o que liga\" existir ao lado.",
+    "Atualizado em 1 set. 2026: a Veliana saiu do nível 1 e está no 5 — os três degraus baratos dela já foram comprados, e a linha dela na tabela agora parte daí. Quatro ressalvas. A primeira é específica: o degrau mais barato da tabela é o da Tidecaller, e a wiki já catalogou um inimigo que devora uma invocação a cada 5 segundos, além de Restrain contra Summon no estágio 83 — o herói mais barato de ligar é também o que tem counter conhecido. Os níveis vêm das telas de 30-31 ago. 2026 e envelhecem. A tabela conta só fragmento, e subir também consome EXP de classe, que é por classe e pode ser o gargalo real. E o crítico por fragmento é um critério entre outros: ele ignora completamente o que o degrau faz em combate, que é justamente o motivo de a coluna \"o que liga\" existir ao lado.",
   pending: [
     "Refazer a tabela com os níveis atuais sempre que houver uma leva nova de prints do elenco",
     "Acrescentar o custo em EXP de classe por degrau, quando a curva desse recurso estiver levantada",

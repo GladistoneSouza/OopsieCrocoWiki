@@ -22,6 +22,7 @@ export const starMage: HeroRecord = {
     "Disponível no Hero Exchange por 500 Hero Coins (50% off, limite semanal 8/8)",
   ],
   stats: [
+    "Leitura de 31 ago. 2026, nível 16: poder 26.818 · ATK 24,69K · HP 296,51K · DEF 10,13K.",
     "Snapshot no nível 9 (30 jul.): poder 8.362 · ataque 7,70K (7697) · HP 93,24K · defesa 3.132 · Dano Crítico global +12,6% · essência 371/384 · fragmentos 0/10",
     "No primeiro print da ficha o poder aparecia parcialmente coberto (~8362) e o HP cortado (\"…24K\"); o segundo print confirmou poder 8.362, ATK 7697 e HP 93,24K.",
   ],

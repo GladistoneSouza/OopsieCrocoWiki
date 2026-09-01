@@ -1634,5 +1634,17 @@
     ],
     "max_width": 860,
     "note": "Lilith: degraus 15 e 20 lidos em português"
+  },
+  {
+    "src": "img_game/herois-ficha/2026-09-01_10-18-32.jpg",
+    "out": "progression/gema-raridade-pink-diamond.jpg",
+    "crop": [
+      268,
+      813,
+      951,
+      1491
+    ],
+    "max_width": 860,
+    "note": "Pink Diamond: a mesma gema exclusiva em quatro raridades, de 20% a 42%"
   }
 ]

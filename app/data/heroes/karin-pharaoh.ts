@@ -10,6 +10,8 @@ export const karinPharaoh: HeroRecord = {
   summary: "Controller centrada em Solar Flare e Sun Beams, capaz de aplicar stun, reduzir o dano inimigo e ampliar o dano dos aliados.",
   fieldNote: "O kit é coerente no papel, mas o controle foi pouco impactante nos testes. Deve ser tratada como ferramenta situacional até que duração, resistência de bosses e tempo de conjuração sejam medidos.",
   artImage: "/screenshots/art/karin-pharaoh-card.jpg",
+  stats: [
+    "Leitura de 31 ago. 2026, nível 15: poder 25.536 · ATK 21,23K · HP 316,07K · DEF 10,8K.",],
   levelSkills: [
     { name: "Solar Flare", description: "Aplica stun e libera Sun Beams." },
     { name: "+1 Solar Flare", description: "Adiciona uma conjuração de Solar Flare." },

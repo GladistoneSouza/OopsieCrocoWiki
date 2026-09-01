@@ -19,6 +19,7 @@ export const onmyoji: HeroRecord = {
     "Alcance/posição exibida: 4",
   ],
   stats: [
+    "Leitura de 31 ago. 2026, nível 18: poder 28.354 · ATK 23,74K · HP 348,46K · DEF 11,9K.",
     "Nível 15: poder 20.184 · ataque 16,69K · HP 250,9K · defesa 8.587 · Dano Crítico global +21,0% · fragmentos 7/60",
     "Snapshot no nível 9 (30 jul.): poder 8.359 · ataque 6.998 · HP 103,6K · defesa 3.481 · Dano Crítico global +12,6%",
   ],

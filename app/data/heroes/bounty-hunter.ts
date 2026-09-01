@@ -19,6 +19,7 @@ export const bountyHunter: HeroRecord = {
     "Posição exibida: 5",
   ],
   stats: [
+    "Leitura de 31 ago. 2026, nível 16: poder 26.712 · ATK 24,51K · HP 296,51K · DEF 10,13K.",
     "Nível 15: poder 21.398 · ataque 19,57K · HP 238,82K · defesa 8.136 · Dano Crítico global +21,0% · fragmentos 19/60",
     "Snapshot no nível 13: poder 17.149 · ataque 15,54K · HP 194,83K · defesa 6.545",
     "Snapshot no nível 10 (jul.-ago.): poder 8.664 · ataque 7.975 · HP 96,61K · defesa 3.245",
