@@ -161,7 +161,7 @@ export const rosterFit = {
   kicker: "O ELENCO CABE EXATO",
   title: "8 míticos, 8 vagas",
   text:
-    "O Mythical Summon lista oito heróis no Probability UP — Sword Demon, Tidecaller, Succubus, Light Archer, Flower Spirit, Catwoman, Dragon Warrior e Red Queen — e são exatamente os oito com raridade SP catalogados na wiki. A expedição pede quatro times de dois. Coleção completa e grade cheia dão o mesmo número, o que sugere que a expedição foi dimensionada para um elenco SP inteiro.",
+    "Marco atingido em 31 ago. 2026: os oito SP estão desbloqueados — Kazres no 15, Succubus e Dragon Warrior no 8, Mitia no 5, Lia no 3, e Tidecaller, Veliana e Livia no 1. O pré-requisito de quatro times de qualidade SP está cumprido; o que resta é nível, não desbloqueio. O Mythical Summon lista oito heróis no Probability UP — Sword Demon, Tidecaller, Succubus, Light Archer, Flower Spirit, Catwoman, Dragon Warrior e Red Queen — e são exatamente os oito com raridade SP catalogados na wiki. A expedição pede quatro times de dois. Coleção completa e grade cheia dão o mesmo número, o que sugere que a expedição foi dimensionada para um elenco SP inteiro.",
   note: "Coincidência aritmética entre dois dados confirmados, não afirmação de intenção do desenvolvedor.",
 };
 
@@ -294,7 +294,7 @@ export const breakpointMap = {
     { hero: "Mitia — Catwoman", now: "5", target: "8", frags: "30", crit: "+4,8%", eff: "0,160%", opens: "Devouring Prey — crítico crescente conforme o campo esvazia" },
     { hero: "Mitia — Catwoman", now: "5", target: "10", frags: "50", crit: "+8,0%", eff: "0,160%", opens: "Cat Claw Divine Art — o Hunt que pode se relançar" },
     { hero: "Rain Flame Soul — Dragon Warrior", now: "8", target: "10", frags: "20", crit: "+3,2%", eff: "0,160%", opens: "Summon Dragon ou Dragon God's Blessing" },
-    { hero: "Selina · Frostcharm — Succubus", now: "8", target: "10", frags: "20", crit: "+3,2%", eff: "0,160%", opens: "Stun de 2s em 30% ou corte de 20% na cura inimiga" },
+    { hero: "Selina · Frostcharm — Succubus", now: "8", target: "10", frags: "20", crit: "+3,2%", eff: "0,160%", opens: "Stun de 2s em 30% ou corte de 20% na cura inimiga — os únicos números exibidos em qualquer kit vermelho" },
     { hero: "Kazres · Darkblade", now: "15", target: "20", frags: "300", crit: "+8,0%", eff: "0,027%", opens: "Fear em cada corte e reinvocação de clone" },
   ],
   reading:

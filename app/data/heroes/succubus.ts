@@ -10,7 +10,7 @@ export const succubus: HeroRecord = {
   summary:
     "Controladora SP baseada em Charm: encanta inimigos com ataques básicos e pode converter o fim do encanto em atordoamento.",
   fieldNote:
-    "Personagem ainda bloqueada na conta observada — a ficha lista os talentos, mas nenhum valor prático foi testado. Os prints de 30 ago. 2026 acrescentaram o degrau de nível 10 com dois números raros nesta wiki (30% de chance de stun por 2 segundos; 20% de corte na cura inimiga) e mostraram a passiva exclusiva mudando de Charm · Continuation para Heartbreak · Echo conforme o nível sobe.",
+    "Desbloqueada e no nível 8 em 31 ago. 2026, confirmado pelo dono da conta — a ficha esteve bloqueada até algum ponto entre 22 e 30 ago., e os textos abaixo foram lidos naquele período. Nenhum valor prático foi testado em run. Os prints de 30 ago. 2026 acrescentaram o degrau de nível 10 com dois números raros nesta wiki (30% de chance de stun por 2 segundos; 20% de corte na cura inimiga) e mostraram a passiva exclusiva mudando de Charm · Continuation para Heartbreak · Echo conforme o nível sobe.",
   image: "/screenshots/sp-heroes/succubus-profile.jpg",
   artImage: "/screenshots/art/succubus-card.jpg",
   identity: [
@@ -18,13 +18,13 @@ export const succubus: HeroRecord = {
     "Nome exibido na ficha: Selina · Frostcharm",
     "Profissão: Control",
     "Posição exibida: 4",
-    "Status na conta observada: bloqueada (Locked)",
+    "Status na conta observada: desbloqueada, nível 8 (31 ago. 2026)",
   ],
-  stats: ["Prévia da ficha bloqueada: poder 14.287 · ataque 11,86K · HP 176,97K · defesa 6.057"],
+  stats: ["Prévia da ficha ainda bloqueada (22 ago. 2026): poder 14.287 · ataque 11,86K · HP 176,97K · defesa 6.057 — os atributos do nível 8 atual não foram capturados"],
   levelSkills: [
-    { name: "Nível 3 — Charm · Continuation", description: "Começa a batalha com Charm · Continuation obtido.", source: "Texto confirmado na ficha; herói bloqueado." },
-    { name: "Nível 5 — charm no ataque básico", description: "Ataques básicos têm chance de encantar (charm) o inimigo.", source: "Texto confirmado na ficha; herói bloqueado." },
-    { name: "Nível 8 — Heartbreak · Echo", description: "Começa a batalha com Heartbreak · Echo obtido.", source: "Texto confirmado na ficha; herói bloqueado." },
+    { name: "Nível 3 — Charm · Continuation", description: "Começa a batalha com Charm · Continuation obtido.", source: "Texto confirmado na ficha, lida quando a heroína ainda estava bloqueada." },
+    { name: "Nível 5 — charm no ataque básico", description: "Ataques básicos têm chance de encantar (charm) o inimigo.", source: "Texto confirmado na ficha, lida quando a heroína ainda estava bloqueada." },
+    { name: "Nível 8 — Heartbreak · Echo", description: "Começa a batalha com Heartbreak · Echo obtido.", source: "Texto confirmado na ficha, lida quando a heroína ainda estava bloqueada." },
     { name: "Nível 10 — Enraptured / Heartbreak Flash", description: "Enraptured: depois que o charm termina, 30% de chance de atordoar adicionalmente por 2 segundos. Heartbreak Flash: o buff Heartbreak passa a ser acumulável e reduz em 20% a cura recebida pelo inimigo.", source: "Ficha fotografada em 30 ago. 2026 — é a única bifurcação dela com valores numéricos visíveis." },
     { name: "Ultimate — Tentação Fatal", description: "Nome lido no painel de bônus de coleção, que registra: depois de usar Tentação Fatal, a Succubus entra em estado não selecionável por 1,5 segundo.", source: "Painel de bônus de coleção do elenco (31 ago. 2026); o tooltip da própria ultimate ainda não foi aberto." },
   ],
@@ -60,6 +60,8 @@ export const succubus: HeroRecord = {
       text: "Com o Heartbreak acumulável cortando 20% da cura por camada, ela vira ferramenta contra boss que se recupera. É a mesma função que a Fear into the Soul cumpre no Kazres, o que os torna redundantes num mesmo time e substituíveis num outro.",
     },
   ],
+  breakpoints:
+    "Ela está no 8, e o degrau seguinte é o único do kit dela com números na tela: no nível 10 escolhe entre 30% de chance de atordoar por 2 segundos quando o charm acaba, ou o Heartbreak acumulável cortando 20% da cura inimiga. Custa 20 fragmentos — dois níveis na faixa de dez. É o degrau mais barato do elenco que compra uma decisão de função em vez de atributo.",
   strengths: [
     "Controle que sai do ataque básico, sem gastar habilidade nem competir com o dano por recurso",
     "A bifurcação do nível 10 oferece duas funções distintas — controle duro ou anticura — em vez de duas versões do mesmo efeito",
@@ -76,7 +78,7 @@ export const succubus: HeroRecord = {
   evidence: ["Prévia da ficha SP Succubus bloqueada (22 ago. 2026)"],
   evidenceImages: [{ src: "/screenshots/sp-heroes/succubus-profile.jpg", caption: "Prévia da ficha SP Succubus — Selina · Frostcharm (bloqueada)" }],
   pending: [
-    "Desbloquear a personagem e confirmar os talentos",
+    
     "Medir duração do charm e interação com bosses",
     "Testar se aplicar charm em rajadas curtas produz mais stuns que prolongá-lo, como o Enraptured sugere",
     "Abrir o Blessing Bestiary da Succubus — nenhuma blessing dela foi capturada",
