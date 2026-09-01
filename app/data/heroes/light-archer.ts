@@ -197,6 +197,15 @@ export const lightArcher: HeroRecord = {
   ],
   breakpoints:
     "Ela quase não tem nível morto — cada degrau aumenta a frequência com que a própria mecânica gera mais mecânica. Mas o nível 10 não é um degrau: é a bifurcação. Demon-Banishing Upgrade entrega 60% de penetração de defesa e serve ao eixo do estado; Holy Light Upgrade reduz os gatilhos para o Overclock e serve ao eixo das flechas. Os níveis 20 e 25 repetem exatamente a mesma escolha, então o que for decidido no 10 define a heroína até o 25. Antes disso, o 3 e o 8 são baratos e já entregam as duas peças que ligam o motor: a velocidade dentro do estado e a chance alta de Light Arrow.",
+  levelShots: [
+    { label: "O nome do nível 3", src: "/screenshots/niveis/light-archer-3-tooltip.jpg", caption: "Demon-Slaying Arrow · Speed abre como Swift: +105% de velocidade de ataque dentro do estado." },
+    { label: "Níveis 3, 5 e 8", src: "/screenshots/niveis/light-archer-3-8.jpg", caption: "O talento de nível 5 deixa claro que a velocidade começa alta e decai — o que trabalha contra a leitura de que ela é a escolha para luta longa." },
+    { label: "O nome do nível 8", src: "/screenshots/niveis/light-archer-8-tooltip.jpg", caption: "Light Arrow · Mastery: a probabilidade de disparo da Light Arrow aumenta bastante." },
+    { label: "Nível 10 — a bifurcação", src: "/screenshots/niveis/light-archer-10.jpg", caption: "Demon-Banishing Upgrade dá 60% de penetração de defesa dentro do estado; Holy Light Upgrade reduz os gatilhos até o Overclock. Os níveis 20 e 25 repetem esta mesma escolha." },
+    { label: "Níveis 12 e 15", src: "/screenshots/niveis/light-archer-12-15.jpg", caption: "Blessing adicional após a Ultimate, e mais velocidade de ataque ao liberar o encantamento." },
+    { label: "Nível 20", src: "/screenshots/niveis/light-archer-20.jpg", caption: "Um gatilho a menos para a Starlight Arrow, ou ataque consecutivo dentro do Overclock." },
+    { label: "Nível 25", src: "/screenshots/niveis/light-archer-25.jpg", caption: "A Starlight Arrow passa a somar velocidade de ataque; no Overclock, mais chance de disparar Light Arrows." },
+  ],
   strengths: [
     "Dois eixos de escala independentes, então o draft raramente fica sem caminho — se o estado não vier, as flechas vêm",
     "Os dois eixos pagam na mesma moeda (velocidade de ataque), o que faz escolhas \"híbridas\" continuarem somando em vez de dividir",

@@ -45,7 +45,7 @@ export const tidecaller: HeroRecord = {
     {
       name: "Nível 8 — Tidal Counterstrike",
       description:
-        "Começa a batalha com Tidal Counterstrike obtido. O tooltip do próprio Tidal Counterstrike não foi capturado; na mesma tela um tooltip mostrou \"tidal blowback — ataques do Tidal element causam dano em área\". Hipótese: Tidal Counterstrike e tidal blowback seriam a mesma blessing com nomes divergentes — não confirmado.",
+        "Começa a batalha com Tidal Counterstrike obtido. O tooltip do próprio Tidal Counterstrike não foi capturado; na mesma tela um tooltip mostrou \"tidal blowback — ataques do Tidal element causam dano em área\". Confirmado em 30 ago. 2026: o tooltip do próprio Tidal Counterstrike abre com o título tidal blowback e o texto \"Tidal element attacks cause area damage\". São a mesma blessing com dois nomes, como a wiki suspeitava.",
       source: "Texto confirmado na ficha.",
     },
     {
@@ -210,6 +210,15 @@ export const tidecaller: HeroRecord = {
   ],
   breakpoints:
     "O nível 5 dela é provavelmente o degrau mais barato do elenco vermelho em relação ao que entrega: mana a cada unidade que morre, numa heroína cuja profissão fabrica unidades descartáveis. Custa 20 fragmentos desde o 1 e liga o ciclo econômico inteiro. Os degraus 20 e 25 melhoram muito o kit, mas entram na faixa em que o fragmento por nível já é sessenta.",
+  levelShots: [
+    { label: "Níveis 3, 5 e 8", src: "/screenshots/niveis/tidecaller-3-8.jpg", caption: "O nível 5 é o degrau barato que liga o motor: cada unidade que morre devolve mana." },
+    { label: "O nome do nível 3", src: "/screenshots/niveis/tidecaller-3-tooltip.jpg", caption: "Hydro Arrow Mastery abre como Water Arrow Mastery: o elemento de água vira flecha ao morrer e ataca inimigos aleatórios." },
+    { label: "O nome do nível 8", src: "/screenshots/niveis/tidecaller-8-tooltip.jpg", caption: "Tidal Counterstrike abre como tidal blowback: os ataques do Tidal element causam dano em área. Era hipótese registrada na wiki; o tooltip confirma." },
+    { label: "Nível 10 — a bifurcação", src: "/screenshots/niveis/tidecaller-10.jpg", caption: "Tsunami dá 1s extra de stun na Tidal Wave; Reclaim melhora ainda mais o multiplicador do Deep-Sea Behemoth." },
+    { label: "Níveis 12 e 15", src: "/screenshots/niveis/tidecaller-12-15.jpg", caption: "Blessing adicional após a Ultimate, e o Tidal Element se curando a cada 5 ataques — o texto do 15 segue cortado no próprio jogo." },
+    { label: "Nível 20", src: "/screenshots/niveis/tidecaller-20.jpg", caption: "Tsunami invoca 3 Water Elementals após a onda; Reclaim dá chance de 2 upgrades extras." },
+    { label: "Níveis 25 e 30", src: "/screenshots/niveis/tidecaller-25-30.jpg", caption: "No 25 a onda exige menos mortes e o colosso ganha imunidade a controle com cura grande no crescimento máximo." },
+  ],
   strengths: [
     "Presença permanente no campo: ela ocupa espaço com corpos, o que divide aggro sem gastar peça defensiva",
     "Economia fechada de mana — as mortes que ela mesma provoca pagam as próximas invocações",
@@ -265,7 +274,7 @@ export const tidecaller: HeroRecord = {
   pending: [
     "Confirmar se a morte de invocações próprias conta para Recycle, para tsunami e para a mana do nível 5 — decide se a Tidecaller é um motor fechado ou dependente do campo inimigo",
     "Comparar as rotas Tsunami e Reclaim numa mesma faixa de estágio; hoje só a rota do colosso tem run observada",
-    "Abrir o tooltip específico de Tidal Counterstrike (confirmar ou descartar a hipótese de que é a tidal blowback)",
+    
     "Confirmar o final possivelmente cortado do talento de nível 15 (\"...every time it attacks 5\")",
     "Verificar se existe linha de progressão no nível 50 (a ficha documentada vai até o 45)",
     "Confirmar se Deep-Sea Behemoth é o Tidal Elemental gigante e se Tidal Wave/tsunami e Reclaim/Recycle são os mesmos efeitos com nomes divergentes",

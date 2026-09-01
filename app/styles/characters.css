@@ -1260,3 +1260,10 @@
   margin-bottom: 8px;
   color: var(--ink);
 }
+/* O recorte do painel de talentos e deitado; o .shot padrao e retrato 9/14 com
+   object-fit cover, o que cortava as laterais e comia o texto. */
+.level-shots .shot img {
+  aspect-ratio: auto;
+  object-fit: contain;
+  height: auto;
+}

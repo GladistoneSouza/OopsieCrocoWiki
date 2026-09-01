@@ -986,5 +986,329 @@
     ],
     "max_width": 860,
     "note": "Mitia: degraus 25 e 30"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_23-52-07.jpg",
+    "out": "niveis/tidecaller-3-8.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Ice Blue Snowbud: degraus 3, 5 e 8"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_23-52-10.jpg",
+    "out": "niveis/tidecaller-3-tooltip.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Ice Blue Snowbud: Hydro Arrow Mastery abre como Water Arrow Mastery"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_23-52-12.jpg",
+    "out": "niveis/tidecaller-8-tooltip.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Ice Blue Snowbud: Tidal Counterstrike abre como tidal blowback"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_23-52-16.jpg",
+    "out": "niveis/tidecaller-10.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Ice Blue Snowbud: degrau 10, a bifurcação Tsunami contra Reclaim"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_23-52-24.jpg",
+    "out": "niveis/tidecaller-12-15.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Ice Blue Snowbud: degraus 12 e 15"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_23-52-34.jpg",
+    "out": "niveis/tidecaller-20.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Ice Blue Snowbud: degrau 20"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_23-52-38.jpg",
+    "out": "niveis/tidecaller-25-30.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Ice Blue Snowbud: degraus 25 e 30"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_23-55-02.jpg",
+    "out": "niveis/light-archer-3-tooltip.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Veliana: Demon-Slaying Arrow · Speed abre como Swift, com +105% de velocidade no estado"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_23-55-04.jpg",
+    "out": "niveis/light-archer-3-8.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Veliana: degraus 3, 5 e 8"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_23-55-10.jpg",
+    "out": "niveis/light-archer-8-tooltip.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Veliana: Light Arrow · Mastery e o degrau 10 com os 60% de penetração"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_23-55-22.jpg",
+    "out": "niveis/light-archer-10.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Veliana: o degrau 10 inteiro, a bifurcação da ficha"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_23-55-26.jpg",
+    "out": "niveis/light-archer-12-15.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Veliana: degraus 12 e 15"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_23-55-30.jpg",
+    "out": "niveis/light-archer-20.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Veliana: degrau 20"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_23-55-34.jpg",
+    "out": "niveis/light-archer-25.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Veliana: degrau 25"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_23-49-49.jpg",
+    "out": "niveis/red-queen-3-tooltip.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Livia: Wind Flame · Hell abre como firestorm damage greatly increased"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_23-49-53.jpg",
+    "out": "niveis/red-queen-3-8.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Livia: degraus 3, 5 e 8"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_23-49-57.jpg",
+    "out": "niveis/red-queen-8-tooltip.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Livia: Earth Fire · Penetration abre como lava block DMG slightly increased"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_23-50-15.jpg",
+    "out": "niveis/red-queen-10-12.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Livia: degraus 10 e 12"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_23-50-26.jpg",
+    "out": "niveis/red-queen-15-20.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Livia: degraus 15 e 20"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_23-47-01.jpg",
+    "out": "niveis/dragon-warrior-3-8.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Rain Flame Soul: degraus 3, 5 e 8"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_23-47-03.jpg",
+    "out": "niveis/dragon-warrior-8-tooltip.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Rain Flame Soul: tooltip de Link · Thick Skin"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_23-47-14.jpg",
+    "out": "niveis/dragon-warrior-10-12.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Rain Flame Soul: degraus 10 e 12"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_23-47-26.jpg",
+    "out": "niveis/dragon-warrior-15-20.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Rain Flame Soul: degraus 15 e 20"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_23-47-32.jpg",
+    "out": "niveis/dragon-warrior-25-30.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Rain Flame Soul: degraus 25 e 30"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_10-41-18.jpg",
+    "out": "niveis/succubus-3-8.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Selina · Frostcharm: degraus 3, 5 e 8 vistos do nível 1"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_10-41-27.jpg",
+    "out": "niveis/succubus-tooltip.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Selina · Frostcharm: tooltip da passiva exclusiva"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_10-51-04.jpg",
+    "out": "niveis/succubus-10.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Selina · Frostcharm: degrau 10 com o stun de 30% e o corte de 20% na cura"
   }
 ]

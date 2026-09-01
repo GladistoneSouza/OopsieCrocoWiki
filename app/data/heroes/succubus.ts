@@ -103,6 +103,11 @@ export const succubus: HeroRecord = {
       text: "Cura sempre que um encantado é atacado, e o encantado passa a ficar encantado por mais tempo. É o sustain dela sem gastar escolha em peça defensiva.",
     },
   ],
+  levelShots: [
+    { label: "Níveis 3, 5 e 8 vistos do 1", src: "/screenshots/niveis/succubus-3-8.jpg", caption: "A escada dela lida quando ainda estava no nível 1, com os três degraus bloqueados." },
+    { label: "A passiva exclusiva", src: "/screenshots/niveis/succubus-tooltip.jpg", caption: "O campo Exclusive Passive exibe o talento mais recente desbloqueado, e muda conforme ela sobe." },
+    { label: "Nível 10 — a bifurcação", src: "/screenshots/niveis/succubus-10.jpg", caption: "Enraptured dá 30% de chance de atordoar por 2 segundos quando o charm acaba; Heartbreak Flash torna o Heartbreak acumulável e corta 20% da cura inimiga. São os únicos números exibidos em qualquer kit vermelho." },
+  ],
   strengths: [
     "Converte dano inimigo em dano a favor do time — nenhum outro herói documentado faz isso",
     "Heartbreak amplifica o dano e o crítico recebidos pelo alvo, então ela multiplica o carry em vez de competir com ele por espaço",

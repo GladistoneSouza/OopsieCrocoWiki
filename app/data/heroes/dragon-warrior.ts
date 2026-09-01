@@ -190,6 +190,13 @@ export const dragonWarrior: HeroRecord = {
       text: "A dourada revive uma vez ao chegar a 0 e devolve muita vida. Como o HP máximo dele cresce com os Dragonhearts acumulados na run, a revivida vale mais quanto mais tempo de Link ele somou antes — a mesma blessing vale pouco no começo e muito no fim.",
     },
   ],
+  levelShots: [
+    { label: "Níveis 3, 5 e 8", src: "/screenshots/niveis/dragon-warrior-3-8.jpg", caption: "O nível 5 aumenta a redução de dano conforme a vida cai — o kit lê pressão como recurso." },
+    { label: "O nome do nível 8", src: "/screenshots/niveis/dragon-warrior-8-tooltip.jpg", caption: "Link · Thick Skin: para cada aliado no compartilhamento, a própria redução de dano aumenta bastante." },
+    { label: "Níveis 10 e 12", src: "/screenshots/niveis/dragon-warrior-10-12.jpg", caption: "Summon Dragon provoca todos e escuda os aliados; Dragon God's Blessing sobe a redução e fortalece o Link." },
+    { label: "Níveis 15 e 20", src: "/screenshots/niveis/dragon-warrior-15-20.jpg", caption: "Escudo pós-Link no 15; no 20, inimigos provocados causam menos dano ou o HP perdido volta por segundo." },
+    { label: "Níveis 25 e 30", src: "/screenshots/niveis/dragon-warrior-25-30.jpg", caption: "No 25 o Dragon Breath dá redução de dano ao time todo, ou sobe a taxa de reflexão." },
+  ],
   strengths: [
     "Melhora sob pressão: metade do kit lê dano recebido como recurso, então ele fica mais duro na sala mais perigosa",
     "HP máximo cresce permanentemente dentro da run via Dragonheart, então cada sala longa o deixa maior para a próxima",

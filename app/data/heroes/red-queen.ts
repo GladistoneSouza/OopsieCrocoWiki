@@ -197,6 +197,13 @@ export const redQueen: HeroRecord = {
       text: "O nível 20 aumenta a velocidade de conjuração depois de matar inimigos e o 25 gera 3 bolas de fogo em alvos aleatórios. Com Singing acelerando a cada invocação, sala com muitos alvos fracos vira um ciclo em que matar acelera conjurar, que mata mais rápido.",
     },
   ],
+  levelShots: [
+    { label: "O nome do nível 3", src: "/screenshots/niveis/red-queen-3-tooltip.jpg", caption: "Wind Flame · Hell abre como firestorm damage greatly increased." },
+    { label: "Níveis 3, 5 e 8", src: "/screenshots/niveis/red-queen-3-8.jpg", caption: "O nível 5 dá chance de a Firestorm sair consecutivamente — frequência, não dano." },
+    { label: "O texto divergente do nível 8", src: "/screenshots/niveis/red-queen-8-tooltip.jpg", caption: "Earth Fire · Penetration abre como lava block DMG slightly increased, que contradiz o Bestiary, onde a mesma blessing fala em penetração de defesa a cada 6 blocos. Os dois textos ficam registrados." },
+    { label: "Níveis 10 e 12", src: "/screenshots/niveis/red-queen-10-12.jpg", caption: "Inferno Descends faz as bolas de fogo explodirem em área; Molten Heart dá chance de cada instância acertar 2 vezes extras." },
+    { label: "Níveis 15 e 20", src: "/screenshots/niveis/red-queen-15-20.jpg", caption: "No 15 tempestade e lava passam a somar dano a cada vez que causam dano; no 20 matar acelera a conjuração." },
+  ],
   strengths: [
     "Dano em área permanente sem precisar mirar: a lava fica no chão trabalhando enquanto ela conjura a próxima tempestade",
     "Duas douradas independentes com contadores próprios, então há duas condições de vitória no draft em vez de uma",
