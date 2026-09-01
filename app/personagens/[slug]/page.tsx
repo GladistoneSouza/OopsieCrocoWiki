@@ -79,6 +79,7 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
     hero.story?.length ? { id: "historia", label: "História" } : null,
     { id: "campo", label: "Observação prática" },
     hero.kit ? { id: "motor", label: "O motor" } : null,
+    hero.levelShots?.length ? { id: "escada", label: "A escada na tela" } : null,
     hero.breakpoints ? { id: "degraus", label: "Níveis que valem" } : null,
     hero.strengths?.length || hero.weaknesses?.length ? { id: "forcas", label: "Ganha e quebra" } : null,
     hero.combos?.length ? { id: "combos", label: "Combos" } : null,
@@ -197,6 +198,21 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
                 ))}
               </div>
             ) : null}
+          </section>
+        ) : null}
+
+        {hero.levelShots?.length ? (
+          <section className="sticker-card" id="escada">
+            <p className="eyebrow">A ESCADA, NA TELA</p>
+            <h2>Cada degrau com o texto que o prova</h2>
+            <div className="level-shots">
+              {hero.levelShots.map((shot) => (
+                <article key={shot.src}>
+                  <h3>{shot.label}</h3>
+                  <ShotFigure src={shot.src} alt={shot.label} caption={shot.caption} linked />
+                </article>
+              ))}
+            </div>
           </section>
         ) : null}
 

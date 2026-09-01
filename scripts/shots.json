@@ -854,5 +854,137 @@
     ],
     "max_width": 720,
     "note": "Arte de karin-pharaoh, recortada da ficha do heroi"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_23-56-56.jpg",
+    "out": "niveis/flower-spirit-3-8.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Lia: degraus 3, 5 e 8 com o tooltip de Flower Spirit Bloom aberto"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_23-56-59.jpg",
+    "out": "niveis/flower-spirit-8-tooltip.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Lia: tooltip de Tenacious Flower Leaf mostrando Tough Flower Leaves"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_23-57-13.jpg",
+    "out": "niveis/flower-spirit-10-12.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Lia: degraus 10 e 12"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_23-57-16.jpg",
+    "out": "niveis/flower-spirit-15-20.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Lia: degraus 12, 15 e 20"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_23-57-20.jpg",
+    "out": "niveis/flower-spirit-25-30.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Lia: degraus 25 e 30"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_23-58-43.jpg",
+    "out": "niveis/catwoman-3-8.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Mitia: degraus 3, 5 e 8 com o tooltip de Prey Collection aberto"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_23-58-45.jpg",
+    "out": "niveis/catwoman-8-tooltip.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Mitia: tooltip de Devouring Prey mostrando Devour prey"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_23-58-50.jpg",
+    "out": "niveis/catwoman-10.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Mitia: degrau 10 com Cat Claw Divine Art e Wild Pursuit"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_23-58-55.jpg",
+    "out": "niveis/catwoman-12-15.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Mitia: degraus 12 e 15"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_23-58-58.jpg",
+    "out": "niveis/catwoman-20.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Mitia: degrau 20"
+  },
+  {
+    "src": "img_game/herois-arte/2026-08-30_23-59-00.jpg",
+    "out": "niveis/catwoman-25-30.jpg",
+    "crop": [
+      30,
+      1621,
+      1190,
+      2535
+    ],
+    "max_width": 860,
+    "note": "Mitia: degraus 25 e 30"
   }
 ]

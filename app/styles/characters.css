@@ -1246,3 +1246,17 @@
     overflow: visible;
   }
 }
+
+/* ---- A escada na tela: recorte ao lado de cada faixa de niveis ---- */
+
+.level-shots {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+.level-shots h3 {
+  font-size: 17px;
+  margin-bottom: 8px;
+  color: var(--ink);
+}

@@ -57,6 +57,7 @@ export type HeroRecord = {
   levelSkills: HeroSkill[];
   kit?: HeroKit;
   breakpoints?: string;
+  levelShots?: { label: string; src: string; caption: string }[];
   combos?: HeroCombo[];
   strengths?: string[];
   weaknesses?: string[];

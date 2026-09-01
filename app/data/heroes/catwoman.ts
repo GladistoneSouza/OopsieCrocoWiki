@@ -208,6 +208,14 @@ export const catwoman: HeroRecord = {
   ],
   breakpoints:
     "A escada geral da wiki aponta 12, 15 e 20 como os níveis que mudam um herói. Na Mitia os degraus que importam vêm antes: o 5 liga a catraca (dano permanente por abate), o 8 acrescenta crítico crescente conforme o campo esvazia e o 10 abre o Hunt recursivo, que é o único talento capaz de mudar o comportamento do kit em vez de somar a ele. Ela já está no 5, então o próximo alvo real é o 8 — não o 6.",
+  levelShots: [
+    { label: "Níveis 3, 5 e 8", src: "/screenshots/niveis/catwoman-3-8.jpg", caption: "Prey Collection aberto: a morte de um inimigo aumenta o próprio dano, e com um único inimigo restante vêm velocidade de ataque alta e roubo de vida." },
+    { label: "O nome do nível 8", src: "/screenshots/niveis/catwoman-8-tooltip.jpg", caption: "Devouring Prey abre como Devour prey: quanto menos inimigos, maior a taxa de crítico." },
+    { label: "Nível 10", src: "/screenshots/niveis/catwoman-10.jpg", caption: "Cat Claw Divine Art dá chance de cada Hunt ser lançado de novo em alvo aleatório; Wild Pursuit soma esquiva quando um alvo com Prey morre." },
+    { label: "Níveis 12 e 15", src: "/screenshots/niveis/catwoman-12-15.jpg", caption: "Blessing adicional após a Ultimate, e o assassinato de emergência com vida baixa." },
+    { label: "Nível 20", src: "/screenshots/niveis/catwoman-20.jpg", caption: "Catclaw Mastery com o texto Killing Time is more likely to trigger, que segue sem correspondência conhecida; Wild Hunt pode disparar uma vez extra ao matar." },
+    { label: "Níveis 25 e 30", src: "/screenshots/niveis/catwoman-25-30.jpg", caption: "No 25 o Wild Hunt termina dando 3 acúmulos de Prey a todos — o número exato que a execução pede." },
+  ],
   strengths: [
     "Catraca de abate: o ganho de dano por morte é permanente dentro da run, então cada sala deixa a próxima mais barata",
     "Curva invertida — fica mais forte conforme o campo esvazia, o que a entrega no boss no melhor momento dela",

@@ -47,7 +47,7 @@ export const flowerSpirit: HeroRecord = {
     { name: "Bestiary — Protective Mosaic Leaves", description: "Floral Leaf additionally purifies negative effects — Floral Leaf também purifica efeitos negativos.", source: "Blessing Bestiary" },
     { name: "Bestiary — Abundance (dourada)", description: "After releasing three skills, Hua Ling will heal all allies and add a shield — após liberar três habilidades, Hua Ling cura todos os aliados e adiciona escudo. (O texto usa o nome 'Hua Ling' para a heroína.)", source: "Blessing Bestiary" },
     { name: "Bestiary — flower rain (dourada)", description: "Releasing the skill will apply mosaic and leaves to all allies — usar a habilidade aplica 'mosaic and leaves' em todos os aliados.", source: "Blessing Bestiary" },
-    { name: "Nível 3 — Flower Spirit Bloom", description: "Começa a batalha com Flower Spirit Bloom obtido.", source: "Texto confirmado na tela de progressão; talento desbloqueado." },
+    { name: "Nível 3 — Flower Spirit Bloom", description: "Começa a batalha com Flower Spirit Bloom obtido. O tooltip aberto em 30 ago. 2026 resolve o nome: a blessing é The flowers are blooming exuberantly, cujo efeito é naturally blooms and restores extra health. Era hipótese na wiki, agora confirmado na tela.", source: "Tooltip aberto na tela de exibição, 30 ago. 2026." },
     {
       name: "Nível 5 — The flowers are blooming exuberantly",
       description: "Floresce naturalmente e restaura vida extra (tooltip: 'naturally blooms and restores extra health'). A linha da lista diz 'naturally blooms and has a chance to be released additionally' — floresce naturalmente e tem chance de ser liberada adicionalmente. Os dois textos coexistem para o mesmo talento nas telas.",
@@ -109,6 +109,13 @@ export const flowerSpirit: HeroRecord = {
       text: "A ressurreição cobra HP dela. Quem pega o seguro precisa pagar a franquia: escudo próprio e recuperação extra existem para ela sobreviver ao preço que o próprio kit cobra. Pegar a ressurreição sem sustain é comprar um seguro que pode matar o segurado.",
     },
   ],
+  levelShots: [
+    { label: "Níveis 3, 5 e 8", src: "/screenshots/niveis/flower-spirit-3-8.jpg", caption: "O tooltip aberto liga Flower Spirit Bloom a The flowers are blooming exuberantly — naturally blooms and restores extra health." },
+    { label: "O nome do nível 8", src: "/screenshots/niveis/flower-spirit-8-tooltip.jpg", caption: "Tenacious Flower Leaf abre como Tough Flower Leaves: increase variegated leaves duration." },
+    { label: "Níveis 10 e 12", src: "/screenshots/niveis/flower-spirit-10-12.jpg", caption: "Abundance ganha +50% de cura e escudo; Flower Rain dá redução de dano parcial à folha." },
+    { label: "Níveis 12, 15 e 20", src: "/screenshots/niveis/flower-spirit-15-20.jpg", caption: "No 15 a Petal Leaf passa a aumentar HP máximo permanentemente; no 20 a Abundance pode disparar duas vezes." },
+    { label: "Níveis 25 e 30", src: "/screenshots/niveis/flower-spirit-25-30.jpg", caption: "No 25 a Petal Leaf aumenta permanentemente o ATK do alvo; no 30, +8% de dano para a profissão." },
+  ],
   strengths: [
     "É a única do elenco documentado que desfaz uma morte — The Blessing of the Flower God cobre o primeiro erro do time",
     "Utilidade que ninguém mais entrega: purificação de efeitos negativos e imunidade a controle, ambas penduradas na mesma folha",
@@ -119,7 +126,7 @@ export const flowerSpirit: HeroRecord = {
     "Dano próprio nenhum — ela ocupa uma vaga que não mata nada, e o time precisa fechar as salas sem ela",
     "Cara no começo: antes de a folha ganhar passageiros, o lançamento é cura pequena em dois aliados, o que é pouco na fase em que o draft ainda está aberto",
     "Duas das peças mais fortes cobram a própria vida, e ela não tem cura própria garantida para pagar",
-    "Nomenclatura caótica até para o padrão do jogo: mosaic leaves, Petal Leaf, Floral Leaf, variegated leaves e Flower Leaf aparecem para a mesma coisa, e Flower Spirit Bloom do nível 3 não foi ligado a nenhuma blessing conhecida",
+    "Nomenclatura caótica até para o padrão do jogo: mosaic leaves, Petal Leaf, Floral Leaf, variegated leaves e Flower Leaf aparecem para a mesma coisa. Dois nós já foram desatados pelos tooltips — Flower Spirit Bloom é The flowers are blooming exuberantly, e Tenacious Flower Leaf é Tough Flower Leaves —, mas o pacote de nomes da folha continua sem um termo canônico",
     "Se o time morre, ela não segura sala sozinha — o kit inteiro pressupõe alguém vivo para receber a folha",
   ],
   builds: [
@@ -163,7 +170,7 @@ export const flowerSpirit: HeroRecord = {
   ],
   pending: [
     "Documentar a progressão do nível 35 em diante (nv35 aparece cortado na tela)",
-    "Confirmar a que blessing corresponde 'Flower Spirit Bloom' do nível 3 (hipótese: relação com 'Flowers in full bloom'/'The flowers are blooming exuberantly'; nenhum tooltip liga os nomes explicitamente)",
+    
     "Esclarecer a terminologia das folhas — Petal Leaf / Floral Leaf / 'mosaic and leaves' / variegated leaves aparecem em textos diferentes, aparentemente para o mesmo recurso (inconsistência de localização)",
     "Explicar a divergência de stats no nível 3 entre 30 jul. (poder 8.175) e 21-22 ago. (poder ~16K) — mesmo nível, valores dobrados",
     "Origem do buff 'Sharpness' visto na carta em batalha (não aparece em nenhuma blessing ou talento transcrito)",
