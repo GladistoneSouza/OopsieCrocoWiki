@@ -378,6 +378,7 @@ export const refineTierNote =
   "Faixas transcritas do popup Weapon Special Attribute Max Preview (arma). Os nomes de classe acompanham a peça — na arma aparecem os efeitos de Warrior; outras peças mostraram Strongest Assassin (+9,58% observado) e Mage Emblem (+6,14%), sugerindo uma família por classe. As faixas das demais peças ainda não foram capturadas.";
 
 export const refineTierGallery = [
+  { src: "/screenshots/refining/max-preview-tiers-overview.jpg", alt: "Os quatro tiers do Weapon Special Attribute Max Preview lado a lado", caption: "Os quatro tiers juntos: do azul para o roxo as faixas dobram, e Berserk Warrior sobe de 3–6% até 24–30% no rosa." },
   { src: "/screenshots/refining/max-preview-tier-azul.jpg", alt: "Prévia de atributos especiais da arma — tier azul", caption: "Tier azul: God of Arena, Master of All Trades, Berserk Warrior e Warrior Emblem." },
   { src: "/screenshots/refining/max-preview-tier-roxo.jpg", alt: "Prévia de atributos especiais da arma — tier roxo", caption: "Tier roxo: faixas dobram em relação ao azul." },
   { src: "/screenshots/refining/max-preview-tier-vermelho.jpg", alt: "Prévia de atributos especiais da arma — tier vermelho", caption: "Tier vermelho: Berserk Warrior chega a 18–24%." },
