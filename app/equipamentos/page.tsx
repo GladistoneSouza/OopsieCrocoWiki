@@ -5,14 +5,27 @@ import { SectionHead } from "../components/SectionHead";
 import { FactCard } from "../components/FactCard";
 import { CalloutNote } from "../components/CalloutNote";
 import { ShotFigure } from "../components/ShotFigure";
+import { EvidenceCarousel } from "../components/EvidenceCarousel";
 import {
   equipmentLayers,
   gemBonuses,
+  gemFacts,
+  gemOperations,
+  equipmentGemSnapshots,
+  equipmentGemSnapshotsNote,
+  gemGallery,
   refiningEffects,
+  forgeIntro,
+  forgeGallery,
+  rarityNameColors,
+  rarityHeaderGallery,
+  rarityNameColorsNote,
+  refiningOverviewShot,
   refiningFacts,
   refiningRule,
   refiningCosts,
   refiningCostsNote,
+  refiningAttempts,
   refineTierNames,
   refineTierTable,
   refineTierNote,
@@ -23,7 +36,6 @@ import {
   dismantleFilters,
   dismantleGallery,
 } from "../data/equipment";
-import { wings, wingsIntro, wingsGallery } from "../data/wings";
 
 export const metadata: Metadata = {
   title: "Equipamentos — Oopsie Croco Wiki",
@@ -31,6 +43,29 @@ export const metadata: Metadata = {
 };
 
 export default function EquipmentPage() {
+  const dismantleItems = [
+    ...dismantleGallery.map((shot) => ({ src: shot.src, label: shot.caption, kind: "Desmontagem", alt: shot.alt })),
+    {
+      src: "/screenshots/refining/dismantle-mass-batch.jpg",
+      label: "Lote em massa: 25,86K de ouro + 8.705 poções de refino de uma vez.",
+      kind: "Desmontagem em massa",
+      alt: "Desmontagem em massa com filtros Below 120 e Below Mythical",
+    },
+  ];
+  const gemItems = gemGallery.map((shot) => ({ src: shot.src, label: shot.caption, kind: "Gemas", alt: shot.alt }));
+  const refiningItems = refiningEffects.map((item) => ({
+    src: item.image,
+    label: `${item.value} • ${item.slot} • custo ${item.cost}`,
+    kind: item.effect,
+    alt: `Tela de refino com ${item.effect}`,
+  }));
+  const refineTierItems = refineTierGallery.map((shot) => ({
+    src: shot.src,
+    label: shot.caption,
+    kind: "Faixa por tier",
+    alt: shot.alt,
+  }));
+
   return (
     <main>
       <SiteHeader active="/equipamentos" />
@@ -114,16 +149,7 @@ export default function EquipmentPage() {
           <span>{dismantleFilters.quality}</span>
         </div>
         <CalloutNote tone="info" title={massDismantle.title} text={massDismantle.text} />
-        <div className="shot-grid wide">
-          {dismantleGallery.map((shot) => (
-            <ShotFigure key={shot.src} src={shot.src} alt={shot.alt} caption={shot.caption} />
-          ))}
-          <ShotFigure
-            src="/screenshots/refining/dismantle-mass-batch.jpg"
-            alt="Desmontagem em massa com filtros Below 120 e Below Mythical"
-            caption="Lote em massa: 25,86K de ouro + 8.705 poções de refino de uma vez."
-          />
-        </div>
+        <EvidenceCarousel items={dismantleItems} />
       </section>
 
       <section className="section" id="gemas">
@@ -143,7 +169,7 @@ export default function EquipmentPage() {
           <div className="table-wrap sticker-card">
             <table className="game-table">
               <thead>
-                <tr><th>Bônus documentado</th><th>Total atual</th><th>Origem</th></tr>
+                <tr><th>Bônus documentado</th><th>Valor documentado</th><th>Origem</th></tr>
               </thead>
               <tbody>
                 {gemBonuses.map(([bonus, total, origin]) => (
@@ -153,11 +179,90 @@ export default function EquipmentPage() {
             </table>
           </div>
         </div>
+        <div className="fact-grid three">
+          {gemFacts.map((fact) => (
+            <FactCard key={fact.title} kicker={fact.kicker} title={fact.title} text={fact.text} />
+          ))}
+        </div>
+        <div className="detail-grid">
+          {gemOperations.map((operation) => (
+            <article className="sticker-card" key={operation.name}>
+              <span className="kicker">OPERAÇÃO DE GEMA</span>
+              <h3>{operation.name}</h3>
+              <p className="boss-desc">{operation.note}</p>
+            </article>
+          ))}
+        </div>
+        <div className="table-wrap sticker-card">
+          <table className="game-table">
+            <thead>
+              <tr><th>Peça</th><th>Slot</th><th>Nível</th><th>Power</th><th>Base</th><th>Atributos de gema vistos</th></tr>
+            </thead>
+            <tbody>
+              {equipmentGemSnapshots.map((item) => (
+                <tr key={`${item.piece}-${item.level}-${item.base}`}>
+                  <td>{item.piece}</td>
+                  <td>{item.slot}</td>
+                  <td>{item.level}</td>
+                  <td>{item.power}</td>
+                  <td>{item.base}</td>
+                  <td>{item.gemAttrs}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
         <CalloutNote
           tone="warning"
           title="Nota de fórmula"
           text="Ainda precisamos testar se categorias diferentes somam ou multiplicam entre si. Os valores acima registram apenas os bônus visíveis."
         />
+        <CalloutNote
+          tone="warning"
+          title="Cada linha é um nível, não a peça inteira"
+          text={equipmentGemSnapshotsNote}
+        />
+        <EvidenceCarousel items={gemItems} />
+      </section>
+
+      <section className="section" id="forja">
+        <SectionHead
+          eyebrow="ONDE TUDO ACONTECE"
+          title="A forja"
+          description={forgeIntro}
+        />
+        <div className="dismantle-layout">
+          <div className="table-wrap sticker-card">
+            <table className="game-table">
+              <thead>
+                <tr><th>Qualidade</th><th>Cor do nome</th><th>Onde foi visto</th></tr>
+              </thead>
+              <tbody>
+                {rarityNameColors.map((row) => (
+                  <tr key={row.quality}>
+                    <td>{row.quality}</td>
+                    <td>{row.color}</td>
+                    <td>{row.source}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <aside className="sticker-card">
+            <span className="kicker">LIMITE DA OBSERVAÇÃO</span>
+            <span>{rarityNameColorsNote}</span>
+          </aside>
+        </div>
+        <div className="shot-grid stack natural">
+          {rarityHeaderGallery.map((shot) => (
+            <ShotFigure key={shot.src} src={shot.src} alt={shot.alt} caption={shot.caption} linked />
+          ))}
+        </div>
+        <div className="shot-grid three">
+          {forgeGallery.map((shot) => (
+            <ShotFigure key={shot.src} src={shot.src} alt={shot.alt} caption={shot.caption} linked />
+          ))}
+        </div>
       </section>
 
       <section className="section" id="refino">
@@ -194,18 +299,15 @@ export default function EquipmentPage() {
           title="Como interpretar"
           text="Masteries de modo só funcionam naquele conteúdo. Emblems fortalecem uma classe. Master of All Trades exige quatro classes e entrega simultaneamente dano e redução de dano. Os custos pertencem às peças exibidas; ainda não formam uma fórmula universal por slot, nível ou raridade."
         />
-        <div className="shot-grid three">
-          {refiningEffects.map((item) => (
-            <ShotFigure
-              key={item.image}
-              src={item.image}
-              alt={`Tela de refino com ${item.effect}`}
-              title={item.effect}
-              caption={`${item.value} • ${item.slot} • custo ${item.cost}`}
-              linked
-            />
-          ))}
+        <div className="shot-grid stack natural">
+          <ShotFigure
+            src={refiningOverviewShot.src}
+            alt={refiningOverviewShot.alt}
+            caption={refiningOverviewShot.caption}
+            linked
+          />
         </div>
+        <EvidenceCarousel items={refiningItems} />
       </section>
 
       <section className="section" id="refino-detalhes">
@@ -235,6 +337,25 @@ export default function EquipmentPage() {
         <div className="table-wrap sticker-card">
           <table className="game-table">
             <thead>
+              <tr><th>Peça</th><th>Custo</th><th>Efeito travado</th><th>Antes</th><th>Depois</th><th>Leitura</th></tr>
+            </thead>
+            <tbody>
+              {refiningAttempts.map((attempt) => (
+                <tr key={`${attempt.piece}-${attempt.cost}-${attempt.lockedEffect}-${attempt.before}`}>
+                  <td>{attempt.piece}</td>
+                  <td>{attempt.cost}</td>
+                  <td>{attempt.lockedEffect}</td>
+                  <td>{attempt.before}</td>
+                  <td>{attempt.after}</td>
+                  <td>{attempt.note}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div className="table-wrap sticker-card">
+          <table className="game-table">
+            <thead>
               <tr>
                 <th>Efeito especial</th>
                 <th>Aplicação</th>
@@ -253,43 +374,7 @@ export default function EquipmentPage() {
           </table>
         </div>
         <CalloutNote tone="info" title="Fonte da tabela" text={refineTierNote} />
-        <div className="shot-grid four">
-          {refineTierGallery.map((shot) => (
-            <ShotFigure key={shot.src} src={shot.src} alt={shot.alt} caption={shot.caption} linked />
-          ))}
-        </div>
-      </section>
-
-      <section className="section" id="asas">
-        <SectionHead eyebrow="SISTEMA NOVO" title="Asas (Wings)" description={wingsIntro} />
-        <div className="detail-grid">
-          {wings.map((wing) => (
-            <article className="sticker-card" key={wing.name}>
-              <div className="detail-title">
-                <span className="kicker">WING SKILL POR ESTRELA</span>
-                <b className="chip chip-green">{wing.stats}</b>
-              </div>
-              <h3>{wing.name}</h3>
-              <div className="skill-list">
-                {wing.skills.map((skill) => (
-                  <div key={skill.level}>
-                    <b>{skill.level}</b>
-                    <span>{skill.text}</span>
-                  </div>
-                ))}
-              </div>
-              {wing.note ? <p className="boss-desc" style={{ marginTop: 12 }}>{wing.note}</p> : null}
-            </article>
-          ))}
-        </div>
-        <div className="shot-grid four">
-          {wings.map((wing) => (
-            <ShotFigure key={wing.image} src={wing.image} alt={`Tela da asa ${wing.name}`} caption={wing.name} />
-          ))}
-          {wingsGallery.map((shot) => (
-            <ShotFigure key={shot.src} src={shot.src} alt={shot.alt} caption={shot.caption} />
-          ))}
-        </div>
+        <EvidenceCarousel items={refineTierItems} />
       </section>
 
       <SiteFooter />

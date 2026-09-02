@@ -400,6 +400,16 @@ a:hover > .sticker-card {
   transition: transform var(--pop);
 }
 
+/* Print largo (faixa, painel de duas colunas): manter a proporcao propria
+   em vez de cortar para retrato — o corte comia justamente o texto. */
+.shot-grid.natural .shot img {
+  aspect-ratio: auto;
+  object-fit: contain;
+  height: auto;
+}
+
+.shot-grid.stack { grid-template-columns: 1fr; }
+
 .shot a:hover img {
   transform: scale(1.03);
 }

@@ -6,6 +6,7 @@ export type EvidenceCarouselItem = {
   src: string;
   label: string;
   kind: string;
+  alt?: string;
 };
 
 type Props = {
@@ -32,7 +33,7 @@ export function EvidenceCarousel({ items }: Props) {
           ‹
         </button>
         <a className="carousel-image-link" href={active.src} target="_blank" rel="noreferrer">
-          <img src={active.src} alt={active.label} />
+          <img src={active.src} alt={active.alt ?? active.label} />
         </a>
         <button className="carousel-nav next" type="button" aria-label="Próximo print" onClick={() => go(1)}>
           ›

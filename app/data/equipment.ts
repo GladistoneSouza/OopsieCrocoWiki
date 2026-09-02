@@ -21,6 +21,36 @@ export type RefiningEffect = {
   image: string;
 };
 
+export type RefiningAttempt = {
+  piece: string;
+  cost: number;
+  lockedEffect: string;
+  before: string;
+  after: string;
+  note: string;
+};
+
+export type GemFact = {
+  kicker: string;
+  title: string;
+  text: string;
+};
+
+export type EquipmentGemSnapshot = {
+  piece: string;
+  slot: string;
+  level: string;
+  power: string;
+  base: string;
+  gemAttrs: string;
+};
+
+export type EquipmentShot = {
+  src: string;
+  alt: string;
+  caption: string;
+};
+
 export const rarities = [
   { name: "R", color: "Azul", note: "Base da progressão de heróis" },
   { name: "SR", color: "Roxo", note: "Intermediário" },
@@ -33,23 +63,137 @@ export const equipmentLayers: EquipmentLayer[] = [
   { n: "01", title: "Raridade", text: "Define o tier estrutural da peça. Um Mythic vermelho pode superar um Legendary dourado mesmo alguns níveis abaixo." },
   { n: "02", title: "Nível", text: "Eleva o atributo-base dentro do mesmo tier. É importante, mas não deve ser comparado isoladamente." },
   { n: "03", title: "Aprimoramento", text: "O valor +58, +59 e semelhantes representa o reforço aplicado à peça." },
-  { n: "04", title: "Gemas", text: "Cada peça recebe até cinco bônus. Eles podem fortalecer classe, personagem, modo, tipo de inimigo ou condição de combate. A tela da gema, aberta em 1 set. 2026, mostra a contribuição de uma só: a Pink Diamond da Mia soma Pet Attack +192, Assassin Defense +96, Mage Defense +96, Damage to Elites and BOSS +32% e Disaster damage +12,5% — os agregados da tabela abaixo são a soma dessas contribuições entre as peças. A mesma tela traz dois botões que a wiki não registrava: Reforge e Socket." },
+  { n: "04", title: "Gemas", text: "Cada peça recebe até cinco bônus visíveis. Eles podem fortalecer classe, personagem, modo, tipo de inimigo ou condição de combate. Prints de 2 set. 2026 confirmam que a ficha da gema tem slot/base próprios, efeitos da gema, lista de sockets e os botões Reforge e Socket." },
   { n: "05", title: "Refino", text: "Rola atributos e tem 20% de chance de gerar um efeito especial. Efeitos úteis devem ser travados antes de novas tentativas." },
 ];
 
-// Operacoes de gema vistas em 1 set. 2026, ainda sem tela propria aberta.
 export const gemOperations = [
-  { name: "Reforge", note: "Botão na ficha da gema. O que reforja — o bônus base, os cinco subatributos ou os dois — não foi capturado." },
-  { name: "Socket", note: "Segundo botão da mesma ficha. Presumivelmente encaixa a gema numa peça, mas a tela não foi aberta." },
+  { name: "Reforge", note: "Botão confirmado na ficha da Sapphire. O print ainda não mostra se rerrola o efeito principal, os sockets ou ambos." },
+  { name: "Socket", note: "Botão confirmado ao lado de Reforge. A tela mostra cinco linhas de socket: algumas vazias e outras preenchidas com bônus de classe/inimigo." },
+];
+
+export const gemFacts: GemFact[] = [
+  {
+    kicker: "FICHA DA GEMA",
+    title: "Slot e base ficam na própria gema",
+    text: "A Sapphire aberta no capacete mostra Helmet, DEF +8% e Gem Effects: Damage to minor enemies +40%. Isso separa o efeito base da gema dos bônus encaixados na lista lateral.",
+  },
+  {
+    kicker: "SÍNTESE",
+    title: "Quatro iguais, com trava",
+    text: "A tela Synthesize mostra quatro Sapphires da mesma qualidade. O aviso confirma que tocar na gema abre detalhes e que travar remove aquela gema da síntese.",
+  },
+  {
+    kicker: "SOCKETS",
+    title: "Cinco linhas por peça",
+    text: "Os prints de peças Immortal exibem cinco atributos de gema por equipamento. Na ficha da Sapphire, espaços sem gema aparecem como No gems socketed yet.",
+  },
+  {
+    kicker: "DUAS ABAS",
+    title: "Gem Attr e Equipment Attr são separados",
+    text: "A ficha da peça abre em Gem Attr, com os cinco bônus vindos de gema, e tem uma aba Equipment Attr ao lado. O que a peça ganha por gema não se mistura com o atributo próprio dela.",
+  },
+  {
+    kicker: "REMOÇÃO",
+    title: "Gema encaixada pode ser retirada",
+    text: "Nas peças da própria conta, cada linha de Gem Attr traz um botão Remove, com um Remove geral e o botão Equipment Refining no rodapé. Nas peças inspecionadas de outros jogadores esses botões não aparecem — só a leitura dos atributos.",
+  },
 ];
 
 export const gemBonuses: [string, string, string][] = [
   ["Shadow Wolf", "+15% dano", "Armadura"],
-  ["Assasin", "+35% dano", "Arma + anel + escudo"],
+  ["Assassin", "+35% dano", "Arma + anel + escudo"],
+  ["Assassin", "+12,5% dano", "Sapphire"],
   ["Elite e boss", "+64% dano", "Arma + armadura"],
+  ["Elite e boss", "+32% dano", "Sapphire"],
+  ["Inimigos menores", "+40% dano", "Sapphire"],
   ["Alvo acima de 70% HP", "+50% dano", "Arma + anel"],
-  ["Archer", "+12,5% dano", "Capacete"],
-  ["Primeiros 5 andares", "+64% dano", "Colar + escudo"],
+  ["Primeiros 5 andares", "+64% dano", "Weapon + Armor"],
+  ["Archer", "+12,5% dano", "Socket da Sapphire (capacete)"],
+  ["Archer", "+342 ATK", "Weapon + Shield"],
+  ["Archer", "+96 DEF", "Helmet"],
+  ["Warrior", "+192 ATK", "Weapon"],
+  ["Warrior", "+25% shield return", "Helmet 12,5% + Necklace 12,5%"],
+  ["Control", "+192 ATK", "Shield"],
+  ["Adventurer", "+192 ATK / +32% dano", "Armor + Shield"],
+  ["Summon", "+37,5% dano", "Shield + Ring + Necklace (12,5% cada)"],
+  ["Disaster", "+37,5% dano", "Shield + Ring + Necklace (12,5% cada)"],
+  ["Pet", "+192 ATK / +12,5% dano", "Helmet + Ring"],
+  ["Hero", "+128 DEF", "Helmet 64 + Armor 64"],
+  ["Hero", "+18% lifesteal", "Weapon 10% + Helmet 8%"],
+  ["Redução de dano", "+12%", "Weapon 6% + Armor 6%"],
+];
+
+export const equipmentGemSnapshots: EquipmentGemSnapshot[] = [
+  {
+    piece: "Immortal Weapon",
+    slot: "ATK",
+    level: "83",
+    power: "317",
+    base: "882",
+    gemAttrs: "Warrior ATK +192; primeiros 5 andares +32%; redução de dano +6%; Hero lifesteal +10%; Archer ATK +150.",
+  },
+  {
+    piece: "Immortal Shield",
+    slot: "ATK",
+    level: "83",
+    power: "317",
+    base: "882",
+    gemAttrs: "Control ATK +192; Disaster damage +12,5%; Adventurer Damage +32%; Summon damage +12,5%; Archer ATK +192.",
+  },
+  {
+    piece: "Immortal Helmet",
+    slot: "DEF",
+    level: "85",
+    power: "164",
+    base: "457",
+    gemAttrs: "Archer DEF +96; Hero DEF +64; Pet ATK +192; Warrior shield return +12,5%; Hero lifesteal +8%.",
+  },
+  {
+    piece: "Immortal Armor",
+    slot: "DEF",
+    level: "85",
+    power: "164",
+    base: "457",
+    gemAttrs: "Redução de dano +6%; primeiros 5 andares +32%; Adventurer ATK +192; Hero DEF +64; efeito exclusivo da Phantom com attack speed +5%.",
+  },
+  {
+    piece: "Immortal Ring",
+    slot: "Max HP",
+    level: "75",
+    power: "137",
+    base: "11,48K",
+    gemAttrs: "Archer damage +12,5%; Pet damage +12,5%; Disaster damage +12,5%; Mage damage +12,5%; Summon damage +12,5%.",
+  },
+  {
+    piece: "Legendary Necklace",
+    slot: "Max HP",
+    level: "83",
+    power: "114",
+    base: "9531",
+    gemAttrs: "Summon damage +12,5%; Disaster damage +12,5%; Priest HP +2880; Warrior shield return +12,5%; primeiros 15s após início +25% hero damage.",
+  },
+];
+
+export const equipmentGemSnapshotsNote =
+  "Combat Power e valor base acompanham o nível da peça, então cada linha vale para o nível mostrado e não para a peça em geral. Nos prints, a mesma Immortal Weapon aparece com 299 de Power no nível 80, 317 no 83 e 329 no 85; o Immortal Ring vai de 137 no nível 75 a 158 no 83 e 164 no 85; o Legendary Necklace, de 114 no nível 83 a 129 no 90 e 136 no 93. Comparar peças só faz sentido no mesmo nível.";
+
+export const gemGallery: EquipmentShot[] = [
+  {
+    src: "/screenshots/equipment/immortal-weapon-gem-attrs.jpg",
+    alt: "Atributos de gema na Immortal Weapon",
+    caption: "Peça Immortal: cinco atributos de gema visíveis na arma.",
+  },
+  {
+    src: "/screenshots/equipment/gem-synthesize-sapphires.jpg",
+    alt: "Tela de síntese com quatro Sapphires",
+    caption: "Síntese: quatro Sapphires iguais e aviso sobre travar gemas.",
+  },
+  {
+    src: "/screenshots/equipment/sapphire-detail-socket.jpg",
+    alt: "Ficha da Sapphire com Reforge, Socket e lista de sockets",
+    caption: "Sapphire: Helmet DEF +8%, efeito base e sockets preenchidos/vazios.",
+  },
 ];
 
 export const refiningEffects: RefiningEffect[] = [
@@ -63,6 +207,68 @@ export const refiningEffects: RefiningEffect[] = [
   { effect: "Strongest Assassin", value: "+9,58%", target: "Damage do Assassin com maior Blessing", slot: "Armadura", cost: 265, image: "/screenshots/refining/strongest-assassin-armor.jpg" },
   { effect: "Mage Emblem", value: "+6,14%", target: "Mage Hero Damage", slot: "Escudo", cost: 252, image: "/screenshots/refining/mage-emblem-shield.jpg" },
   { effect: "Berserk Mage", value: "—", target: "Tooltip ainda não capturado", slot: "Escudo", cost: 252, image: "/screenshots/refining/berserk-mage-shield.jpg" },
+];
+
+export const refiningOverviewShot: EquipmentShot = {
+  src: "/screenshots/refining/refining-effects-overview.jpg",
+  alt: "Painel visual com sete efeitos especiais de refino aprovados como baseline",
+  caption: "Baseline visual oficial: sete efeitos de refino reconstruídos no mesmo molde.",
+};
+
+export type RarityNameColor = {
+  quality: string;
+  color: string;
+  source: string;
+};
+
+export const forgeIntro =
+  "Refino, aprimoramento e desmontagem acontecem na mesma tela de forja: a peça flutua na fornalha, o nome aparece sobre a bigorna e os botões Enhance e Refine ficam no rodapé. A cor do nome não é decoração — ela repete a qualidade da peça.";
+
+export const rarityNameColors: RarityNameColor[] = [
+  { quality: "Rare", color: "Azul", source: "Nome na forja (Rare Helmet)" },
+  { quality: "Epic", color: "Roxo", source: "Peças roxas na tela de desmontagem; rótulo Epic junto da cor ainda não capturado" },
+  { quality: "Legendary", color: "Dourado", source: "Cabeçalho da ficha (Legendary Necklace Lv.93) e nome na forja" },
+  { quality: "Mythic", color: "Vermelho/salmão", source: "Cabeçalho da ficha (Mythic Shield Lv.83) e nome na forja" },
+  { quality: "Immortal", color: "Rosa", source: "Cabeçalho da ficha (Immortal Ring Lv.83)" },
+];
+
+export const rarityNameColorsNote =
+  "A cor aparece em dois lugares e bate nos dois: no cabeçalho da ficha da peça e no nome escrito sobre a bigorna na forja. Legendary, Mythic e Immortal têm print que junta o nome da qualidade à cor; Rare só na forja. Epic entra pela cor dos tiles na desmontagem, sem print que amarre o rótulo — e Normal e Excellent seguem sem nenhum, então a escada não deve ser completada por dedução.";
+
+export const rarityHeaderGallery: EquipmentShot[] = [
+  {
+    src: "/screenshots/equipment/rarity-header-legendary.jpg",
+    alt: "Cabeçalho dourado da ficha do Legendary Necklace nível 93",
+    caption: "Legendary: cabeçalho dourado.",
+  },
+  {
+    src: "/screenshots/equipment/rarity-header-mythic.jpg",
+    alt: "Cabeçalho vermelho da ficha do Mythic Shield nível 83",
+    caption: "Mythic: cabeçalho vermelho/salmão.",
+  },
+  {
+    src: "/screenshots/equipment/rarity-header-immortal.jpg",
+    alt: "Cabeçalho rosa da ficha do Immortal Ring nível 83",
+    caption: "Immortal: cabeçalho rosa, o tier acima do Mythic.",
+  },
+];
+
+export const forgeGallery: EquipmentShot[] = [
+  {
+    src: "/screenshots/equipment/forge-rare-helmet.jpg",
+    alt: "Rare Helmet na forja, com o nome escrito em azul",
+    caption: "Rare: nome em azul.",
+  },
+  {
+    src: "/screenshots/equipment/forge-mythic-helmet.jpg",
+    alt: "Mythic Helmet na forja, com o nome escrito em rosa",
+    caption: "Mythic: nome em vermelho/salmão, a mesma peça um tier acima.",
+  },
+  {
+    src: "/screenshots/equipment/forge-mythic-weapon.jpg",
+    alt: "Mythic Weapon na forja, com o nome escrito em rosa",
+    caption: "A forja é a mesma para arma, capacete e joia.",
+  },
 ];
 
 export const dismantleRows: DismantleRow[] = [
@@ -99,7 +305,7 @@ export const dismantleGallery = [
 
 export const refiningRule = {
   title: "Como funciona cada tentativa",
-  text: "Cada refino rola 1 ou 2 atributos novos e tem 20% de chance de gerar um efeito especial. O jogador escolhe entre Replace (aceitar o resultado) e Refine (rolar de novo). Efeitos úteis devem ser travados antes de novas tentativas.",
+  text: "Cada refino rola 1 ou 2 atributos comuns novos e tem 20% de chance de gerar um efeito especial. O resultado aparece em After Refining como uma proposta: o jogador escolhe Replace para aceitar ou Refine para rolar de novo. Efeitos úteis devem ser travados antes de novas tentativas.",
 };
 
 export const refiningCosts = [
@@ -113,6 +319,41 @@ export const refiningCosts = [
 
 export const refiningCostsNote =
   "Custos em poções de refino por tentativa, observados nas peças Mythic da conta (níveis 83-88). Peças Legendary custaram menos nas mesmas condições — arma 210, escudo 205, capacete 193 —, indicando que o custo escala com a raridade da peça; a fórmula exata segue pendente.";
+
+export const refiningAttempts: RefiningAttempt[] = [
+  {
+    piece: "Mythic Weapon Lv.88 +69",
+    cost: 265,
+    lockedEffect: "Co-op Spire Mastery",
+    before: "Stage Battle Attack +29; Co-op Spire Battle Attack +52; Co-op Spire Mastery travado.",
+    after: "Warrior Hero Attack +24; Attack do Control Hero com maior Blessing +111.",
+    note: "Exemplo com botão Replace visível: a rolagem cria uma proposta e não substitui sozinha.",
+  },
+  {
+    piece: "Mythic Shield Lv.95 +69",
+    cost: 324,
+    lockedEffect: "Stage Mastery +13,25%",
+    before: "Summoner Hero Attack +11; Stage Mastery travado.",
+    after: "None.",
+    note: "Mostra que o jogador pode manter o efeito especial e continuar buscando atributos comuns melhores.",
+  },
+  {
+    piece: "Mythic Ring Lv.85 +69",
+    cost: 246,
+    lockedEffect: "Co-op Spire Mastery +10,21%",
+    before: "HP do Archer com maior Blessing +1448; HP do Summoner com maior Blessing +1243; Co-op Spire Mastery travado.",
+    after: "None.",
+    note: "Mesmo com o especial travado a tentativa pode não oferecer atributo novo, e os comuns miram o herói de maior Blessing dentro de uma classe.",
+  },
+  {
+    piece: "Legendary Necklace Lv.93 +70",
+    cost: 255,
+    lockedEffect: "Co-op Spire Mastery +14,89%",
+    before: "HP do Archer com maior Blessing +3318; Co-op Spire Mastery travado.",
+    after: "None.",
+    note: "A joia Legendary também pode manter especial travado; custo observado fica próximo ao Mythic Ring por causa de nível/slot.",
+  },
+];
 
 export type RefineTierRow = {
   effect: string;
@@ -151,5 +392,6 @@ export const massDismantle = {
 export const refiningFacts = [
   { kicker: "REFINO CONFIRMADO", title: "Stage Mastery", text: "Exemplo observado: Stage Battle Damage +5,62%." },
   { kicker: "4 CLASSES", title: "Master of All Trades", text: "Exemplo observado: All Damage +6,06% e Damage Reduction +6,06% ao usar quatro classes." },
+  { kicker: "LOCK", title: "Trava preserva o especial", text: "Prints de 2 set. mostram Stage/Co-op Spire Mastery com cadeado enquanto os atributos comuns continuam sendo rerrolados." },
   { kicker: "DIREÇÃO DE BUILD", title: "Bônus universais primeiro", text: "All Damage, Adventurer Damage e Attack servem ao núcleo inteiro; bônus de classe devem acompanhar os carries realmente usados." },
 ];
