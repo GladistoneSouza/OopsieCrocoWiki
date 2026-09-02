@@ -69,6 +69,10 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
     );
   }
 
+  // cartas recortadas da tela: bencaos do Bestiary e tooltips de degrau, na mesma grade
+  const cartas = hero.levelSkills.filter((skill) => skill.image);
+  const cartasDeDegrau = cartas.filter((skill) => !skill.name.startsWith("Bestiary — ")).length;
+
   const storyImageSources = new Set([
     ...(hero.storyImages?.flatMap((item) => [item.src, originalStorySource(item.src)]) ?? []),
     ...(hero.storySlides?.flatMap((item) => item.sourceImage ? [item.sourceImage, item.sourceImage.replace("/story-crops/", "/")] : []) ?? []),
@@ -80,7 +84,7 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
     hero.story?.length ? { id: "historia", label: "História" } : null,
     { id: "campo", label: "Observação prática" },
     hero.kit ? { id: "motor", label: "O motor" } : null,
-    hero.levelSkills.some((skill) => skill.image) ? { id: "bencaos", label: "Bênçãos" } : null,
+    cartas.length ? { id: "bencaos", label: "Bênçãos" } : null,
     hero.levelShots?.length ? { id: "escada", label: "A escada na tela" } : null,
     hero.breakpoints ? { id: "degraus", label: "Níveis que valem" } : null,
     hero.strengths?.length || hero.weaknesses?.length ? { id: "forcas", label: "Ganha e quebra" } : null,
@@ -203,15 +207,18 @@ export default async function HeroPage({ params }: { params: Promise<{ slug: str
           </section>
         ) : null}
 
-        {hero.levelSkills.some((skill) => skill.image) ? (
+        {cartas.length ? (
           <details className="blessing-panel sticker-card" id="bencaos">
             <summary>
-              <span className="eyebrow">BLESSING BESTIARY</span>
+              <span className="eyebrow">CARTAS DO JOGO</span>
               <b>As bênçãos, uma a uma</b>
-              <small>{hero.levelSkills.filter((skill) => skill.image).length} cartas recortadas da tela</small>
+              <small>
+                {cartas.length} cartas recortadas da tela
+                {cartasDeDegrau ? ` — ${cartas.length - cartasDeDegrau} do Bestiary e ${cartasDeDegrau} de tooltip de nível` : ""}
+              </small>
             </summary>
             <div className="blessing-grid">
-              {hero.levelSkills.filter((skill) => skill.image).map((skill) => (
+              {cartas.map((skill) => (
                 <figure key={skill.name} title={skill.description}>
                   <img
                     src={skill.image}

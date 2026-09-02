@@ -205,6 +205,28 @@ adiantada (o essencial abre cedo e o resto é luxo), progressiva (cada degrau
 faz os anteriores renderem mais) ou escada (degraus independentes, que
 permitem comprar um, parar e voltar depois).
 
+## Carta redesenhada vale como carta
+
+Um card do jogo redesenhado por fora — passado por uma IA de imagem para ficar
+legível, ou redigitado à mão — pode entrar na wiki como se fosse o recorte
+original, desde que **o texto seja idêntico ao da tela**.
+
+A régua de confiabilidade classifica a *afirmação*, não os pixels. "O Bestiary
+da Mia traz Wildfire Rebirth: quando o Elemento de Fogo morre, tem chance de se
+dividir em 1" é confirmado na tela do mesmo jeito, tenha o leitor visto o recorte
+cru ou a versão redesenhada. Quem lê os dois sai com a mesma informação.
+
+O que continua valendo:
+
+- Conferir palavra por palavra contra o print antes de publicar. O redesenho é a
+  única etapa do fluxo em que um erro de transcrição vira uma imagem convincente.
+- Guardar o print de origem. Ele é o que permite a conferência depois.
+- Não redesenhar o que não está na tela. Preencher um número que o jogo omite
+  continua sendo invenção, em qualquer formato.
+
+Uma carta redesenhada é cara e não se reproduz em lote. Vale para o punhado que
+o recortador automático não consegue pegar limpo, não como substituto dele.
+
 ## Regra de confiabilidade
 
 Classifique mentalmente cada afirmação antes de escrever:

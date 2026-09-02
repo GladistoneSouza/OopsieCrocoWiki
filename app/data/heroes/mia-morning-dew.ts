@@ -67,8 +67,9 @@ export const miaMorningDew: HeroRecord = {
     },
     {
       name: "Nível 3 — Deathrattle • Self-destruction",
-      description: "Obtida inicialmente. Quando morre, o Elemental de Fogo causa dano a inimigos aleatórios.",
+      description: "Obtida inicialmente. Quando morre, o Elemental de Fogo causa dano a inimigos aleatórios. Tooltip: 'Fire element Deals damage to random enemies when dying'.",
       source: "Ficha do personagem e tooltip",
+      image: "/screenshots/niveis/mia-nivel-3-self-destruction.png",
     },
     {
       name: "Nível 5 — Fireballs",
@@ -77,8 +78,9 @@ export const miaMorningDew: HeroRecord = {
     },
     {
       name: "Nível 8 — Enhance • Burn",
-      description: "A ficha informa que uma bênção de Burn é obtida inicialmente; o tooltip mostrado na mesma tela identifica Strengthen • Incinerate, que causa dano aos inimigos próximos a cada segundo.",
+      description: "A ficha informa que uma bênção de Burn é obtida inicialmente; o tooltip mostrado na mesma tela identifica Strengthen • Incinerate: 'Fire element causes damage to surrounding enemies every second'. É dano em área contínuo ao redor do elemental vivo, não queimadura aplicada por acerto — o que faz o efeito depender de os elementais estarem perto do inimigo, e não de a Mia atacar.",
       source: "Ficha do personagem e tooltip",
+      image: "/screenshots/niveis/mia-nivel-8-incinerate.png",
     },
     {
       name: "Nível 10 — Death is Only the Beginning",
@@ -114,6 +116,30 @@ export const miaMorningDew: HeroRecord = {
       name: "Níveis 25, 30, 35, 40, 45 e 50 — bônus de profissão",
       description: "Cada um desses níveis aumenta em 6% o dano dos personagens desta profissão.",
       source: "Os seis breakpoints foram confirmados nas telas de progressão.",
+    },
+    {
+      name: "Bestiary — Summon • First Strike",
+      description: "Invoca 3 Elementais de Fogo quando a batalha começa. Texto do card: 'When the battle starts, summon 3 fire elements'.",
+      source: "Blessing Bestiary da Mia (1º set.). Card comum, losango prateado.",
+      image: "/screenshots/bencaos/mia/summon-first-strike.png",
+    },
+    {
+      name: "Bestiary — Strengthen and feed back",
+      description: "Quando um Elemental de Fogo aparece, o dano de todos os aliados aumenta: 'When fire element appears, the damage of all friendly forces increases'. O gatilho é o surgimento, não a morte — é a outra ponta do efeito do nível 15, que paga o buff quando o elemental morre. As duas fontes empilham a mesma estatística por caminhos opostos, então invocar e perder elementais alimenta o time nos dois momentos.",
+      source: "Blessing Bestiary da Mia (1º set.). Card comum, losango prateado.",
+      image: "/screenshots/bencaos/mia/strengthen-and-feed-back.png",
+    },
+    {
+      name: "Bestiary — Death is the beginning",
+      description: "A cada 8 segundos solta bolas de fogo em inimigos aleatórios, e cada Elemental de Fogo morto aumenta em 1 a quantidade de bolas: 'Every 8 seconds, fireballs are released to attack random enemies. Every 1 dead fire element will increase the number of fireballs.' É a raiz da rota de mesmo nome.",
+      source: "Blessing Bestiary da Mia (1º set.). Card dourado com coroa, o que confirma que a rota é uma Ultimate.",
+      image: "/screenshots/bencaos/mia/death-is-the-beginning.png",
+    },
+    {
+      name: "Bestiary — Wildfire Rebirth",
+      description: "Quando um Elemental de Fogo morre, tem chance de se dividir em 1 novo Elemental de Fogo: 'When Fire Element dies, it has a chance to Split into 1 Fire Element'. O card diz 1; a tela do nível 20 fala em dividir em dois, então o degrau melhora a divisão em vez de só aumentar a chance.",
+      source: "Blessing Bestiary da Mia (1º set.). Card dourado com coroa, o que confirma que a rota é uma Ultimate.",
+      image: "/screenshots/bencaos/mia/wildfire-rebirth.png",
     },
   ],
   kit: {
@@ -170,7 +196,7 @@ export const miaMorningDew: HeroRecord = {
   ],
   weaknesses: [
     "O buff de time vem de mortes, então precisa de reinvestimento constante: parar de invocar apaga o efeito em oito segundos",
-    "É a ficha mais rasa entre as douradas com print — doze entradas e nenhum Blessing Bestiary capturado",
+    "Continua a ficha mais rasa entre as douradas com print — quatro cartas do Blessing Bestiary contra as doze mapeadas da Lilith",
     "Sem controle sobre o alvo: as bolas de fogo e a explosão de morte vão para inimigos aleatórios",
     "Nenhuma peça defensiva no kit documentado, e os elementais não seguram aggro de forma confiável",
     "A divergência Enhance • Burn contra Strengthen • Incinerate no nível 8 continua sem resolução, e não se sabe qual é o nome da blessing real",
@@ -256,9 +282,11 @@ export const miaMorningDew: HeroRecord = {
   ],
   pending: [
     "Registrar porcentagens, duração e limite de acúmulos dos aumentos de dano.",
+    "Fotografar o resto do Blessing Bestiary da Mia — só quatro cartas das doze estão registradas.",
+    "Medir se Strengthen and feed back e o buff do nível 15 realmente empilham, ou se são a mesma estatística com um teto.",
     "Confirmar a chance base e a chance melhorada de Wildfire Rebirth.",
     "Verificar se elementais criados por Wildfire Rebirth também ativam normalmente todos os efeitos de morte.",
-    "Esclarecer a diferença de nomenclatura entre Enhance • Burn e Strengthen • Incinerate na tela do nível 8.",
+    "Fotografar a tela de progressão do nível 8 inteira: o tooltip de Strengthen • Incinerate está registrado, falta a linha que nomeia a bênção como Enhance • Burn para saber qual dos dois nomes o jogo usa de fato.",
     "Testar a duração, o acúmulo e a renovação do escudo da Pink Diamond; a tela mostra o percentual por raridade mas não esses parâmetros.",
     "Descobrir o que sobe a raridade de uma gema exclusiva e quanto custa — a escada de 20 a 42% está na tela, o caminho até ela não.",
     "Confirmar a inconsistência de nomes entre Mia Morning Dew, Mia Morningdew e Mia Chenlu nas telas da história.",
