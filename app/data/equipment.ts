@@ -237,21 +237,27 @@ export const rarityNameColorsNote =
 
 export const rarityHeaderGallery: EquipmentShot[] = [
   {
+    src: "/screenshots/equipment/rarity-color-reference.jpg",
+    alt: "Referência de cores dos equipamentos com os cabeçalhos Legendary, Mythic e Immortal legendados",
+    caption: "Os três cabeçalhos juntos, na ordem do tier: dourado, vermelho/salmão e rosa.",
+  },
+  {
     src: "/screenshots/equipment/rarity-header-legendary.jpg",
-    alt: "Cabeçalho dourado da ficha do Legendary Necklace nível 93",
-    caption: "Legendary: cabeçalho dourado.",
+    alt: "Cabeçalho dourado do Legendary Necklace nível 93, Combat Power 136",
+    caption: "Legendary: dourado. Necklace Lv.93, Combat Power 136, 11,39K de Max HP.",
   },
   {
     src: "/screenshots/equipment/rarity-header-mythic.jpg",
-    alt: "Cabeçalho vermelho da ficha do Mythic Shield nível 83",
-    caption: "Mythic: cabeçalho vermelho/salmão.",
+    alt: "Cabeçalho vermelho do Mythic Shield nível 83, Combat Power 254",
+    caption: "Mythic: vermelho/salmão. Shield Lv.83, Combat Power 254, 706 de ATK.",
   },
   {
     src: "/screenshots/equipment/rarity-header-immortal.jpg",
-    alt: "Cabeçalho rosa da ficha do Immortal Ring nível 83",
-    caption: "Immortal: cabeçalho rosa, o tier acima do Mythic.",
+    alt: "Cabeçalho rosa do Immortal Ring nível 83, Combat Power 158",
+    caption: "Immortal: rosa. Ring Lv.83, Combat Power 158, 13,24K de Max HP.",
   },
 ];
+
 
 export const forgeGallery: EquipmentShot[] = [
   {
