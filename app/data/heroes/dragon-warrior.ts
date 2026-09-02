@@ -45,14 +45,15 @@ export const dragonWarrior: HeroRecord = {
     },
     {
       name: "Nível 5 — redução de dano por HP baixo",
-      description: "Quanto menor a vida, maior a redução de dano.",
-      source: "Texto confirmado na tela de progressão.",
+      description: "Quanto menor a vida, maior a redução de dano. O Bestiary traz Link · Survival ('When HP is low, gain DMG Reduction') com efeito parecido, mas a redação difere: a progressão descreve ganho proporcional à vida perdida e a carta descreve um ganho ao cruzar um limiar. Não dá para dizer pelas telas se são a mesma bênção.",
+      source: "Texto confirmado na tela de progressão."
     },
     {
       name: "Nível 8 — Link · Thick Skin",
       description:
         "Começa com Link · Thick Skin. Tooltip: para cada 1 aliado com dano compartilhado, a própria redução de dano aumenta bastante. Nota de tradução: o tooltip da ficha diz \"For every 1 teammate shared, one's own DMG reduction will be greatly increased\" e o Bestiary/picker em batalha diz \"For each 1 ally you share damage with, your DMG Reduction increases greatly\" — duas traduções para o mesmo efeito.",
       source: "Ficha, tooltip, Bestiary e picker em batalha confirmados na tela.",
+      image: "/screenshots/bencaos/dragon-warrior/p1-2.jpg",
     },
     {
       name: "Nível 10 — Summon Dragon / Dragon God's Blessing (melhoria)",
@@ -92,60 +93,71 @@ export const dragonWarrior: HeroRecord = {
     },
     {
       name: "Bestiary — Dragonheart · Sustain",
-      description: "Duração de Dragon Soul Link aumentada; ganha Dragonheart por segundo, aumentando permanentemente o HP máximo.",
+      description: "Duração de Dragon Soul Link aumentada; ganha Dragonheart por segundo, aumentando permanentemente o HP máximo. Texto do card: 'Dragon Soul Link duration increased; gain Dragonheart every second, permanently increasing Max HP'.",
       source: "Blessing Bestiary; também vista como opção em picker de batalha (21 ago.).",
+      image: "/screenshots/bencaos/dragon-warrior/p1-1.jpg",
     },
     {
       name: "Bestiary — Dragonheart · Feedback",
-      description: "Durante Dragon Soul Link, ser atingido tem chance de causar dano aos inimigos próximos e restaurar o próprio HP.",
+      description: "Durante Dragon Soul Link, ser atingido tem chance de causar dano aos inimigos próximos e restaurar o próprio HP. Texto do card: 'During Dragon Soul Link, being hit has a chance to deal damage to nearby enemies and restore your HP'.",
       source: "Blessing Bestiary; também vista como opção em picker de batalha (21 ago.).",
+      image: "/screenshots/bencaos/dragon-warrior/p1-3.jpg",
     },
     {
       name: "Bestiary — Dragonheart · Sword Intent",
-      description: "Ataques causam dano adicional e têm chance de conceder Dragonheart.",
+      description: "Ataques causam dano adicional e têm chance de conceder Dragonheart. Texto do card: 'Attacks deal additional damage and have a chance to grant Dragonheart'.",
       source: "Blessing Bestiary; também vista como opção em picker de batalha (21 ago.).",
+      image: "/screenshots/bencaos/dragon-warrior/p2-1.jpg",
     },
     {
       name: "Bestiary — Dragonheart · Intimidation",
-      description: "Durante Dragon Soul Link, causa dano por segundo aos inimigos próximos e reduz o ataque deles.",
+      description: "Durante Dragon Soul Link, causa dano por segundo aos inimigos próximos e reduz o ataque deles. Texto do card: 'During Dragon Soul Link, deal damage to nearby enemies every second and reduce their ATK'.",
       source: "Blessing Bestiary; não apareceu nos pickers de batalha registrados.",
+      image: "/screenshots/bencaos/dragon-warrior/p2-3.jpg",
     },
     {
       name: "Bestiary — Dragonheart · Scale Armor",
-      description: "Ao ativar Dragon Soul Link, provoca inimigos próximos e ganha um escudo.",
+      description: "Ao ativar Dragon Soul Link, provoca inimigos próximos e ganha um escudo. Texto do card: 'When Dragon Soul Link is activated, taunt nearby enemies and gain a shield'.",
       source: "Blessing Bestiary; também vista como opção em picker de batalha (21 ago.).",
+      image: "/screenshots/bencaos/dragon-warrior/p3-1.jpg",
     },
     {
       name: "Bestiary — Link · Enhancement",
-      description: "A cada 1 instância de dano recebida, ganha um pouco de redução de dano.",
+      description: "A cada 1 instância de dano recebida, ganha um pouco de redução de dano. Texto do card: 'Each time you take 1 instance of damage, gain some DMG Reduction'.",
       source: "Blessing Bestiary; não apareceu nos pickers de batalha registrados.",
+      image: "/screenshots/bencaos/dragon-warrior/p1-4.jpg",
     },
     {
       name: "Bestiary — Link · Spread",
-      description: "Dragon Soul Link vincula todos os aliados.",
+      description: "Dragon Soul Link vincula todos os aliados. Texto do card: 'Dragon Soul Link links all allies'.",
       source: "Blessing Bestiary; também vista como opção em picker de batalha (21 ago.).",
+      image: "/screenshots/bencaos/dragon-warrior/p2-2.jpg",
     },
     {
       name: "Bestiary — Link · Nourishment",
-      description: "Com HP baixo, restaura vida continuamente.",
+      description: "Com HP baixo, restaura vida continuamente. Texto do card: 'When HP is low, continuously restore HP'.",
       source: "Blessing Bestiary; também vista como opção em picker de batalha (21 ago.).",
+      image: "/screenshots/bencaos/dragon-warrior/p2-4.jpg",
     },
     {
       name: "Bestiary — Link · Survival",
-      description: "Com HP baixo, ganha redução de dano.",
+      description: "Com HP baixo, ganha redução de dano. Texto do card: 'When HP is low, gain DMG Reduction'.",
       source: "Blessing Bestiary; também vista como opção em picker de batalha (21 ago.).",
+      image: "/screenshots/bencaos/dragon-warrior/p3-2.jpg",
     },
     {
       name: "Bestiary — Summon Dragon (dourada)",
-      description: "Invoca um dragão gigante que causa dano a todos os inimigos e reduz a defesa deles.",
+      description: "Invoca um dragão gigante que causa dano a todos os inimigos e reduz a defesa deles. Texto do card: 'Summon a giant dragon to deal damage to all enemies and reduce their DEF'.",
       source:
         "Blessing Bestiary; também oferecida como dourada em picker de batalha (21 ago.). As linhas de progressão dos níveis 10/20/25 acrescentam efeitos a esta ultimate (hipótese).",
+      image: "/screenshots/bencaos/dragon-warrior/p3-3.jpg",
     },
     {
       name: "Bestiary — Dragon God's Blessing (dourada)",
-      description: "Na primeira vez que o HP chega a 0, revive e recupera uma grande quantidade de vida.",
+      description: "Na primeira vez que o HP chega a 0, revive e recupera uma grande quantidade de vida. Texto do card: 'The first time HP reaches 0, revive and recover a large amount of HP'.",
       source:
         "Blessing Bestiary; também oferecida como dourada em picker de batalha nível 12 (21 ago.). As linhas de progressão dos níveis 10/20/25 acrescentam efeitos a esta ultimate (hipótese).",
+      image: "/screenshots/bencaos/dragon-warrior/p3-4.jpg",
     },
   ],
   kit: {
@@ -255,6 +267,7 @@ export const dragonWarrior: HeroRecord = {
     { src: "/screenshots/dragon-warrior/hero-details-level-5-coop.jpg", caption: "Hero Details nível 5 em contexto co-op, com stats divergentes da ficha própria" },
   ],
   pending: [
+    "Definir se o nível 5 concede Link · Survival ou uma redução de dano própria: o nível 3 concede Dragonheart · Sustain e o nível 8 concede Link · Thick Skin, então o padrão sugere que sim, mas as duas redações descrevem curvas diferentes.",
     "Resolver a direção do compartilhamento do Dragon Soul Link: ele absorve parte do dano dos aliados ou despeja 30% do próprio dano neles? O texto (\"compartilha 30% do dano recebido por 1 a 3 aliados\") aceita as duas leituras, e a build inteira muda conforme a resposta",
     "Medir o ganho de Link · Thick Skin com 1, 2 e 4 aliados vinculados para saber se Link · Spread vale prioridade máxima",
     "Registrar uma run completa focada no Dragon Warrior para validar a direção de build (os registros de 21 ago. mostram pickers e ranking, mas não quais blessings foram escolhidas)",
