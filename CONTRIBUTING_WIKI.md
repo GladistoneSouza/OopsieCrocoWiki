@@ -17,6 +17,7 @@ Uma conversa ou agente deve cuidar de um assunto por vez. Não coloque conhecime
 - Heróis UR e o evento Immortal Hero: `app/data/immortal.ts` → página `/ur`
 - Expedition Squad: `app/data/expedition.ts` → página `/expedicao`
 - Invocação mítica, evento de invocação e Battle Pass: `app/data/summons.ts` → página `/invocacao`
+- Wings, skins e visuais com atributo: `app/data/wings.ts` + `app/data/visuals.ts` → página `/visuais`
 - Prints publicados: `public/screenshots/`
 - Visual (cores, cards, tipografia): `app/styles/` — não estilize inline nas páginas
 
@@ -211,6 +212,12 @@ Um card do jogo redesenhado por fora — passado por uma IA de imagem para ficar
 legível, ou redigitado à mão — pode entrar na wiki como se fosse o recorte
 original, desde que **o texto seja idêntico ao da tela**.
 
+Quando o jogador envia uma imagem redesenhada/gerada depois de conferir contra o
+print original, trate essa imagem como fonte canônica para a transcrição factual.
+O nome `ChatGPT Image...` ou `generated` descreve o acabamento visual, não reduz a
+força da evidência. Se o texto, número, classe, slot ou condição está ali e foi
+curado pelo jogador, entra na mesma fila de mineração factual dos prints brutos.
+
 A régua de confiabilidade classifica a *afirmação*, não os pixels. "O Bestiary
 da Mia traz Wildfire Rebirth: quando o Elemento de Fogo morre, tem chance de se
 dividir em 1" é confirmado na tela do mesmo jeito, tenha o leitor visto o recorte
@@ -226,6 +233,46 @@ O que continua valendo:
 
 Uma carta redesenhada é cara e não se reproduz em lote. Vale para o punhado que
 o recortador automático não consegue pegar limpo, não como substituto dele.
+
+## Spec visual v1 — Refinamento, Mastery e Emblem
+
+Os sete assets aprovados em 2 set. 2026 são o baseline oficial para painéis de
+refino: Stage Mastery, Dungeon Mastery, Co-op Spire Mastery, Archer Emblem,
+Strongest Assassin, Master of All Trades e Assassin Emblem. Novos assets dessa
+família devem imitar esse padrão; não invente outro visual para o mesmo tipo de
+informação.
+
+Estrutura fixa:
+
+- Bloco superior principal com fundo navy, leve gradiente, borda/glow azul,
+  cantos arredondados, título grande centralizado, divisor com três bolinhas de
+  cada lado, descrição abaixo e valor positivo em verde vivo.
+- Barra inferior na mesma linguagem visual, com ícone brilhante à esquerda, nome
+  repetido do refinamento e cadeado aberto à direita.
+
+O que pode variar:
+
+- Texto, valor, cor da categoria e ícone correspondente.
+
+O que não deve variar sem motivo:
+
+- Proporção, hierarquia em dois blocos, posição dos elementos, estilo da moldura,
+  intensidade geral do glow e sensação visual do asset.
+
+Mapa de cor aprovado:
+
+- Stage Mastery, Dungeon Mastery e Archer Emblem: rosa.
+- Co-op Spire Mastery: vermelho.
+- Strongest Assassin e Assassin Emblem: laranja/dourado.
+- Master of All Trades: roxo.
+
+Pipeline determinístico:
+
+1. Se o print já está bom: identificar o bloco, recortar, limpar sobras, preservar
+   proporção e exportar.
+2. Se o print está ruim: ler título, descrição, valor, nome da barra inferior,
+   cor e ícone; reconstruir no template travado; comparar com os sete modelos
+   canônicos; exportar.
 
 ## Regra de confiabilidade
 
