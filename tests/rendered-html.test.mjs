@@ -50,6 +50,7 @@ test("every published route renders", async () => {
     "/", "/personagens", "/equipamentos", "/coop", "/runs", "/ur",
     "/expedicao", "/invocacao", "/visuais",
     "/equipamentos/pecas", "/equipamentos/gemas", "/equipamentos/refino",
+    "/equipamentos/aprimoramento",
     ...fichas.map((slug) => `/personagens/${slug}`),
   ];
 

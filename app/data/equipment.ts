@@ -62,7 +62,7 @@ export const rarities = [
 export const equipmentLayers: EquipmentLayer[] = [
   { n: "01", title: "Raridade", text: "Define o tier estrutural da peça. Um Mythic vermelho pode superar um Legendary dourado mesmo alguns níveis abaixo." },
   { n: "02", title: "Nível", text: "Eleva o atributo-base dentro do mesmo tier. É importante, mas não deve ser comparado isoladamente." },
-  { n: "03", title: "Aprimoramento", text: "O valor +58, +59 e semelhantes representa o reforço aplicado à peça." },
+  { n: "03", title: "Aprimoramento", text: "O +69, +70 ao lado do nome. Cada passo sobe o atributo principal e, em níveis-limiar como +70 e +80, destrava um bônus de Breakthrough próprio do slot — crítico na arma, mitigação no colar." },
   { n: "04", title: "Gemas", text: "Cada peça recebe até cinco bônus visíveis. Eles podem fortalecer classe, personagem, modo, tipo de inimigo ou condição de combate. Prints de 2 set. 2026 confirmam que a ficha da gema tem slot/base próprios, efeitos da gema, lista de sockets e os botões Reforge e Socket." },
   { n: "05", title: "Refino", text: "Rola atributos e tem 20% de chance de gerar um efeito especial. Efeitos úteis devem ser travados antes de novas tentativas." },
 ];
@@ -275,6 +275,77 @@ export const forgeGallery: EquipmentShot[] = [
     alt: "Mythic Weapon na forja, com o nome escrito em rosa",
     caption: "A forja é a mesma para arma, capacete e joia.",
   },
+];
+
+export type EnhanceStep = {
+  piece: string;
+  jump: string;
+  stat: string;
+  before: string;
+  after: string;
+  gain: string;
+};
+
+export type BreakthroughRow = {
+  slot: string;
+  attr: string;
+  current: string;
+  nextLevel: string;
+  next: string;
+};
+
+export const enhanceIntro =
+  "Aprimorar é o +69, +70 que acompanha o nome da peça. Cada passo sobe o atributo principal e, em níveis-limiar, destrava um bônus de Breakthrough próprio do slot. Os seis prints de 2 set. 2026 cobrem um passo de cada peça equipada, entre +68 e +71.";
+
+export const enhanceSteps: EnhanceStep[] = [
+  { piece: "Mythic Weapon", jump: "+69 → +70", stat: "ATK", before: "1722", after: "1770", gain: "+48" },
+  { piece: "Mythic Shield", jump: "+69 → +70", stat: "ATK", before: "1722", after: "1770", gain: "+48" },
+  { piece: "Mythic Helmet", jump: "+69 → +70", stat: "DEF", before: "861", after: "885", gain: "+24" },
+  { piece: "Mythic Armor", jump: "+68 → +69", stat: "DEF", before: "837", after: "861", gain: "+24" },
+  { piece: "Mythic Ring", jump: "+69 → +70", stat: "Max HP", before: "25,83K", after: "26,55K", gain: "+720" },
+  { piece: "Legendary Necklace", jump: "+70 → +71", stat: "Max HP", before: "26,55K", after: "27,45K", gain: "+900" },
+];
+
+export const enhanceFacts = [
+  {
+    kicker: "MESMO ATRIBUTO, MESMO NÚMERO",
+    title: "A peça não muda o valor",
+    text: "Arma e escudo mostram ATK 1722 no +69, os dois. O capacete chega a 861 de DEF no +69 e é exatamente onde a armadura termina o salto +68 → +69. Dentro de um mesmo atributo, o que manda é o nível de aprimoramento, não qual peça é.",
+  },
+  {
+    kicker: "UM PAR, UMA PISTA",
+    title: "A raridade talvez nem entre na conta",
+    text: "O Legendary Necklace no +70 marca 26,55K de Max HP — o mesmo que o Mythic Ring alcança no +70. É um par só, então serve como pista e não como regra: falta um segundo caso para dizer que a raridade não altera o valor do aprimoramento.",
+  },
+  {
+    kicker: "UM POR SLOT",
+    title: "Cada slot tem seu Breakthrough",
+    text: "Os seis slots capturados trazem seis atributos diferentes, sem repetição: crítico na arma, resistência a crítico no escudo, dano crítico no capacete, redução de dano crítico na armadura, dano no anel e mitigação no colar.",
+  },
+];
+
+export const breakthroughRows: BreakthroughRow[] = [
+  { slot: "Weapon", attr: "Critical Rate", current: "+1,5%", nextLevel: "+70", next: "+1,7%" },
+  { slot: "Shield", attr: "Critical Resistance", current: "+1,5%", nextLevel: "+70", next: "+1,7%" },
+  { slot: "Helmet", attr: "Critical DMG", current: "+15%", nextLevel: "+70", next: "+17%" },
+  { slot: "Armor", attr: "Critical DMG Reduction", current: "+15%", nextLevel: "+70", next: "+17%" },
+  { slot: "Ring", attr: "DMG Increase", current: "+3%", nextLevel: "+70", next: "+3,4%" },
+  { slot: "Necklace", attr: "DMG Mitigation", current: "+3,4%", nextLevel: "+80", next: "+3,8%" },
+];
+
+export const breakthroughNote =
+  "A linha de baixo aparece com cadeado e o nível que a destrava. Cinco peças apontam para +70; o colar, que já passou do +70, aponta para +80 — então os limiares são degraus da escada de aprimoramento, não um marco único. A armadura ainda está no +68 e já carrega +15%, o que prova que existe pelo menos um limiar antes do +70; qual, não foi capturado.";
+
+export const enhanceLimits =
+  "Os seis passos observados ficam todos entre +68 e +71, um por peça. Não dá para escrever a curva do aprimoramento a partir disso: o ganho por passo dentro de um mesmo atributo se repetiu (ATK +48, DEF +24), mas o Max HP subiu +720 num passo e +900 no seguinte, então o incremento muda ao longo da escada. Sem prints de outras faixas, a tabela abaixo vale como registro dos passos vistos, não como fórmula.";
+
+export const enhanceGallery: EquipmentShot[] = [
+  { src: "/screenshots/equipment/enhance-weapon.jpg", alt: "Aprimoramento da Mythic Weapon de +69 para +70", caption: "Arma: ATK 1722 → 1770, Breakthrough de Critical Rate." },
+  { src: "/screenshots/equipment/enhance-shield.jpg", alt: "Aprimoramento do Mythic Shield de +69 para +70", caption: "Escudo: mesmo ATK da arma, Breakthrough de Critical Resistance." },
+  { src: "/screenshots/equipment/enhance-helmet.jpg", alt: "Aprimoramento do Mythic Helmet de +69 para +70", caption: "Capacete: DEF 861 → 885, Breakthrough de Critical DMG." },
+  { src: "/screenshots/equipment/enhance-armor.jpg", alt: "Aprimoramento da Mythic Armor de +68 para +69", caption: "Armadura: um passo atrás, terminando em 861 — onde o capacete já estava." },
+  { src: "/screenshots/equipment/enhance-ring.jpg", alt: "Aprimoramento do Mythic Ring de +69 para +70", caption: "Anel: Max HP 25,83K → 26,55K, Breakthrough de DMG Increase." },
+  { src: "/screenshots/equipment/enhance-necklace.jpg", alt: "Aprimoramento do Legendary Necklace de +70 para +71", caption: "Colar: já passou do +70, então o próximo Breakthrough é o do +80." },
 ];
 
 export const dismantleRows: DismantleRow[] = [

@@ -14,8 +14,9 @@ Uma conversa ou agente deve cuidar de um assunto por vez. Não coloque conhecime
 - Monstros descobertos fora do Co-op: `app/data/enemies.ts`
 - Equipamentos: `app/data/equipment.ts` → `/equipamentos` é só o painel (as 5 camadas e os
   links). O conteúdo mora nas sub-páginas: `/equipamentos/pecas` (camadas, raridade e cores da
-  forja), `/equipamentos/gemas` e `/equipamentos/refino` (que inclui a desmontagem, fonte
-  da poção que o refino gasta). Assunto novo de equipamento
+  forja), `/equipamentos/aprimoramento`,
+  `/equipamentos/gemas` e `/equipamentos/refino` (que inclui a desmontagem, fonte da poção
+  que o refino gasta). Assunto novo de equipamento
   entra na sub que trata dele, não no painel — o painel só ganha card quando nasce uma frente
   nova, como o aprimoramento ainda por minerar
 - Economia de invocações: `app/data/economy.ts` (exibida na home)

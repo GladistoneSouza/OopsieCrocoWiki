@@ -21,6 +21,15 @@ const areas = [
     destaque: "A cor do nome já diz a raridade — dourado é Legendary, vermelho é Mythic, rosa é Immortal.",
   },
   {
+    href: "/equipamentos/aprimoramento",
+    icon: "🔨",
+    tone: "croco",
+    title: "Aprimoramento",
+    text: "O +69, +70 ao lado do nome: quanto cada passo rende no atributo principal e o bônus de Breakthrough que cada slot destrava.",
+    cta: "Ver os saltos",
+    destaque: "Arma e escudo marcam o mesmo ATK no +69 — dentro de um atributo, vale o nível, não a peça.",
+  },
+  {
     href: "/equipamentos/gemas",
     icon: "💎",
     tone: "berry",
@@ -56,9 +65,9 @@ export default function EquipmentPage() {
 
       <section className="section" id="areas">
         <SectionHead
-          eyebrow="CINCO CAMADAS, TRÊS PÁGINAS"
+          eyebrow="CINCO CAMADAS, QUATRO PÁGINAS"
           title="Onde cada camada mora"
-          description="Raridade, nível e aprimoramento se leem na própria peça e ficam juntos em Peças e raridade. Gemas e refino são grandes o bastante para ter página cada um — e a desmontagem mora com o refino, porque é dela que sai a poção que ele gasta. Esta aqui é só o índice."
+          description="Raridade e nível se leem na própria peça. Aprimoramento, gemas e refino são grandes o bastante para ter página cada um — e a desmontagem mora com o refino, porque é dela que sai a poção que ele gasta. Esta aqui é só o índice."
         />
         <div className="system-grid">
           {areas.map((area) => (
@@ -73,8 +82,8 @@ export default function EquipmentPage() {
         </div>
         <CalloutNote
           tone="info"
-          title="A camada mais fraca da wiki"
-          text="Das cinco, o aprimoramento é a que tem menos escrito: uma linha dizendo que o +69, +70 representa o reforço da peça. Os prints do salto de nível e dos bônus de Breakthrough já estão capturados e ainda não foram minerados — quando virarem tabela, o aprimoramento ganha a quarta página."
+          title="O que falta"
+          text="Os seis passos de aprimoramento capturados ficam todos entre +68 e +71, então a curva completa segue desconhecida — e os limiares de Breakthrough abaixo do +70 nunca apareceram numa tela. A desmontagem não tem página própria de propósito: ela vive no refino, que é quem gasta a poção."
         />
       </section>
 
