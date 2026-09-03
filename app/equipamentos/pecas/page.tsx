@@ -8,6 +8,7 @@ import { CalloutNote } from "../../components/CalloutNote";
 import { ShotFigure } from "../../components/ShotFigure";
 import { EvidenceCarousel } from "../../components/EvidenceCarousel";
 import {
+  equipmentLayers,
   forgeIntro,
   forgeGallery,
   rarityNameColors,
@@ -50,6 +51,35 @@ export default function Page() {
         <p className="eyebrow">A PEÇA EM SI</p>
         <h1>Peças e raridade</h1>
         <p className="lede">Raridade, nível e aprimoramento definem o esqueleto da peça. É a camada que se lê antes de olhar gema ou refino — e a cor diz a raridade antes de qualquer número.</p>
+      </section>
+
+      <section className="section" id="camadas">
+        <SectionHead
+          eyebrow="AS 5 CAMADAS"
+          title="O que define a força de uma peça"
+        />
+        <div className="tier-rule sticker-card">
+          <span className="quality-dot legendary" aria-hidden="true" />
+          <b>Legendary</b>
+          <span className="arrow" aria-hidden="true">→</span>
+          <span className="quality-dot mythic" aria-hidden="true" />
+          <b>Mythic</b>
+          <p>Na prática observada, o salto de tier pode valer mais que alguns níveis de diferença.</p>
+        </div>
+        <div className="layer-grid">
+          {equipmentLayers.map((layer) => (
+            <article key={layer.n}>
+              <span>{layer.n}</span>
+              <h3>{layer.title}</h3>
+              <p>{layer.text}</p>
+            </article>
+          ))}
+        </div>
+        <CalloutNote
+          tone="info"
+          title="Exemplo real"
+          text="Mythic nível 83 pode ser mais forte que Legendary nível 85. Ordem de comparação recomendada: raridade → atributo-base → nível/aprimoramento → gemas → efeito de refino."
+        />
       </section>
 
       <section className="section" id="forja">

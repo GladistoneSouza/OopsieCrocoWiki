@@ -4,7 +4,6 @@ import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
 import { SectionHead } from "../components/SectionHead";
 import { CalloutNote } from "../components/CalloutNote";
-import { equipmentLayers } from "../data/equipment";
 
 export const metadata: Metadata = {
   title: "Equipamentos — Oopsie Croco Wiki",
@@ -17,7 +16,7 @@ const areas = [
     icon: "🛡️",
     tone: "gold",
     title: "Peças e raridade",
-    text: "O esqueleto da peça: as camadas que definem força, o código de cor que identifica a raridade na forja e o retorno da desmontagem.",
+    text: "Começa pelas cinco camadas que definem a força de uma peça e segue no código de cor da forja e no retorno da desmontagem.",
     cta: "Ler a peça",
     destaque: "A cor do nome já diz a raridade — dourado é Legendary, vermelho é Mythic, rosa é Immortal.",
   },
@@ -55,40 +54,11 @@ export default function EquipmentPage() {
         </p>
       </section>
 
-      <section className="section" id="camadas">
-        <SectionHead
-          eyebrow="AS 5 CAMADAS"
-          title="O que define a força de uma peça"
-        />
-        <div className="tier-rule sticker-card">
-          <span className="quality-dot legendary" aria-hidden="true" />
-          <b>Legendary</b>
-          <span className="arrow" aria-hidden="true">→</span>
-          <span className="quality-dot mythic" aria-hidden="true" />
-          <b>Mythic</b>
-          <p>Na prática observada, o salto de tier pode valer mais que alguns níveis de diferença.</p>
-        </div>
-        <div className="layer-grid">
-          {equipmentLayers.map((layer) => (
-            <article key={layer.n}>
-              <span>{layer.n}</span>
-              <h3>{layer.title}</h3>
-              <p>{layer.text}</p>
-            </article>
-          ))}
-        </div>
-        <CalloutNote
-          tone="info"
-          title="Exemplo real"
-          text="Mythic nível 83 pode ser mais forte que Legendary nível 85. Ordem de comparação recomendada: raridade → atributo-base → nível/aprimoramento → gemas → efeito de refino."
-        />
-      </section>
-
       <section className="section" id="areas">
         <SectionHead
           eyebrow="TRÊS FRENTES"
           title="Onde cada camada é tratada"
-          description="A página que você está lendo é o mapa. Cada frente abaixo tem página própria, com as tabelas, os custos e os prints daquele assunto."
+          description="Esta página é só o índice. Cada frente abaixo tem página própria, com as tabelas, os custos e os prints daquele assunto."
         />
         <div className="system-grid">
           {areas.map((area) => (
