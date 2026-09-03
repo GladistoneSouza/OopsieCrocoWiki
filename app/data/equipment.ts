@@ -326,6 +326,62 @@ export const refiningCosts = [
 export const refiningCostsNote =
   "Custos em poções de refino por tentativa, observados nas peças Mythic da conta (níveis 83-88). Peças Legendary custaram menos nas mesmas condições — arma 210, escudo 205, capacete 193 —, indicando que o custo escala com a raridade da peça; a fórmula exata segue pendente.";
 
+export type EffectTierRow = {
+  tier: string;
+  color: string;
+  exemplo: string;
+  faixa: string;
+};
+
+export const refiningElixir = {
+  name: "Refining Elixir",
+  tooltip: "Used to reroll equipment affixes of Epic quality or higher",
+  source: "Equipment Dismantling",
+  text: "A ficha do próprio item fecha o circuito: a poção serve para rerrolar afixos de equipamento de qualidade Epic ou superior, e a fonte declarada pelo jogo é a desmontagem, com botão Go que leva direto para lá. Peça abaixo de Epic não é alvo de refino.",
+};
+
+export const lockRule = {
+  toast: "Successfully locked effect, effect will remain unchanged after refining",
+  text: "Ao travar, o jogo confirma na tela com essa mensagem. O efeito travado atravessa as tentativas seguintes intacto — só os atributos comuns continuam sendo rerrolados.",
+};
+
+export const effectTierColors: EffectTierRow[] = [
+  { tier: "Roxo", color: "Roxo", exemplo: "Stage Battle Damage +3,88%", faixa: "3–6%" },
+  { tier: "Laranja", color: "Laranja", exemplo: "Stage Battle Damage +6,98%", faixa: "6–9%" },
+  { tier: "Rosa", color: "Rosa", exemplo: "Stage Battle Damage +12,19%", faixa: "12–15%" },
+];
+
+export const effectTierColorsNote =
+  "O nome do efeito e o losango ao lado dele mudam de cor conforme a faixa em que a rolagem caiu — dá para ler o tier antes de conferir o número. Três Stage Mastery capturados em 2 set. 2026 batem com a tabela de faixas: roxo dentro de 3–6%, laranja dentro de 6–9%, rosa dentro de 12–15%. Azul e vermelho ainda não foram capturados com valor junto da cor.";
+
+export const refiningEvidenceGallery: EquipmentShot[] = [
+  {
+    src: "/screenshots/refining/refining-elixir-source.jpg",
+    alt: "Ficha do Refining Elixir mostrando a fonte Equipment Dismantling",
+    caption: "A ficha do Refining Elixir declara a fonte: Equipment Dismantling.",
+  },
+  {
+    src: "/screenshots/refining/lock-confirmation.jpg",
+    alt: "Mensagem de confirmação ao travar um efeito de refino",
+    caption: "Confirmação da trava: o efeito segue inalterado nas próximas tentativas.",
+  },
+  {
+    src: "/screenshots/refining/effect-tier-roxo.jpg",
+    alt: "Stage Mastery em roxo com Stage Battle Damage +3,88%",
+    caption: "Roxo: +3,88%, dentro da faixa 3–6%.",
+  },
+  {
+    src: "/screenshots/refining/effect-tier-laranja.jpg",
+    alt: "Stage Mastery em laranja com Stage Battle Damage +6,98%",
+    caption: "Laranja: +6,98%, dentro da faixa 6–9%.",
+  },
+  {
+    src: "/screenshots/refining/effect-tier-rosa.jpg",
+    alt: "Stage Mastery em rosa com Stage Battle Damage +12,19%",
+    caption: "Rosa: +12,19%, dentro da faixa 12–15%.",
+  },
+];
+
 export const refiningAttempts: RefiningAttempt[] = [
   {
     piece: "Mythic Weapon Lv.88 +69",
@@ -399,6 +455,6 @@ export const massDismantle = {
 export const refiningFacts = [
   { kicker: "REFINO CONFIRMADO", title: "Stage Mastery", text: "Exemplo observado: Stage Battle Damage +5,62%." },
   { kicker: "4 CLASSES", title: "Master of All Trades", text: "Exemplo observado: All Damage +6,06% e Damage Reduction +6,06% ao usar quatro classes." },
-  { kicker: "LOCK", title: "Trava preserva o especial", text: "Prints de 2 set. mostram Stage/Co-op Spire Mastery com cadeado enquanto os atributos comuns continuam sendo rerrolados." },
+  { kicker: "LOCK", title: "Trava preserva o especial", text: "O jogo confirma na tela: \"effect will remain unchanged after refining\". O especial travado atravessa as tentativas; só os comuns são rerrolados." },
   { kicker: "DIREÇÃO DE BUILD", title: "Bônus universais primeiro", text: "All Damage, Adventurer Damage e Attack servem ao núcleo inteiro; bônus de classe devem acompanhar os carries realmente usados." },
 ];

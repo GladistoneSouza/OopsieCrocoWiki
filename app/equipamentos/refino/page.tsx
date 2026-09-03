@@ -8,6 +8,11 @@ import { CalloutNote } from "../../components/CalloutNote";
 import { ShotFigure } from "../../components/ShotFigure";
 import { EvidenceCarousel } from "../../components/EvidenceCarousel";
 import {
+  refiningElixir,
+  lockRule,
+  effectTierColors,
+  effectTierColorsNote,
+  refiningEvidenceGallery,
   massDismantle,
   dismantleRows,
   dismantleBatch,
@@ -114,6 +119,50 @@ export default function Page() {
           />
         </div>
         <EvidenceCarousel items={refiningItems} />
+      </section>
+
+      <section className="section" id="recurso-e-trava">
+        <SectionHead
+          eyebrow="O QUE O JOGO DIZ"
+          title="A poção, a trava e a cor do efeito"
+          description="Três coisas que a própria interface declara e a wiki estava deduzindo."
+        />
+        <div className="fact-grid three">
+          <FactCard kicker="REFINING ELIXIR" title={refiningElixir.tooltip} text={refiningElixir.text} />
+          <FactCard kicker="TRAVA" title={lockRule.toast} text={lockRule.text} />
+          <FactCard
+            kicker="COR DO EFEITO"
+            title="A cor entrega o tier"
+            text="O nome do efeito muda de cor conforme a faixa em que a rolagem caiu, então dá para ler o resultado antes do número."
+          />
+        </div>
+        <div className="dismantle-layout">
+          <div className="table-wrap sticker-card">
+            <table className="game-table">
+              <thead>
+                <tr><th>Cor do efeito</th><th>Exemplo capturado</th><th>Faixa do tier</th></tr>
+              </thead>
+              <tbody>
+                {effectTierColors.map((row) => (
+                  <tr key={row.tier}>
+                    <td>{row.color}</td>
+                    <td>{row.exemplo}</td>
+                    <td>{row.faixa}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <aside className="sticker-card">
+            <span className="kicker">LIMITE DA OBSERVAÇÃO</span>
+            <span>{effectTierColorsNote}</span>
+          </aside>
+        </div>
+        <div className="shot-grid stack natural">
+          {refiningEvidenceGallery.map((shot) => (
+            <ShotFigure key={shot.src} src={shot.src} alt={shot.alt} caption={shot.caption} linked />
+          ))}
+        </div>
       </section>
 
       <section className="section" id="refino-detalhes">
