@@ -8,6 +8,11 @@ import { CalloutNote } from "../../components/CalloutNote";
 import { ShotFigure } from "../../components/ShotFigure";
 import { EvidenceCarousel } from "../../components/EvidenceCarousel";
 import {
+  massDismantle,
+  dismantleRows,
+  dismantleBatch,
+  dismantleFilters,
+  dismantleGallery,
   refiningEffects,
   refiningOverviewShot,
   refiningFacts,
@@ -23,10 +28,20 @@ import {
 
 export const metadata: Metadata = {
   title: "Refino — Oopsie Croco Wiki",
-  description: "Efeitos especiais, custo em poções, faixas por tier e o que uma tentativa de refino realmente propõe em Oopsie Croco.",
+  description: "Efeitos especiais, custo em poções, faixas por tier e a desmontagem que abastece o refino em Oopsie Croco.",
 };
 
 export default function Page() {
+  const dismantleItems = [
+    ...dismantleGallery.map((shot) => ({ src: shot.src, label: shot.caption, kind: "Desmontagem", alt: shot.alt })),
+    {
+      src: "/screenshots/refining/dismantle-mass-batch.jpg",
+      label: "Lote em massa: 25,86K de ouro + 8.705 poções de refino de uma vez.",
+      kind: "Desmontagem em massa",
+      alt: "Desmontagem em massa com filtros Below 120 e Below Mythical",
+    },
+  ];
+
   const refiningItems = refiningEffects.map((item) => ({
     src: item.image,
     label: `${item.value} • ${item.slot} • custo ${item.cost}`,
@@ -53,7 +68,7 @@ export default function Page() {
       <section className="page-hero tone-sky">
         <p className="eyebrow">20% POR TENTATIVA</p>
         <h1>Refino</h1>
-        <p className="lede">Cada tentativa rola atributos comuns e tem 20% de chance de gerar um efeito especial. O resultado é uma proposta: aceitar ou rolar de novo. Efeitos bons se travam antes da próxima.</p>
+        <p className="lede">Cada tentativa rola atributos comuns e tem 20% de chance de gerar um efeito especial. O resultado é uma proposta: aceitar ou rolar de novo. Efeitos bons se travam antes da próxima — e cada rolagem custa poção, que vem da desmontagem no fim desta página.</p>
       </section>
 
       <section className="section" id="refino">
@@ -166,6 +181,50 @@ export default function Page() {
         </div>
         <CalloutNote tone="info" title="Fonte da tabela" text={refineTierNote} />
         <EvidenceCarousel items={refineTierItems} />
+      </section>
+
+      <section className="section" id="desmontagem">
+        <SectionHead
+          eyebrow="DE ONDE VEM O RECURSO"
+          title="Desmontagem"
+          description="O refino consome poção e ouro; a desmontagem é onde os dois nascem. Peça sem uso vira Refining Elixir e gold, e o preview mostra o retorno antes de confirmar. Por isso a tabela de retorno por raridade e nível fecha esta página em vez de abrir a das peças."
+        />
+        <div className="dismantle-layout">
+          <div className="table-wrap sticker-card">
+            <table className="game-table">
+              <thead>
+                <tr><th>Qualidade</th><th>Nível</th><th>Ouro</th><th>Material</th></tr>
+              </thead>
+              <tbody>
+                {dismantleRows.map((row, index) => (
+                  <tr key={index}>
+                    <td><i className={`quality-dot ${row.quality}`} aria-hidden="true" />{row.qualityLabel}</td>
+                    <td>{row.level}</td>
+                    <td>{row.gold}</td>
+                    <td>{row.material}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="batch-proof sticker-card">
+            <span className="kicker">LOTE COMPROVADO</span>
+            <h3>{dismantleBatch.pieces}</h3>
+            <p>{dismantleBatch.composition}</p>
+            <strong>{dismantleBatch.gold}</strong>
+            <strong>{dismantleBatch.material}</strong>
+            <hr />
+            <p>{dismantleBatch.proof}</p>
+            <small>{dismantleBatch.note}</small>
+          </div>
+        </div>
+        <div className="filter-note">
+          <b>Filtros disponíveis</b>
+          <span>{dismantleFilters.level}</span>
+          <span>{dismantleFilters.quality}</span>
+        </div>
+        <CalloutNote tone="info" title={massDismantle.title} text={massDismantle.text} />
+        <EvidenceCarousel items={dismantleItems} />
       </section>
 
       <SiteFooter />

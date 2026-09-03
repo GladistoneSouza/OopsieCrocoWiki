@@ -16,7 +16,7 @@ const areas = [
     icon: "🛡️",
     tone: "gold",
     title: "Peças e raridade",
-    text: "Começa pelas cinco camadas que definem a força de uma peça e segue no código de cor da forja e no retorno da desmontagem.",
+    text: "As cinco camadas que definem a força de uma peça, e o código de cor que identifica a raridade antes de qualquer número aparecer.",
     cta: "Ler a peça",
     destaque: "A cor do nome já diz a raridade — dourado é Legendary, vermelho é Mythic, rosa é Immortal.",
   },
@@ -34,7 +34,7 @@ const areas = [
     icon: "🔥",
     tone: "sky",
     title: "Refino",
-    text: "Rolagem de atributos com 20% de chance de efeito especial, custo em poções, faixas por tier e o que a trava preserva entre tentativas.",
+    text: "Rolagem de atributos com 20% de chance de efeito especial, custo em poções, faixas por tier — e a desmontagem, que é de onde a poção vem.",
     cta: "Entrar na forja",
     destaque: "Berserk Warrior vai de 3–6% no tier azul até 24–30% no rosa.",
   },
@@ -58,7 +58,7 @@ export default function EquipmentPage() {
         <SectionHead
           eyebrow="CINCO CAMADAS, TRÊS PÁGINAS"
           title="Onde cada camada mora"
-          description="Raridade, nível e aprimoramento se leem na própria peça e ficam juntos em Peças e raridade. Gemas e refino são grandes o bastante para ter página cada um. Esta aqui é só o índice."
+          description="Raridade, nível e aprimoramento se leem na própria peça e ficam juntos em Peças e raridade. Gemas e refino são grandes o bastante para ter página cada um — e a desmontagem mora com o refino, porque é dela que sai a poção que ele gasta. Esta aqui é só o índice."
         />
         <div className="system-grid">
           {areas.map((area) => (
