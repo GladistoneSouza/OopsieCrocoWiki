@@ -56,9 +56,9 @@ export default function EquipmentPage() {
 
       <section className="section" id="areas">
         <SectionHead
-          eyebrow="TRÊS FRENTES"
-          title="Onde cada camada é tratada"
-          description="Esta página é só o índice. Cada frente abaixo tem página própria, com as tabelas, os custos e os prints daquele assunto."
+          eyebrow="CINCO CAMADAS, TRÊS PÁGINAS"
+          title="Onde cada camada mora"
+          description="Raridade, nível e aprimoramento se leem na própria peça e ficam juntos em Peças e raridade. Gemas e refino são grandes o bastante para ter página cada um. Esta aqui é só o índice."
         />
         <div className="system-grid">
           {areas.map((area) => (
@@ -73,8 +73,8 @@ export default function EquipmentPage() {
         </div>
         <CalloutNote
           tone="info"
-          title="Ainda sem página própria"
-          text="O aprimoramento (o +69, +70 da peça) e os bônus de Breakthrough por faixa têm prints capturados mas ainda não foram minerados. Entram como quarta frente quando a tabela existir."
+          title="A camada mais fraca da wiki"
+          text="Das cinco, o aprimoramento é a que tem menos escrito: uma linha dizendo que o +69, +70 representa o reforço da peça. Os prints do salto de nível e dos bônus de Breakthrough já estão capturados e ainda não foram minerados — quando virarem tabela, o aprimoramento ganha a quarta página."
         />
       </section>
 
