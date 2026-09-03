@@ -48,7 +48,8 @@ test("every published route renders", async () => {
   ];
   const rotas = [
     "/", "/personagens", "/equipamentos", "/coop", "/runs", "/ur",
-    "/expedicao", "/invocacao",
+    "/expedicao", "/invocacao", "/visuais",
+    "/equipamentos/pecas", "/equipamentos/gemas", "/equipamentos/refino",
     ...fichas.map((slug) => `/personagens/${slug}`),
   ];
 

@@ -348,3 +348,13 @@
     box-shadow: 6px 6px 0 rgba(43, 37, 67, 0.2);
   }
 }
+
+/* Destaque dentro do card de área (painel de equipamentos) */
+.area-destaque {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 2px solid rgba(43, 37, 67, 0.16);
+  font-size: 12px;
+  font-style: italic;
+  line-height: 1.5;
+}

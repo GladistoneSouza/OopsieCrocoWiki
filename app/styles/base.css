@@ -523,3 +523,26 @@ a:hover > .sticker-card {
 .batch-proof h3 {
   color: #fff;
 }
+
+/* ---- Trilha de navegação das sub-páginas ---- */
+
+.crumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 1140px;
+  margin: 18px auto -8px;
+  padding: 0 24px;
+  font-size: 12px;
+  color: var(--ink-soft);
+}
+
+.crumbs a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-bottom: 2px solid rgba(43, 37, 67, 0.2);
+}
+
+.crumbs a:hover { color: var(--ink); }
+
+.crumbs b { color: var(--ink); }

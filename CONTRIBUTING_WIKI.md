@@ -12,7 +12,11 @@ Uma conversa ou agente deve cuidar de um assunto por vez. Não coloque conhecime
 - Co-op (regras, custos, boss, andares, drops): `app/data/coop.ts` → página `/coop`
 - Runs documentadas e núcleo de time: `app/data/combatRuns.ts` → página `/runs`
 - Monstros descobertos fora do Co-op: `app/data/enemies.ts`
-- Equipamentos, gemas, refino e desmontagem: `app/data/equipment.ts` → página `/equipamentos`
+- Equipamentos: `app/data/equipment.ts` → `/equipamentos` é só o painel (as 5 camadas e os
+  links). O conteúdo mora nas sub-páginas: `/equipamentos/pecas` (raridade, cores da forja,
+  desmontagem), `/equipamentos/gemas` e `/equipamentos/refino`. Assunto novo de equipamento
+  entra na sub que trata dele, não no painel — o painel só ganha card quando nasce uma frente
+  nova, como o aprimoramento ainda por minerar
 - Economia de invocações: `app/data/economy.ts` (exibida na home)
 - Heróis UR e o evento Immortal Hero: `app/data/immortal.ts` → página `/ur`
 - Expedition Squad: `app/data/expedition.ts` → página `/expedicao`
